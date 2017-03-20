@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meniere</string>
+
+    <string name="one">ONE</string>
+    <string name="four">FOUR</string>
+    <string name="three">THREE</string>
+    <string name="two">TWO</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+</resources>
