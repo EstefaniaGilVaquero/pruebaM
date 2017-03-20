@@ -1,10 +1,15 @@
 <resources>
     <string name="app_name">Meniere</string>
 
-    <string name="one">ONE</string>
-    <string name="four">FOUR</string>
-    <string name="three">THREE</string>
-    <string name="two">TWO</string>
+    <string name="MyMeniere">My Ménière</string>
+    <string name="aboutMeniere">About Ménière</string>
+    <string name="utilities">Utilities</string>
+    <string name="help">Help</string>
+
     <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_activity_spalsh">SpalshActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

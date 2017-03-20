@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>document size</key>
+	<string>{300, 300}</string>
+	<key>document units</key>
+	<integer>3</integer>
+	<key>layers</key>
+	<array>
+		<dict>
+			<key>data source</key>
+			<dict>
+				<key>layer source type</key>
+				<integer>1</integer>
+				<key>shape</key>
+				<integer>17</integer>
+				<key>shape param 1</key>
+				<real>0.0</real>
+				<key>shape param 2</key>
+				<real>3.4028234663852886e+38</real>
+			</dict>
+			<key>dataProvider 2D</key>
+			<dict>
+				<key>transform unit</key>
+				<dict>
+					<key>transform factor 1</key>
+					<real>0.0</real>
+					<key>transform factor 2</key>
+					<real>0.0</real>
+					<key>transform splines</key>
+					<dict>
+						<key>transform count points</key>
+						<integer>0</integer>
+						<key>transform count splines</key>
+						<integer>0</integer>
+					</dict>
+					<key>transform type</key>
+					<integer>301</integer>
+				</dict>
+			</dict>
+			<key>layer angle</key>
+			<real>0.0</real>
+			<key>layer composite operation</key>
+			<integer>0</integer>
+			<key>layer flip x</key>
+			<false/>
+			<key>layer flip y</key>
+			<false/>
+			<key>layer is3D</key>
+			<false/>
+			<key>layer locked</key>
+			<false/>
+			<key>layer opacity</key>
+			<real>1</real>
+			<key>layer origin</key>
+			<string>{9.4774475088569829, 9.4774475088569829}</string>
+			<key>layer size</key>
+			<string>{281.04510498228603, 281.04510498228603}</string>
+			<key>layer size3DScale</key>
+			<real>1</real>
+			<key>layer tag</key>
+			<integer>0</integer>
+			<key>layer title</key>
+			<string>Capa 2</string>
+			<key>layer version</key>
+			<real>654</real>
+			<key>layer visible</key>
+			<true/>
+			<key>style unit</key>
+			<dict>
+				<key>fill</key>
+				<true/>
+				<key>filling type</key>
+				<integer>0</integer>
+				<key>glow unit</key>
+				<dict>
+					<key>glow blur</key>
+					<real>5</real>
+					<key>glow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NGMSAwIDAAEAGA
+					AtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNX
+					TlNDb2xvcqISFFhOU09iamVjdF8QD05TS2V5
+					ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3
+					O0FITltiaWttcn2GjpGarK+0AAAAAAAAAQEA
+					AAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
+					</data>
+					<key>glow composite operation</key>
+					<integer>0</integer>
+					<key>glow is tint</key>
+					<true/>
+					<key>glow tint color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NGMSAwIDEAEAGA
+					AtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNX
+					TlNDb2xvcqISFFhOU09iamVjdF8QD05TS2V5
+					ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3
+					O0FITltiaWttcn2GjpGarK+0AAAAAAAAAQEA
+					AAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
+					</data>
+					<key>glow width</key>
+					<real>7</real>
+					<key>isGlow</key>
+					<false/>
+					<key>unit name</key>
+					<string>glowUnit</string>
+				</dict>
+				<key>gradient unit</key>
+				<dict>
+					<key>fill color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGKyxYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKcHCBMZHSQoVSRudWxs1QkKCwwNDg8QERJc
+					TlNDb21wb25lbnRzVU5TUkdCXE5TQ29sb3JT
+					cGFjZV8QEk5TQ3VzdG9tQ29sb3JTcGFjZVYk
+					Y2xhc3NPEBIwLjk5OTk5NjAwNjUgMSAxIDFP
+					ECcwLjk5OTk5OTI4NDcgMC45OTk5NzQ0Mjk2
+					IDAuOTk5OTkxMjk3NwAQAYACgAbTFBUNFhcY
+					VE5TSURVTlNJQ0MQB4ADgAXSGg0bHFdOUy5k
+					YXRhTxEMSAAADEhMaW5vAhAAAG1udHJSR0Ig
+					WFlaIAfOAAIACQAGADEAAGFjc3BNU0ZUAAAA
+					AElFQyBzUkdCAAAAAAAAAAAAAAAAAAD21gAB
+					AAAAANMtSFAgIAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAEWNwcnQAAAFQAAAAM2Rlc2MAAAGEAAAA
+					bHd0cHQAAAHwAAAAFGJrcHQAAAIEAAAAFHJY
+					WVoAAAIYAAAAFGdYWVoAAAIsAAAAFGJYWVoA
+					AAJAAAAAFGRtbmQAAAJUAAAAcGRtZGQAAALE
+					AAAAiHZ1ZWQAAANMAAAAhnZpZXcAAAPUAAAA
+					JGx1bWkAAAP4AAAAFG1lYXMAAAQMAAAAJHRl
+					Y2gAAAQwAAAADHJUUkMAAAQ8AAAIDGdUUkMA
+					AAQ8AAAIDGJUUkMAAAQ8AAAIDHRleHQAAAAA
+					Q29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQt
+					UGFja2FyZCBDb21wYW55AABkZXNjAAAAAAAA
+					ABJzUkdCIElFQzYxOTY2LTIuMQAAAAAAAAAA
+					AAAAEnNSR0IgSUVDNjE5NjYtMi4xAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAABYWVogAAAAAAAA
+					81EAAQAAAAEWzFhZWiAAAAAAAAAAAAAAAAAA
+					AAAAWFlaIAAAAAAAAG+iAAA49QAAA5BYWVog
+					AAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAk
+					oAAAD4QAALbPZGVzYwAAAAAAAAAWSUVDIGh0
+					dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAW
+					SUVDIGh0dHA6Ly93d3cuaWVjLmNoAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAGRlc2MAAAAAAAAALklF
+					QyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29s
+					b3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAA
+					LklFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0Ig
+					Y29sb3VyIHNwYWNlIC0gc1JHQgAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAABkZXNjAAAAAAAAACxS
+					ZWZlcmVuY2UgVmlld2luZyBDb25kaXRpb24g
+					aW4gSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAs
+					UmVmZXJlbmNlIFZpZXdpbmcgQ29uZGl0aW9u
+					IGluIElFQzYxOTY2LTIuMQAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAdmlldwAAAAAAE6T+
+					ABRfLgAQzxQAA+3MAAQTCwADXJ4AAAABWFla
+					IAAAAAAATAlWAFAAAABXH+dtZWFzAAAAAAAA
+					AAEAAAAAAAAAAAAAAAAAAAAAAAACjwAAAAJz
+					aWcgAAAAAENSVCBjdXJ2AAAAAAAABAAAAAAF
+					AAoADwAUABkAHgAjACgALQAyADcAOwBAAEUA
+					SgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCL
+					AJAAlQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA
+					0ADVANsA4ADlAOsA8AD2APsBAQEHAQ0BEwEZ
+					AR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4B
+					dQF8AYMBiwGSAZoBoQGpAbEBuQHBAckB0QHZ
+					AeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksC
+					VAJdAmcCcQJ6AoQCjgKYAqICrAK2AsECywLV
+					AuAC6wL1AwADCwMWAyEDLQM4A0MDTwNaA2YD
+					cgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQT
+					BCAELQQ7BEgEVQRjBHEEfgSMBJoEqAS2BMQE
+					0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWW
+					BaYFtQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoG
+					ewaMBp0GrwbABtEG4wb1BwcHGQcrBz0HTwdh
+					B3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoI
+					bgiCCJYIqgi+CNII5wj7CRAJJQk6CU8JZAl5
+					CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgK
+					rgrFCtwK8wsLCyILOQtRC2kLgAuYC7ALyAvh
+					C/kMEgwqDEMMXAx1DI4MpwzADNkM8w0NDSYN
+					QA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6b
+					DrYO0g7uDwkPJQ9BD14Peg+WD7MPzw/sEAkQ
+					JhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGq
+					EckR6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MT
+					YxODE6QTxRPlFAYUJxRJFGoUixStFM4U8BUS
+					FTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW
+					+hcdF0EXZReJF64X0hf3GBsYQBhlGIoYrxjV
+					GPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa
+					7BsUGzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1
+					HR4dRx1wHZkdwx3sHhYeQB5qHpQevh7pHxMf
+					Ph9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1
+					IaEhziH7IiciVSKCIq8i3SMKIzgjZiOUI8Ij
+					8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZX
+					JocmtyboJxgnSSd6J6sn3CgNKD8ocSiiKNQp
+					Bik4KWspnSnQKgIqNSpoKpsqzysCKzYraSud
+					K9EsBSw5LG4soizXLQwtQS12Last4S4WLkwu
+					gi63Lu4vJC9aL5Evxy/+MDUwbDCkMNsxEjFK
+					MYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0
+					ZTSeNNg1EzVNNYc1wjX9Njc2cjauNuk3JDdg
+					N5w31zgUOFA4jDjIOQU5Qjl/Obw5+To2OnQ6
+					sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3g
+					PiA+YD6gPuA/IT9hP6I/4kAjQGRApkDnQSlB
+					akGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTO
+					RRJFVUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtI
+					kUjXSR1JY0mpSfBKN0p9SsRLDEtTS5pL4kwq
+					THJMuk0CTUpNk03cTiVObk63TwBPSU+TT91Q
+					J1BxULtRBlFQUZtR5lIxUnxSx1MTU19TqlP2
+					VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BY
+					L1h9WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1
+					XIZc1l0nXXhdyV4aXmxevV8PX2Ffs2AFYFdg
+					qmD8YU9homH1YklinGLwY0Njl2PrZEBklGTp
+					ZT1lkmXnZj1mkmboZz1nk2fpaD9olmjsaUNp
+					mmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4S
+					bmtuxG8eb3hv0XArcIZw4HE6cZVx8HJLcqZz
+					AXNdc7h0FHRwdMx1KHWFdeF2Pnabdvh3Vnez
+					eBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF8
+					4X1BfaF+AX5ifsJ/I3+Ef+WAR4CogQqBa4HN
+					gjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteH
+					O4efiASIaYjOiTOJmYn+imSKyoswi5aL/Ixj
+					jMqNMY2Yjf+OZo7OjzaPnpAGkG6Q1pE/kaiS
+					EZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1
+					l+CYTJi4mSSZkJn8mmia1ZtCm6+cHJyJnPed
+					ZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMG
+					o3aj5qRWpMelOKWpphqmi6b9p26n4KhSqMSp
+					N6mpqhyqj6sCq3Wr6axcrNCtRK24ri2uoa8W
+					r4uwALB1sOqxYLHWskuywrM4s660JbSctRO1
+					irYBtnm28Ldot+C4WbjRuUq5wro7urW7Lrun
+					vCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePC
+					X8Lbw1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8
+					yTrJuco4yrfLNsu2zDXMtc01zbXONs62zzfP
+					uNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV
+					1tjXXNfg2GTY6Nls2fHadtr724DcBdyK3RDd
+					lt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz
+					5PzlhOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr
+					++yG7RHtnO4o7rTvQO/M8Fjw5fFy8f/yjPMZ
+					86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf6
+					5/t3/Af8mP0p/br+S/7c/23//4AE0h4fICFa
+					JGNsYXNzbmFtZVgkY2xhc3Nlc11OU011dGFi
+					bGVEYXRhoyAiI1ZOU0RhdGFYTlNPYmplY3TS
+					Hh8lJlxOU0NvbG9yU3BhY2WiJyNcTlNDb2xv
+					clNwYWNl0h4fKSpXTlNDb2xvcqIpI18QD05T
+					S2V5ZWRBcmNoaXZlctEtLlRyb290gAEACAAR
+					ABoAIwAtADIANwA/AEUAUABdAGMAcACFAIwA
+					oQDLAM0AzwDRANgA3QDjAOUA5wDpAO4A9g1C
+					DUQNSQ1UDV0Naw1vDXYNfw2EDZENlA2hDaYN
+					rg2xDcMNxg3LAAAAAAAAAgEAAAAAAAAALwAA
+					AAAAAAAAAAAAAAAADc0=
+					</data>
+					<key>gradient angle</key>
+					<real>-90</real>
+					<key>gradient control</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGXV5YJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oK8QFAcIDxYfICEiKi41ODxERUlRUlZZVSRu
+					dWxs0wkKCwwNDl8QFE5TR3JhZGllbnRDb2xv
+					clNwYWNlViRjbGFzc18QFE5TR3JhZGllbnRD
+					b2xvckFycmF5gAiAE4AC0hAKERVaTlMub2Jq
+					ZWN0c6MSExSAA4AMgA+AEtMXEAoYGx5XTlMu
+					a2V5c6IZGoAEgAWiHB2ABoAHgAtfEBJOU0dy
+					YWRpZW50UG9zaXRpb25fEA9OU0dyYWRpZW50
+					Q29sb3IjAAAAAAAAAADUIyQlCiYnDClVTlNS
+					R0JcTlNDb2xvclNwYWNlXxASTlNDdXN0b21D
+					b2xvclNwYWNlRjAgMCAwABABgAiACtIrCiwt
+					VE5TSUQQAYAJ0i8wMTJaJGNsYXNzbmFtZVgk
+					Y2xhc3Nlc1xOU0NvbG9yU3BhY2WiMzRcTlND
+					b2xvclNwYWNlWE5TT2JqZWN00i8wNjdXTlND
+					b2xvcqI2NNIvMDk6XxATTlNNdXRhYmxlRGlj
+					dGlvbmFyeaM5OzRcTlNEaWN0aW9uYXJ50xcQ
+					Cj1AHqIZGoAEgAWiQUKADYAOgAsjP+AAAAAA
+					AADUIyQlCkYnDClMMC41IDAuNSAwLjUAgAiA
+					CtMXEApKTR6iGRqABIAFok5PgBCAEYALIz/w
+					AAAAAAAA1CMkJQpTJwwpRjEgMSAxAIAIgArS
+					LzBXWFdOU0FycmF5olc00i8wWltaTlNHcmFk
+					aWVudKJcNFpOU0dyYWRpZW50XxAPTlNLZXll
+					ZEFyY2hpdmVy0V9gVHJvb3SAAQAIABEAGgAj
+					AC0AMgA3AE4AVABbAHIAeQCQAJIAlACWAJsA
+					pgCqAKwArgCwALIAuQDBAMQAxgDIAMsAzQDP
+					ANEA5gD4AQEBCgEQAR0BMgE5ATsBPQE/AUQB
+					SQFLAU0BUgFdAWYBcwF2AYMBjAGRAZkBnAGh
+					AbcBuwHIAc8B0gHUAdYB2QHbAd0B3wHoAfEB
+					/gIAAgICCQIMAg4CEAITAhUCFwIZAiICKwIy
+					AjQCNgI7AkMCRgJLAlYCWQJkAnYCeQJ+AAAA
+					AAAAAgEAAAAAAAAAYQAAAAAAAAAAAAAAAAAA
+					AoA=
+					</data>
+					<key>gradient offset</key>
+					<string>{0, 0}</string>
+					<key>gradient type</key>
+					<integer>0</integer>
+					<key>unit name</key>
+					<string>gradientUnit</string>
+				</dict>
+				<key>inner shadow unit</key>
+				<dict>
+					<key>composite operation</key>
+					<integer>0</integer>
+					<key>is inner shadow</key>
+					<false/>
+					<key>shadow angle</key>
+					<real>0.0</real>
+					<key>shadow blur</key>
+					<real>6.9693080357142883</real>
+					<key>shadow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NKMCAwIDAgMC44
+					ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFz
+					c2VzV05TQ29sb3KiEhRYTlNPYmplY3RfEA9O
+					U0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEa
+					Iy0yNztBSE5bYm1vcXaBipKVnrCzuAAAAAAA
+					AAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAAC6
+					</data>
+					<key>shadow distance</key>
+					<real>0.0</real>
+					<key>unit name</key>
+					<string>innerShadowUnit</string>
+					<key>width</key>
+					<real>1</real>
+				</dict>
+				<key>mask unit</key>
+				<dict>
+					<key>isMask</key>
+					<false/>
+					<key>mask angle</key>
+					<real>0.0</real>
+					<key>mask brightness</key>
+					<real>0.0</real>
+					<key>mask contrast</key>
+					<real>1</real>
+					<key>mask data ref</key>
+					<string>Masks/Mask14.jpg</string>
+					<key>mask is inverse</key>
+					<false/>
+					<key>mask offset</key>
+					<string>{0, 0}</string>
+					<key>mask scale</key>
+					<real>0.5</real>
+					<key>unit name</key>
+					<string>maskUnit</string>
+				</dict>
+				<key>shader unit</key>
+				<dict>
+					<key>unit name</key>
+					<string>shaderUnit</string>
+				</dict>
+				<key>shadow is shadow</key>
+				<false/>
+				<key>shadow unit</key>
+				<dict>
+					<key>shadow angle</key>
+					<real>0.0</real>
+					<key>shadow blur</key>
+					<real>5</real>
+					<key>shadow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NKMCAwIDAgMC44
+					ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFz
+					c2VzV05TQ29sb3KiEhRYTlNPYmplY3RfEA9O
+					U0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEa
+					Iy0yNztBSE5bYm1vcXaBipKVnrCzuAAAAAAA
+					AAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAAC6
+					</data>
+					<key>shadow distance</key>
+					<real>0.0</real>
+					<key>unit name</key>
+					<string>shadowUnit</string>
+				</dict>
+				<key>stroke unit</key>
+				<dict>
+					<key>Stroke List</key>
+					<array>
+						<dict>
+							<key>color</key>
+							<data>
+							YnBsaXN0MDDUAQIDBAUG
+							FRZYJHZlcnNpb25YJG9i
+							amVjdHNZJGFyY2hpdmVy
+							VCR0b3ASAAGGoKMHCA9V
+							JG51bGzTCQoLDA0OV05T
+							V2hpdGVcTlNDb2xvclNw
+							YWNlViRjbGFzc0IwABAD
+							gALSEBESE1okY2xhc3Nu
+							YW1lWCRjbGFzc2VzV05T
+							Q29sb3KiEhRYTlNPYmpl
+							Y3RfEA9OU0tleWVkQXJj
+							aGl2ZXLRFxhUcm9vdIAB
+							CBEaIy0yNztBSFBdZGdp
+							a3B7hIyPmKqtsgAAAAAA
+							AAEBAAAAAAAAABkAAAAA
+							AAAAAAAAAAAAAAC0
+							</data>
+							<key>width</key>
+							<real>1</real>
+						</dict>
+					</array>
+					<key>stroke</key>
+					<false/>
+					<key>unit name</key>
+					<string>strokeUnit</string>
+				</dict>
+				<key>texture unit</key>
+				<dict>
+					<key>texture angle</key>
+					<real>0.0</real>
+					<key>texture dataRef</key>
+					<string>Paper/paper_11.jpg</string>
+					<key>texture key color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NPECcwLjg1NzE0
+					Mjg1NzEgMC44NTcxNDI4NTcxIDAuODU3MTQy
+					ODU3MQAQAoAC0hAREhNaJGNsYXNzbmFtZVgk
+					Y2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0
+					XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SA
+					AQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcA
+					AAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
+					AAAA2Q==
+					</data>
+					<key>texture phase</key>
+					<string>{0, 0}</string>
+					<key>texture scale</key>
+					<real>1</real>
+					<key>texture type</key>
+					<integer>4</integer>
+					<key>unit name</key>
+					<string>textureUnit</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>data source</key>
+			<dict>
+				<key>layer source type</key>
+				<integer>0</integer>
+				<key>text</key>
+				<data>
+				YnBsaXN0MDDUAQIDBAUGTU5YJHZlcnNpb25YJG9iamVj
+				dHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcIDxAeHyAh
+				IiMrMjo7PkNGSVUkbnVsbNMJCgsMDQ5YTlNTdHJpbmdW
+				JGNsYXNzXE5TQXR0cmlidXRlc4ACgBGAA1FN0xESChMY
+				HVdOUy5rZXlzWk5TLm9iamVjdHOkFBUWF4AEgAWABoAH
+				pBkaGxyACIAJgAuADoAQVk5TS2Vybl8QEE5TUGFyYWdy
+				YXBoU3R5bGVWTlNGb250V05TQ29sb3IjP+mZmaAAAADU
+				JCUKJicoKSpaTlNUYWJTdG9wc1tOU0FsaWdubWVudF8Q
+				FE5TTGluZUhlaWdodE11bHRpcGxlgAAQBIAKIz/v///g
+				AAAA0iwtLi9aJGNsYXNzbmFtZVgkY2xhc3Nlc18QF05T
+				TXV0YWJsZVBhcmFncmFwaFN0eWxloy4wMV8QEE5TUGFy
+				YWdyYXBoU3R5bGVYTlNPYmplY3TUMzQ1CjY3ODlWTlNT
+				aXplWE5TZkZsYWdzVk5TTmFtZSNAPgAAAAAAABAQgAyA
+				DV8QD1Bob3NwaGF0ZS1Tb2xpZNIsLTw9Vk5TRm9udKI8
+				MdM/QApBKEJXTlNXaGl0ZVxOU0NvbG9yU3BhY2VFMC43
+				OQCAD9IsLURFV05TQ29sb3KiRDHSLC1HSFxOU0RpY3Rp
+				b25hcnmiRzHSLC1KS18QEk5TQXR0cmlidXRlZFN0cmlu
+				Z6JMMV8QEk5TQXR0cmlidXRlZFN0cmluZ18QD05TS2V5
+				ZWRBcmNoaXZlctFPUFRyb290gAEACAARABoAIwAtADIA
+				NwBMAFIAWQBiAGkAdgB4AHoAfAB+AIUAjQCYAJ0AnwCh
+				AKMApQCqAKwArgCwALIAtAC7AM4A1QDdAOYA7wD6AQYB
+				HQEfASEBIwEsATEBPAFFAV8BYwF2AX8BiAGPAZgBnwGo
+				AaoBrAGuAcABxQHMAc8B1gHeAesB8QHzAfgCAAIDAggC
+				FQIYAh0CMgI1AkoCXAJfAmQAAAAAAAACAQAAAAAAAABR
+				AAAAAAAAAAAAAAAAAAACZg==
+				</data>
+			</dict>
+			<key>dataProvider 2D</key>
+			<dict>
+				<key>transform unit</key>
+				<dict>
+					<key>transform factor 1</key>
+					<real>0.0</real>
+					<key>transform factor 2</key>
+					<real>0.0</real>
+					<key>transform splines</key>
+					<dict>
+						<key>transform count points</key>
+						<integer>0</integer>
+						<key>transform count splines</key>
+						<integer>0</integer>
+					</dict>
+					<key>transform type</key>
+					<integer>0</integer>
+				</dict>
+			</dict>
+			<key>layer angle</key>
+			<real>0.0</real>
+			<key>layer composite operation</key>
+			<integer>0</integer>
+			<key>layer flip x</key>
+			<false/>
+			<key>layer flip y</key>
+			<false/>
+			<key>layer is3D</key>
+			<false/>
+			<key>layer locked</key>
+			<false/>
+			<key>layer opacity</key>
+			<real>1</real>
+			<key>layer origin</key>
+			<string>{59.038903102510091, 63.20307348980576}</string>
+			<key>layer size</key>
+			<string>{181.92219379497982, 173.59385302038848}</string>
+			<key>layer size3DScale</key>
+			<real>1</real>
+			<key>layer tag</key>
+			<integer>0</integer>
+			<key>layer title</key>
+			<string>Text</string>
+			<key>layer version</key>
+			<real>654</real>
+			<key>layer visible</key>
+			<true/>
+			<key>style unit</key>
+			<dict>
+				<key>fill</key>
+				<true/>
+				<key>filling type</key>
+				<integer>0</integer>
+				<key>glow unit</key>
+				<dict>
+					<key>glow blur</key>
+					<real>10.875</real>
+					<key>glow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NGMSAwIDAAEAGA
+					AtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNX
+					TlNDb2xvcqISFFhOU09iamVjdF8QD05TS2V5
+					ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3
+					O0FITltiaWttcn2GjpGarK+0AAAAAAAAAQEA
+					AAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
+					</data>
+					<key>glow composite operation</key>
+					<integer>0</integer>
+					<key>glow is tint</key>
+					<true/>
+					<key>glow tint color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NGMSAwIDEAEAGA
+					AtIQERITWiRjbGFzc25hbWVYJGNsYXNzZXNX
+					TlNDb2xvcqISFFhOU09iamVjdF8QD05TS2V5
+					ZWRBcmNoaXZlctEXGFRyb290gAEIERojLTI3
+					O0FITltiaWttcn2GjpGarK+0AAAAAAAAAQEA
+					AAAAAAAAGQAAAAAAAAAAAAAAAAAAALY=
+					</data>
+					<key>glow width</key>
+					<real>8.75</real>
+					<key>isGlow</key>
+					<false/>
+					<key>unit name</key>
+					<string>glowUnit</string>
+				</dict>
+				<key>gradient unit</key>
+				<dict>
+					<key>fill color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGKyxYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKcHCBMZHSQoVSRudWxs1QkKCwwNDg8QERJc
+					TlNDb21wb25lbnRzVU5TUkdCXE5TQ29sb3JT
+					cGFjZV8QEk5TQ3VzdG9tQ29sb3JTcGFjZVYk
+					Y2xhc3NPECcwLjgyODY5NDI4NCAwLjU4Mzgy
+					Mzc0MDUgMC41MzkzNzc5ODc0IDFPECcwLjc4
+					MzY2OTc2OTggMC41MDcwNzYxNDQyIDAuNDY2
+					MDc4OTk2NwAQAYACgAbTFBUNFhcYVE5TSURV
+					TlNJQ0MQB4ADgAXSGg0bHFdOUy5kYXRhTxEM
+					SAAADEhMaW5vAhAAAG1udHJSR0IgWFlaIAfO
+					AAIACQAGADEAAGFjc3BNU0ZUAAAAAElFQyBz
+					UkdCAAAAAAAAAAAAAAAAAAD21gABAAAAANMt
+					SFAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEWNw
+					cnQAAAFQAAAAM2Rlc2MAAAGEAAAAbHd0cHQA
+					AAHwAAAAFGJrcHQAAAIEAAAAFHJYWVoAAAIY
+					AAAAFGdYWVoAAAIsAAAAFGJYWVoAAAJAAAAA
+					FGRtbmQAAAJUAAAAcGRtZGQAAALEAAAAiHZ1
+					ZWQAAANMAAAAhnZpZXcAAAPUAAAAJGx1bWkA
+					AAP4AAAAFG1lYXMAAAQMAAAAJHRlY2gAAAQw
+					AAAADHJUUkMAAAQ8AAAIDGdUUkMAAAQ8AAAI
+					DGJUUkMAAAQ8AAAIDHRleHQAAAAAQ29weXJp
+					Z2h0IChjKSAxOTk4IEhld2xldHQtUGFja2Fy
+					ZCBDb21wYW55AABkZXNjAAAAAAAAABJzUkdC
+					IElFQzYxOTY2LTIuMQAAAAAAAAAAAAAAEnNS
+					R0IgSUVDNjE5NjYtMi4xAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAABYWVogAAAAAAAA81EAAQAA
+					AAEWzFhZWiAAAAAAAAAAAAAAAAAAAAAAWFla
+					IAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAA
+					YpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QA
+					ALbPZGVzYwAAAAAAAAAWSUVDIGh0dHA6Ly93
+					d3cuaWVjLmNoAAAAAAAAAAAAAAAWSUVDIGh0
+					dHA6Ly93d3cuaWVjLmNoAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAGRlc2MAAAAAAAAALklFQyA2MTk2
+					Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNw
+					YWNlIC0gc1JHQgAAAAAAAAAAAAAALklFQyA2
+					MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3Vy
+					IHNwYWNlIC0gc1JHQgAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAABkZXNjAAAAAAAAACxSZWZlcmVu
+					Y2UgVmlld2luZyBDb25kaXRpb24gaW4gSUVD
+					NjE5NjYtMi4xAAAAAAAAAAAAAAAsUmVmZXJl
+					bmNlIFZpZXdpbmcgQ29uZGl0aW9uIGluIElF
+					QzYxOTY2LTIuMQAAAAAAAAAAAAAAAAAAAAAA
+					AAAAAAAAAAAAdmlldwAAAAAAE6T+ABRfLgAQ
+					zxQAA+3MAAQTCwADXJ4AAAABWFlaIAAAAAAA
+					TAlWAFAAAABXH+dtZWFzAAAAAAAAAAEAAAAA
+					AAAAAAAAAAAAAAAAAAACjwAAAAJzaWcgAAAA
+					AENSVCBjdXJ2AAAAAAAABAAAAAAFAAoADwAU
+					ABkAHgAjACgALQAyADcAOwBAAEUASgBPAFQA
+					WQBeAGMAaABtAHIAdwB8AIEAhgCLAJAAlQCa
+					AJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA
+					4ADlAOsA8AD2APsBAQEHAQ0BEwEZAR8BJQEr
+					ATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMB
+					iwGSAZoBoQGpAbEBuQHBAckB0QHZAeEB6QHy
+					AfoCAwIMAhQCHQImAi8COAJBAksCVAJdAmcC
+					cQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1
+					AwADCwMWAyEDLQM4A0MDTwNaA2YDcgN+A4oD
+					lgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7
+					BEgEVQRjBHEEfgSMBJoEqAS2BMQE0wThBPAE
+					/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYFtQXF
+					BdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0G
+					rwbABtEG4wb1BwcHGQcrBz0HTwdhB3QHhgeZ
+					B6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYI
+					qgi+CNII5wj7CRAJJQk6CU8JZAl5CY8JpAm6
+					Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrFCtwK
+					8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwq
+					DEMMXAx1DI4MpwzADNkM8w0NDSYNQA1aDXQN
+					jg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7u
+					DwkPJQ9BD14Peg+WD7MPzw/sEAkQJhBDEGEQ
+					fhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR6BIH
+					EiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QT
+					xRPlFAYUJxRJFGoUixStFM4U8BUSFTQVVhV4
+					FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EX
+					ZReJF64X0hf3GBsYQBhlGIoYrxjVGPoZIBlF
+					GWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsUGzsb
+					YxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1w
+					HZkdwx3sHhYeQB5qHpQevh7pHxMfPh9pH5Qf
+					vx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7
+					IiciVSKCIq8i3SMKIzgjZiOUI8Ij8CQfJE0k
+					fCSrJNolCSU4JWgllyXHJfcmJyZXJocmtybo
+					JxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWsp
+					nSnQKgIqNSpoKpsqzysCKzYraSudK9EsBSw5
+					LG4soizXLQwtQS12Last4S4WLkwugi63Lu4v
+					JC9aL5Evxy/+MDUwbDCkMNsxEjFKMYIxujHy
+					MioyYzKbMtQzDTNGM38zuDPxNCs0ZTSeNNg1
+					EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgU
+					OFA4jDjIOQU5Qjl/Obw5+To2OnQ6sjrvOy07
+					azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6g
+					PuA/IT9hP6I/4kAjQGRApkDnQSlBakGsQe5C
+					MEJyQrVC90M6Q31DwEQDREdEikTORRJFVUWa
+					Rd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1J
+					Y0mpSfBKN0p9SsRLDEtTS5pL4kwqTHJMuk0C
+					TUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtR
+					BlFQUZtR5lIxUnxSx1MTU19TqlP2VEJUj1Tb
+					VShVdVXCVg9WXFapVvdXRFeSV+BYL1h9WMtZ
+					GllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0n
+					XXhdyV4aXmxevV8PX2Ffs2AFYFdgqmD8YU9h
+					omH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXn
+					Zj1mkmboZz1nk2fpaD9olmjsaUNpmmnxakhq
+					n2r3a09rp2v/bFdsr20IbWBtuW4SbmtuxG8e
+					b3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0
+					FHRwdMx1KHWFdeF2Pnabdvh3VnezeBF4bnjM
+					eSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+
+					AX5ifsJ/I3+Ef+WAR4CogQqBa4HNgjCCkoL0
+					g1eDuoQdhICE44VHhauGDoZyhteHO4efiASI
+					aYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Y
+					jf+OZo7OjzaPnpAGkG6Q1pE/kaiSEZJ6kuOT
+					TZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4
+					mSSZkJn8mmia1ZtCm6+cHJyJnPedZJ3SnkCe
+					rp8dn4uf+qBpoNihR6G2oiailqMGo3aj5qRW
+					pMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyq
+					j6sCq3Wr6axcrNCtRK24ri2uoa8Wr4uwALB1
+					sOqxYLHWskuywrM4s660JbSctRO1irYBtnm2
+					8Ldot+C4WbjRuUq5wro7urW7LrunvCG8m70V
+					vY++Cr6Evv+/er/1wHDA7MFnwePCX8Lbw1jD
+					1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4
+					yrfLNsu2zDXMtc01zbXONs62zzfPuNA50LrR
+					PNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg
+					2GTY6Nls2fHadtr724DcBdyK3RDdlt4c3qLf
+					Kd+v4DbgveFE4cziU+Lb42Pj6+Rz5PzlhOYN
+					5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHt
+					nO4o7rTvQO/M8Fjw5fFy8f/yjPMZ86f0NPTC
+					9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3/Af8
+					mP0p/br+S/7c/23//4AE0h4fICFaJGNsYXNz
+					bmFtZVgkY2xhc3Nlc11OU011dGFibGVEYXRh
+					oyAiI1ZOU0RhdGFYTlNPYmplY3TSHh8lJlxO
+					U0NvbG9yU3BhY2WiJyNcTlNDb2xvclNwYWNl
+					0h4fKSpXTlNDb2xvcqIpI18QD05TS2V5ZWRB
+					cmNoaXZlctEtLlRyb290gAEACAARABoAIwAt
+					ADIANwA/AEUAUABdAGMAcACFAIwAtgDgAOIA
+					5ADmAO0A8gD4APoA/AD+AQMBCw1XDVkNXg1p
+					DXINgA2EDYsNlA2ZDaYNqQ22DbsNww3GDdgN
+					2w3gAAAAAAAAAgEAAAAAAAAALwAAAAAAAAAA
+					AAAAAAAADeI=
+					</data>
+					<key>gradient angle</key>
+					<real>0.0</real>
+					<key>gradient control</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGdndYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oK8QGgcIDxghIiMkKjA0PD1CRkpSU1ZeX2Nr
+					bG9yVSRudWxs0wkKCwwNDl8QFE5TR3JhZGll
+					bnRDb2xvclNwYWNlViRjbGFzc18QFE5TR3Jh
+					ZGllbnRDb2xvckFycmF5gA2AGYAC0hAKERda
+					TlMub2JqZWN0c6USExQVFoADgAqAD4ASgBWA
+					GNMZEAoaHSBXTlMua2V5c6IbHIAEgAWiHh+A
+					BoAHgAlfEBJOU0dyYWRpZW50UG9zaXRpb25f
+					EA9OU0dyYWRpZW50Q29sb3IiAAAAANMlJgon
+					KClVTlNSR0JcTlNDb2xvclNwYWNlTxAmMC40
+					MDAwMDAwMDYgMC45MzMzMzMzMzczIDAuNzU2
+					ODYyNzU5NgAQAYAI0issLS5aJGNsYXNzbmFt
+					ZVgkY2xhc3Nlc1dOU0NvbG9yoi0vWE5TT2Jq
+					ZWN00issMTJfEBNOU011dGFibGVEaWN0aW9u
+					YXJ5ozEzL1xOU0RpY3Rpb25hcnnTGRAKNTgg
+					ohscgASABaI5OoALgAyACSI+sMhs1CUmPgo/
+					KAwpXxASTlNDdXN0b21Db2xvclNwYWNlTxAn
+					MC4zMDAwMDAwMTE5IDAuNzg2Mjc0NTUyMyAw
+					LjY1Njg2MjczNTcAgA2ACNJDCkRFVE5TSUQQ
+					AYAO0issR0hcTlNDb2xvclNwYWNlokkvXE5T
+					Q29sb3JTcGFjZdMZEApLTiCiGxyABIAFok9Q
+					gBCAEYAJIj8wyGzTJSYKVCgpTxAmMC4yMDAw
+					MDAwMDMgMC42MzkyMTU3MDc4IDAuNTU2ODYy
+					NzcxNQCACNMZEApXWiCiGxyABIAFoltcgBOA
+					FIAJIj9YZDbUJSY+CmAoDClPECcwLjE2NDcw
+					NTg4NzQgMC41Njg2Mjc0NzY3IDAuNTA3ODQz
+					MTM2OACADYAI0xkQCmRnIKIbHIAEgAWiaGmA
+					FoAXgAkiP4AAANMlJgptKClPECcwLjEyOTQx
+					MTc3MTkgMC40OTgwMzkyMTU4IDAuNDU4ODIz
+					NTMxOQCACNIrLHBxV05TQXJyYXmicC/SKyxz
+					dFpOU0dyYWRpZW50onUvWk5TR3JhZGllbnRf
+					EA9OU0tleWVkQXJjaGl2ZXLReHlUcm9vdIAB
+					AAgAEQAaACMALQAyADcAVABaAGEAeAB/AJYA
+					mACaAJwAoQCsALIAtAC2ALgAugC8AL4AxQDN
+					ANAA0gDUANcA2QDbAN0A8gEEAQkBEAEWASMB
+					TAFOAVABVQFgAWkBcQF0AX0BggGYAZwBqQGw
+					AbMBtQG3AboBvAG+AcABxQHOAeMCDQIPAhEC
+					FgIbAh0CHwIkAjECNAJBAkgCSwJNAk8CUgJU
+					AlYCWAJdAmQCjQKPApYCmQKbAp0CoAKiAqQC
+					pgKrArQC3gLgAuIC6QLsAu4C8ALzAvUC9wL5
+					Av4DBQMvAzEDNgM+A0EDRgNRA1QDXwNxA3QD
+					eQAAAAAAAAIBAAAAAAAAAHoAAAAAAAAAAAAA
+					AAAAAAN7
+					</data>
+					<key>gradient offset</key>
+					<string>{0, 0}</string>
+					<key>gradient type</key>
+					<integer>0</integer>
+					<key>unit name</key>
+					<string>gradientUnit</string>
+				</dict>
+				<key>inner shadow unit</key>
+				<dict>
+					<key>composite operation</key>
+					<integer>0</integer>
+					<key>is inner shadow</key>
+					<false/>
+					<key>shadow angle</key>
+					<real>0.0</real>
+					<key>shadow blur</key>
+					<real>5</real>
+					<key>shadow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NKMCAwIDAgMC44
+					ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFz
+					c2VzV05TQ29sb3KiEhRYTlNPYmplY3RfEA9O
+					U0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEa
+					Iy0yNztBSE5bYm1vcXaBipKVnrCzuAAAAAAA
+					AAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAAC6
+					</data>
+					<key>shadow distance</key>
+					<real>0.0</real>
+					<key>unit name</key>
+					<string>innerShadowUnit</string>
+					<key>width</key>
+					<real>0.0</real>
+				</dict>
+				<key>mask unit</key>
+				<dict>
+					<key>isMask</key>
+					<false/>
+					<key>mask angle</key>
+					<real>0.0</real>
+					<key>mask brightness</key>
+					<real>0.70754718780517578</real>
+					<key>mask contrast</key>
+					<real>3.5128645896911621</real>
+					<key>mask data ref</key>
+					<string>Masks/Mask13.jpg</string>
+					<key>mask is inverse</key>
+					<false/>
+					<key>mask offset</key>
+					<string>{0, 0}</string>
+					<key>mask scale</key>
+					<real>1.3660175800323486</real>
+					<key>unit name</key>
+					<string>maskUnit</string>
+				</dict>
+				<key>shader unit</key>
+				<dict>
+					<key>unit name</key>
+					<string>shaderUnit</string>
+				</dict>
+				<key>shadow is shadow</key>
+				<false/>
+				<key>shadow unit</key>
+				<dict>
+					<key>shadow angle</key>
+					<real>0.0</real>
+					<key>shadow blur</key>
+					<real>0.0</real>
+					<key>shadow color</key>
+					<data>
+					YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25Y
+					JG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGG
+					oKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5T
+					Q29sb3JTcGFjZVYkY2xhc3NPEBMwIDAgMCAw
+					LjgwMDAwMDAxMTkAEAGAAtIQERITWiRjbGFz
+					c25hbWVYJGNsYXNzZXNXTlNDb2xvcqISFFhO
+					U09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEX
+					GFRyb290gAEIERojLTI3O0FITltieHp8gYyV
+					naCpu77DAAAAAAAAAQEAAAAAAAAAGQAAAAAA
+					AAAAAAAAAAAAAMU=
+					</data>
+					<key>shadow distance</key>
+					<real>0.0</real>
+					<key>unit name</key>
+					<string>shadowUnit</string>
+				</dict>
+				<key>stroke unit</key>
+				<dict>
+					<key>Stroke List</key>
+					<array>
+						<dict>
+							<key>color</key>
+							<data>
+							YnBsaXN0MDDUAQIDBAUG
+							FRZYJHZlcnNpb25YJG9i
+							amVjdHNZJGFyY2hpdmVy
+							VCR0b3ASAAGGoKMHCA9V
+							JG51bGzTCQoLDA0OV05T
+							V2hpdGVcTlNDb2xvclNw
+							YWNlViRjbGFzc0IwABAD
+							gALSEBESE1okY2xhc3Nu
+							YW1lWCRjbGFzc2VzV05T
+							Q29sb3KiEhRYTlNPYmpl
+							Y3RfEA9OU0tleWVkQXJj
+							aGl2ZXLRFxhUcm9vdIAB
+							CBEaIy0yNztBSFBdZGdp
+							a3B7hIyPmKqtsgAAAAAA
+							AAEBAAAAAAAAABkAAAAA
+							AAAAAAAAAAAAAAC0
+							</data>
+							<key>width</key>
+							<real>1</real>
+						</dict>
+					</array>
+					<key>stroke</key>
+					<false/>
+					<key>unit name</key>
+					<string>strokeUnit</string>
+				</dict>
+				<key>texture unit</key>
+				<dict>
+					<key>texture angle</key>
+					<real>0.0</real>
+					<key>texture phase</key>
+					<string>{0, 0}</string>
+					<key>texture scale</key>
+					<real>1</real>
+					<key>texture type</key>
+					<integer>4</integer>
+					<key>unit name</key>
+					<string>textureUnit</string>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+	<key>version</key>
+	<integer>654</integer>
+</dict>
+</plist>

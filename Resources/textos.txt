@@ -1,0 +1,779 @@
+/* Class = "UILabel"; text = "0"; ObjectID = "0qN-m3-pcN"; */
+"0qN-m3-pcN.text" = "0";
+
+/* Class = "UILabel"; text = "Dizziness disability: 0"; ObjectID = "0rq-EH-Xcc"; */
+"0rq-EH-Xcc.text" = "Mareo de fondo: 0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "0xP-Od-Mj9"; */
+"0xP-Od-Mj9.text" = "0";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "1RG-YZ-SJP"; */
+"1RG-YZ-SJP.text" = "Max.";
+
+/* Class = "UILabel"; text = "ON CRISIS"; ObjectID = "1Xe-5I-9FV"; */
+"1Xe-5I-9FV.text" = "EN CRISIS";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1gB-k3-7eA"; */
+"1gB-k3-7eA.text" = "Etiqueta";
+
+/* Class = "UIButton"; normalTitle = "New Password"; ObjectID = "1t3-Ih-KIo"; */
+"1t3-Ih-KIo.normalTitle" = "Nueva Contraseña";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "2m4-7l-Rqu"; */
+"2m4-7l-Rqu.text" = "Max.";
+
+/* Class = "UILabel"; text = "My notes"; ObjectID = "3RS-sO-93Y"; */
+"3RS-sO-93Y.text" = "Mis notas";
+
+/* Class = "UILabel"; text = "Ear fullness"; ObjectID = "3eU-Zo-aKJ"; */
+"3eU-Zo-aKJ.text" = "Plenitud ótica";
+
+/* Class = "UILabel"; text = "LOG IN: HEARING DIARY"; ObjectID = "3lq-Ac-tOu"; */
+"3lq-Ac-tOu.text" = "ACCESO: DIARIO AUDITIVO";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "3uf-nE-Lf6"; */
+"3uf-nE-Lf6.text" = "5";
+
+/* Class = "UISegmentedControl"; 3xr-AC-0yW.segmentTitles[0] = "N/A"; ObjectID = "3xr-AC-0yW"; */
+"3xr-AC-0yW.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; 3xr-AC-0yW.segmentTitles[1] = "Excelent"; ObjectID = "3xr-AC-0yW"; */
+"3xr-AC-0yW.segmentTitles[1]" = "Excelente";
+
+/* Class = "UISegmentedControl"; 3xr-AC-0yW.segmentTitles[2] = "Regular"; ObjectID = "3xr-AC-0yW"; */
+"3xr-AC-0yW.segmentTitles[2]" = "Regular";
+
+/* Class = "UISegmentedControl"; 3xr-AC-0yW.segmentTitles[3] = "Poor"; ObjectID = "3xr-AC-0yW"; */
+"3xr-AC-0yW.segmentTitles[3]" = "Malo";
+
+/* Class = "UILabel"; text = "Vertigo days"; ObjectID = "4CU-gY-3HF"; */
+"4CU-gY-3HF.text" = "Vértigo";
+
+/* Class = "UINavigationItem"; title = "View events report"; ObjectID = "4Xp-Av-10g"; */
+"4Xp-Av-10g.title" = "Ver informe";
+
+/* Class = "UILabel"; text = "Event triggers"; ObjectID = "5KK-85-NaF"; */
+"5KK-85-NaF.text" = "Desencadenantes";
+
+/* Class = "UILabel"; text = "Activity limitation: 0"; ObjectID = "5XX-DK-2iU"; */
+"5XX-DK-2iU.text" = "Limitación actividad: 0";
+
+/* Class = "UILabel"; text = "Main triggers:  One Two Three Four"; ObjectID = "6L2-lM-ngF"; */
+"6L2-lM-ngF.text" = "Main triggers:
+
+One
+Two
+Three
+Four";
+
+/* Class = "UILabel"; text = "MÉNIÈRE"; ObjectID = "6T3-ic-IKC"; */
+"6T3-ic-IKC.text" = "MÉNIÈRE";
+
+/* Class = "UILabel"; text = "Head Pressure: 0"; ObjectID = "6WQ-4C-dDQ"; */
+"6WQ-4C-dDQ.text" = "Pesión Cefálica: 0";
+
+/* Class = "UILabel"; text = "Events in month:"; ObjectID = "6XZ-Um-FtU"; */
+"6XZ-Um-FtU.text" = "Eventos del mes:";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "6og-WP-pqx"; */
+"6og-WP-pqx.text" = "Max.";
+
+/* Class = "UIButton"; normalTitle = "Back Today"; ObjectID = "7gb-Dy-fSu"; */
+"7gb-Dy-fSu.normalTitle" = "Volver a Hoy";
+
+/* Class = "UILabel"; text = "Phonophobia"; ObjectID = "9X3-uu-i9v"; */
+"9X3-uu-i9v.text" = "Fonofobia";
+
+/* Class = "UILabel"; text = "Photophobia"; ObjectID = "12E-rG-vq2"; */
+"12E-rG-vq2.text" = "Fotofobia";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "12W-tg-BOb"; */
+"12W-tg-BOb.text" = "5";
+
+/* Class = "UILabel"; text = "JARM"; ObjectID = "12b-BB-2vg"; */
+"12b-BB-2vg.text" = "JARM";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "16b-er-Whg"; */
+"16b-er-Whg.text" = "Max.";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "17B-ty-A9w"; */
+"17B-ty-A9w.text" = "5";
+
+/* Class = "UILabel"; text = "Physical activity"; ObjectID = "55H-Qs-WQE"; */
+"55H-Qs-WQE.text" = "Actividad física";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "55M-Ft-gVY"; */
+"55M-Ft-gVY.text" = "Min.";
+
+/* Class = "UILabel"; text = "Frameworks"; ObjectID = "56Q-KJ-ttP"; */
+"56Q-KJ-ttP.text" = "Frameworks";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "78V-nR-Ngl"; */
+"78V-nR-Ngl.text" = "5";
+
+/* Class = "UILabel"; text = "Visit Website"; ObjectID = "87V-hN-3Gp"; */
+"87V-hN-3Gp.text" = "Visitar Web";
+
+/* Class = "UILabel"; text = "Weather"; ObjectID = "273-lE-CfH"; */
+"273-lE-CfH.text" = "Clima";
+
+/* Class = "UILabel"; text = "JARM"; ObjectID = "A5f-MZ-xTT"; */
+"A5f-MZ-xTT.text" = "JARM";
+
+/* Class = "UIButton"; normalTitle = "New Password"; ObjectID = "Bej-Xa-q0D"; */
+"Bej-Xa-q0D.normalTitle" = "Nueva Contraseña";
+
+/* Class = "UILabel"; text = "Menstruation"; ObjectID = "BkW-0P-vLz"; */
+"BkW-0P-vLz.text" = "Menstruación";
+
+/* Class = "UILabel"; text = "Authors"; ObjectID = "ByI-vT-u3h"; */
+"ByI-vT-u3h.text" = "Autores";
+
+/* Class = "UILabel"; text = "Healthy Habits"; ObjectID = "C94-NA-m5R"; */
+"C94-NA-m5R.text" = "Buenos Hábitos";
+
+/* Class = "UILabel"; text = "Vertical Sensivity"; ObjectID = "CY4-iy-3o1"; */
+"CY4-iy-3o1.text" = "Vertical Subjetiva";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "Cmi-HY-jNZ"; */
+"Cmi-HY-jNZ.text" = "Min.";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "D8D-K4-D98"; */
+"D8D-K4-D98.text" = "Max.";
+
+/* Class = "UISegmentedControl"; DEN-FF-Sch.segmentTitles[0] = "N/A"; ObjectID = "DEN-FF-Sch"; */
+"DEN-FF-Sch.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; DEN-FF-Sch.segmentTitles[1] = "Throbbing"; ObjectID = "DEN-FF-Sch"; */
+"DEN-FF-Sch.segmentTitles[1]" = "Pulsátil";
+
+/* Class = "UISegmentedControl"; DEN-FF-Sch.segmentTitles[2] = "Tightening"; ObjectID = "DEN-FF-Sch"; */
+"DEN-FF-Sch.segmentTitles[2]" = "Opresivo";
+
+/* Class = "UITextView"; text = "About text"; ObjectID = "DSn-ye-p5I"; */
+"DSn-ye-p5I.text" = "Acerca de";
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "DYh-va-LGX"; */
+"DYh-va-LGX.text" = "Fecha";
+
+/* Class = "UINavigationItem"; title = "Hearing Diary"; ObjectID = "Dhh-2D-8F8"; */
+"Dhh-2D-8F8.title" = "Diario Auditivo";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "Dhx-CA-lXW"; */
+"Dhx-CA-lXW.text" = "Min.";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "EBo-h2-mk9"; */
+"EBo-h2-mk9.text" = "Max.";
+
+/* Class = "UILabel"; text = "To protect your personal data this section is password protected.\n Enter or create password below."; ObjectID = "EIk-2b-UOM"; */
+"EIk-2b-UOM.text" = "Para proteger sus datos esta sección está protegida por contraseña.
+
+Escriba su contraseña y entre.";
+
+/* Class = "UILabel"; text = "Weather"; ObjectID = "ETu-Sv-dVb"; */
+"ETu-Sv-dVb.text" = "Clima";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Ejl-p7-kR6"; */
+"Ejl-p7-kR6.text" = "0";
+
+/* Class = "UILabel"; text = "Background Symptoms"; ObjectID = "Em7-Jh-bhj"; */
+"Em7-Jh-bhj.text" = "Síntomas Residuales";
+
+/* Class = "UILabel"; text = "Headache"; ObjectID = "GQ3-wH-mKN"; */
+"GQ3-wH-mKN.text" = "Jaqueca";
+
+/* Class = "UINavigationItem"; title = "Add today Ménière's events"; ObjectID = "GjL-Zj-9TL"; */
+"GjL-Zj-9TL.title" = "Añadir eventos para hoy";
+
+/* Class = "UILabel"; text = "Vomiting"; ObjectID = "Gyi-5r-sD4"; */
+"Gyi-5r-sD4.text" = "Vómito";
+
+/* Class = "UILabel"; text = "Tumarkin"; ObjectID = "HDD-dA-vLn"; */
+"HDD-dA-vLn.text" = "Tumarkin";
+
+/* Class = "UIButton"; normalTitle = "Month Report"; ObjectID = "HEM-Qn-Cjz"; */
+"HEM-Qn-Cjz.normalTitle" = "Informe Mensual";
+
+/* Class = "UILabel"; text = "Headache properties"; ObjectID = "HSS-AT-xzM"; */
+"HSS-AT-xzM.text" = "Tipo de jaqueca";
+
+/* Class = "UILabel"; text = "Inestability disability: 0"; ObjectID = "HUx-2C-hgf"; */
+"HUx-2C-hgf.text" = "Inestabilidad de fondo: 0";
+
+/* Class = "UISegmentedControl"; HYa-no-OgK.segmentTitles[0] = "N/A"; ObjectID = "HYa-no-OgK"; */
+"HYa-no-OgK.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; HYa-no-OgK.segmentTitles[1] = "High"; ObjectID = "HYa-no-OgK"; */
+"HYa-no-OgK.segmentTitles[1]" = "Alto";
+
+/* Class = "UISegmentedControl"; HYa-no-OgK.segmentTitles[2] = "Medium"; ObjectID = "HYa-no-OgK"; */
+"HYa-no-OgK.segmentTitles[2]" = "Moderado";
+
+/* Class = "UISegmentedControl"; HYa-no-OgK.segmentTitles[3] = "Low"; ObjectID = "HYa-no-OgK"; */
+"HYa-no-OgK.segmentTitles[3]" = "Bajo";
+
+/* Class = "UILabel"; text = "Instability intensity: 0"; ObjectID = "Hfn-Sk-QWZ"; */
+"Hfn-Sk-QWZ.text" = "Inestabilidad: 0";
+
+/* Class = "UITabBarItem"; title = "+ Utilities"; ObjectID = "HgH-Pt-qRu"; */
+"HgH-Pt-qRu.title" = "+ Utilidades";
+
+/* Class = "UISegmentedControl"; Hwe-9W-vRq.segmentTitles[0] = "N/A"; ObjectID = "Hwe-9W-vRq"; */
+"Hwe-9W-vRq.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; Hwe-9W-vRq.segmentTitles[1] = "Excelent"; ObjectID = "Hwe-9W-vRq"; */
+"Hwe-9W-vRq.segmentTitles[1]" = "Excelente";
+
+/* Class = "UISegmentedControl"; Hwe-9W-vRq.segmentTitles[2] = "Regular"; ObjectID = "Hwe-9W-vRq"; */
+"Hwe-9W-vRq.segmentTitles[2]" = "Regular";
+
+/* Class = "UISegmentedControl"; Hwe-9W-vRq.segmentTitles[3] = "Poor"; ObjectID = "Hwe-9W-vRq"; */
+"Hwe-9W-vRq.segmentTitles[3]" = "Malo";
+
+/* Class = "UITabBarItem"; title = "Help"; ObjectID = "I6G-qZ-2tT"; */
+"I6G-qZ-2tT.title" = "Ayuda";
+
+/* Class = "UILabel"; text = "Mean duration"; ObjectID = "INI-Kz-N8f"; */
+"INI-Kz-N8f.text" = "Mean duration";
+
+/* Class = "UISegmentedControl"; J3Y-jq-7uE.segmentTitles[0] = "N/A"; ObjectID = "J3Y-jq-7uE"; */
+"J3Y-jq-7uE.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; J3Y-jq-7uE.segmentTitles[1] = "Throbbing"; ObjectID = "J3Y-jq-7uE"; */
+"J3Y-jq-7uE.segmentTitles[1]" = "Pulsátil";
+
+/* Class = "UISegmentedControl"; J3Y-jq-7uE.segmentTitles[2] = "Tightening"; ObjectID = "J3Y-jq-7uE"; */
+"J3Y-jq-7uE.segmentTitles[2]" = "Opresivo";
+
+/* Class = "UILabel"; text = "To protect your personal data this section is password protected.\n Enter or create password below."; ObjectID = "KSH-8M-gMy"; */
+"KSH-8M-gMy.text" = "Para proteger sus datos esta sección está protegida por contraseña.
+
+Escriba su contraseña y entre.";
+
+/* Class = "UILabel"; text = "Vertigo intensity: 0"; ObjectID = "Ki1-mo-GOe"; */
+"Ki1-mo-GOe.text" = "Intensidad vértigo: 0";
+
+/* Class = "UILabel"; text = "1.- Go to a very silent room. 2.- Check MUTE button is OFF. 3.- Place the EarPod on your LEFT ear. 4.- Press Start button. 5.- Press (and hold) the button when you hear sound. 6.- Release the button when you do not hear sound. 7.- Repeat many times point 5 and 6 following the instructions."; ObjectID = "LKR-tY-gXa"; */
+"LKR-tY-gXa.text" = "1.- Vaya a una habitación silenciosa.
+2.- Desactive el interruptor de SILENCIO del teléfono.
+3.- Póngase un auricular en el oído IZQUIERDO.
+4.- Pulse EMPEZAR.
+5.- Pulse (y mantenga) el botón mientras oiga un pitido.
+6.- Suelte cuando no oiga pitido.
+7.- Repita varias veces los pasos 5 y 6 (siga las instrucciones)";
+
+/* Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "NIl-Iz-ZwY"; */
+"NIl-Iz-ZwY.normalTitle" = "ACCESO";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "NL4-ke-ggH"; */
+"NL4-ke-ggH.text" = "0";
+
+/* Class = "UITextView"; text = "Disability Scale: (Shephard et al., 1990) \n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or had to change job because of symptoms\n5: Established severe disability; unable to work for over 1 year or established\npermanent disability with compensation payments"; ObjectID = "NLc-1v-al8"; */
+"NLc-1v-al8.text" = "Escala de discapacidad: (Adaptado de Shephard et al., 1990
+
+0: Sin discapacidad; no hay síntomas
+1: Sin discapacidad; síntomas anecdóticos
+2: Leve discapacidad; realiza sus tareas o trabajos habitualmente pero los síntomas interfieren con ellos
+3: Discapacidad moderada; los síntomas interrumpen y dificultan frecuentemente sus actividades o trabajos
+4: Discapacidad severa reciente; de baja médica o ha cambiado de trabajo por culpa de los síntomas
+5: Discapacidad severa permanente; incapacitado para trabajar durante más de un año o con pensión de discapacidad.";
+
+/* Class = "UITextView"; text = "Disability Scale: (Shephard et al., 1990) \n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or had to change job because of symptoms\n5: Established severe disability; unable to work for over 1 year or established\npermanent disability with compensation payments"; ObjectID = "O5Q-Ne-tpS"; */
+"O5Q-Ne-tpS.text" = "Escala de discapacidad: (Adaptado de Shephard et al., 1990)
+
+0: Sin discapacidad; no hay síntomas
+1: Sin discapacidad; síntomas anecdóticos
+2: Leve discapacidad; realiza sus tareas o trabajos habitualmente pero los síntomas interfieren con ellos
+3: Discapacidad moderada; los síntomas interrumpen y dificultan frecuentemente sus actividades o trabajos
+4: Discapacidad severa reciente; de baja médica o ha cambiado de trabajo por culpa de los síntomas
+5: Discapacidad severa permanente; incapacitado para trabajar durante más de un año o con pensión de discapacidad.";
+
+/* Class = "UINavigationItem"; title = "Some Utilities"; ObjectID = "Pax-3n-Ss5"; */
+"Pax-3n-Ss5.title" = "Algunas Utilidades";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "Q6m-0Q-Q9x"; */
+"Q6m-0Q-Q9x.text" = "Min.";
+
+/* Class = "UITextView"; text = "Authors: ---------  Juan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  Nicolás Pérez Fernández (Medical Advisor) Ángel Batuecas Caletrío (Medical Advisor) Jose Antonio López Escámez (Medical Advisor) Mark Jackson (English Localization) Eva Perendreu (ASMES)  Original Idea & Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa & Rey"; ObjectID = "QPi-qI-ln4"; */
+"QPi-qI-ln4.text" = "Autores:
+---------
+
+Juan Manuel Espinosa
+Jorge Rey Martínez
+
+Colaboradores:
+--------------
+
+Nicolás Pérez Fernández (Asesor médico)
+Ángel Batuecas Caletrío (Asesor médico)
+Jose Antonio López Escámez (Asesor médico)
+Mark Jackson (Revisión del Inglés)
+Eva Perendreu (Supervisora de ASMES)
+
+Diseño e Idea Original:
+-----------------------
+
+Juan Manuel Espinosa
+Jorge Rey Martínez
+
+Desarrollo y Diseño para iOS:
+------------------------------
+
+Jorge Rey Martínez
+Marina González Llorca (Diseñadora para iOS)
+
+
+
+© 2017 Espinosa & Rey";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "QiW-Ia-PQw"; */
+"QiW-Ia-PQw.text" = "Min.";
+
+/* Class = "UINavigationItem"; title = "Frameworks"; ObjectID = "QnY-nK-2b4"; */
+"QnY-nK-2b4.title" = "Frameworks";
+
+/* Class = "UILabel"; text = "Habit - Excess"; ObjectID = "Qsm-3I-9MX"; */
+"Qsm-3I-9MX.text" = "Excesos";
+
+/* Class = "UIButton"; normalTitle = "Touch ID login"; ObjectID = "R08-0F-ImZ"; */
+"R08-0F-ImZ.normalTitle" = "Acceso Touch ID";
+
+/* Class = "UILabel"; text = "Tumarkin"; ObjectID = "R8r-2q-g7G"; */
+"R8r-2q-g7G.text" = "Tumarkin";
+
+/* Class = "UILabel"; text = "Rate Me !"; ObjectID = "S6l-nB-gA8"; */
+"S6l-nB-gA8.text" = "¡Puntúame!";
+
+/* Class = "UILabel"; text = "Mean intensity"; ObjectID = "SkL-LX-oRd"; */
+"SkL-LX-oRd.text" = "Mean intensity";
+
+/* Class = "UILabel"; text = "Vertigo intensity: 0"; ObjectID = "Skg-tw-dfY"; */
+"Skg-tw-dfY.text" = "Intensidad vértigo: 0";
+
+/* Class = "UILabel"; text = "Event triggers"; ObjectID = "SmK-0P-3rE"; */
+"SmK-0P-3rE.text" = "Desencadenantes";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "TAt-oW-raM"; */
+"TAt-oW-raM.text" = "5";
+
+/* Class = "UILabel"; text = "Vertigo attacks: & Migraine attacks:"; ObjectID = "TIb-Ag-Anr"; */
+"TIb-Ag-Anr.text" = "Vertigo attacks: & Migraine attacks:";
+
+/* Class = "UIButton"; normalTitle = "START"; ObjectID = "TKf-E2-iXg"; */
+"TKf-E2-iXg.normalTitle" = "EMPEZAR";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Tba-k0-mjE"; */
+"Tba-k0-mjE.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "New Event"; ObjectID = "U0f-nj-tWx"; */
+"U0f-nj-tWx.normalTitle" = "Nuevo Evento";
+
+/* Class = "UILabel"; text = "Nausea"; ObjectID = "U9b-4m-Yqc"; */
+"U9b-4m-Yqc.text" = "Nausea";
+
+/* Class = "UIButton"; normalTitle = "Expand Graph"; ObjectID = "Ugc-NE-nq2"; */
+"Ugc-NE-nq2.normalTitle" = "Gráfico Ampliado";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "Um3-i7-vbe"; */
+"Um3-i7-vbe.text" = "Min.";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Vw9-Wq-KgT"; */
+"Vw9-Wq-KgT.text" = "0";
+
+/* Class = "UILabel"; text = "Sleep"; ObjectID = "VzE-Ol-hNP"; */
+"VzE-Ol-hNP.text" = "Sueño";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[0] = "N/A"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[1] = "Salt"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[1]" = "Sal";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[2] = "Caffeine"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[2]" = "Cafeina";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[3] = "Alcohol"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[3]" = "Alcohol";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[4] = "Tobacco"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[4]" = "Tabaco";
+
+/* Class = "UISegmentedControl"; WBi-2g-Yfi.segmentTitles[5] = "Sugar"; ObjectID = "WBi-2g-Yfi"; */
+"WBi-2g-Yfi.segmentTitles[5]" = "Azúcar";
+
+/* Class = "UILabel"; text = "Visual Symptoms"; ObjectID = "WCB-3F-ab7"; */
+"WCB-3F-ab7.text" = "Síntomas
+Visuales";
+
+/* Class = "UILabel"; text = "S"; ObjectID = "WKc-Wi-710"; */
+"WKc-Wi-710.text" = "S";
+
+/* Class = "UILabel"; text = "Migraine days"; ObjectID = "Wvv-Sq-Xsi"; */
+"Wvv-Sq-Xsi.text" = "Migraña";
+
+/* Class = "UILabel"; text = "Instability"; ObjectID = "Xef-ME-yXl"; */
+"Xef-ME-yXl.text" = "Inestabilidad";
+
+/* Class = "UILabel"; text = "Day events"; ObjectID = "YK3-i5-8dN"; */
+"YK3-i5-8dN.text" = "Eventos";
+
+/* Class = "UILabel"; text = "This month statistics"; ObjectID = "YPk-Wt-Cfd"; */
+"YPk-Wt-Cfd.text" = "Estadísticas del mes";
+
+/* Class = "UILabel"; text = "Mean stress"; ObjectID = "YRn-nT-EBS"; */
+"YRn-nT-EBS.text" = "Mean stress";
+
+/* Class = "UILabel"; text = "Physical activity"; ObjectID = "YUG-9O-tzx"; */
+"YUG-9O-tzx.text" = "Actividad física";
+
+/* Class = "UILabel"; text = "Hearing loss"; ObjectID = "YVS-GN-2W0"; */
+"YVS-GN-2W0.text" = "Sordera";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "YgG-ho-oWU"; */
+"YgG-ho-oWU.text" = "0";
+
+/* Class = "UILabel"; text = "S"; ObjectID = "ZNW-rc-9tz"; */
+"ZNW-rc-9tz.text" = "S";
+
+/* Class = "UILabel"; text = "My notes"; ObjectID = "a8w-AL-eim"; */
+"a8w-AL-eim.text" = "Mis notas";
+
+/* Class = "UILabel"; text = "Visual Blurr disability: 0"; ObjectID = "aAo-d2-yqk"; */
+"aAo-d2-yqk.text" = "Visión borrosa: 0";
+
+/* Class = "UILabel"; text = "Today Events"; ObjectID = "aR8-8i-wRh"; */
+"aR8-8i-wRh.text" = "Eventos de Hoy";
+
+/* Class = "UILabel"; text = "Tinnitus"; ObjectID = "aaS-7U-sUO"; */
+"aaS-7U-sUO.text" = "Acúfenos";
+
+/* Class = "UITabBarItem"; title = "My Ménière"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Mi Ménière";
+
+/* Class = "UINavigationItem"; title = "Log In"; ObjectID = "ayu-tG-VoH"; */
+"ayu-tG-VoH.title" = "Acceso";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "bN6-Bg-AJA"; */
+"bN6-Bg-AJA.text" = "5";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "bXS-Sf-vKW"; */
+"bXS-Sf-vKW.text" = "Min.";
+
+/* Class = "UISegmentedControl"; bus-5o-y9u.segmentTitles[0] = "N/A"; ObjectID = "bus-5o-y9u"; */
+"bus-5o-y9u.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; bus-5o-y9u.segmentTitles[1] = "Mild"; ObjectID = "bus-5o-y9u"; */
+"bus-5o-y9u.segmentTitles[1]" = "Leve";
+
+/* Class = "UISegmentedControl"; bus-5o-y9u.segmentTitles[2] = "Moderate"; ObjectID = "bus-5o-y9u"; */
+"bus-5o-y9u.segmentTitles[2]" = "Moderado";
+
+/* Class = "UISegmentedControl"; bus-5o-y9u.segmentTitles[3] = "Severe"; ObjectID = "bus-5o-y9u"; */
+"bus-5o-y9u.segmentTitles[3]" = "Severo";
+
+/* Class = "UILabel"; text = "Menstruation"; ObjectID = "c1R-wR-SvG"; */
+"c1R-wR-SvG.text" = "Menstruación";
+
+/* Class = "UILabel"; text = "Visual Symptoms"; ObjectID = "cEl-pk-U6L"; */
+"cEl-pk-U6L.text" = "Síntomas
+Visuales";
+
+/* Class = "UITabBarItem"; title = "About Ménière"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Sobre Ménière";
+
+/* Class = "UILabel"; text = "MÉNIÈRE"; ObjectID = "cXX-KG-mcQ"; */
+"cXX-KG-mcQ.text" = "MÉNIÈRE";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "cfl-Vp-9sc"; */
+"cfl-Vp-9sc.text" = "Max.";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "clH-HN-NjI"; */
+"clH-HN-NjI.text" = "Max.";
+
+/* Class = "UILabel"; text = "Inestability disability: 0"; ObjectID = "dcd-Pn-QGq"; */
+"dcd-Pn-QGq.text" = "Inestabilidad de fondo: 0";
+
+/* Class = "UILabel"; text = "Nausea"; ObjectID = "eD4-mZ-G1D"; */
+"eD4-mZ-G1D.text" = "Nausea";
+
+/* Class = "UILabel"; text = "Not in test"; ObjectID = "eHE-8a-zXi"; */
+"eHE-8a-zXi.text" = "No en prueba";
+
+/* Class = "UILabel"; text = "Headache"; ObjectID = "eWc-sM-1G4"; */
+"eWc-sM-1G4.text" = "Jaqueca";
+
+/* Class = "UILabel"; text = "Phonophobia"; ObjectID = "eca-Tx-GTz"; */
+"eca-Tx-GTz.text" = "Fonofobia";
+
+/* Class = "UIButton"; normalTitle = "View Selected"; ObjectID = "eik-p9-Jx1"; */
+"eik-p9-Jx1.normalTitle" = "Ver Selección";
+
+/* Class = "UILabel"; text = "LOG IN: MY MÉNIÈRE"; ObjectID = "evn-xu-nUV"; */
+"evn-xu-nUV.text" = "ACCESO: MI MÉNIÈRE";
+
+/* Class = "UISegmentedControl"; f4a-iR-qoY.segmentTitles[0] = "N/A"; ObjectID = "f4a-iR-qoY"; */
+"f4a-iR-qoY.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; f4a-iR-qoY.segmentTitles[1] = "High"; ObjectID = "f4a-iR-qoY"; */
+"f4a-iR-qoY.segmentTitles[1]" = "Alto";
+
+/* Class = "UISegmentedControl"; f4a-iR-qoY.segmentTitles[2] = "Medium"; ObjectID = "f4a-iR-qoY"; */
+"f4a-iR-qoY.segmentTitles[2]" = "Moderado";
+
+/* Class = "UISegmentedControl"; f4a-iR-qoY.segmentTitles[3] = "Low"; ObjectID = "f4a-iR-qoY"; */
+"f4a-iR-qoY.segmentTitles[3]" = "Bajo";
+
+/* Class = "UIButton"; normalTitle = "Return"; ObjectID = "fGC-bE-j2M"; */
+"fGC-bE-j2M.normalTitle" = "Volver";
+
+/* Class = "UINavigationItem"; title = "Help & Info"; ObjectID = "fz6-5b-I40"; */
+"fz6-5b-I40.title" = "Info & Ayuda";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "g0A-XQ-Bhp"; */
+"g0A-XQ-Bhp.text" = "5";
+
+/* Class = "UILabel"; text = "Days in month"; ObjectID = "g4h-Uk-fmd"; */
+"g4h-Uk-fmd.text" = "Días del mes";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "g7b-ce-gt1"; */
+"g7b-ce-gt1.text" = "5";
+
+/* Class = "UILabel"; text = "Tinnitus"; ObjectID = "goc-3r-ny5"; */
+"goc-3r-ny5.text" = "Acúfenos";
+
+/* Class = "UISegmentedControl"; hUL-Dz-z1j.segmentTitles[0] = "N/A"; ObjectID = "hUL-Dz-z1j"; */
+"hUL-Dz-z1j.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; hUL-Dz-z1j.segmentTitles[1] = "Sunny"; ObjectID = "hUL-Dz-z1j"; */
+"hUL-Dz-z1j.segmentTitles[1]" = "Sol";
+
+/* Class = "UISegmentedControl"; hUL-Dz-z1j.segmentTitles[2] = "Cloudy"; ObjectID = "hUL-Dz-z1j"; */
+"hUL-Dz-z1j.segmentTitles[2]" = "Nublado";
+
+/* Class = "UISegmentedControl"; hUL-Dz-z1j.segmentTitles[3] = "Storm"; ObjectID = "hUL-Dz-z1j"; */
+"hUL-Dz-z1j.segmentTitles[3]" = "Tormenta";
+
+/* Class = "UILabel"; text = "INSTRUCTIONS"; ObjectID = "hrB-BI-PuY"; */
+"hrB-BI-PuY.text" = "INSTRUCCIONES";
+
+/* Class = "UILabel"; text = "Left Ear 500 OI 1000 OI 2000 OI 4000 OI"; ObjectID = "huF-qv-TAW"; */
+"huF-qv-TAW.text" = "Left Ear
+500 OI
+1000 OI
+2000 OI
+4000 OI";
+
+/* Class = "UINavigationItem"; title = "Log In"; ObjectID = "i3x-Nf-Ymz"; */
+"i3x-Nf-Ymz.title" = "Acceso";
+
+/* Class = "UILabel"; text = "Activity limitation: 0"; ObjectID = "iKi-sT-2C6"; */
+"iKi-sT-2C6.text" = "Limitación actividad: 0";
+
+/* Class = "UILabel"; text = "Duration: 0h:00m"; ObjectID = "iUW-Td-7gn"; */
+"iUW-Td-7gn.text" = "Duración: 0h:00m";
+
+/* Class = "UILabel"; text = "Instability intensity: 0"; ObjectID = "ifK-TE-QD8"; */
+"ifK-TE-QD8.text" = "Inestabilidad: 0";
+
+/* Class = "UILabel"; text = "Stress level: 0"; ObjectID = "jDN-xB-Acc"; */
+"jDN-xB-Acc.text" = "Nivel estrés: 0";
+
+/* Class = "UILabel"; text = "DATE"; ObjectID = "jWg-8f-5w4"; */
+"jWg-8f-5w4.text" = "FECHA";
+
+/* Class = "UILabel"; text = "Head Pressure: 0"; ObjectID = "jvr-ck-ecM"; */
+"jvr-ck-ecM.text" = "Presión Cefálica: 0";
+
+/* Class = "UILabel"; text = "Background Symptoms"; ObjectID = "kV4-wp-gNr"; */
+"kV4-wp-gNr.text" = "Síntomas Residuales";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "kb4-Ht-JSl"; */
+"kb4-Ht-JSl.text" = "5";
+
+/* Class = "UISegmentedControl"; kbz-5j-OzN.segmentTitles[0] = "N/A"; ObjectID = "kbz-5j-OzN"; */
+"kbz-5j-OzN.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; kbz-5j-OzN.segmentTitles[1] = "One side"; ObjectID = "kbz-5j-OzN"; */
+"kbz-5j-OzN.segmentTitles[1]" = "Un lado";
+
+/* Class = "UISegmentedControl"; kbz-5j-OzN.segmentTitles[2] = "Whole head"; ObjectID = "kbz-5j-OzN"; */
+"kbz-5j-OzN.segmentTitles[2]" = "Toda la cabeza";
+
+/* Class = "UILabel"; text = "Ear fullness"; ObjectID = "kd3-bO-ubY"; */
+"kd3-bO-ubY.text" = "Plenitud ótica";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "lKo-ZJ-Lsr"; */
+"lKo-ZJ-Lsr.text" = "Max.";
+
+/* Class = "UITextView"; text = "About text"; ObjectID = "m8i-Kt-YCq"; */
+"m8i-Kt-YCq.text" = "Acerca de";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "mIQ-xi-CMm"; */
+"mIQ-xi-CMm.text" = "5";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "mpr-mz-JUw"; */
+"mpr-mz-JUw.text" = "5";
+
+/* Class = "UINavigationItem"; title = "About Ménière"; ObjectID = "nW1-d5-oEu"; */
+"nW1-d5-oEu.title" = "Sobre Ménière";
+
+/* Class = "UISegmentedControl"; oBk-sw-5b7.segmentTitles[0] = "N/A"; ObjectID = "oBk-sw-5b7"; */
+"oBk-sw-5b7.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; oBk-sw-5b7.segmentTitles[1] = "One side"; ObjectID = "oBk-sw-5b7"; */
+"oBk-sw-5b7.segmentTitles[1]" = "Un lado";
+
+/* Class = "UISegmentedControl"; oBk-sw-5b7.segmentTitles[2] = "Whole head"; ObjectID = "oBk-sw-5b7"; */
+"oBk-sw-5b7.segmentTitles[2]" = "Toda la cabeza";
+
+/* Class = "UILabel"; text = "Intensity"; ObjectID = "oFt-h1-hQM"; */
+"oFt-h1-hQM.text" = "Intensidad";
+
+/* Class = "UINavigationItem"; title = "Authors & Cols."; ObjectID = "oUQ-5o-IdE"; */
+"oUQ-5o-IdE.title" = "Autores & Cols.";
+
+/* Class = "UILabel"; text = "Sleep"; ObjectID = "obg-mf-FpC"; */
+"obg-mf-FpC.text" = "Sueño";
+
+/* Class = "UINavigationItem"; title = "Hearing Assesement"; ObjectID = "pLK-Np-Ln2"; */
+"pLK-Np-Ln2.title" = "Valoración Auditiva";
+
+/* Class = "UINavigationItem"; title = "Ménière events calendar"; ObjectID = "pXX-Ee-EQs"; */
+"pXX-Ee-EQs.title" = "Calendario de eventos";
+
+/* Class = "UILabel"; text = "Duration: 0h:00m"; ObjectID = "pyT-QN-pJO"; */
+"pyT-QN-pJO.text" = "Duración: 0h:00m";
+
+/* Class = "UILabel"; text = "Right Ear 500 OD 1000 OD 2000 OD 4000 OD"; ObjectID = "qBP-pk-wMr"; */
+"qBP-pk-wMr.text" = "Right Ear
+500 OD
+1000 OD
+2000 OD
+4000 OD";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "qYe-xV-crr"; */
+"qYe-xV-crr.text" = "Min.";
+
+/* Class = "UILabel"; text = "31"; ObjectID = "r5q-tN-LTv"; */
+"r5q-tN-LTv.text" = "31";
+
+/* Class = "UINavigationItem"; title = "View Ménière events"; ObjectID = "rOC-0g-Jgr"; */
+"rOC-0g-Jgr.title" = "Ver eventos";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "rRh-4i-oXt"; */
+"rRh-4i-oXt.text" = "0";
+
+/* Class = "UILabel"; text = "Dizziness disability: 0"; ObjectID = "rWd-D2-iBY"; */
+"rWd-D2-iBY.text" = "Mareo de fondo: 0";
+
+/* Class = "UILabel"; text = "Visual Blurr disability: 0"; ObjectID = "sFY-K2-F0q"; */
+"sFY-K2-F0q.text" = "Visión borrosa: 0";
+
+/* Class = "UILabel"; text = "Vomiting"; ObjectID = "saU-zW-fdA"; */
+"saU-zW-fdA.text" = "Vómito";
+
+/* Class = "UILabel"; text = "Hearing loss"; ObjectID = "u3r-X1-FNt"; */
+"u3r-X1-FNt.text" = "Sordera";
+
+/* Class = "UILabel"; text = "Habit - Excess"; ObjectID = "ukH-rb-dRs"; */
+"ukH-rb-dRs.text" = "Excesos";
+
+/* Class = "UILabel"; text = "S"; ObjectID = "un9-1n-ckB"; */
+"un9-1n-ckB.text" = "S";
+
+/* Class = "UILabel"; text = "Max."; ObjectID = "upl-CR-tIy"; */
+"upl-CR-tIy.text" = "Max.";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "v4M-dG-MV0"; */
+"v4M-dG-MV0.text" = "10";
+
+/* Class = "UINavigationItem"; title = "User's Guide"; ObjectID = "vGH-i8-I7r"; */
+"vGH-i8-I7r.title" = "Guía de Uso";
+
+/* Class = "UILabel"; text = "Mean limitation"; ObjectID = "vc4-AV-CYt"; */
+"vc4-AV-CYt.text" = "Mean limitation";
+
+/* Class = "UILabel"; text = "Hearing Diary"; ObjectID = "vcb-Ds-SBZ"; */
+"vcb-Ds-SBZ.text" = "Diario Auditivo";
+
+/* Class = "UISegmentedControl"; vcu-cH-hKa.segmentTitles[0] = "N/A"; ObjectID = "vcu-cH-hKa"; */
+"vcu-cH-hKa.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; vcu-cH-hKa.segmentTitles[1] = "Sunny"; ObjectID = "vcu-cH-hKa"; */
+"vcu-cH-hKa.segmentTitles[1]" = "Sol";
+
+/* Class = "UISegmentedControl"; vcu-cH-hKa.segmentTitles[2] = "Cloudy"; ObjectID = "vcu-cH-hKa"; */
+"vcu-cH-hKa.segmentTitles[2]" = "Nublado";
+
+/* Class = "UISegmentedControl"; vcu-cH-hKa.segmentTitles[3] = "Storm"; ObjectID = "vcu-cH-hKa"; */
+"vcu-cH-hKa.segmentTitles[3]" = "Tormenta";
+
+/* Class = "UIButton"; normalTitle = "LOG IN"; ObjectID = "vrn-Jd-Kx4"; */
+"vrn-Jd-Kx4.normalTitle" = "ACCESO";
+
+/* Class = "UILabel"; text = "S"; ObjectID = "wU0-Jj-zRu"; */
+"wU0-Jj-zRu.text" = "S";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "wY6-QE-FL8"; */
+"wY6-QE-FL8.text" = "Min.";
+
+/* Class = "UILabel"; text = "Headache properties"; ObjectID = "wYr-AF-wEz"; */
+"wYr-AF-wEz.text" = "Tipo de jaqueca";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[0] = "N/A"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[1] = "Salt"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[1]" = "Sal";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[2] = "Caffeine"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[2]" = "Cafeina";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[3] = "Alcohol"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[3]" = "Alcohol";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[4] = "Tobacco"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[4]" = "Tabaco";
+
+/* Class = "UISegmentedControl"; wge-IH-Z6u.segmentTitles[5] = "Sugar"; ObjectID = "wge-IH-Z6u"; */
+"wge-IH-Z6u.segmentTitles[5]" = "Azúcar";
+
+/* Class = "UILabel"; text = "Events this month:"; ObjectID = "wlC-YH-AXg"; */
+"wlC-YH-AXg.text" = "Eventos este mes:";
+
+/* Class = "UILabel"; text = "Instability"; ObjectID = "xCE-xX-Tzf"; */
+"xCE-xX-Tzf.text" = "Inestabilidad";
+
+/* Class = "UILabel"; text = "User's Guide"; ObjectID = "xGM-Sp-idW"; */
+"xGM-Sp-idW.text" = "Guía de Uso";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "xLn-U1-Py6"; */
+"xLn-U1-Py6.text" = "5";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "xSJ-XD-uLl"; */
+"xSJ-XD-uLl.text" = "5";
+
+/* Class = "UILabel"; text = "Min."; ObjectID = "xd4-n5-0rS"; */
+"xd4-n5-0rS.text" = "Min.";
+
+/* Class = "UILabel"; text = "Photophobia"; ObjectID = "xpj-89-EQU"; */
+"xpj-89-EQU.text" = "Fotobobia";
+
+/* Class = "UIButton"; normalTitle = "Touch ID login"; ObjectID = "yGn-a6-4h1"; */
+"yGn-a6-4h1.normalTitle" = "Acceso Touch ID";
+
+/* Class = "UISegmentedControl"; zV9-w2-Xqd.segmentTitles[0] = "N/A"; ObjectID = "zV9-w2-Xqd"; */
+"zV9-w2-Xqd.segmentTitles[0]" = "N/C";
+
+/* Class = "UISegmentedControl"; zV9-w2-Xqd.segmentTitles[1] = "Mild"; ObjectID = "zV9-w2-Xqd"; */
+"zV9-w2-Xqd.segmentTitles[1]" = "Leve";
+
+/* Class = "UISegmentedControl"; zV9-w2-Xqd.segmentTitles[2] = "Moderate"; ObjectID = "zV9-w2-Xqd"; */
+"zV9-w2-Xqd.segmentTitles[2]" = "Moderado";
+
+/* Class = "UISegmentedControl"; zV9-w2-Xqd.segmentTitles[3] = "Severe"; ObjectID = "zV9-w2-Xqd"; */
+"zV9-w2-Xqd.segmentTitles[3]" = "Severo";
+
+/* Class = "UILabel"; text = "Stress level: 0"; ObjectID = "zX7-7Z-qfW"; */
+"zX7-7Z-qfW.text" = "Nivel estrés: 0";
+
