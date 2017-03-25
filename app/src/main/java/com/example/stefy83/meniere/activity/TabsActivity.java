@@ -1,5 +1,6 @@
 package com.example.stefy83.meniere.activity;
 
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.widget.TextView;
 
 import com.example.stefy83.meniere.R;
@@ -29,20 +31,28 @@ public class TabsActivity extends AppCompatActivity {
     private ViewPager viewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tabs);
+        try {
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            setContentView(R.layout.activity_tabs);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
+            toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
-        setupTabIcons();
+            viewPager = (ViewPager) findViewById(R.id.viewpager);
+            tabLayout = (TabLayout) findViewById(R.id.tabs);
+
+            setupViewPager(viewPager);
+            if (tabLayout != null) {
+                tabLayout.setupWithViewPager(viewPager);
+            }
+            setupTabIcons();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -76,12 +86,16 @@ public class TabsActivity extends AppCompatActivity {
      * @param viewPager
      */
     private void setupViewPager(ViewPager viewPager) {
-        TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new OneFragment(), "ONE");
-        adapter.addFrag(new TwoFragment(), "TWO");
-        adapter.addFrag(new ThreeFragment(), "THREE");
-        adapter.addFrag(new FourFragment(), "FOUR");
-        viewPager.setAdapter(adapter);
+        try {
+            TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(getSupportFragmentManager());
+            adapter.addFrag(new OneFragment(), "ONE");
+            adapter.addFrag(new TwoFragment(), "TWO");
+            adapter.addFrag(new ThreeFragment(), "THREE");
+            adapter.addFrag(new FourFragment(), "FOUR");
+            viewPager.setAdapter(adapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
