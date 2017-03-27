@@ -13,15 +13,51 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
     <string-array name="arrayQuestions">
-        <item>pregunta1</item>
-        <item>pregunta2</item>
-        <item>pregunta3</item>
+        <item>WHAT IS MÉNIÈRE’S DISEASE?</item>
+        <item>HOW COMMON IS IT?</item>
+        <item>WHAT IS THE CAUSE OF MD?</item>
+        <item>WHAT ARE THE SYMPTOMS OF MD?</item>
+        <item>HOW IS A DIAGNOSIS MADE?</item>
+        <item>HOW IS MD TREATED?</item>
+        <item>HOW CAN I COPE WITH MD?</item>
+        <item>MORE INFO ABOUT MD?</item>
     </string-array>
 
-    <string-array name="arrayAnswers">
-        <item>balblalblalblalbalbl balb alblal blal blalblabl al bl al blal bl a lb</item>
-        <item>asdf asdfgadfh rsthj iu djdgf hsfdh dfgfsg hsdf sf gfhsd</item>
-        <item>adfhg gsf ghsfg hda fgj jukdfg sf gsdf nfgh</item>
+    <string-array name="arrayAnswers" formatted="false">
+        <item>Ménière’s syndrome is a chronic inner-ear disorder characterized by frequent episodes of spontaneous vertigo and fluctuating hearing loss in one or sometimes both ears, tinnitus (ringing in the ears), and a feeling of fullness in the ear.
+            When we can point to a recognized cause for these symptoms, it is called Ménière’s syndrome. However, in many cases it is often difficult to find a cause at all, so in theses cases it is coined Ménière’s disease (MD).</item>
+        <item>Although MD is considered the third most common cause of vertigo, after benign paroxysmal positional vertigo and vestibular migraine, it is a rare disease. In the United States, it is estimated that approximately 615,000 individuals are currently diagnosed with Ménière’s disease and that 45,500 cases are newly diagnosed each year.
+            MD commonly begins between 30 and 50 years of age, and the condition is often found to affect a higher proportion of females. Both ears are affected in 25–40% of sufferers. If the condition is found in patients of the same family of one or two generations apart, it is considered familial MD.
+            Migraine and autoimmune diseases (systemic lupus erythematous, psoriasis, or rheumatoid arthritis) are common in patients with MD.
+        </item>
+        <item>The cause of MD is unknown although allergies, autoimmunity, and genetic factors are supposed to be involved. Furthermore, one or more suspected environmental factors may trigger the disease. Somehow, an excess of a fluid in the inner ear, known as endolymph, causes an expansion of some structures of the inner ear termed endolymphatic hydrops.
+        </item>
+        <item>Symptoms may vary over time and are often experienced differently from one patient to another. Vertigo is the most disabling symptom, commonly described as a spinning sensation, made worse by head movements and is accompanied by nausea, vomiting, and sweating. Spells of vertigo appear spontaneously lasting several hours and, when they subside,
+            patients complain of a lack of balance for some days.These spells of vertigo often begin with tinnitus and aural fullness, followed a little later by a loss of hearing in the affected ear. But, as the disease progresses over time, hearing worsens with each attack with the previous hearing level not fully recovered. Eventually, deafness becomes
+            permanent and no longer fluctuates.Some patients report sudden falls with no previous warning or trigger, and without vertigo, loss of consciousness, or other neurologic symptoms. We refer to these episodes as crises of Tumarkin.Headaches occur in more than 40% of Ménière’s attacks, and migraine-type headaches are felt in 8% of patients during
+            episodes of vertigo.Numerous factors have been known to trigger MD attacks, including stress, sleep deprivation, some foods, allergens, change of atmospheric pressure, and hormonal changes such us the period.The frequency of attacks is highly unpredictable and varies greatly from patient to patient. As time progresses, the frequency of these
+            attacks usually decreases, and hearing loss becomes permanent, as does the tinnitus.</item>
+        <item>There is currently no precise way of testing for MD, therefore diagnosis is determined through a patient´s symptoms and any signs perceived by a medical practitioner. A hearing test is needed to determine the existence of hearing loss in the affected ear, and its type. Balance function tests such as caloric tests and/or a video head impulse test, are commonly performed. A magnetic resonance imaging (MRI) is routinely called for to rule out other causes of vertigo.
+        </item>
+        <item>MD treatment is often issued in two main ways
+            Treatment given as and when a patient suffers a spell.
+            Preventive treatment, usually in the form of daily medication. While suffering a spell of MD, you may require medication to alleviate nausea, vomiting or feelings of vertigo. Depending on the impact on your quality of life, a preventive treatment may also be required. Preventive treatment comprises:
+            dietary changes (an increase in water intake and a low-salt diet) and lifestyle changes which include avoiding caffeine, smoking and alcohol, avoiding stressful situations, getting regular sleep and doing light exercise
+            oral medication (diuretics, betahistine)
+            intratympanic injection with either gentamicin or corticosteroids
+            and in some extreme cases surgical procedures.
+            The diverse nature of MD could explain the difference in response to a treatment between one person and the next. Other treatment options are hearing aids, cochlear implants, and the Meniett device.</item>
+        <item>MD has a high impact on healthrelated quality of life. Along with hearing loss comes an inability to discriminate between different phonemes.
+            Oftentimes a rise in volume will not improve comprehension and may even cause greater difficulties in understanding speech.
+            As you can imagine, this often causes some limitations in your daily routines.
+            Your doctor can advise you and clarify any aspect related to the disease and its treatment.
+            Relaxation techniques and cognitive behavioral therapy can help you.
+            Selfhelp groups, such as the Menieres Society in UK or ASMES in Spain, can offer you support.
+            Today, MD is considered incurable but research efforts are becoming more successful and we are gaining a better understanding of the disease.
+            So, there is a hope for the development of a specific treatment through our continued investigations.
+            Please help us with our ongoing efforts to find a cure for this debilitating disease.
+        </item>
+        <item>links</item>
     </string-array>
 
 </resources>

@@ -47,26 +47,26 @@ public class FaqAdapter extends RecyclerView.Adapter  {
 
         try {
             final FaqAdapter.ViewHolder viewHolder = (FaqAdapter.ViewHolder) holder;
-            isShowing = false;
+            isShowing = true;
 
             viewHolder.txtQuestion.setText(arrayQuestions[position]);
             viewHolder.txtAnswer.setText(arrayAnswers[position]);
 
             //Onclicklistener
 
-//            viewHolder.cvRow.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    if (!isShowing) {
-//                        isShowing = true;
-//                        viewHolder.txtQuestion.setText(arrayQuestions[position]);
-//                        viewHolder.txtAnswer.setText(arrayAnswers[position]);
-//                    } else {
-//                        isShowing = false;
-//                        viewHolder.txtQuestion.setText(arrayQuestions[position]);
-//                    }
-//                }
-//            });
+            viewHolder.cvRow.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (!isShowing) {
+                        isShowing = true;
+                        viewHolder.txtAnswer.setVisibility(view.VISIBLE);
+                        viewHolder.txtAnswer.setText(arrayAnswers[position]);
+                    } else {
+                        isShowing = false;
+                        viewHolder.txtAnswer.setVisibility(view.GONE);
+                    }
+                }
+            });
 
         } catch (Exception e) {
             e.printStackTrace();
