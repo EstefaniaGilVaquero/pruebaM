@@ -7,72 +7,124 @@
     android:orientation="vertical"
     tools:context="com.example.stefy83.meniere.fragments.ThreeFragment">
 
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1">
+
+    </android.support.v7.widget.LinearLayoutCompat>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/CVhearingDiary"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/hearingDiary"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/hearing" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/CVverticalSensivity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/verticalSensivity"
+                android:layout_width="wrap_content"
+                android:layout_height="97dp"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/verticality" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_weight="1"
         android:padding="5dp"
         android:background="@color/colorPrimaryDark">
 
-        <ImageView
-            android:id="@+id/hearingDiary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
+        <android.support.v7.widget.CardView
+            android:id="@+id/CVhealthyHabits"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            app:srcCompat="@drawable/ic_healty" />
+            app:cardBackgroundColor="@color/colorPrimary">
 
-        <ImageView
-            android:id="@+id/verticalSensivity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:background="@color/colorPrimary"
+            <ImageView
+                android:id="@+id/healthyHabits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/healty" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/CVrateMe"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/mark" />
+            app:cardBackgroundColor="@color/colorPrimary">
 
-
+            <ImageView
+                android:id="@+id/rateMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/authors" />
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 
-
-
-    <LinearLayout
+    <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1"
-        android:padding="5dp"
-        android:background="@color/colorPrimaryDark">
+        android:layout_height="100dp"
+        android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/healthyHabits"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:background="@color/colorPrimary"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/mark" />
-
-        <ImageView
-            android:id="@+id/rateMe"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:background="@color/colorPrimary"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/mark" />
-
-
-
-    </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
 
 </LinearLayout>

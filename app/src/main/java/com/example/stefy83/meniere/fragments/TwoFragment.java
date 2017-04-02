@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.adapter.FaqAdapter;
@@ -21,16 +22,11 @@ public class TwoFragment extends Fragment {
 
     private Activity activity;
     private RecyclerView mRecyclerView;
-    private RecyclerView.Adapter mAdapter;
-    private RecyclerView.LayoutManager mLayoutManager;
     private View rootView;
-//    private String[] arrayQuestions = activity.getResources().getStringArray(R.array.arrayQuestions);
-//    private String[] arrayAnswers = activity.getResources().getStringArray(R.array.arrayAnswers);
-//    private String[] arrayQuestions = {"pregunta1"};
-//    private String[] arrayAnswers = {"respuesta1"};
     private String[] arrayQuestions;
     private String[] arrayAnswers;
     private FaqAdapter adapter;
+    private TextView tvTitle;
 
 
     public TwoFragment() {
@@ -44,6 +40,9 @@ public class TwoFragment extends Fragment {
         activity = getActivity();
         arrayQuestions = activity.getResources().getStringArray(R.array.arrayQuestions);
         arrayAnswers = activity.getResources().getStringArray(R.array.arrayAnswers);
+        //Set fragment title
+        tvTitle = (TextView) activity.findViewById(R.id.tvTitulo);
+        tvTitle.setText(R.string.aboutMeniere);
 
 
     }
@@ -52,6 +51,8 @@ public class TwoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
         rootView = inflater.inflate(R.layout.fragment_two, container, false);
 
 
@@ -62,6 +63,8 @@ public class TwoFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         try {
+
+
 
             // 1. get a reference to recyclerView
             mRecyclerView = (RecyclerView) rootView.findViewById(R.id.FAQ_RecyclerView);

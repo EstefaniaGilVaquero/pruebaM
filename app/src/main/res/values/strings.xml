@@ -5,9 +5,6 @@
     <string name="aboutMeniere">About Ménière</string>
     <string name="utilities">Utilities</string>
     <string name="help">Help</string>
-
-    <string name="title_activity_main2">Main2Activity</string>
-
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -57,6 +54,41 @@
             So, there is a hope for the development of a specific treatment through our continued investigations.
             Please help us with our ongoing efforts to find a cure for this debilitating disease.
         </item>
+        <item>links</item>
+    </string-array>
+
+    <string-array name="arrayTituloHabitos">
+        <item>OVERVIEW</item>
+        <item>DIET</item>
+        <item>LIFESTYLE CHANGES</item>
+        <item>LIFESTYLE: EXERCISE</item>
+        <item>LIFESTYLE: SLEEP</item>
+        <item>LIFESTYLE: STRESS</item>
+    </string-array>
+
+    <string-array name="arrayDescripcionHabitos" formatted="false">
+        <item>DIETARY CHANGES AND LIFESTYLE MODIFICATIONS
+            Making some changes to your diet and adopting good lifestyle habits are two important means of preventive treatment of MD.
+        </item>
+        <item>The initial aim is to avoid all the common triggers of MD, but once your symptoms have improved you can slowly reintroduce them trying to identify your personal triggers.
+            The most important dietary recommendation is a high-water intake and a low sodium diet. Some Japanese researchers have found that a water intake of 35 mL/kg per day (about 2 litres and a half if you are 70 kg) may improve the symptoms of MD. Very low sodium mineral water is a good option. We also advise a sodium intake between 1.5-2g per day (less than a teaspoon of table salt). Therefore, we recommend removing the use of salt at the table and reducing the consumption of foods with a high-sodium content like processed or cured meats (bacon, sausages, ham) and frozen meals, canned foods, fast food and potato chips. We also recommend avoiding food containing monosodium glutamate, a flavor enhancer commonly added to Chinese food.
+            It is also advisable to eat at regular times and not to skip meals.
+            Coffee and other caffeine-containing food and drink like tea and chocolate should be reduced to one cup of coffee a day, as should alcohol with a limit of a glass of wine or half a pint of beer per day.
+        </item>
+        <item>Try to adopt healthy habits to your daily life. A systematic approach to your life helps to maintain daily routines which may prevent vertigo attacks.
+            Exercise regularly, establish regular sleeping habits and think of ways to reduce stress. Try to limit caffeine and alcohol intake.
+            Keep in mind that smoking is often not just a habit but also an addiction, so if you have MD, it is a good opportunity to try to quit.
+        </item>
+        <item>Be active and do some light to moderate physical exercise. Try going for a walk for 30 minutes at least every day or playing some sport regularly. Dancing, aerobics, Pilates and tai chi are also good options.</item>
+        <item>Try these tips below to help you to form healthy sleep habits. In order to maintain at least 7 hours of sleep per night, try keeping a
+            regular sleep schedule which means going to sleep and getting up at the same time every day, including weekends and holidays.
+            Consider avoiding naps, especially longer than 20 minutes. Lighter dinners and a reduce fluid intake before bedtime allow for
+            ease of sleep. Coffee from late afternoon onward is not advised. Do regular exercise but not too close to bedtime.
+        </item>
+        <item>Reducing your stress level is easier to said than done, but the question is how to do this. The first step in reducing stress is to identify the cause. Once it is known, first try to change your circumstances. This could mean finding alternatives (manage your time better, change of routines, etc.).  Second, learn ways of avoiding situations that you find stressful. Thirdly, if the above are not possible, try to adapt to your environment.  Ultimately, sometimes it is necessary to accept that there are things we just can’t change. Take then a deep breath and try to stay calm.
+            Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.
+            Relaxation techniques and mindfulness sessions may be appropriate.</item>
+
         <item>links</item>
     </string-array>
 
