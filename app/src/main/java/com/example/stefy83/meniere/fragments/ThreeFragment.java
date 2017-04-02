@@ -2,6 +2,7 @@ package com.example.stefy83.meniere.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
 
 import com.example.stefy83.meniere.R;
@@ -24,6 +26,8 @@ public class ThreeFragment extends Fragment {
     private Activity activity;
     private View rootView;
     private ImageView cvHealthyHabits;
+    private CardView cvRateMe;
+    private CardView cvVerticalSensivity;
 
     public ThreeFragment() {
         // Required empty public constructor
@@ -60,6 +64,8 @@ public class ThreeFragment extends Fragment {
 
     private void setCardViews() {
         cvHealthyHabits = (ImageView) rootView.findViewById(R.id.healthyHabits);
+        cvRateMe = (CardView) rootView.findViewById(R.id.CVrateMe);
+        cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
 
         cvHealthyHabits.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,9 +74,31 @@ public class ThreeFragment extends Fragment {
             }
         });
 
+        cvVerticalSensivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                //Go to playStore
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.sindromedemeniereespana.com/"));
+                startActivity(intent);
+
+            }
+        });
+
+        cvRateMe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Go to playStore
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=com.android.app"));
+                try{
+                    startActivity(intent);
+                }
+                catch(Exception e){
+                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.android.app"));
+                }
+            }
+        });
     }
-
-
-
 }
