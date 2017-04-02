@@ -40,9 +40,7 @@ public class TwoFragment extends Fragment {
         activity = getActivity();
         arrayQuestions = activity.getResources().getStringArray(R.array.arrayQuestions);
         arrayAnswers = activity.getResources().getStringArray(R.array.arrayAnswers);
-        //Set fragment title
-        tvTitle = (TextView) activity.findViewById(R.id.tvTitulo);
-        tvTitle.setText(R.string.aboutMeniere);
+
 
 
     }
