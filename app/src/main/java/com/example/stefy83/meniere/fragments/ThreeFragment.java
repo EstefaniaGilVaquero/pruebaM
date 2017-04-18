@@ -25,7 +25,7 @@ public class ThreeFragment extends Fragment {
 
     private Activity activity;
     private View rootView;
-    private ImageView cvHealthyHabits;
+    private CardView cvHealthyHabits;
     private CardView cvRateMe;
     private CardView cvVerticalSensivity;
 
@@ -36,9 +36,6 @@ public class ThreeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
-
     }
 
     @Override
@@ -63,7 +60,7 @@ public class ThreeFragment extends Fragment {
     }
 
     private void setCardViews() {
-        cvHealthyHabits = (ImageView) rootView.findViewById(R.id.healthyHabits);
+        cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVhealthyHabits);
         cvRateMe = (CardView) rootView.findViewById(R.id.CVrateMe);
         cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
 
