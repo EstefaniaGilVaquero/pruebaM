@@ -9,10 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
-import android.view.View;
-import android.view.Window;
 import android.widget.TextView;
 
 import com.example.stefy83.meniere.R;
@@ -61,7 +58,7 @@ public class TabsActivity extends AppCompatActivity {
 
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabOne.setText(R.string.MyMeniere);
-        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0, 0);
+        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.aboutprueba, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
