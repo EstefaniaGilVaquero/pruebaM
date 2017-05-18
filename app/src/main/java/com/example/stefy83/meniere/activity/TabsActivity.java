@@ -58,22 +58,22 @@ public class TabsActivity extends AppCompatActivity {
 
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabOne.setText(R.string.MyMeniere);
-        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.aboutprueba, 0, 0);
+        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabTwo.setText(R.string.aboutMeniere);
-        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0, 0);
+        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText(R.string.utilities);
-        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0, 0);
+        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
 
         TextView tabFour = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabFour.setText(R.string.help);
-        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0, 0);
+        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
         tabLayout.getTabAt(3).setCustomView(tabFour);
     }
 

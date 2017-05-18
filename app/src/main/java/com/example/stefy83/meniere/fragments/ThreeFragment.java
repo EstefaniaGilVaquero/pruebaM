@@ -62,7 +62,7 @@ public class ThreeFragment extends Fragment {
     private void setCardViews() {
         cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVhealthyHabits);
         cvRateMe = (CardView) rootView.findViewById(R.id.CVrateMe);
-        cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
+        //cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
 
         cvHealthyHabits.setOnClickListener(new View.OnClickListener() {
             @Override
