@@ -8,6 +8,7 @@
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="textSplash1">MÈNIÈRE</string>
 
     <string-array name="arrayQuestions">
         <item>WHAT IS MÉNIÈRE’S DISEASE?</item>

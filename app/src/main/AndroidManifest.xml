@@ -25,8 +25,7 @@
         android:theme="@style/MyMaterialTheme">
         <activity
             android:name=".activity.SplashActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,7 +39,9 @@
             android:name=".activity.HealthyHabits"
             android:screenOrientation="portrait" />
         <activity android:name=".activity.AuthorsActivity" />
-        <activity android:name=".activity.FrameworksActivity"></activity>
+        <activity android:name=".activity.FrameworksActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.HearingDiaryActivity"></activity>
     </application>
 
 </manifest>

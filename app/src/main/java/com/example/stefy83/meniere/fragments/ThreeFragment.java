@@ -18,6 +18,8 @@ import android.widget.ImageView;
 
 import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.activity.HealthyHabits;
+import com.example.stefy83.meniere.activity.HearingDiaryActivity;
+import com.example.stefy83.meniere.activity.LoginActivity;
 import com.example.stefy83.meniere.adapter.FaqAdapter;
 
 
@@ -28,6 +30,7 @@ public class ThreeFragment extends Fragment {
     private CardView cvHealthyHabits;
     private CardView cvRateMe;
     private CardView cvVerticalSensivity;
+    private CardView cvHearingDiary;
 
     public ThreeFragment() {
         // Required empty public constructor
@@ -63,6 +66,14 @@ public class ThreeFragment extends Fragment {
         cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVhealthyHabits);
         cvRateMe = (CardView) rootView.findViewById(R.id.CVrateMe);
         //cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
+        cvHearingDiary = (CardView) rootView.findViewById(R.id.CVhearingDiary);
+
+        cvHearingDiary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), HearingDiaryActivity.class));
+            }
+        });
 
         cvHealthyHabits.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,17 +82,17 @@ public class ThreeFragment extends Fragment {
             }
         });
 
-        cvVerticalSensivity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                //Go to playStore
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.sindromedemeniereespana.com/"));
-                startActivity(intent);
-
-            }
-        });
+//        cvVerticalSensivity.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                //Go to playStore
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("http://www.sindromedemeniereespana.com/"));
+//                startActivity(intent);
+//
+//            }
+//        });
 
         cvRateMe.setOnClickListener(new View.OnClickListener() {
             @Override
