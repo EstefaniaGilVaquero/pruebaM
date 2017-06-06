@@ -18,17 +18,51 @@ public class SplashActivity extends AppCompatActivity {
     private Activity activity;
     private String idioma;
 
-    
+
 
     @Override
-    protected void onResume() {
-        try {
-            super.onResume();
-            chargeSplash();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_splash);
+
+        //creating thread that will sleep for 10 seconds
+        Thread t=new Thread() {
+            public void run() {
+
+                try {
+                    //sleep thread for 10 seconds, time in milliseconds
+                    sleep(10000);
+
+                    //start new activity
+                    Intent i=new Intent(SplashActivity.this,TabsActivity.class);
+                    startActivity(i);
+
+                    //destroying Splash activity
+                    finish();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+
+        //start thread
+        t.start();
     }
+
+
+    //Destroy Welcome_screen.java after it goes to next activity
+    @Override
+    protected void onPause()
+    {
+        // TODO Auto-generated method stub
+        super.onPause();
+        finish();
+
+    }
+
+
+
 
 
 
