@@ -18,7 +18,22 @@ public class SplashActivity extends AppCompatActivity {
     private Activity activity;
     private String idioma;
 
-    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // SET SCREEN ORIENTATION
+        //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        // SharedPreference.setMyContext(this);
+        // HIDE TITLE
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        // SET FULLSCREEN
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // SET LAYOUT
+        setContentView(R.layout.activity_splash);
+    }
 
     @Override
     protected void onResume() {
@@ -30,8 +45,6 @@ public class SplashActivity extends AppCompatActivity {
         }
     }
 
-
-
     private void checkIdioma() {
         idioma = Locale.getDefault().getLanguage();
         if (idioma != null && !idioma.equalsIgnoreCase("es")) {
@@ -41,22 +54,9 @@ public class SplashActivity extends AppCompatActivity {
 
     protected void chargeSplash(){
         try {
-            // SET SCREEN ORIENTATION
-            //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            // SharedPreference.setMyContext(this);
-            // HIDE TITLE
-            requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-            // SET FULLSCREEN
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-            // SET LAYOUT
-            setContentView(R.layout.activity_splash);
 
             // MAIN VARIABLES
             activity = this;
-
-            //tvSplashLoading = (TextView) findViewById(R.id.tvSplashLoading);
 
             checkIdioma();
 

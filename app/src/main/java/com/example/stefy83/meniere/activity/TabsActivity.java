@@ -9,7 +9,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.stefy83.meniere.R;
@@ -26,6 +28,7 @@ public class TabsActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    public static boolean activitySwitchFlag = false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,6 +52,20 @@ public class TabsActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if (!activitySwitchFlag) {
+            // Cambiamos de activity y no hacemos nada
+            // Hemos pulsado home, matamos la app
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+            finishAffinity();
+        }
+        activitySwitchFlag = false;
     }
 
     /**
@@ -79,6 +96,7 @@ public class TabsActivity extends AppCompatActivity {
 
     /**
      * Adding fragments to ViewPager
+     *
      * @param viewPager
      */
     private void setupViewPager(ViewPager viewPager) {
@@ -122,4 +140,5 @@ public class TabsActivity extends AppCompatActivity {
             return mFragmentTitleList.get(position);
         }
     }
+
 }

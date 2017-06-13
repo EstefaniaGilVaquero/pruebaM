@@ -103,10 +103,12 @@
     </string-array>
 
 
-    <string name="text_authors">Authors: /n---------  Juan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  
+    <string name="text_authors">Authors :\n---------\nJuan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  
 Nicolás Pérez Fernández (Medical Advisor) Ángel Batuecas Caletrío (Medical Advisor) Jose Antonio López Escámez (Medical Advisor) 
 Mark Jackson (English Localization) Eva Perendreu (ASMES)  
 Original Idea y Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  
 iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa y Rey</string>
 
+
+    <string name="text_login">ACCESO: MI MÉNIÈRE</string>
 </resources>

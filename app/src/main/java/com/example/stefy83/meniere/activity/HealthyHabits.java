@@ -2,12 +2,15 @@ package com.example.stefy83.meniere.activity;
 
 import android.app.Activity;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -21,6 +24,7 @@ public class HealthyHabits extends AppCompatActivity {
     private String[] arrayDescripcionHabitos;
     private FaqAdapter adapter;
     private Toolbar toolbar;
+    boolean activitySwitchFlag = false;
 
     @Override
     protected void onResume() {
@@ -36,6 +40,7 @@ public class HealthyHabits extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
+            activitySwitchFlag = true;
             onBackPressed();
             return true;
         }
@@ -63,7 +68,6 @@ public class HealthyHabits extends AppCompatActivity {
         arrayDescripcionHabitos = getResources().getStringArray(R.array.arrayDescripcionHabitos);
 
 
-
         // 1. get a reference to recyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.HealthyHabits_RecyclerView);
         // 2. set layoutManger
@@ -76,5 +80,33 @@ public class HealthyHabits extends AppCompatActivity {
         adapter = new FaqAdapter(arrayTituloHabitos, arrayDescripcionHabitos, this);
         adapter.notifyDataSetChanged();
         mRecyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            activitySwitchFlag = true;
+            onBackPressed();
+            // activity switch stuff..
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if (!activitySwitchFlag) {
+            // Cambiamos de activity y no hacemos nada
+            // Hemos pulsado home, matamos la app
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+            finishAffinity();
+        }
+        activitySwitchFlag = false;
     }
 }

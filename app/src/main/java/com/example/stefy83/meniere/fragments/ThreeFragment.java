@@ -20,6 +20,7 @@ import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.activity.HealthyHabits;
 import com.example.stefy83.meniere.activity.HearingDiaryActivity;
 import com.example.stefy83.meniere.activity.LoginActivity;
+import com.example.stefy83.meniere.activity.TabsActivity;
 import com.example.stefy83.meniere.adapter.FaqAdapter;
 
 
@@ -71,14 +72,16 @@ public class ThreeFragment extends Fragment {
         cvHearingDiary.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), HearingDiaryActivity.class));
+                TabsActivity.activitySwitchFlag = true;
+                startActivity(new Intent(view.getContext(), HearingDiaryActivity.class));
             }
         });
 
         cvHealthyHabits.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), HealthyHabits.class));
+                TabsActivity.activitySwitchFlag = true;
+                startActivity(new Intent(view.getContext(), HealthyHabits.class));
             }
         });
 
@@ -101,6 +104,7 @@ public class ThreeFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=com.android.app"));
                 try{
+                    TabsActivity.activitySwitchFlag = true;
                     startActivity(intent);
                 }
                 catch(Exception e){

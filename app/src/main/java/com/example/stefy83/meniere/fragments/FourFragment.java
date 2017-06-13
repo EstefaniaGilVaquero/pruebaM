@@ -16,6 +16,7 @@ import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.activity.AuthorsActivity;
 import com.example.stefy83.meniere.activity.FrameworksActivity;
 import com.example.stefy83.meniere.activity.HealthyHabits;
+import com.example.stefy83.meniere.activity.TabsActivity;
 
 
 public class FourFragment extends Fragment {
@@ -65,6 +66,7 @@ public class FourFragment extends Fragment {
         cvGuide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                TabsActivity.activitySwitchFlag = true;
                 startActivity(new Intent(getActivity(), HealthyHabits.class));
             }
         });
@@ -72,7 +74,7 @@ public class FourFragment extends Fragment {
         cvAuthors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                TabsActivity.activitySwitchFlag = true;
                 startActivity(new Intent(getActivity(), AuthorsActivity.class));
 
             }
@@ -81,6 +83,7 @@ public class FourFragment extends Fragment {
         cvFrameworks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                TabsActivity.activitySwitchFlag = true;
                 startActivity(new Intent(getActivity(), FrameworksActivity.class));
             }
         });
@@ -88,7 +91,6 @@ public class FourFragment extends Fragment {
         cvWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //Go to playStore
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("http://www.sindromedemeniereespana.com/"));

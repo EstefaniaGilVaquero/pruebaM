@@ -11,79 +11,88 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:layout_weight="1">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/CVGuide"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="100dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="1dp">
-
-            <ImageView
-                android:id="@+id/guide"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/webprueba" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:text="Guia" />
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/CVAuthors"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-            android:layout_marginTop="100dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="1dp">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:text="Guia" />
-
-            <ImageView
-                android:id="@+id/authors"
+            <android.support.v7.widget.CardView
+                android:id="@+id/CVGuide"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="100dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/webprueba" />
-        </android.support.v7.widget.CardView>
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="1dp">
 
+                <ImageView
+                    android:id="@+id/guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/webprueba" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="Guia" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/CVAuthors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+
+                android:layout_marginTop="100dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="1dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="Guia" />
+
+                <ImageView
+                    android:id="@+id/authors"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/webprueba" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
 
     <android.support.v7.widget.LinearLayoutCompat
@@ -94,78 +103,87 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorPrimaryDark"
         android:orientation="horizontal"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:layout_weight="1">
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/CVFrameworks"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="1dp">
+            android:layout_gravity="center"
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:text="Guia" />
-
-            <ImageView
-                android:id="@+id/frameworks"
+            <android.support.v7.widget.CardView
+                android:id="@+id/CVFrameworks"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/webprueba" />
-
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/CVwebsite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            app:cardBackgroundColor="@color/colorPrimary"
-            app:cardElevation="1dp">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:text="Guia" />
-
-            <ImageView
-                android:id="@+id/website"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginBottom="40dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/webprueba" />
-        </android.support.v7.widget.CardView>
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="1dp">
 
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="Guia" />
+
+                <ImageView
+                    android:id="@+id/frameworks"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/webprueba" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/CVwebsite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardElevation="1dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:text="Guia" />
+
+                <ImageView
+                    android:id="@+id/website"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/webprueba" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
 
     <android.support.v7.widget.LinearLayoutCompat
