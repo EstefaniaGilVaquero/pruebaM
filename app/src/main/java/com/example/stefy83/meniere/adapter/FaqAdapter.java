@@ -1,7 +1,6 @@
 package com.example.stefy83.meniere.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.stefy83.meniere.R;
-
-import java.util.ArrayList;
 
 /**
  * Created by stefy83 on 20/03/2017.
@@ -35,7 +32,7 @@ public class FaqAdapter extends RecyclerView.Adapter  {
     @Override
     public FaqAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         final View itemLayoutView;
-        itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rowfaq, parent, false);
+        itemLayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_faq, parent, false);
 
         // create ViewHolder
         return new FaqAdapter.ViewHolder(itemLayoutView);
