@@ -54,6 +54,18 @@
                     android:padding="5dp">
 
                     <TextView
+                        android:id="@+id/tvRigthTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="Guia" />
+                    <TextView
+                        android:id="@+id/tvRigth05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="Guia" />
+                    <TextView
                         android:id="@+id/tvRigth1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -66,19 +78,7 @@
                         android:layout_gravity="bottom|center_horizontal"
                         android:text="Guia" />
                     <TextView
-                        android:id="@+id/tvRigth3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:text="Guia" />
-                    <TextView
                         android:id="@+id/tvRigth4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:text="Guia" />
-                    <TextView
-                        android:id="@+id/tvRigth5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center_horizontal"
@@ -105,6 +105,18 @@
                     android:padding="5dp">
 
                     <TextView
+                        android:id="@+id/tvLeftTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="Guia" />
+                    <TextView
+                        android:id="@+id/tvLeft05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:text="Guia" />
+                    <TextView
                         android:id="@+id/tvLeft1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -117,19 +129,7 @@
                         android:layout_gravity="bottom|center_horizontal"
                         android:text="Guia" />
                     <TextView
-                        android:id="@+id/tvLeft3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:text="Guia" />
-                    <TextView
                         android:id="@+id/tvLeft4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|center_horizontal"
-                        android:text="Guia" />
-                    <TextView
-                        android:id="@+id/tvLeft5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|center_horizontal"

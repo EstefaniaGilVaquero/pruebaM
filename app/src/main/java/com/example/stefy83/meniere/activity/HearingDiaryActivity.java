@@ -1,6 +1,8 @@
 package com.example.stefy83.meniere.activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -9,20 +11,21 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.adapter.FaqAdapter;
+import com.example.stefy83.meniere.adapter.HearingDiaryAdapter;
 import com.example.stefy83.meniere.models.HearingDiaryModel;
 
 public class HearingDiaryActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private String[] arrayTituloHabitos;
-    private String[] arrayDescripcionHabitos;
+    private HearingDiaryModel[] arrayHearingEntries;
     private FaqAdapter adapter;
     private Toolbar toolbar;
     boolean activitySwitchFlag = false;
-    private hearingDiary = new HearingDiaryModel();
+    private HearingDiaryModel hearingDiary = new HearingDiaryModel();
 
     @Override
     protected void onResume() {
@@ -55,6 +58,14 @@ public class HearingDiaryActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAudio);
+        fab.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Snackbar.make(view, "Se ha presionado FAB", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+            }
+        });
+
         // SET BACK BUTTON
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         if (toolbar != null) {
@@ -62,9 +73,8 @@ public class HearingDiaryActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        arrayTituloHabitos = getResources().getStringArray(R.array.arrayTituloHabitos);
-        arrayDescripcionHabitos = getResources().getStringArray(R.array.arrayDescripcionHabitos);
-
+        //Recupero mediciones de audio de sqlite
+        //arrayHearingEntries = getResources().(R.array.arrayHearingEntries);
 
         // 1. get a reference to recyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.hearingDiary_RecyclerView);
@@ -74,10 +84,11 @@ public class HearingDiaryActivity extends AppCompatActivity {
         // 3. set item animator to DefaultAnimator
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+
         // 4. create and set adapter
-        adapter = new FaqAdapter(arrayTituloHabitos, arrayDescripcionHabitos, this);
+        /*adapter = new HearingDiaryAdapter(arrayTituloHabitos, arrayDescripcionHabitos, this);
         adapter.notifyDataSetChanged();
-        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setAdapter(adapter);*/
     }
 
     @Override

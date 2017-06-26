@@ -27,11 +27,11 @@
 
         <android.support.v7.widget.CardView
             android:id="@+id/CVhearingDiary"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
             android:layout_weight="1"
             app:cardBackgroundColor="@color/colorPrimary">
 
@@ -44,28 +44,15 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/hearing" />
 
+            <TextView
+                android:id="@+id/txtHearingDiary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Guia" />
+
         </android.support.v7.widget.CardView>
-
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:id="@+id/CVverticalSensivity"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_marginBottom="10dp"-->
-            <!--android:layout_marginLeft="10dp"-->
-            <!--android:layout_marginRight="20dp"-->
-
-            <!--android:layout_weight="1"-->
-            <!--app:cardBackgroundColor="@color/colorPrimary">-->
-
-            <!--<ImageView-->
-                <!--android:id="@+id/verticalSensivity"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:layout_margin="30dp"-->
-                <!--android:layout_weight="1"-->
-                <!--app:srcCompat="@drawable/verticality" />-->
-        <!--</android.support.v7.widget.CardView>-->
 
     </LinearLayout>
 
@@ -97,6 +84,14 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/healty" />
 
+            <TextView
+                android:id="@+id/textHealthyHabits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Guia" />
+
         </android.support.v7.widget.CardView>
 
         <android.support.v7.widget.CardView
@@ -119,6 +114,14 @@
                 android:layout_margin="30dp"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/authors" />
+            <TextView
+                android:id="@+id/txtAuthors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:text="Guia" />
+
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
