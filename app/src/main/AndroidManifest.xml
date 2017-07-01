@@ -41,7 +41,7 @@
         <activity android:name=".activity.AuthorsActivity" />
         <activity android:name=".activity.FrameworksActivity" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.HearingDiaryActivity"></activity>
+        <activity android:name=".activity.HearingDiaryActivity" />
     </application>
 
 </manifest>

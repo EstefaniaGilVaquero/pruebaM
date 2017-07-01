@@ -32,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // User Table Columns
     private static final String KEY_USER_ID = "id";
-    private static final String KEY_USER_PWD = "id";
+    private static final String KEY_USER_PWD = "pwd";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -53,13 +53,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USERS +
                 "(" +
-                KEY_USER_ID + " INTEGER PRIMARY KEY," +
+                KEY_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
                 KEY_USER_PWD + " INTEGER" +
                 ")";
 
         String CREATE_AUDIO_TABLE = "CREATE TABLE " + TABLE_AUDIO +
                 "(" +
-                KEY_AUDIO_ID + " INTEGER PRIMARY KEY," + // Define a primary key
+                KEY_AUDIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," + // Define a primary key
                 //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
                 KEY_AUDIO_DATE + " TEXT, " +
                 KEY_AUDIO_LEFT_05 + " TEXT, " +

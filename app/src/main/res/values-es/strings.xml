@@ -9,6 +9,15 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <!-- Hearing diary -->
+    <string name="oidoIzquierdo">Oído Izquierdo</string>
+    <string name="oidoDerecho">Oído Derecho</string>
+    <string name="frecuencia05">0.5kHz:</string>
+    <string name="frecuencia1">1kHz:</string>
+    <string name="frecuencia2">2kHz:</string>
+    <string name="frecuencia4">4kHz:</string>
+
+
     <string-array name="arrayQuestions">
         <item>WHAT IS MÉNIÈRE’S DISEASE?</item>
         <item>HOW COMMON IS IT?</item>
