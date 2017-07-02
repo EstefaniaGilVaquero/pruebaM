@@ -1,5 +1,7 @@
 package com.example.stefy83.meniere.activity;
 
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -11,10 +13,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.stefy83.meniere.AndroidDatabaseManager;
 import com.example.stefy83.meniere.R;
+import com.example.stefy83.meniere.adapter.DatabaseHelper;
 import com.example.stefy83.meniere.fragments.FourFragment;
 import com.example.stefy83.meniere.fragments.OneFragment;
 import com.example.stefy83.meniere.fragments.ThreeFragment;
@@ -29,6 +35,8 @@ public class TabsActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     public static boolean activitySwitchFlag = false;
+    private SQLiteDatabase db;
+    private DatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +51,9 @@ public class TabsActivity extends AppCompatActivity {
             viewPager = (ViewPager) findViewById(R.id.viewpager);
             tabLayout = (TabLayout) findViewById(R.id.tabs);
 
+            dbHelper = new DatabaseHelper(this);
+            db = dbHelper.getWritableDatabase();
+
             setupViewPager(viewPager);
             if (tabLayout != null) {
                 tabLayout.setupWithViewPager(viewPager);
@@ -53,6 +64,10 @@ public class TabsActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+
+
+
 
     @Override
     public void onPause(){

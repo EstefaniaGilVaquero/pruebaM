@@ -3,11 +3,15 @@ package com.example.stefy83.meniere.adapter;
 /**
  * Created by ESTEFANIA GIL on 10/06/2017.
  */
-import android.database.Cursor;
-import android.database.SQLException;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.MatrixCursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
+import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Info
@@ -21,14 +25,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Audio Table Columns
     private static final String KEY_AUDIO_ID = "id";
     private static final String KEY_AUDIO_DATE = "date";
-    private static final String KEY_AUDIO_LEFT_05 = "left_05";
-    private static final String KEY_AUDIO_LEFT_1 = "left_1";
-    private static final String KEY_AUDIO_LEFT_2 = "left_2";
-    private static final String KEY_AUDIO_LEFT_4 = "left_4";
-    private static final String KEY_AUDIO_RIGTH_05 = "rigth_05";
-    private static final String KEY_AUDIO_RIGTH_1 = "rigth_1";
-    private static final String KEY_AUDIO_RIGTH_2 = "rigth_2";
-    private static final String KEY_AUDIO_RIGTH_4 = "rigth_4";
+    private static final String KEY_AUDIO_LEFT_05 = "left05";
+    private static final String KEY_AUDIO_LEFT_1 = "left1";
+    private static final String KEY_AUDIO_LEFT_2 = "left2";
+    private static final String KEY_AUDIO_LEFT_4 = "left4";
+    private static final String KEY_AUDIO_RIGTH_05 = "rigth05";
+    private static final String KEY_AUDIO_RIGTH_1 = "rigth1";
+    private static final String KEY_AUDIO_RIGTH_2 = "rigth2";
+    private static final String KEY_AUDIO_RIGTH_4 = "rigth4";
 
     // User Table Columns
     private static final String KEY_USER_ID = "id";
@@ -38,28 +42,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    // Called when the database connection is being configured.
+    /*// Called when the database connection is being configured.
     // Configure database settings for things like foreign key support, write-ahead logging, etc.
     @Override
     public void onConfigure(SQLiteDatabase db) {
         super.onConfigure(db);
         db.setForeignKeyConstraintsEnabled(true);
-    }
+    }*/
 
     // Called when the database is created for the FIRST time.
     // If a database already exists on disk with the same DATABASE_NAME, this method will NOT be called.
     @Override
     public void onCreate(SQLiteDatabase db) {
 
+        String sql = "CREATE TABLE todos (" +
+                " _id INTEGER PRIMARY KEY," +
+                " name TEXT," +
+                " score REAL)";
+        db.execSQL(sql);
+
         String CREATE_USERS_TABLE = "CREATE TABLE " + TABLE_USERS +
                 "(" +
-                KEY_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," +
+                KEY_USER_ID + " INTEGER PRIMARY KEY ," +
                 KEY_USER_PWD + " INTEGER" +
                 ")";
 
         String CREATE_AUDIO_TABLE = "CREATE TABLE " + TABLE_AUDIO +
                 "(" +
-                KEY_AUDIO_ID + " INTEGER PRIMARY KEY AUTOINCREMENT ," + // Define a primary key
+                KEY_AUDIO_ID + " INTEGER PRIMARY KEY ," + // Define a primary key
                 //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
                 KEY_AUDIO_DATE + " TEXT, " +
                 KEY_AUDIO_LEFT_05 + " TEXT, " +
@@ -85,7 +95,53 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             // Simplest implementation is to drop all old tables and recreate them
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_AUDIO);
+            db.execSQL("DROP TABLE IF EXISTS todos");
             onCreate(db);
         }
     }
+
+    public ArrayList<Cursor> getData(String Query){
+        //get writable database
+        SQLiteDatabase sqlDB = this.getWritableDatabase();
+        String[] columns = new String[] { "message" };
+        //an array list of cursor to save two cursors one has results from the query
+        //other cursor stores error message if any errors are triggered
+        ArrayList<Cursor> alc = new ArrayList<Cursor>(2);
+        MatrixCursor Cursor2= new MatrixCursor(columns);
+        alc.add(null);
+        alc.add(null);
+
+        try{
+            String maxQuery = Query ;
+            //execute the query results will be save in Cursor c
+            Cursor c = sqlDB.rawQuery(maxQuery, null);
+
+            //add value to cursor2
+            Cursor2.addRow(new Object[] { "Success" });
+
+            alc.set(1,Cursor2);
+            if (null != c && c.getCount() > 0) {
+
+                alc.set(0,c);
+                c.moveToFirst();
+
+                return alc ;
+            }
+            return alc;
+        } catch(SQLException sqlEx){
+            Log.d("printing exception", sqlEx.getMessage());
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+sqlEx.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        } catch(Exception ex){
+            Log.d("printing exception", ex.getMessage());
+
+            //if any exceptions are triggered save the error message to cursor an return the arraylist
+            Cursor2.addRow(new Object[] { ""+ex.getMessage() });
+            alc.set(1,Cursor2);
+            return alc;
+        }
+    }
+
 }

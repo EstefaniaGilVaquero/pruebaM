@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -17,46 +18,31 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.InputType;
-import android.text.TextWatcher;
-import android.text.method.PasswordTransformationMethod;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import com.example.stefy83.meniere.AndroidDatabaseManager;
 import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.adapter.DatabaseHelper;
-import com.example.stefy83.meniere.adapter.FaqAdapter;
 import com.example.stefy83.meniere.adapter.HearingDiaryAdapter;
 import com.example.stefy83.meniere.models.HearingDiaryModel;
 import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.afollestad.materialdialogs.StackingBehavior;
-import com.afollestad.materialdialogs.Theme;
-import com.afollestad.materialdialogs.internal.MDTintHelper;
-import com.afollestad.materialdialogs.internal.ThemeSingleton;
-import com.afollestad.materialdialogs.util.DialogUtils;
-
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class HearingDiaryActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private HearingDiaryModel[] arrayHearingEntries;
-    private FaqAdapter adapter;
+    private ArrayList<HearingDiaryModel> arrayHearingEntries = new ArrayList<HearingDiaryModel>();
+    private HearingDiaryAdapter adapter;
     private Toolbar toolbar;
     boolean activitySwitchFlag = false;
-    private HearingDiaryModel hearingDiary = new HearingDiaryModel();
     private Toast toast;
-    private View positiveAction;
-    private EditText passwordInput;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
 
@@ -70,13 +56,31 @@ public class HearingDiaryActivity extends AppCompatActivity {
         super.onBackPressed();
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        // Action View
+        //MenuItem searchItem = menu.findItem(R.id.action_search);
+        //SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        // Configure the search info and add any event listeners
+        //return super.onCreateOptionsMenu(menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
+
+        //handle presses on the action bar items
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                activitySwitchFlag = true;
+                onBackPressed();
+                return true;
+
+            case R.id.showSqlite:
+                Intent dbmanager = new Intent(this,AndroidDatabaseManager.class);
+                startActivity(dbmanager);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -112,9 +116,6 @@ public class HearingDiaryActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        //Recupero mediciones de audio de sqlite
-        //arrayHearingEntries = getResources().(R.array.arrayHearingEntries);
-
         // 1. get a reference to recyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.hearingDiary_RecyclerView);
         // 2. set layoutManger
@@ -123,12 +124,16 @@ public class HearingDiaryActivity extends AppCompatActivity {
         // 3. set item animator to DefaultAnimator
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+        //Recupero mediciones de audio de sqlite
+        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
 
         // 4. create and set adapter
-        /*adapter = new HearingDiaryAdapter(arrayTituloHabitos, arrayDescripcionHabitos, this);
+        adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
         adapter.notifyDataSetChanged();
-        mRecyclerView.setAdapter(adapter);*/
+        mRecyclerView.setAdapter(adapter);
     }
+
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
@@ -167,6 +172,31 @@ public class HearingDiaryActivity extends AppCompatActivity {
         toast.show();
     }
 
+    public ArrayList<HearingDiaryModel> getHearingEntries(String sql){
+
+        Cursor cursor = db.rawQuery(sql, null);
+
+        //Inicializo array
+        HearingDiaryModel audio = new HearingDiaryModel();
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()) {
+            audio.date = cursor.getString(cursor.getColumnIndex("date"));
+            audio.left05 = cursor.getString(cursor.getColumnIndex("left05"));
+            audio.left1 = cursor.getString(cursor.getColumnIndex("left1"));
+            audio.left2 = cursor.getString(cursor.getColumnIndex("left2"));
+            audio.left4 = cursor.getString(cursor.getColumnIndex("left4"));
+            audio.rigth05 = cursor.getString(cursor.getColumnIndex("rigth05"));
+            audio.rigth1 = cursor.getString(cursor.getColumnIndex("rigth1"));
+            audio.rigth2 = cursor.getString(cursor.getColumnIndex("rigth2"));
+            audio.rigth4 = cursor.getString(cursor.getColumnIndex("rigth4"));
+
+            arrayHearingEntries.add(audio);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return arrayHearingEntries;
+    }
+
     public void showCustomView() {
         boolean wrapInScrollView = true;
 
@@ -180,17 +210,26 @@ public class HearingDiaryActivity extends AppCompatActivity {
                                 showToast("creo audicion");
                                 String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
                                 ContentValues cv = new ContentValues();
-                                cv.put("date", date);
-                                cv.put("left_05",  dialog.getCustomView().findViewById(R.id.etOidoIzq05).toString());
-                                cv.put("left_1", dialog.getCustomView().findViewById(R.id.etOidoIzq1).toString());
-                                cv.put("left_2", dialog.getCustomView().findViewById(R.id.etOidoIzq2).toString());
-                                cv.put("left_4", dialog.getCustomView().findViewById(R.id.etOidoIzq4).toString());
-                                cv.put("rigth_05", dialog.getCustomView().findViewById(R.id.etOidoDer05).toString());
-                                cv.put("rigth_1", dialog.getCustomView().findViewById(R.id.etOidoDer1).toString());
-                                cv.put("rigth_2", dialog.getCustomView().findViewById(R.id.etOidoDer2).toString());
-                                cv.put("rigth_4", dialog.getCustomView().findViewById(R.id.etOidoDer4).toString());
+                                EditText left05 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq05);
+                                EditText left1 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq1);
+                                EditText left2 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq2);
+                                EditText left4 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq4);
+                                EditText rigth05 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer05);
+                                EditText rigth1 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer1);
+                                EditText rigth2 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer2);
+                                EditText rigth4 = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer4);
 
-                                db.insert("users", null, cv);
+                                cv.put("date", date);
+                                cv.put("left05",  left05.getText().toString());
+                                cv.put("left1", left1.getText().toString());
+                                cv.put("left2", left2.getText().toString());
+                                cv.put("left4", left4.getText().toString());
+                                cv.put("rigth05", rigth05.getText().toString());
+                                cv.put("rigth1", rigth1.getText().toString());
+                                cv.put("rigth2", rigth2.getText().toString());
+                                cv.put("rigth4", rigth4.getText().toString());
+
+                                db.insert("audio", null, cv);
 
                             }
                         })
@@ -201,8 +240,9 @@ public class HearingDiaryActivity extends AppCompatActivity {
                         .backgroundColor(getResources().getColor(R.color.colorPrimary))
                         .build();
         dialog.show();
+    }
 
-
+    public void SqlQuery(String sql) {
 
     }
 }

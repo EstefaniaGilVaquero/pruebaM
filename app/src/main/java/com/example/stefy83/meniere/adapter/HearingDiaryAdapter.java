@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.example.stefy83.meniere.R;
 import com.example.stefy83.meniere.models.HearingDiaryModel;
 
+import java.util.ArrayList;
+
 /**
  * Created by stefy83 on 21/06/2017.
  */
@@ -18,10 +20,10 @@ import com.example.stefy83.meniere.models.HearingDiaryModel;
 public class HearingDiaryAdapter extends RecyclerView.Adapter {
 
     private Activity activity;
-    HearingDiaryModel[] arrayHearingEntries;
+    ArrayList<HearingDiaryModel> arrayHearingEntries;
 
 
-    public HearingDiaryAdapter(HearingDiaryModel[] arrayHearingEntries, Activity activity) {
+    public HearingDiaryAdapter(ArrayList<HearingDiaryModel> arrayHearingEntries, Activity activity) {
         this.arrayHearingEntries = arrayHearingEntries;
 
         this.activity = activity;
@@ -43,16 +45,15 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
 
         try {
             final HearingDiaryAdapter.ViewHolder viewHolder = (HearingDiaryAdapter.ViewHolder) holder;
-
-            viewHolder.txtDate.setText(arrayHearingEntries[position].date);
-            viewHolder.txtLeft05.setText(arrayHearingEntries[position].left05);
-            viewHolder.txtLeft1.setText(arrayHearingEntries[position].left1);
-            viewHolder.txtLeft2.setText(arrayHearingEntries[position].left2);
-            viewHolder.txtLeft4.setText(arrayHearingEntries[position].left4);
-            viewHolder.txtRigth05.setText(arrayHearingEntries[position].rigth05);
-            viewHolder.txtRigth1.setText(arrayHearingEntries[position].rigth1);
-            viewHolder.txtRigth2.setText(arrayHearingEntries[position].rigth2);
-            viewHolder.txtRigth4.setText(arrayHearingEntries[position].rigth4);
+            viewHolder.txtDate.setText(arrayHearingEntries.get(position).date);
+            viewHolder.txtLeft05.setText(arrayHearingEntries.get(position).left05);
+            viewHolder.txtLeft1.setText(arrayHearingEntries.get(position).left1);
+            viewHolder.txtLeft2.setText(arrayHearingEntries.get(position).left2);
+            viewHolder.txtLeft4.setText(arrayHearingEntries.get(position).left4);
+            viewHolder.txtRigth05.setText(arrayHearingEntries.get(position).rigth05);
+            viewHolder.txtRigth1.setText(arrayHearingEntries.get(position).rigth1);
+            viewHolder.txtRigth2.setText(arrayHearingEntries.get(position).rigth2);
+            viewHolder.txtRigth4.setText(arrayHearingEntries.get(position).rigth4);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,7 +64,7 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
     // Return the size of your itemsData (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return arrayHearingEntries.length;
+        return arrayHearingEntries.size();
     }
 
     // inner class to hold a reference to each item of RecyclerView

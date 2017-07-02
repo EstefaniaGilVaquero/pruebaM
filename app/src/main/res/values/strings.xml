@@ -123,5 +123,6 @@ Nicolás Pérez Fernández (Medical Advisor) Ángel Batuecas Caletrío (Medica
 Mark Jackson (English Localization) Eva Perendreu (ASMES)  
 Original Idea y Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  
 iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa y Rey</string>
+    <string name="title_activity_main">MainActivity</string>
 
 </resources>
