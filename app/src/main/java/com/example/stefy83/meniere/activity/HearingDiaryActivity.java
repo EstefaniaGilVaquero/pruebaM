@@ -49,6 +49,13 @@ public class HearingDiaryActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        //Recupero mediciones de audio de sqlite
+        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
+
+        // 4. create and set adapter
+        adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
+        adapter.notifyDataSetChanged();
+        mRecyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -174,12 +181,13 @@ public class HearingDiaryActivity extends AppCompatActivity {
 
     public ArrayList<HearingDiaryModel> getHearingEntries(String sql){
 
+        ArrayList<HearingDiaryModel> arrayHearingEntriesAux = new ArrayList<>();
         Cursor cursor = db.rawQuery(sql, null);
 
         //Inicializo array
-        HearingDiaryModel audio = new HearingDiaryModel();
         cursor.moveToFirst();
         while(!cursor.isAfterLast()) {
+            HearingDiaryModel audio = new HearingDiaryModel();
             audio.date = cursor.getString(cursor.getColumnIndex("date"));
             audio.left05_a = cursor.getString(cursor.getColumnIndex("left05_a"));
             audio.left05_b = cursor.getString(cursor.getColumnIndex("left05_b"));
@@ -198,11 +206,11 @@ public class HearingDiaryActivity extends AppCompatActivity {
             audio.rigth4_a = cursor.getString(cursor.getColumnIndex("rigth4_a"));
             audio.rigth4_b = cursor.getString(cursor.getColumnIndex("rigth4_b"));
 
-            arrayHearingEntries.add(audio);
+            arrayHearingEntriesAux.add(audio);
             cursor.moveToNext();
         }
         cursor.close();
-        return arrayHearingEntries;
+        return arrayHearingEntriesAux;
     }
 
     public void showCustomView() {

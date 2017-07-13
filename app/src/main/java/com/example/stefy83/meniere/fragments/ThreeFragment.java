@@ -64,10 +64,10 @@ public class ThreeFragment extends Fragment {
     }
 
     private void setCardViews() {
-        cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVhealthyHabits);
-        cvRateMe = (CardView) rootView.findViewById(R.id.CVrateMe);
+        cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVHealtyHabits);
+        cvRateMe = (CardView) rootView.findViewById(R.id.CVRateMe);
         //cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
-        cvHearingDiary = (CardView) rootView.findViewById(R.id.CVhearingDiary);
+        cvHearingDiary = (CardView) rootView.findViewById(R.id.CVHearingDiary);
 
         cvHearingDiary.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,18 +84,6 @@ public class ThreeFragment extends Fragment {
                 startActivity(new Intent(view.getContext(), HealthyHabits.class));
             }
         });
-
-//        cvVerticalSensivity.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                //Go to playStore
-//                Intent intent = new Intent(Intent.ACTION_VIEW);
-//                intent.setData(Uri.parse("http://www.sindromedemeniereespana.com/"));
-//                startActivity(intent);
-//
-//            }
-//        });
 
         cvRateMe.setOnClickListener(new View.OnClickListener() {
             @Override

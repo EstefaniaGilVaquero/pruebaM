@@ -24,6 +24,16 @@
     <string name="frecMasMenos">+</string>
     <string name="enCrisis">En crisis</string>
 
+    <!-- Tab Four -->
+    <string name="txtUserGuide">Guia de uso</string>
+    <string name="txtAuthors">Autores</string>
+    <string name="txtFrameworks">Frameworks</string>
+    <string name="txtVisitWeb">Visitar Web</string>
+
+    <!-- Tab thre -->
+    <string name="txtHearingDiary">Diario Auditivo</string>
+    <string name="txtHealthyHabits">Buenos Hábitos</string>
+    <string name="txtRateMe">¡Puentúame!</string>
 
     <string-array name="arrayQuestions">
         <item>WHAT IS MÉNIÈRE’S DISEASE?</item>
