@@ -47,21 +47,13 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
             final HearingDiaryAdapter.ViewHolder viewHolder = (HearingDiaryAdapter.ViewHolder) holder;
             viewHolder.txtDate.setText(arrayHearingEntries.get(position).date);
             viewHolder.txtLeft05.setText(arrayHearingEntries.get(position).left05_a);
-            viewHolder.txtLeft05.setText(arrayHearingEntries.get(position).left05_b);
             viewHolder.txtLeft1.setText(arrayHearingEntries.get(position).left1_a);
-            viewHolder.txtLeft1.setText(arrayHearingEntries.get(position).left1_b);
             viewHolder.txtLeft2.setText(arrayHearingEntries.get(position).left2_a);
-            viewHolder.txtLeft2.setText(arrayHearingEntries.get(position).left2_b);
             viewHolder.txtLeft4.setText(arrayHearingEntries.get(position).left4_a);
-            viewHolder.txtLeft4.setText(arrayHearingEntries.get(position).left4_b);
             viewHolder.txtRigth05.setText(arrayHearingEntries.get(position).rigth05_a);
-            viewHolder.txtRigth05.setText(arrayHearingEntries.get(position).rigth05_b);
             viewHolder.txtRigth1.setText(arrayHearingEntries.get(position).rigth1_a);
-            viewHolder.txtRigth1.setText(arrayHearingEntries.get(position).rigth1_b);
             viewHolder.txtRigth2.setText(arrayHearingEntries.get(position).rigth2_a);
-            viewHolder.txtRigth2.setText(arrayHearingEntries.get(position).rigth2_b);
             viewHolder.txtRigth4.setText(arrayHearingEntries.get(position).rigth4_a);
-            viewHolder.txtRigth4.setText(arrayHearingEntries.get(position).rigth4_b);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,6 +84,7 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
                 txtRigth1 = (TextView) itemLayoutView.findViewById(R.id.tvRigth1);
                 txtRigth2 = (TextView) itemLayoutView.findViewById(R.id.tvRigth2);
                 txtRigth4 = (TextView) itemLayoutView.findViewById(R.id.tvRigth4);
+
                 cvRow = (CardView) itemLayoutView.findViewById(R.id.cvRow);
             } catch (Exception e) {
                 e.printStackTrace();

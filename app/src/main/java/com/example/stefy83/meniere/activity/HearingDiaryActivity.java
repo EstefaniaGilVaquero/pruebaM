@@ -38,7 +38,7 @@ import java.util.Date;
 public class HearingDiaryActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private ArrayList<HearingDiaryModel> arrayHearingEntries = new ArrayList<HearingDiaryModel>();
+    private ArrayList<HearingDiaryModel> arrayHearingEntries = new ArrayList<>();
     private HearingDiaryAdapter adapter;
     private Toolbar toolbar;
     boolean activitySwitchFlag = false;
@@ -192,11 +192,11 @@ public class HearingDiaryActivity extends AppCompatActivity {
             audio.rigth05_a = cursor.getString(cursor.getColumnIndex("rigth05_a"));
             audio.rigth05_b = cursor.getString(cursor.getColumnIndex("rigth05_b"));
             audio.rigth1_a = cursor.getString(cursor.getColumnIndex("rigth1_a"));
-            audio.rigth1_a = cursor.getString(cursor.getColumnIndex("rigth1_b"));
-            audio.rigth2_b = cursor.getString(cursor.getColumnIndex("rigth2_a"));
+            audio.rigth1_b = cursor.getString(cursor.getColumnIndex("rigth1_b"));
+            audio.rigth2_a = cursor.getString(cursor.getColumnIndex("rigth2_a"));
             audio.rigth2_a = cursor.getString(cursor.getColumnIndex("rigth2_b"));
-            audio.rigth4_b = cursor.getString(cursor.getColumnIndex("rigth4_a"));
-            audio.rigth4_a = cursor.getString(cursor.getColumnIndex("rigth4_b"));
+            audio.rigth4_a = cursor.getString(cursor.getColumnIndex("rigth4_a"));
+            audio.rigth4_b = cursor.getString(cursor.getColumnIndex("rigth4_b"));
 
             arrayHearingEntries.add(audio);
             cursor.moveToNext();

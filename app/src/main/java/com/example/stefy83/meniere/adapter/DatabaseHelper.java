@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Info
     private static final String DATABASE_NAME = "meniereDatabase";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Table Names
     private static final String TABLE_AUDIO = "audio";
@@ -94,7 +94,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 KEY_AUDIO_RIGTH_1_b + " TEXT, " +
                 KEY_AUDIO_RIGTH_2_a + " TEXT, " +
                 KEY_AUDIO_RIGTH_2_b + " TEXT, " +
-                KEY_AUDIO_RIGTH_4_a + " TEXT " +
+                KEY_AUDIO_RIGTH_4_a + " TEXT, " +
                 KEY_AUDIO_RIGTH_4_b + " TEXT " +
                 ")";
 
