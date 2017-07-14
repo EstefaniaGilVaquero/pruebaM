@@ -1,11 +1,11 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.stefy83.meniere.R;
+import com.symbel.meniere.R;
 
 public class FrameworksActivity extends AppCompatActivity {
 

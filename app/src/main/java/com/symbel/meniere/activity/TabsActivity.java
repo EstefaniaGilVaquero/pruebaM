@@ -1,6 +1,5 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -11,20 +10,15 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
-import com.example.stefy83.meniere.AndroidDatabaseManager;
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.adapter.DatabaseHelper;
-import com.example.stefy83.meniere.fragments.FourFragment;
-import com.example.stefy83.meniere.fragments.OneFragment;
-import com.example.stefy83.meniere.fragments.ThreeFragment;
-import com.example.stefy83.meniere.fragments.TwoFragment;
+import com.symbel.meniere.R;
+import com.symbel.meniere.adapter.DatabaseHelper;
+import com.symbel.meniere.fragments.FourFragment;
+import com.symbel.meniere.fragments.OneFragment;
+import com.symbel.meniere.fragments.ThreeFragment;
+import com.symbel.meniere.fragments.TwoFragment;
 
 import java.util.ArrayList;
 import java.util.List;

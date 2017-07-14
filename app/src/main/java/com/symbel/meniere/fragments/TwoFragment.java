@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.fragments;
+package com.symbel.meniere.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,10 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.adapter.FaqAdapter;
-
-import java.util.ArrayList;
+import com.symbel.meniere.R;
+import com.symbel.meniere.adapter.FaqAdapter;
 
 
 public class TwoFragment extends Fragment {

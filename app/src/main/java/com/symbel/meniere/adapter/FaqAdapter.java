@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.adapter;
+package com.symbel.meniere.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.CardView;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.stefy83.meniere.R;
+import com.symbel.meniere.R;
 
 /**
  * Created by stefy83 on 20/03/2017.

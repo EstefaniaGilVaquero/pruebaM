@@ -5,5 +5,4 @@
     android:id="@+id/tab"
     android:textColor="@color/colorPrimaryDark"
     android:textSize="@dimen/tab_label"
-    android:textAlignment="center"
-    android:fontFamily="@string/font_fontFamily_medium"/>
+    android:textAlignment="center"/>

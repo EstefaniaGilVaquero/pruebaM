@@ -1,9 +1,5 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
-import android.app.Activity;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -12,10 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.adapter.FaqAdapter;
+import com.symbel.meniere.R;
+import com.symbel.meniere.adapter.FaqAdapter;
 
 public class HealthyHabits extends AppCompatActivity {
 

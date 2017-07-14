@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.TextView;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.utils.Utils;
+import com.symbel.meniere.R;
+import com.symbel.meniere.utils.Utils;
 
 import java.util.Locale;
 

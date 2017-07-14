@@ -1,16 +1,11 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
-import android.app.Dialog;
 import android.content.ContentValues;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatDrawableManager;
@@ -24,11 +19,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-import com.example.stefy83.meniere.AndroidDatabaseManager;
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.adapter.DatabaseHelper;
-import com.example.stefy83.meniere.adapter.HearingDiaryAdapter;
-import com.example.stefy83.meniere.models.HearingDiaryModel;
+
+import com.symbel.meniere.R;
+import com.symbel.meniere.adapter.DatabaseHelper;
+import com.symbel.meniere.adapter.HearingDiaryAdapter;
+import com.symbel.meniere.models.HearingDiaryModel;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import java.text.SimpleDateFormat;
@@ -85,8 +80,8 @@ public class HearingDiaryActivity extends AppCompatActivity {
                 return true;
 
             case R.id.showSqlite:
-                Intent dbmanager = new Intent(this,AndroidDatabaseManager.class);
-                startActivity(dbmanager);
+                /*Intent dbmanager = new Intent(this,AndroidDatabaseManager.class);
+                startActivity(dbmanager);*/
                 return true;
         }
         return super.onOptionsItemSelected(item);

@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.fragments;
+package com.symbel.meniere.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,21 +7,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.widget.ImageView;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.activity.HealthyHabits;
-import com.example.stefy83.meniere.activity.HearingDiaryActivity;
-import com.example.stefy83.meniere.activity.LoginActivity;
-import com.example.stefy83.meniere.activity.TabsActivity;
-import com.example.stefy83.meniere.adapter.FaqAdapter;
+import com.symbel.meniere.R;
+import com.symbel.meniere.activity.HealthyHabits;
+import com.symbel.meniere.activity.HearingDiaryActivity;
+import com.symbel.meniere.activity.LoginActivity;
+import com.symbel.meniere.activity.TabsActivity;
+import com.symbel.meniere.adapter.FaqAdapter;
 
 
 public class ThreeFragment extends Fragment {

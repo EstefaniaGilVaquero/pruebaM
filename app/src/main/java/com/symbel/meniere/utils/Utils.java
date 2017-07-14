@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.utils;
+package com.symbel.meniere.utils;
 
 import android.os.Handler;
 

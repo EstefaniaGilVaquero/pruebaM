@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.adapter;
+package com.symbel.meniere.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.CardView;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.models.HearingDiaryModel;
+import com.symbel.meniere.R;
+import com.symbel.meniere.models.HearingDiaryModel;
 
 import java.util.ArrayList;
 

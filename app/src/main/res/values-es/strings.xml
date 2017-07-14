@@ -8,15 +8,32 @@
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="textSplash1">MÈNIÈRE</string>
+
+    <!-- Acciones dialogos -->
+    <string name="dialogoGuardar">Guardar</string>
 
     <!-- Hearing diary -->
+    <string name="titleNewEntry">Nueva audición</string>
     <string name="oidoIzquierdo">Oído Izquierdo</string>
     <string name="oidoDerecho">Oído Derecho</string>
     <string name="frecuencia05">0.5kHz:</string>
     <string name="frecuencia1">1kHz:</string>
     <string name="frecuencia2">2kHz:</string>
     <string name="frecuencia4">4kHz:</string>
+    <string name="frecMasMenos">+</string>
+    <string name="enCrisis">En crisis</string>
 
+    <!-- Tab Four -->
+    <string name="txtUserGuide">Guia de uso</string>
+    <string name="txtAuthors">Autores</string>
+    <string name="txtFrameworks">Frameworks</string>
+    <string name="txtVisitWeb">Visitar Web</string>
+
+    <!-- Tab thre -->
+    <string name="txtHearingDiary">Diario Auditivo</string>
+    <string name="txtHealthyHabits">Buenos Hábitos</string>
+    <string name="txtRateMe">¡Puentúame!</string>
 
     <string-array name="arrayQuestions">
         <item>WHAT IS MÉNIÈRE’S DISEASE?</item>
@@ -75,6 +92,7 @@
         <item>LIFESTYLE: STRESS</item>
     </string-array>
 
+
     <string-array name="arrayDescripcionHabitos" formatted="false">
         <item>DIETARY CHANGES AND LIFESTYLE MODIFICATIONS
             Making some changes to your diet and adopting good lifestyle habits are two important means of preventive treatment of MD.
@@ -112,12 +130,11 @@
     </string-array>
 
 
-    <string name="text_authors">Authors :\n---------\nJuan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  
+    <string name="text_authors">Authors: \n---------\n\n  Juan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  
 Nicolás Pérez Fernández (Medical Advisor) Ángel Batuecas Caletrío (Medical Advisor) Jose Antonio López Escámez (Medical Advisor) 
 Mark Jackson (English Localization) Eva Perendreu (ASMES)  
 Original Idea y Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  
 iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa y Rey</string>
+    <string name="title_activity_main">MainActivity</string>
 
-
-    <string name="text_login">ACCESO: MI MÉNIÈRE</string>
 </resources>

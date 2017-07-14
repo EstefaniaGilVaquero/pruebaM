@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.fragments;
+package com.symbel.meniere.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.stefy83.meniere.R;
+import com.symbel.meniere.R;
 
 
 public class OneFragment extends Fragment {

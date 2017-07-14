@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.fragments;
+package com.symbel.meniere.fragments;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,13 +10,12 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
-import com.example.stefy83.meniere.R;
-import com.example.stefy83.meniere.activity.AuthorsActivity;
-import com.example.stefy83.meniere.activity.FrameworksActivity;
-import com.example.stefy83.meniere.activity.HealthyHabits;
-import com.example.stefy83.meniere.activity.TabsActivity;
+import com.symbel.meniere.R;
+import com.symbel.meniere.activity.AuthorsActivity;
+import com.symbel.meniere.activity.FrameworksActivity;
+import com.symbel.meniere.activity.HealthyHabits;
+import com.symbel.meniere.activity.TabsActivity;
 
 
 public class FourFragment extends Fragment {

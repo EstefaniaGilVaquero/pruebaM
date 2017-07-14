@@ -1,10 +1,9 @@
-package com.example.stefy83.meniere.activity;
+package com.symbel.meniere.activity;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.example.stefy83.meniere.R;
+import com.symbel.meniere.R;
 
 public class LoginActivity extends AppCompatActivity {
 

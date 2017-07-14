@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.adapter;
+package com.symbel.meniere.adapter;
 
 /**
  * Created by ESTEFANIA GIL on 10/06/2017.

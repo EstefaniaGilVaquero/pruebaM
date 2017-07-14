@@ -1,4 +1,4 @@
-package com.example.stefy83.meniere.models;
+package com.symbel.meniere.models;
 
 /**
  * Created by stefy83 on 22/06/2017.
