@@ -85,13 +85,13 @@ public class ThreeFragment extends Fragment {
             public void onClick(View view) {
                 //Go to playStore
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("market://details?id=com.android.app"));
+                intent.setData(Uri.parse("market://details?id=com.symbel.meniere"));
                 try{
                     TabsActivity.activitySwitchFlag = true;
                     startActivity(intent);
                 }
                 catch(Exception e){
-                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.android.app"));
+                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.symbel.meniere&hl=es"));
                 }
             }
         });

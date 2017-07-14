@@ -1,8 +1,10 @@
 package com.symbel.meniere.activity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -83,6 +85,17 @@ public class HearingDiaryActivity extends AppCompatActivity {
                 /*Intent dbmanager = new Intent(this,AndroidDatabaseManager.class);
                 startActivity(dbmanager);*/
                 return true;
+            case R.id.hearingTestApp:
+                //Go to playStore
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("market://details?id=com.amw.hearingtest"));
+                try{
+                    TabsActivity.activitySwitchFlag = true;
+                    startActivity(intent);
+                }
+                catch(Exception e){
+                    intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.amw.hearingtest&hl=es"));
+                }
         }
         return super.onOptionsItemSelected(item);
     }

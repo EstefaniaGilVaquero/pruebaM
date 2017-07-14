@@ -21,7 +21,7 @@
     <string name="frecuencia1">1kHz:</string>
     <string name="frecuencia2">2kHz:</string>
     <string name="frecuencia4">4kHz:</string>
-    <string name="frecMasMenos">+</string>
+    <string name="frecMasMenos">±</string>
     <string name="enCrisis">En crisis</string>
 
     <!-- Tab Four -->

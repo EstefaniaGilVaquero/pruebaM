@@ -41,6 +41,7 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:backgroundTint="@color/colorPrimaryDark"
+        app:borderWidth="8dp"
         app:fabSize="normal"
         />
 
