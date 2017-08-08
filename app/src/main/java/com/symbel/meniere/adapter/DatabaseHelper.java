@@ -26,21 +26,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_AUDIO_ID = "id";
     private static final String KEY_AUDIO_DATE = "date";
     private static final String KEY_AUDIO_LEFT_05_a = "left05_a";
-    private static final String KEY_AUDIO_LEFT_05_b = "left05_b";
     private static final String KEY_AUDIO_LEFT_1_a = "left1_a";
-    private static final String KEY_AUDIO_LEFT_1_b = "left1_b";
     private static final String KEY_AUDIO_LEFT_2_a = "left2_a";
-    private static final String KEY_AUDIO_LEFT_2_b = "left2_b";
     private static final String KEY_AUDIO_LEFT_4_a = "left4_a";
-    private static final String KEY_AUDIO_LEFT_4_b = "left4_b";
     private static final String KEY_AUDIO_RIGTH_05_a = "rigth05_a";
-    private static final String KEY_AUDIO_RIGTH_05_b = "rigth05_b";
     private static final String KEY_AUDIO_RIGTH_1_a = "rigth1_a";
-    private static final String KEY_AUDIO_RIGTH_1_b = "rigth1_b";
     private static final String KEY_AUDIO_RIGTH_2_a = "rigth2_a";
-    private static final String KEY_AUDIO_RIGTH_2_b = "rigth2_b";
     private static final String KEY_AUDIO_RIGTH_4_a = "rigth4_a";
-    private static final String KEY_AUDIO_RIGTH_4_b = "rigth4_b";
 
     // User Table Columns
     private static final String KEY_USER_ID = "id";
@@ -81,21 +73,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
                 KEY_AUDIO_DATE + " TEXT, " +
                 KEY_AUDIO_LEFT_05_a + " TEXT, " +
-                KEY_AUDIO_LEFT_05_b + " TEXT, " +
                 KEY_AUDIO_LEFT_1_a + " TEXT, " +
-                KEY_AUDIO_LEFT_1_b + " TEXT, " +
                 KEY_AUDIO_LEFT_2_a + " TEXT, " +
-                KEY_AUDIO_LEFT_2_b + " TEXT, " +
                 KEY_AUDIO_LEFT_4_a + " TEXT, " +
-                KEY_AUDIO_LEFT_4_b + " TEXT, " +
                 KEY_AUDIO_RIGTH_05_a + " TEXT, " +
-                KEY_AUDIO_RIGTH_05_b + " TEXT, " +
                 KEY_AUDIO_RIGTH_1_a + " TEXT, " +
-                KEY_AUDIO_RIGTH_1_b + " TEXT, " +
                 KEY_AUDIO_RIGTH_2_a + " TEXT, " +
-                KEY_AUDIO_RIGTH_2_b + " TEXT, " +
-                KEY_AUDIO_RIGTH_4_a + " TEXT, " +
-                KEY_AUDIO_RIGTH_4_b + " TEXT " +
+                KEY_AUDIO_RIGTH_4_a + " TEXT " +
                 ")";
 
         db.execSQL(CREATE_USERS_TABLE);

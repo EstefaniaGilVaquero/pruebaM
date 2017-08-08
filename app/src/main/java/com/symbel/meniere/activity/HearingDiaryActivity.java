@@ -44,6 +44,12 @@ public class HearingDiaryActivity extends AppCompatActivity {
     private SQLiteDatabase db;
 
     @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        refreshData();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         //Recupero mediciones de audio de sqlite
@@ -187,6 +193,15 @@ public class HearingDiaryActivity extends AppCompatActivity {
         toast.show();
     }
 
+    public void refreshData(){
+        //Recupero mediciones de audio de sqlite
+        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
+        // 4. create and set adapter
+        adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
+        adapter.notifyDataSetChanged();
+        mRecyclerView.setAdapter(adapter);
+    }
+
     public ArrayList<HearingDiaryModel> getHearingEntries(String sql){
 
         ArrayList<HearingDiaryModel> arrayHearingEntriesAux = new ArrayList<>();
@@ -198,21 +213,13 @@ public class HearingDiaryActivity extends AppCompatActivity {
             HearingDiaryModel audio = new HearingDiaryModel();
             audio.date = cursor.getString(cursor.getColumnIndex("date"));
             audio.left05_a = cursor.getString(cursor.getColumnIndex("left05_a"));
-            audio.left05_b = cursor.getString(cursor.getColumnIndex("left05_b"));
             audio.left1_a = cursor.getString(cursor.getColumnIndex("left1_a"));
-            audio.left1_b = cursor.getString(cursor.getColumnIndex("left1_b"));
             audio.left2_a = cursor.getString(cursor.getColumnIndex("left2_a"));
-            audio.left2_b = cursor.getString(cursor.getColumnIndex("left2_b"));
             audio.left4_a = cursor.getString(cursor.getColumnIndex("left4_a"));
-            audio.left4_b = cursor.getString(cursor.getColumnIndex("left4_b"));
             audio.rigth05_a = cursor.getString(cursor.getColumnIndex("rigth05_a"));
-            audio.rigth05_b = cursor.getString(cursor.getColumnIndex("rigth05_b"));
             audio.rigth1_a = cursor.getString(cursor.getColumnIndex("rigth1_a"));
-            audio.rigth1_b = cursor.getString(cursor.getColumnIndex("rigth1_b"));
             audio.rigth2_a = cursor.getString(cursor.getColumnIndex("rigth2_a"));
-            audio.rigth2_a = cursor.getString(cursor.getColumnIndex("rigth2_b"));
             audio.rigth4_a = cursor.getString(cursor.getColumnIndex("rigth4_a"));
-            audio.rigth4_b = cursor.getString(cursor.getColumnIndex("rigth4_b"));
 
             arrayHearingEntriesAux.add(audio);
             cursor.moveToNext();
@@ -235,42 +242,25 @@ public class HearingDiaryActivity extends AppCompatActivity {
                                 String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
                                 ContentValues cv = new ContentValues();
                                 EditText left05_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq05_a);
-                                EditText left05_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq05_b);
                                 EditText left1_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq1_a);
-                                EditText left1_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq1_b);
                                 EditText left2_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq2_a);
-                                EditText left2_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq2_b);
                                 EditText left4_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq4_a);
-                                EditText left4_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq4_b);
                                 EditText rigth05_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer05_a);
-                                EditText rigth05_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer05_b);
                                 EditText rigth1_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer1_a);
-                                EditText rigth1_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer1_b);
                                 EditText rigth2_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer2_a);
-                                EditText rigth2_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer2_b);
                                 EditText rigth4_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer4_a);
-                                EditText rigth4_b = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer4_b);
 
                                 cv.put("date", date);
                                 cv.put("left05_a",  left05_a.getText().toString());
-                                cv.put("left05_b",  left05_b.getText().toString());
                                 cv.put("left1_a", left1_a.getText().toString());
-                                cv.put("left1_b", left1_b.getText().toString());
                                 cv.put("left2_a", left2_a.getText().toString());
-                                cv.put("left2_b", left2_b.getText().toString());
                                 cv.put("left4_a", left4_a.getText().toString());
-                                cv.put("left4_b", left4_b.getText().toString());
                                 cv.put("rigth05_a", rigth05_a.getText().toString());
-                                cv.put("rigth05_b", rigth05_b.getText().toString());
                                 cv.put("rigth1_a", rigth1_a.getText().toString());
-                                cv.put("rigth1_b", rigth1_b.getText().toString());
                                 cv.put("rigth2_a", rigth2_a.getText().toString());
-                                cv.put("rigth2_b", rigth2_b.getText().toString());
                                 cv.put("rigth4_a", rigth4_a.getText().toString());
-                                cv.put("rigth4_b", rigth4_b.getText().toString());
 
-                                db.insert("audio", null, cv);
-
+                                db.insert("audio", null, cv); 
                             }
                         })
                         .positiveText(R.string.dialogoGuardar)

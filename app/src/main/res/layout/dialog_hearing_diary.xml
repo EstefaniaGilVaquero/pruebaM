@@ -75,18 +75,6 @@
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:text=""/>
-                <TextView
-                    android:id="@+id/tvMasMenos1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/frecMasMenos"/>
-                <EditText
-                    android:id="@+id/etOidoIzq05_b"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:text=""/>
-
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -96,19 +84,6 @@
                 android:orientation="horizontal">
                 <EditText
                     android:id="@+id/etOidoDer05_a"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:text=""/>
-
-                <TextView
-                    android:id="@+id/tvMasMenos2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/frecMasMenos"/>
-
-                <EditText
-                    android:id="@+id/etOidoDer05_b"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:text=""/>
@@ -130,30 +105,21 @@
                 android:layout_height="wrap_content"
                 android:text="@string/frecuencia1" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
             android:orientation="horizontal">
+
             <EditText
                 android:id="@+id/etOidoIzq1_a"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
-                android:text=""/>
-            <TextView
-                android:id="@+id/tvMasMenos3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-            <EditText
-                android:id="@+id/etOidoIzq1_b"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
+                android:text="" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -162,19 +128,6 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/etOidoDer1_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
-            <TextView
-                android:id="@+id/tvMasMenos4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-
-            <EditText
-                android:id="@+id/etOidoDer1_b"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text=""/>
@@ -207,18 +160,6 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text=""/>
-            <TextView
-                android:id="@+id/tvMasMenos5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-            <EditText
-                android:id="@+id/etOidoIzq2_b"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -228,19 +169,6 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/etOidoDer2_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
-            <TextView
-                android:id="@+id/tvMasMenos6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-
-            <EditText
-                android:id="@+id/etOidoDer2_b"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text=""/>
@@ -273,18 +201,6 @@
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text=""/>
-            <TextView
-                android:id="@+id/tvMasMenos7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-            <EditText
-                android:id="@+id/etOidoIzq4_b"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
@@ -294,19 +210,6 @@
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/etOidoDer4_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-
-            <TextView
-                android:id="@+id/tvMasMenos8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/frecMasMenos"/>
-
-            <EditText
-                android:id="@+id/etOidoDer4_b"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:text=""/>
