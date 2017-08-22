@@ -260,7 +260,7 @@ public class HearingDiaryActivity extends AppCompatActivity {
                                 cv.put("rigth2_a", rigth2_a.getText().toString());
                                 cv.put("rigth4_a", rigth4_a.getText().toString());
 
-                                db.insert("audio", null, cv); 
+                                db.insert("audio", null, cv);
                             }
                         })
                         .positiveText(R.string.dialogoGuardar)
