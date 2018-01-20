@@ -1,4 +1,4 @@
-package com.symbel.meniere.activity;
+package com.symbel.meniere.activity.UtilitiesMeniere;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.symbel.meniere.R;
+import com.symbel.meniere.activity.TabsActivity;
 import com.symbel.meniere.adapter.DatabaseHelper;
 import com.symbel.meniere.adapter.HearingDiaryAdapter;
 import com.symbel.meniere.models.HearingDiaryModel;

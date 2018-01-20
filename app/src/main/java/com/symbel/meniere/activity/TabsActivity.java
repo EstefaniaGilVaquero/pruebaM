@@ -15,10 +15,10 @@ import android.widget.TextView;
 
 import com.symbel.meniere.R;
 import com.symbel.meniere.adapter.DatabaseHelper;
-import com.symbel.meniere.fragments.FourFragment;
-import com.symbel.meniere.fragments.OneFragment;
-import com.symbel.meniere.fragments.ThreeFragment;
-import com.symbel.meniere.fragments.TwoFragment;
+import com.symbel.meniere.activity.HelpMeniere.FourFragment;
+import com.symbel.meniere.activity.MyMeniere.OneFragment;
+import com.symbel.meniere.activity.UtilitiesMeniere.ThreeFragment;
+import com.symbel.meniere.activity.AboutMeniere.TwoFragment;
 
 import java.util.ArrayList;
 import java.util.List;

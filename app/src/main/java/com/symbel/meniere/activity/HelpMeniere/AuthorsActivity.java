@@ -1,4 +1,4 @@
-package com.symbel.meniere.activity;
+package com.symbel.meniere.activity.HelpMeniere;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.MenuItem;
 
 import com.symbel.meniere.R;
 
-public class FrameworksActivity extends AppCompatActivity {
+public class AuthorsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
@@ -29,7 +29,7 @@ public class FrameworksActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frameworks);
+        setContentView(R.layout.activity_authors);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -1,4 +1,4 @@
-package com.symbel.meniere.activity;
+package com.symbel.meniere.activity.UtilitiesMeniere;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

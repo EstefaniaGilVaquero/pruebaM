@@ -7,7 +7,7 @@
     android:orientation="vertical"
     app:layout_collapseMode="parallax"
     app:layout_scrollFlags="enterAlways"
-    tools:context=".fragments.FourFragment">
+    tools:context=".activity.HelpMeniere.FourFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

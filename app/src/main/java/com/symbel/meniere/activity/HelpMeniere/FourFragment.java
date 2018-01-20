@@ -1,4 +1,4 @@
-package com.symbel.meniere.fragments;
+package com.symbel.meniere.activity.HelpMeniere;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,9 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.symbel.meniere.R;
-import com.symbel.meniere.activity.AuthorsActivity;
-import com.symbel.meniere.activity.FrameworksActivity;
-import com.symbel.meniere.activity.HealthyHabits;
+import com.symbel.meniere.activity.HelpMeniere.AuthorsActivity;
+import com.symbel.meniere.activity.HelpMeniere.FrameworksActivity;
+import com.symbel.meniere.activity.UtilitiesMeniere.HealthyHabits;
 import com.symbel.meniere.activity.TabsActivity;
 
 

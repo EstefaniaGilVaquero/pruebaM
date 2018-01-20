@@ -1,4 +1,4 @@
-package com.symbel.meniere.fragments;
+package com.symbel.meniere.activity.AboutMeniere;
 
 import android.app.Activity;
 import android.os.Bundle;

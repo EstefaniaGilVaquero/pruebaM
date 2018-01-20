@@ -1,4 +1,4 @@
-package com.symbel.meniere.fragments;
+package com.symbel.meniere.activity.UtilitiesMeniere;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,11 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.symbel.meniere.R;
-import com.symbel.meniere.activity.HealthyHabits;
-import com.symbel.meniere.activity.HearingDiaryActivity;
-import com.symbel.meniere.activity.LoginActivity;
+import com.symbel.meniere.activity.UtilitiesMeniere.HealthyHabits;
+import com.symbel.meniere.activity.UtilitiesMeniere.HearingDiaryActivity;
 import com.symbel.meniere.activity.TabsActivity;
-import com.symbel.meniere.adapter.FaqAdapter;
 
 
 public class ThreeFragment extends Fragment {
