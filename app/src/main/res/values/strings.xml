@@ -24,6 +24,13 @@
     <string name="frecMasMenos">±</string>
     <string name="enCrisis">En crisis</string>
 
+    <!-- Tab one -->
+    <string name="txtNewEvent">New Event</string>
+    <string name="txtSeeSelection">See Selection</string>
+    <string name="txtMonthReview">Month Review</string>
+    <string name="txtFocusToday">Focus Today</string>
+    <string name="txtMonthEvents">Month Events:</string>
+
     <!-- Tab Four -->
     <string name="txtUserGuide">Guia de uso</string>
     <string name="txtAuthors">Autores</string>
