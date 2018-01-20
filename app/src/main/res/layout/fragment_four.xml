@@ -47,7 +47,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/info_blanco" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -55,6 +55,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtUserGuide" />
 
             </android.support.v7.widget.CardView>
@@ -77,6 +80,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtAuthors" />
 
                 <ImageView
@@ -89,7 +95,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/authors_blanco" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </LinearLayout>
@@ -133,6 +139,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtFrameworks" />
 
                 <ImageView
@@ -145,7 +154,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/frameworks_blanco" />
 
             </android.support.v7.widget.CardView>
 
@@ -166,6 +175,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtVisitWeb" />
 
                 <ImageView

@@ -46,6 +46,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtHearingDiary" />
                 <ImageView
                     android:id="@+id/authors"
@@ -57,7 +60,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/hearing_blanco" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
         <LinearLayout
@@ -103,6 +106,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtHealthyHabits" />
                 <ImageView
                     android:id="@+id/imgHealthyHabits"
@@ -114,7 +120,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/healty_blanco" />
             </android.support.v7.widget.CardView>
             <android.support.v7.widget.CardView
                 android:id="@+id/CVRateMe"
@@ -132,6 +138,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="20dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite"
                     android:text="@string/txtRateMe" />
                 <ImageView
                     android:id="@+id/imgRateMe"
@@ -143,7 +152,7 @@
                     android:layout_marginRight="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/webprueba" />
+                    app:srcCompat="@drawable/myself_blanco" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
     </LinearLayout>
