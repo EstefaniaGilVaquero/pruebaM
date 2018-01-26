@@ -7,7 +7,6 @@
         android:normalScreens="true"
         android:smallScreens="true" />
 
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -26,6 +25,7 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -39,7 +39,7 @@
         <activity android:name=".activity.HelpMeniere.FrameworksActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity" />
-
+        <activity android:name=".activity.MyMeniere.NewEventActivity"></activity>
     </application>
 
 </manifest>
