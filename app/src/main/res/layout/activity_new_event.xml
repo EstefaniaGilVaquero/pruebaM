@@ -610,228 +610,599 @@
                             </LinearLayout>
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Tipo de jaqueca"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_margin="7dp"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:weightSum="4"
-                            android:background="@color/colorPrimaryDarker">
-
-                            <android.support.v7.widget.CardView
+                            android:layout_weight="0.50"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-                                <LinearLayout
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1">
-                                <LinearLayout
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="7dp"
+                        android:weightSum="4"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:weightSum="5"
-                            android:background="@color/colorPrimaryDarker">
-
-                            <android.support.v7.widget.CardView
+                            android:layout_weight="0.5"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.75">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2">
-                                <LinearLayout
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
-                    <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="7dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_margin="7dp"
+                        android:weightSum="4"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:weightSum="5"
-                            android:background="@color/colorPrimaryDarker">
-
-                            <android.support.v7.widget.CardView
+                            android:layout_weight="0.5"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/card_edge">
-                                <LinearLayout
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
-
-                            </android.support.v7.widget.CardView>
-                            <android.support.v7.widget.CardView
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.75">
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2">
-                                <LinearLayout
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:background="@drawable/card_edge">
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:gravity="center"
-                                        android:padding="5dp"
-                                        android:text="prueba"/>
-                                </LinearLayout>
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Desencadenantes"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:textColor="@color/colorWhite"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Clima"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_margin="7dp"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sueño"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_margin="7dp"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Actividad física"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        android:layout_margin="7dp"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.50"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.16">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="5dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Excesos"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="7dp"
+                        android:weightSum="6"
+                        android:background="@color/colorPrimaryDarker">
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:textColor="@color/colorWhite"
+                                    android:background="@color/colorPrimaryDarker"
+                                    android:text="N/C"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:background="@drawable/card_edge">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/card_edge">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:padding="2dp"
+                                    android:text="prueba"/>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Mis notas"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        android:background="@color/colorPrimary"/>
 
-                            </android.support.v7.widget.CardView>
-                        </LinearLayout>
-                    </android.support.v7.widget.CardView>
+
+
+
+
+
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
