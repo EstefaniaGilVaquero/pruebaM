@@ -41,6 +41,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="New Event"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
                     <android.support.v7.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1197,7 +1204,277 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="7dp"
                         android:background="@color/colorPrimary"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Residual Sinmpthoms"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorWhite"/>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        app:cardBackgroundColor="@color/colorPrimary">
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="3"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textStart"
+                                    android:layout_weight="1"
+                                    android:text="Min" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="Duracion" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:layout_weight="1"
+                                    android:text="Max" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <com.xw.repo.BubbleSeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bsb_bubble_color="@color/colorPrimaryDarker"
+                                    app:bsb_bubble_text_color="@color/colorWhite"
+                                    android:layout_gravity="center"
+                                    app:bsb_max="12"
+                                    app:bsb_min="0"
+                                    app:bsb_progress="0"
+                                    app:bsb_second_track_color="@color/colorPrimaryDarker"
+                                    app:bsb_section_count="2"
+                                    app:bsb_section_text_position="below_section_mark"
+                                    app:bsb_show_progress_in_float="false"
+                                    app:bsb_show_section_mark="true"
+                                    app:bsb_show_section_text="true"
+                                    app:bsb_show_thumb_text="false"
+                                    app:bsb_thumb_radius="8dp"
+                                    app:bsb_track_color="@color/colorWhite" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        app:cardBackgroundColor="@color/colorPrimary">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="3"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textStart"
+                                    android:layout_weight="1"
+                                    android:text="Min" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="TextView" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:layout_weight="1"
+                                    android:text="Max" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <com.xw.repo.BubbleSeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bsb_bubble_color="@color/colorPrimaryDarker"
+                                    app:bsb_bubble_text_color="@color/colorWhite"
+                                    android:layout_gravity="center"
+                                    app:bsb_max="10"
+                                    app:bsb_min="0"
+                                    app:bsb_progress="0"
+                                    app:bsb_second_track_color="@color/colorPrimaryDarker"
+                                    app:bsb_section_count="2"
+                                    app:bsb_section_text_position="below_section_mark"
+                                    app:bsb_show_progress_in_float="false"
+                                    app:bsb_show_section_mark="true"
+                                    app:bsb_show_section_text="true"
+                                    app:bsb_show_thumb_text="false"
+                                    app:bsb_thumb_radius="8dp"
+                                    app:bsb_track_color="@color/colorWhite" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        app:cardBackgroundColor="@color/colorPrimary">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="3"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textStart"
+                                    android:layout_weight="1"
+                                    android:text="Min" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="TextView" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:layout_weight="1"
+                                    android:text="Max" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <com.xw.repo.BubbleSeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bsb_bubble_color="@color/colorPrimaryDarker"
+                                    app:bsb_bubble_text_color="@color/colorWhite"
+                                    android:layout_gravity="center"
+                                    app:bsb_max="10"
+                                    app:bsb_min="0"
+                                    app:bsb_progress="0"
+                                    app:bsb_second_track_color="@color/colorPrimaryDarker"
+                                    app:bsb_section_count="2"
+                                    app:bsb_section_text_position="below_section_mark"
+                                    app:bsb_show_progress_in_float="false"
+                                    app:bsb_show_section_mark="true"
+                                    app:bsb_show_section_text="true"
+                                    app:bsb_show_thumb_text="false"
+                                    app:bsb_thumb_radius="8dp"
+                                    app:bsb_track_color="@color/colorWhite" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="7dp"
+                        app:cardBackgroundColor="@color/colorPrimary">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_weight="3"
+                                android:padding="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textStart"
+                                    android:layout_weight="1"
+                                    android:text="Min" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="center"
+                                    android:layout_weight="1"
+                                    android:text="TextView" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAlignment="textEnd"
+                                    android:layout_weight="1"
+                                    android:text="Max" />
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp">
+
+                                <com.xw.repo.BubbleSeekBar
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:bsb_bubble_color="@color/colorPrimaryDarker"
+                                    app:bsb_bubble_text_color="@color/colorWhite"
+                                    android:layout_gravity="center"
+                                    app:bsb_max="10"
+                                    app:bsb_min="0"
+                                    app:bsb_progress="0"
+                                    app:bsb_second_track_color="@color/colorPrimaryDarker"
+                                    app:bsb_section_count="2"
+                                    app:bsb_section_text_position="below_section_mark"
+                                    app:bsb_show_progress_in_float="false"
+                                    app:bsb_show_section_mark="true"
+                                    app:bsb_show_section_text="true"
+                                    app:bsb_show_thumb_text="false"
+                                    app:bsb_thumb_radius="8dp"
+                                    app:bsb_track_color="@color/colorWhite" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
 
 
 

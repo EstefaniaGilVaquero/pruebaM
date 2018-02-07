@@ -16,11 +16,16 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Info
     private static final String DATABASE_NAME = "meniereDatabase";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     // Table Names
-    private static final String TABLE_AUDIO = "audio";
     private static final String TABLE_USERS = "users";
+    private static final String TABLE_AUDIO = "audio";
+    private static final String TABLE_EVENT = "event";
+
+    // User Table Columns
+    private static final String KEY_USER_ID = "id";
+    private static final String KEY_USER_PWD = "pwd";
 
     // Audio Table Columns
     private static final String KEY_AUDIO_ID = "id";
@@ -34,9 +39,37 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_AUDIO_RIGTH_2_a = "rigth2_a";
     private static final String KEY_AUDIO_RIGTH_4_a = "rigth4_a";
 
-    // User Table Columns
-    private static final String KEY_USER_ID = "id";
-    private static final String KEY_USER_PWD = "pwd";
+    // Event Table Columns
+    private static final String KEY_EVENT_ID = "id";
+    private static final String KEY_EVENT_DATE = "date";
+    private static final String KEY_EVENT_DURATION = "duration";
+    private static final String KEY_EVENT_INTENSITY = "intensity";
+    private static final String KEY_EVENT_LIMITATION = "limitation";
+    private static final String KEY_EVENT_STRESS = "stress";
+    private static final String KEY_EVENT_DEAFNESS = "deafness";
+    private static final String KEY_EVENT_TINNITUS = "tinnitus";
+    private static final String KEY_EVENT_PLENITUDE = "plenitude";
+    private static final String KEY_EVENT_MIGRAINE = "migraine";
+    private static final String KEY_EVENT_PHOTOPHOBIA = "photophobia";
+    private static final String KEY_EVENT_PHONOPHOBIA = "phonophobia";
+    private static final String KEY_EVENT_VISUAL_SYMP = "visual_symp";
+    private static final String KEY_EVENT_TUMARKIN = "tumerkin";
+    private static final String KEY_EVENT_MENSTRUATION = "menstruation";
+    private static final String KEY_EVENT_NAUSEA = "nausea";
+    private static final String KEY_EVENT_VOMIT = "vomit";
+    private static final String KEY_EVENT_INESTABILITY = "inestability";
+    private static final String KEY_EVENT_MIGRAINE_TYPE1 = "migraine_type1";
+    private static final String KEY_EVENT_MIGRAINE_TYPE2 = "migraine_type2";
+    private static final String KEY_EVENT_MIGRAINE_TYPE3 = "migraine_type3";
+    private static final String KEY_EVENT_TRIGGERS_CLIMATE = "triggers_climate";
+    private static final String KEY_EVENT_TRIGGERS_SLEEP = "triggers_sleep";
+    private static final String KEY_EVENT_TRIGGERS_PHISIC = "triggers_phisic";
+    private static final String KEY_EVENT_TRIGGERS_EXCESSES = "triggers_excesses";
+    private static final String KEY_EVENT_TRIGGERS_NOTES = "triggers_notes";
+    private static final String KEY_EVENT_RESIDUAL_TYPE1 = "residual_type1";
+    private static final String KEY_EVENT_RESIDUAL_TYPE2 = "residual_type2";
+    private static final String KEY_EVENT_RESIDUAL_TYPE3 = "residual_type3";
+    private static final String KEY_EVENT_RESIDUAL_TYPE4 = "residual_type4";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -82,8 +115,44 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 KEY_AUDIO_RIGTH_4_a + " TEXT " +
                 ")";
 
+        String CREATE_EVENT_TABLE = "CREATE TABLE " + TABLE_EVENT +
+                "(" +
+                KEY_EVENT_ID + " INTEGER PRIMARY KEY ," + // Define a primary key
+                //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
+                KEY_EVENT_DATE + " TEXT, " +
+                KEY_EVENT_DURATION + " TEXT, " +
+                KEY_EVENT_INTENSITY + " TEXT, " +
+                KEY_EVENT_LIMITATION + " TEXT, " +
+                KEY_EVENT_STRESS + " TEXT, " +
+                KEY_EVENT_DEAFNESS + " TEXT, " +
+                KEY_EVENT_TINNITUS + " TEXT, " +
+                KEY_EVENT_PLENITUDE + " TEXT, " +
+                KEY_EVENT_MIGRAINE + " TEXT " +
+                KEY_EVENT_PHOTOPHOBIA + " TEXT " +
+                KEY_EVENT_PHONOPHOBIA + " TEXT " +
+                KEY_EVENT_VISUAL_SYMP + " TEXT " +
+                KEY_EVENT_TUMARKIN + " TEXT " +
+                KEY_EVENT_MENSTRUATION + " TEXT " +
+                KEY_EVENT_NAUSEA + " TEXT " +
+                KEY_EVENT_VOMIT + " TEXT " +
+                KEY_EVENT_INESTABILITY + " TEXT " +
+                KEY_EVENT_MIGRAINE_TYPE1 + " TEXT " +
+                KEY_EVENT_MIGRAINE_TYPE2 + " TEXT " +
+                KEY_EVENT_MIGRAINE_TYPE3 + " TEXT " +
+                KEY_EVENT_TRIGGERS_CLIMATE + " TEXT " +
+                KEY_EVENT_TRIGGERS_SLEEP + " TEXT " +
+                KEY_EVENT_TRIGGERS_PHISIC + " TEXT " +
+                KEY_EVENT_TRIGGERS_EXCESSES + " TEXT " +
+                KEY_EVENT_TRIGGERS_NOTES + " TEXT " +
+                KEY_EVENT_RESIDUAL_TYPE1 + " TEXT " +
+                KEY_EVENT_RESIDUAL_TYPE2 + " TEXT " +
+                KEY_EVENT_RESIDUAL_TYPE3 + " TEXT " +
+                KEY_EVENT_RESIDUAL_TYPE4 + " TEXT " +
+                ")";
+
         db.execSQL(CREATE_USERS_TABLE);
         db.execSQL(CREATE_AUDIO_TABLE);
+        db.execSQL(CREATE_EVENT_TABLE);
     }
 
     // Called when the database needs to be upgraded.
