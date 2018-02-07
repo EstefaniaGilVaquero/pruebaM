@@ -164,6 +164,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             // Simplest implementation is to drop all old tables and recreate them
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_USERS);
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_AUDIO);
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_EVENT);
             db.execSQL("DROP TABLE IF EXISTS todos");
             onCreate(db);
         }
