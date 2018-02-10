@@ -13,6 +13,7 @@
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
 
+
     <!-- Hearing diary -->
     <string name="titleNewEntry">Nueva audición</string>
     <string name="oidoIzquierdo">Oído Izquierdo</string>

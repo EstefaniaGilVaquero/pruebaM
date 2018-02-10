@@ -12,12 +12,16 @@
 
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
+    <string name="positiveTxtOk">OK</string>
+
 
     <!-- My Meniere -->
     <string name="titleNewEvent">New event</string>
     <string name="min">Min.</string>
     <string name="Max">Max.</string>
     <string name="Duration">Duración</string>
+    <string name="selectionErrorTitle">Selection Error</string>
+    <string name="selectionErrorMessage">You mast select today for adding new events</string>
 
     <!-- Hearing diary -->
     <string name="titleNewEntry">Nueva audición</string>

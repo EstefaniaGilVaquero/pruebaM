@@ -1,6 +1,15 @@
 package com.symbel.meniere.utils;
 
+import android.content.Context;
 import android.os.Handler;
+
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.symbel.meniere.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 /**
  * Author : Rajanikant
@@ -24,4 +33,15 @@ public class Utils {
             }
         }, secs * 1000); // afterDelay will be executed after (secs*1000) milliseconds.
     }
+
+    public static void OkDialog(Context context, String title, String content){
+
+        MaterialDialog dialog = new MaterialDialog.Builder(context)
+                .title(title)
+                .content(content)
+                .positiveText(R.string.positiveTxtOk)
+                .show();
+    }
+
+
 }
