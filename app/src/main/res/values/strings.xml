@@ -19,9 +19,72 @@
     <string name="titleNewEvent">New event</string>
     <string name="min">Min.</string>
     <string name="Max">Max.</string>
-    <string name="Duration">Duración</string>
+    <string name="duration">Duration: 00h:00m</string>
+    <string name="vertigoIntensity">Vertigo intensity: 0</string>
+    <string name="limitation">Intensity limitation: 0</string>
+    <string name="stress">Stress level: 0</string>
+    <string name="hearingLoss">Hearing loss</string>
+    <string name="tinnitus">Tinnitus</string>
+    <string name="earFullness">Ear fullness</string>
+    <string name="headache">Headache</string>
+    <string name="photophobia">Photophobia</string>
+    <string name="phonophobia">Phonophobia</string>
+    <string name="visualSymptoms">Visual symptoms</string>
+    <string name="tumarkin">Tumarkin</string>
+    <string name="menstruation">Menstruation</string>
+    <string name="nausea">Nausea</string>
+    <string name="vomiting">Vomiting</string>
+    <string name="instability">Instability</string>
+    <string name="instabilityIntensity">Instability intensity</string>
+    <string name="headacheProperties">Headache properties</string>
+    <string name="NA">N/A</string>
+    <string name="mild">Mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+    <string name="oneSide">One side</string>
+    <string name="wholeHead">Whole Head</string>
+    <string name="throbbing">Throbbing</string>
+    <string name="tightening">Tigthening</string>
+    <string name="eventTriggers">Event triggers</string>
+    <string name="weather">Weather</string>
+    <string name="sunny">Sunny</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="storm">Storm</string>
+    <string name="sleep">Sleep</string>
+    <string name="excelent">Excelent</string>
+    <string name="regular">Regular</string>
+    <string name="poor">Poor</string>
+    <string name="physicalActivity">Physical activity</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="habitExcess">Habit - Excess</string>
+    <string name="salt">Salt</string>
+    <string name="caffeine">Caffeine</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="tobacco">Tobacco</string>
+    <string name="sugar">Sugar</string>
+    <string name="myNotes">My notes</string>
+    <string name="backSymps">Background Symptoms</string>
+    <string name="dizzinessDis">Dizziness disability: 0</string>
+    <string name="inestabilityDis">Inestability disability: 0</string>
+    <string name="visualBlurDis">Visual blur disability: 0</string>
+    <string name="headPressure">Head Pressure: 0</string>
+    <string name="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+
+
+
+
+
+
+
+
+
     <string name="selectionErrorTitle">Selection Error</string>
     <string name="selectionErrorMessage">You mast select today for adding new events</string>
+
 
     <!-- Hearing diary -->
     <string name="titleNewEntry">Nueva audición</string>
