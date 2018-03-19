@@ -19,6 +19,7 @@
     <string name="titleNewEvent">New event</string>
     <string name="min">Min.</string>
     <string name="Max">Max.</string>
+    <string name="episodes">Episodes:</string>
     <string name="duration">Duration:</string>
     <string name="vertigoIntensity">Vertigo intensity:</string>
     <string name="limitation">Intensity limitation:</string>
@@ -70,20 +71,16 @@
     <string name="inestabilityDis">Inestability disability:</string>
     <string name="visualBlurDis">Visual blur disability:</string>
     <string name="headPressure">Head Pressure:</string>
-    <string name="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
-        Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
-
-
-
-
-
-
-
-
-
+    <string name="explanation">Disability Scale: (Shepard et al., 1990)\n\n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or hard to change job because of symptoms\n5: Estabilished severe disability; unable to work for over 1 year or estabilished permanent disability with compensations payments)</string>
 
     <string name="selectionErrorTitle">Selection Error</string>
-    <string name="selectionErrorMessage">You mast select today for adding new events</string>
+    <string name="selectionErrorMessage">Selection Error</string>
+    <string name="addEpisodeTitle">Add more episodes</string>
+    <string name="addEpisodeContent">You have selected to add more episodes. Please enter the number of episodes for today. You must to summarize your symptoms in the other fields of this section</string>
+    <string name="hearingLossSwitchTitle">More data is needed</string>
+    <string name="hearingLossSwitchContent">You selected some auditive symptoms. Please specify where these auditive symptoms mainly occurred.</string>
+    <string name="infoVisualTitle">Items info</string>
+    <string name="infoVisualContent">Visual symptoms: Visual sensations that occur mainly before the attack.\n\nTumarkin: Sudden fall with no previous warning or provocative factor and without vertigo or loss of consciousness.</string>
 
 
     <!-- Hearing diary -->
@@ -101,7 +98,7 @@
     <string name="txtNewEvent">New Event</string>
     <string name="txtSeeSelection">See Selection</string>
     <string name="txtMonthReview">Month Review</string>
-    <string name="txtFocusToday">Focus Today</string>
+    <string name="txtFocusToday">Back Today</string>
     <string name="txtMonthEvents">Month Events:</string>
 
     <!-- Tab Four -->

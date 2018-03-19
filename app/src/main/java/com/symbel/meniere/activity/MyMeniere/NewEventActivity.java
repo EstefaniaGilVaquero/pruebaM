@@ -14,16 +14,24 @@ import android.support.v7.widget.AppCompatDrawableManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.afollestad.materialdialogs.MaterialDialog;
 import com.symbel.meniere.R;
 import com.symbel.meniere.adapter.DatabaseHelper;
 import com.symbel.meniere.models.EventModel;
 import com.symbel.meniere.models.HearingDiaryModel;
+import com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner;
 import com.xw.repo.BubbleSeekBar;
 
 import java.text.SimpleDateFormat;
@@ -36,12 +44,15 @@ public class NewEventActivity extends AppCompatActivity {
     private View mScrollView;
     private BubbleSeekBar mDurationBubble, mVertigoBubble, mLimitationBubble, mStressBubble, mInstabilityIntenBubble, mDizzinessDisBubble, mInstabilityDisBubble, mVisualBlurDisBubble, mHeadPresureDisBubble;
     private SwitchCompat mHearingLossSwitch, mTinnitusSwitch, mEarFullnessSwitch, mHeadacheSwitch, mPhotophobiaSwitch, mPhonophobiaSwitch, mVisualSymSwitch, mTumarkinSwitch, mMenstruationSwitch, mNauseaSwitch, mVomitingSwitch, mInstabilitySwitch;
-    private TextView mDurationTxt, mVertigoTxt, mLimitationTxt, mStressTxt, mInstabilityIntenTxt, mDizzinessDisTxt, mInstabilityDisTxt, mVisualBlurDisTxt, mHeadPresureDisTxt,
+    private TextView mEpisodesTxt, mDurationTxt, mVertigoTxt, mLimitationTxt, mStressTxt, mInstabilityIntenTxt, mDizzinessDisTxt, mInstabilityDisTxt, mVisualBlurDisTxt, mHeadPresureDisTxt,
                         mHeadProp_1a_CardView, mHeadProp_1b_CardView, mHeadProp_1c_CardView, mHeadProp_1d_CardView, mHeadProp_2a_CardView, mHeadProp_2b_CardView, mHeadProp_2c_CardView, mHeadProp_3a_CardView, mHeadProp_3b_CardView, mHeadProp_3c_CardView,
                         mWeather_1a_CardView, mWeather_1b_CardView, mWeather_1c_CardView, mWeather_1d_CardView, mSleep_1a_CardView, mSleep_1b_CardView, mSleep_1c_CardView, mSleep_1d_CardView, mPhysical_1a_CardView, mPhysical_1b_CardView, mPhysical_1c_CardView,
                         mPhysical_1d_CardView, mHabit_1a_CardView, mHabit_1b_CardView, mHabit_1c_CardView, mHabit_1d_CardView, mHabit_1e_CardView, mHabit_1f_CardView, mNotes;
 
-    private String mMigraineType1, mMigraineType2, mMigraineType3, mWeather, mSleep, mPhysical, mHabit;
+    private String mMigraineType1, mMigraineType2, mMigraineType3, mWeather, mSleep, mPhysical, mHabit, mHearingLoss;
+    private ImageButton mAddEpisodeBtn, mInfoVisualBtn;
+    private int mEpisode = 1, mHearingLossIndex;
+
 
     private Toolbar toolbar;
     private DatabaseHelper dbHelper;
@@ -79,6 +90,11 @@ public class NewEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
 
+        mAddEpisodeBtn = (ImageButton) findViewById(R.id.addEpisodeBtn);
+        mInfoVisualBtn = (ImageButton) findViewById(R.id.infoVisualBtn);
+
+        mEpisodesTxt = (TextView) findViewById(R.id.episodesTxt);
+        mEpisodesTxt.setText(getString(R.string.episodes) + " " + mEpisode);
         mScrollView = findViewById(R.id.newEventScrollView);
         mDurationBubble = (BubbleSeekBar) findViewById(R.id.durationBubble);
         mVertigoBubble = (BubbleSeekBar) findViewById(R.id.vertigoIntensityBubble);
@@ -144,6 +160,8 @@ public class NewEventActivity extends AppCompatActivity {
 
         mNotes = (TextView) findViewById(R.id.notesTxt);
 
+        //LinearLayout layoutToDisable = findViewById(R.id.lay);
+
         mScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
             public void onScrollChanged() {
@@ -165,7 +183,7 @@ public class NewEventActivity extends AppCompatActivity {
         db = dbHelper.getWritableDatabase();
 
         //Recupero eventos prueba una fecha
-        arrayEventEntries = getEventEntries("SELECT * FROM " + "event");
+       // arrayEventEntries = getEventEntries("SELECT * FROM " + "event");
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -183,18 +201,111 @@ public class NewEventActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Snackbar.make(view, "Se ha presionado FAB", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+                Snackbar.make(view, "Se ha guardado el evento", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
                 saveEvent();
+                disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
 
             }
         });
-
 
         //Set listeners for bubbles
         setBubblesListeners();
 
         //Set listeners for CardViews
         setCardViewsListeners();
+
+        //set info listeners
+        setInfoListeners();
+
+    }
+
+/*    public void disableEnableEvent(boolean enable, LinearLayout layoutToDisable){
+        for (int i = 0; i < layoutToDisable.getChildCount(); i++) {
+            View child = layoutToDisable.getChildAt(i);
+            child.setEnabled(enable);
+        }
+    }*/
+
+    private void disableEnableEvent(boolean enable, ViewGroup layout) {
+        for (int i = 0; i < layout.getChildCount(); i++) {
+            View child = layout.getChildAt(i);
+            child.setEnabled(enable);
+            if (child instanceof ViewGroup) {
+                ViewGroup group = (ViewGroup) child;
+                for (int j = 0; j < group.getChildCount(); j++) {
+                    group.getChildAt(j).setEnabled(enable);
+                }
+            }
+        }
+    }
+
+
+
+    public void setInfoListeners(){
+        mAddEpisodeBtn.setOnClickListener(new ImageButton.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                int index = mEpisode - 1;
+                new MaterialDialog.Builder(v.getContext())
+                        .title(R.string.addEpisodeTitle)
+                        .content(R.string.addEpisodeContent)
+                        .items(R.array.episodes)
+                        .itemsCallbackSingleChoice(index, new MaterialDialog.ListCallbackSingleChoice() {
+                            @Override
+                            public boolean onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                mEpisodesTxt.setText(getString(R.string.episodes) + " " + (which + 1));
+                                mEpisode = which + 1;
+                                return true;
+                            }
+                        })
+                        .positiveText(R.string.positiveTxtOk)
+                        .show();
+            }
+        } );
+
+        mInfoVisualBtn.setOnClickListener(new ImageButton.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                new MaterialDialog.Builder(v.getContext())
+                        .title(R.string.infoVisualTitle)
+                        .content(R.string.infoVisualContent)
+                        .positiveText(R.string.positiveTxtOk)
+                        .show();
+            }
+        } );
+
+        mHearingLossSwitch.setOnClickListener(new SwitchCompat.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                if (mHearingLossSwitch.isChecked()) {
+                    new MaterialDialog.Builder(v.getContext())
+                            .title(R.string.addEpisodeTitle)
+                            .content(R.string.addEpisodeContent)
+                            .items(R.array.hearingLoss)
+                            .itemsCallbackSingleChoice(mHearingLossIndex, new MaterialDialog.ListCallbackSingleChoice() {
+                                @Override
+                                public boolean onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
+                                    mHearingLoss = text.toString();
+                                    mHearingLossIndex = which;
+                                    return true;
+                                }
+                            })
+                            .positiveText(R.string.positiveTxtOk)
+                            .show();
+                }else{
+                    mHearingLoss = "";
+                    mHearingLossIndex = 0;
+                }
+            }
+        } );
+
+
+
+
+
+
 
     }
 

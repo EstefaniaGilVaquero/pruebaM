@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="episodes">
+        <item>I only had ONE (1) episode</item>
+        <item>I had TWO (2) episodes</item>
+        <item>I had THREE (3) episodes</item>
+        <item>I had FOUR (4) episodes or more</item>
+    </string-array>
+
+    <string-array name="hearingLoss">
+        <item>Not Applicable</item>
+        <item>Left Ear</item>
+        <item>Right Ear</item>
+        <item>Both Ears</item>
+    </string-array>
+</resources>
