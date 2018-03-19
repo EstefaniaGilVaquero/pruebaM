@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Info
     private static final String DATABASE_NAME = "meniereDatabase";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
 
     // Table Names
     private static final String TABLE_USERS = "users";
@@ -46,7 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_EVENT_INTENSITY = "intensity";
     private static final String KEY_EVENT_LIMITATION = "limitation";
     private static final String KEY_EVENT_STRESS = "stress";
-    private static final String KEY_EVENT_DEAFNESS = "deafness";
+    private static final String KEY_EVENT_HEARING_LOSS = "hearingLoss";
     private static final String KEY_EVENT_TINNITUS = "tinnitus";
     private static final String KEY_EVENT_PLENITUDE = "plenitude";
     private static final String KEY_EVENT_MIGRAINE = "migraine";
@@ -119,34 +119,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "(" +
                 KEY_EVENT_ID + " INTEGER PRIMARY KEY ," + // Define a primary key
                 //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
+                //BUBBLES
                 KEY_EVENT_DATE + " TEXT, " +
                 KEY_EVENT_DURATION + " TEXT, " +
                 KEY_EVENT_INTENSITY + " TEXT, " +
                 KEY_EVENT_LIMITATION + " TEXT, " +
                 KEY_EVENT_STRESS + " TEXT, " +
-                KEY_EVENT_DEAFNESS + " TEXT, " +
+                KEY_EVENT_HEARING_LOSS + " TEXT, " +
                 KEY_EVENT_TINNITUS + " TEXT, " +
                 KEY_EVENT_PLENITUDE + " TEXT, " +
-                KEY_EVENT_MIGRAINE + " TEXT " +
-                KEY_EVENT_PHOTOPHOBIA + " TEXT " +
-                KEY_EVENT_PHONOPHOBIA + " TEXT " +
-                KEY_EVENT_VISUAL_SYMP + " TEXT " +
-                KEY_EVENT_TUMARKIN + " TEXT " +
-                KEY_EVENT_MENSTRUATION + " TEXT " +
-                KEY_EVENT_NAUSEA + " TEXT " +
-                KEY_EVENT_VOMIT + " TEXT " +
-                KEY_EVENT_INESTABILITY + " TEXT " +
-                KEY_EVENT_MIGRAINE_TYPE1 + " TEXT " +
-                KEY_EVENT_MIGRAINE_TYPE2 + " TEXT " +
-                KEY_EVENT_MIGRAINE_TYPE3 + " TEXT " +
-                KEY_EVENT_TRIGGERS_CLIMATE + " TEXT " +
-                KEY_EVENT_TRIGGERS_SLEEP + " TEXT " +
-                KEY_EVENT_TRIGGERS_PHISIC + " TEXT " +
-                KEY_EVENT_TRIGGERS_EXCESSES + " TEXT " +
-                KEY_EVENT_TRIGGERS_NOTES + " TEXT " +
-                KEY_EVENT_RESIDUAL_TYPE1 + " TEXT " +
-                KEY_EVENT_RESIDUAL_TYPE2 + " TEXT " +
-                KEY_EVENT_RESIDUAL_TYPE3 + " TEXT " +
+                KEY_EVENT_MIGRAINE + " TEXT, " +
+                KEY_EVENT_PHOTOPHOBIA + " TEXT, " +
+                KEY_EVENT_PHONOPHOBIA + " TEXT, " +
+                KEY_EVENT_VISUAL_SYMP + " TEXT, " +
+                KEY_EVENT_TUMARKIN + " TEXT, " +
+                KEY_EVENT_MENSTRUATION + " TEXT, " +
+                KEY_EVENT_NAUSEA + " TEXT, " +
+                KEY_EVENT_VOMIT + " TEXT, " +
+                KEY_EVENT_INESTABILITY + " TEXT, " +
+                KEY_EVENT_MIGRAINE_TYPE1 + " TEXT, " +
+                KEY_EVENT_MIGRAINE_TYPE2 + " TEXT, " +
+                KEY_EVENT_MIGRAINE_TYPE3 + " TEXT, " +
+                KEY_EVENT_TRIGGERS_CLIMATE + " TEXT, " +
+                KEY_EVENT_TRIGGERS_SLEEP + " TEXT, " +
+                KEY_EVENT_TRIGGERS_PHISIC + " TEXT, " +
+                KEY_EVENT_TRIGGERS_EXCESSES + " TEXT, " +
+                KEY_EVENT_TRIGGERS_NOTES + " TEXT, " +
+                KEY_EVENT_RESIDUAL_TYPE1 + " TEXT, " +
+                KEY_EVENT_RESIDUAL_TYPE2 + " TEXT, " +
+                KEY_EVENT_RESIDUAL_TYPE3 + " TEXT, " +
                 KEY_EVENT_RESIDUAL_TYPE4 + " TEXT " +
                 ")";
 

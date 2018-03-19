@@ -89,8 +89,8 @@ public class HearingDiaryActivity extends AppCompatActivity {
                 return true;
 
             case R.id.showSqlite:
-                /*Intent dbmanager = new Intent(this,AndroidDatabaseManager.class);
-                startActivity(dbmanager);*/
+                Intent dbmanager = new Intent(this,DatabaseHelper.class);
+                startActivity(dbmanager);
                 return true;
             case R.id.hearingTestApp:
                 //Go to playStore

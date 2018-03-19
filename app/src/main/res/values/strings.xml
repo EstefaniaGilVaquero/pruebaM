@@ -19,10 +19,10 @@
     <string name="titleNewEvent">New event</string>
     <string name="min">Min.</string>
     <string name="Max">Max.</string>
-    <string name="duration">Duration: 00h:00m</string>
-    <string name="vertigoIntensity">Vertigo intensity: 0</string>
-    <string name="limitation">Intensity limitation: 0</string>
-    <string name="stress">Stress level: 0</string>
+    <string name="duration">Duration:</string>
+    <string name="vertigoIntensity">Vertigo intensity:</string>
+    <string name="limitation">Intensity limitation:</string>
+    <string name="stress">Stress level:</string>
     <string name="hearingLoss">Hearing loss</string>
     <string name="tinnitus">Tinnitus</string>
     <string name="earFullness">Ear fullness</string>
@@ -35,7 +35,7 @@
     <string name="nausea">Nausea</string>
     <string name="vomiting">Vomiting</string>
     <string name="instability">Instability</string>
-    <string name="instabilityIntensity">Instability intensity</string>
+    <string name="instabilityIntensity">Instability intensity:</string>
     <string name="headacheProperties">Headache properties</string>
     <string name="NA">N/A</string>
     <string name="mild">Mild</string>
@@ -66,10 +66,10 @@
     <string name="sugar">Sugar</string>
     <string name="myNotes">My notes</string>
     <string name="backSymps">Background Symptoms</string>
-    <string name="dizzinessDis">Dizziness disability: 0</string>
-    <string name="inestabilityDis">Inestability disability: 0</string>
-    <string name="visualBlurDis">Visual blur disability: 0</string>
-    <string name="headPressure">Head Pressure: 0</string>
+    <string name="dizzinessDis">Dizziness disability:</string>
+    <string name="inestabilityDis">Inestability disability:</string>
+    <string name="visualBlurDis">Visual blur disability:</string>
+    <string name="headPressure">Head Pressure:</string>
     <string name="explanation">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
         Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
 
