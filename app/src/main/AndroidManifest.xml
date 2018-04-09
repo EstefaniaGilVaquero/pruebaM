@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.symbel.meniere">
+    package="com.asmes.meniere">
 
     <supports-screens
         android:largeScreens="true"
@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
-            android:name=".activity.SplashActivity"
+            android:name="com.asmes.meniere.activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,16 +30,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.TabsActivity"
+            android:name="com.asmes.meniere.activity.TabsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.UtilitiesMeniere.HealthyHabits"
+            android:name="com.asmes.meniere.activity.UtilitiesMeniere.HealthyHabits"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.HelpMeniere.AuthorsActivity" />
-        <activity android:name=".activity.HelpMeniere.FrameworksActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity" />
-        <activity android:name=".activity.MyMeniere.NewEventActivity"></activity>
+        <activity android:name="com.asmes.meniere.activity.HelpMeniere.AuthorsActivity" />
+        <activity android:name="com.asmes.meniere.activity.HelpMeniere.FrameworksActivity" />
+        <activity android:name="com.asmes.meniere.activity.LoginActivity" />
+        <activity android:name="com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity" />
+        <activity android:name="com.asmes.meniere.activity.MyMeniere.NewEventActivity"></activity>
     </application>
 
 </manifest>

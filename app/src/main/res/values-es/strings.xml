@@ -12,6 +12,75 @@
 
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
+    <string name="positiveTxtOk">OK</string>
+
+
+    <!-- My Meniere -->
+    <string name="titleNewEvent">New event</string>
+    <string name="min">Min.</string>
+    <string name="Max">Max.</string>
+    <string name="episodes">Episodes:</string>
+    <string name="duration">Duration:</string>
+    <string name="vertigoIntensity">Vertigo intensity:</string>
+    <string name="limitation">Intensity limitation:</string>
+    <string name="stress">Stress level:</string>
+    <string name="hearingLoss">Hearing loss</string>
+    <string name="tinnitus">Tinnitus</string>
+    <string name="earFullness">Ear fullness</string>
+    <string name="headache">Headache</string>
+    <string name="photophobia">Photophobia</string>
+    <string name="phonophobia">Phonophobia</string>
+    <string name="visualSymptoms">Visual symptoms</string>
+    <string name="tumarkin">Tumarkin</string>
+    <string name="menstruation">Menstruation</string>
+    <string name="nausea">Nausea</string>
+    <string name="vomiting">Vomiting</string>
+    <string name="instability">Instability</string>
+    <string name="instabilityIntensity">Instability intensity:</string>
+    <string name="headacheProperties">Headache properties</string>
+    <string name="NA">N/A</string>
+    <string name="mild">Mild</string>
+    <string name="moderate">Moderate</string>
+    <string name="severe">Severe</string>
+    <string name="oneSide">One side</string>
+    <string name="wholeHead">Whole Head</string>
+    <string name="throbbing">Throbbing</string>
+    <string name="tightening">Tigthening</string>
+    <string name="eventTriggers">Event triggers</string>
+    <string name="weather">Weather</string>
+    <string name="sunny">Sunny</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="storm">Storm</string>
+    <string name="sleep">Sleep</string>
+    <string name="excelent">Excelent</string>
+    <string name="regular">Regular</string>
+    <string name="poor">Poor</string>
+    <string name="physicalActivity">Physical activity</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="habitExcess">Habit - Excess</string>
+    <string name="salt">Salt</string>
+    <string name="caffeine">Caffeine</string>
+    <string name="alcohol">Alcohol</string>
+    <string name="tobacco">Tobacco</string>
+    <string name="sugar">Sugar</string>
+    <string name="myNotes">My notes</string>
+    <string name="backSymps">Background Symptoms</string>
+    <string name="dizzinessDis">Dizziness disability:</string>
+    <string name="inestabilityDis">Inestability disability:</string>
+    <string name="visualBlurDis">Visual blur disability:</string>
+    <string name="headPressure">Head Pressure:</string>
+    <string name="explanation">Disability Scale: (Shepard et al., 1990)\n\n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or hard to change job because of symptoms\n5: Estabilished severe disability; unable to work for over 1 year or estabilished permanent disability with compensations payments)</string>
+
+    <string name="selectionErrorTitle">Selection Error</string>
+    <string name="selectionErrorMessage">Selection Error</string>
+    <string name="addEpisodeTitle">Add more episodes</string>
+    <string name="addEpisodeContent">You have selected to add more episodes. Please enter the number of episodes for today. You must to summarize your symptoms in the other fields of this section</string>
+    <string name="hearingLossSwitchTitle">More data is needed</string>
+    <string name="hearingLossSwitchContent">You selected some auditive symptoms. Please specify where these auditive symptoms mainly occurred.</string>
+    <string name="infoVisualTitle">Items info</string>
+    <string name="infoVisualContent">Visual symptoms: Visual sensations that occur mainly before the attack.\n\nTumarkin: Sudden fall with no previous warning or provocative factor and without vertigo or loss of consciousness.</string>
 
 
     <!-- Hearing diary -->
@@ -24,6 +93,13 @@
     <string name="frecuencia4">4kHz:</string>
     <string name="frecMasMenos">±</string>
     <string name="enCrisis">En crisis</string>
+
+    <!-- Tab one -->
+    <string name="txtNewEvent">New Event</string>
+    <string name="txtSeeSelection">See Selection</string>
+    <string name="txtMonthReview">Month Review</string>
+    <string name="txtFocusToday">Back Today</string>
+    <string name="txtMonthEvents">Month Events:</string>
 
     <!-- Tab Four -->
     <string name="txtUserGuide">Guia de uso</string>
