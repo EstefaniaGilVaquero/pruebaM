@@ -94,7 +94,7 @@ public class NewEventActivity extends AppCompatActivity {
 
         //Si no es nuevo pillo el evento que me llega
         Intent i = getIntent();
-        i.getStringExtra("selectedDate");
+        selectedDate = i.getStringExtra("selectedDate");
         if (!i.getBooleanExtra("isNew",true)){
             event = (EventModel) i.getSerializableExtra("event");
             //Cargar todos los datos en la vista

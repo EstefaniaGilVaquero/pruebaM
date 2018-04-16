@@ -107,10 +107,7 @@ public class OneFragment extends Fragment {
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy y solo un evento por dia
                     if(isValidDay() /*&& getEventEntriesCount()==0*/) {
-                        TabsActivity.activitySwitchFlag = true;
-                        Intent intent = new Intent(getActivity(), NewEventActivity.class);
-                        intent.putExtra("selectedDate", selectedDate);
-                        startActivity(intent);
+                        callNewEvent(true);
                     }else{
                         Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessage));
                     }
@@ -121,8 +118,8 @@ public class OneFragment extends Fragment {
             mSeeSelection.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    TabsActivity.activitySwitchFlag = true;
                     //Recupero datos de eventos de sqlite
-
                     //Eventos del dia
                     String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", selectedDate);
                     event = getEventEntries(query);
@@ -143,10 +140,10 @@ public class OneFragment extends Fragment {
     public void callNewEvent(Boolean isNew){
         Intent intent = new Intent(getActivity(), NewEventActivity.class);
         intent.putExtra("selectedDate", selectedDate);
-        intent.putExtra("isNew", isNew);
-        if (!isNew) {
+        //intent.putExtra("isNew", isNew);
+        /*if (!isNew) {
             intent.putExtra("event", event);
-        }
+        }*/
         startActivity(intent);
     }
 
@@ -157,11 +154,12 @@ public class OneFragment extends Fragment {
     }
 
     public EventModel getEventEntries(String sql){
-        EventModel event = new EventModel();
+        EventModel event = null;
         Cursor cursor = db.rawQuery(sql, null);
 
         //Inicializo array
         if (cursor.getCount()!= 0) {
+            event = new EventModel();
             cursor.moveToFirst();
             event.id = cursor.getString(cursor.getColumnIndex("id"));
             event.episodes = cursor.getString(cursor.getColumnIndex("episodes"));
@@ -198,7 +196,7 @@ public class OneFragment extends Fragment {
         }
 
         cursor.close();
-        return event;
+         return event;
     }
 
     public void focusToday(){
