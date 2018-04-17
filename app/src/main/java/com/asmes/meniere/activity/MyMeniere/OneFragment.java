@@ -140,10 +140,10 @@ public class OneFragment extends Fragment {
     public void callNewEvent(Boolean isNew){
         Intent intent = new Intent(getActivity(), NewEventActivity.class);
         intent.putExtra("selectedDate", selectedDate);
-        //intent.putExtra("isNew", isNew);
-        /*if (!isNew) {
+        intent.putExtra("isNew", isNew);
+        if (!isNew) {
             intent.putExtra("event", event);
-        }*/
+        }
         startActivity(intent);
     }
 

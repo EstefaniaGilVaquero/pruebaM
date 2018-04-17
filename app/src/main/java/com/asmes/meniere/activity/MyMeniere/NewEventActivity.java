@@ -92,15 +92,7 @@ public class NewEventActivity extends AppCompatActivity {
 
         sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-        //Si no es nuevo pillo el evento que me llega
-        Intent i = getIntent();
-        selectedDate = i.getStringExtra("selectedDate");
-        if (!i.getBooleanExtra("isNew",true)){
-            event = (EventModel) i.getSerializableExtra("event");
-            //Cargar todos los datos en la vista
-            //Deshailitar y ocultar floating
-            setEventData();
-        }
+
 
 
         mAddEpisodeBtn = (ImageButton) findViewById(R.id.addEpisodeBtn);
@@ -205,7 +197,7 @@ public class NewEventActivity extends AppCompatActivity {
 
         mNotes = (TextView) findViewById(R.id.notesTxt);
 
-        //LinearLayout layoutToDisable = findViewById(R.id.lay);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAudio);
 
         mScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
@@ -238,31 +230,47 @@ public class NewEventActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAudio);
-        fab.setImageDrawable(AppCompatDrawableManager.get().getDrawable(this, R.drawable.ic_add_white_48px));
-        fab.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Snackbar.make(view, "Se ha guardado el evento", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-                saveEvent();
-                finish();
-                //disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
+
+
+        //Si no es nuevo pillo el evento que me llega
+        Intent i = getIntent();
+        selectedDate = i.getStringExtra("selectedDate");
+        if (!i.getBooleanExtra("isNew",true)){
+            event = (EventModel) i.getSerializableExtra("event");
+            //Deshailitar y ocultar floating
+            fab.setVisibility(View.GONE);
+            //Cargar todos los datos en la vista
+            setEventData();
+        }else{
+
+
+            fab.setImageDrawable(AppCompatDrawableManager.get().getDrawable(this, R.drawable.ic_add_white_48px));
+            fab.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view){
+                    Snackbar.make(view, "Se ha guardado el evento", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+                    saveEvent();
+                    finish();
+                    //disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
                 /*View fondoTransparente = findViewById(R.id.backgroundDisable);
                 fondoTransparente.setLayoutParams(new RelativeLayout.LayoutParams(mScrollView.getWidth(), mScrollView.getMeasuredHeight()));
                 fondoTransparente.setVisibility(View.VISIBLE);
                 fondoTransparente.setEnabled(false);*/
 
-            }
-        });
+                }
+            });
 
-        //Set listeners for bubbles
-        setBubblesListeners();
+            //Set listeners for bubbles
+            setBubblesListeners();
 
-        //Set listeners for CardViews
-        setCardViewsListeners();
+            //Set listeners for CardViews
+            setCardViewsListeners();
 
-        //set info listeners
-        setInfoListeners();
+            //set info listeners
+            setInfoListeners();
+        }
+
+
 
     }
 
