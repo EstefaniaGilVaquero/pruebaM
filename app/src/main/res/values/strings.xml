@@ -18,7 +18,7 @@
     <!-- My Meniere -->
     <string name="titleNewEvent">New event</string>
     <string name="min">Min.</string>
-    <string name="Max">Max.</string>
+    <string name="max">Max.</string>
     <string name="episodes">Episodes:</string>
     <string name="duration">Duration:</string>
     <string name="vertigoIntensity">Vertigo intensity:</string>

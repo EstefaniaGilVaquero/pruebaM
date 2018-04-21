@@ -1,7 +1,6 @@
 package com.asmes.meniere.activity.MyMeniere;
 
 import android.app.Activity;
-import android.app.usage.UsageEvents;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -18,16 +17,12 @@ import com.asmes.meniere.R;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
-import com.asmes.meniere.models.HearingDiaryModel;
 import com.asmes.meniere.utils.Utils;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-
-
 
 public class OneFragment extends Fragment {
 
@@ -50,9 +45,6 @@ public class OneFragment extends Fragment {
 
         super.onCreate(savedInstanceState);
         activity = getActivity();
-
-
-
     }
 
     @Override

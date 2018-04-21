@@ -1,18 +1,17 @@
 package com.asmes.meniere.activity.MyMeniere;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.AppCompatDrawableManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
@@ -30,7 +29,6 @@ import com.xw.repo.BubbleSeekBar;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Locale;
 
 public class NewEventActivity extends AppCompatActivity {
@@ -62,16 +60,6 @@ public class NewEventActivity extends AppCompatActivity {
     private EventModel event;
     private String selectedDate;
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.menu, menu);
-        // Action View
-        //MenuItem searchItem = menu.findItem(R.id.action_search);
-        //SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        // Configure the search info and add any event listeners
-        //return super.onCreateOptionsMenu(menu);
-        return true;
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -85,6 +73,7 @@ public class NewEventActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,24 +81,21 @@ public class NewEventActivity extends AppCompatActivity {
 
         sdf = new SimpleDateFormat("dd/MM/yyyy");
 
+        mAddEpisodeBtn = findViewById(R.id.addEpisodeBtn);
+        mInfoVisualBtn = findViewById(R.id.infoVisualBtn);
 
-
-
-        mAddEpisodeBtn = (ImageButton) findViewById(R.id.addEpisodeBtn);
-        mInfoVisualBtn = (ImageButton) findViewById(R.id.infoVisualBtn);
-
-        mEpisodesTxt = (TextView) findViewById(R.id.episodesTxt);
+        mEpisodesTxt = findViewById(R.id.episodesTxt);
         mEpisodesTxt.setText(getString(R.string.episodes) + " " + mEpisode);
         mScrollView = findViewById(R.id.newEventScrollView);
-        mDurationBubble = (BubbleSeekBar) findViewById(R.id.durationBubble);
-        mVertigoBubble = (BubbleSeekBar) findViewById(R.id.vertigoIntensityBubble);
-        mLimitationBubble = (BubbleSeekBar) findViewById(R.id.intensityLimitationBubble);
-        mStressBubble = (BubbleSeekBar) findViewById(R.id.stressLevelBubble);
-        mInstabilityIntenBubble = (BubbleSeekBar) findViewById(R.id.instabilityIntensityBubble);
-        mDizzinessDisBubble = (BubbleSeekBar) findViewById(R.id.dizzinessBubble);
-        mInstabilityDisBubble = (BubbleSeekBar) findViewById(R.id.inestabilityDisBubble);
-        mVisualBlurDisBubble = (BubbleSeekBar) findViewById(R.id.visualBlurDisBubble);
-        mHeadPresureDisBubble = (BubbleSeekBar) findViewById(R.id.headPressureDisBubble);
+        mDurationBubble = findViewById(R.id.durationBubble);
+        mVertigoBubble = findViewById(R.id.vertigoIntensityBubble);
+        mLimitationBubble = findViewById(R.id.intensityLimitationBubble);
+        mStressBubble =  findViewById(R.id.stressLevelBubble);
+        mInstabilityIntenBubble = findViewById(R.id.instabilityIntensityBubble);
+        mDizzinessDisBubble = findViewById(R.id.dizzinessBubble);
+        mInstabilityDisBubble = findViewById(R.id.inestabilityDisBubble);
+        mVisualBlurDisBubble = findViewById(R.id.visualBlurDisBubble);
+        mHeadPresureDisBubble = findViewById(R.id.headPressureDisBubble);
 
         mHearingLossSwitch = (SwitchCompat) findViewById(R.id.hearingLossSwitch);
         mTinnitusSwitch = (SwitchCompat) findViewById(R.id.tinnitusSwitch);
@@ -239,6 +225,8 @@ public class NewEventActivity extends AppCompatActivity {
             event = (EventModel) i.getSerializableExtra("event");
             //Deshailitar y ocultar floating
             fab.setVisibility(View.GONE);
+
+
             //Cargar todos los datos en la vista
             setEventData();
         }else{
@@ -893,7 +881,14 @@ public class NewEventActivity extends AppCompatActivity {
         mVertigoBubble.setProgress(event.vertigoIntensity!=null?Float.valueOf(event.vertigoIntensity):0);
         mLimitationBubble.setProgress(event.limitation!=null?Float.valueOf(event.limitation):0);
         mStressBubble.setProgress(event.stress!=null?Float.valueOf(event.stress):0);
-        mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
+
+
+
+        //Mostrar instavility booble
+        if (event.instabilityIntensity!=null){
+            mInstavilityIntenCardView.setVisibility(View.VISIBLE);
+            mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
+        }
 
         mHearingLossSwitch.setChecked(event.hearingLoss);
         mTinnitusSwitch.setChecked(event.tinnitus);
@@ -913,7 +908,7 @@ public class NewEventActivity extends AppCompatActivity {
         mNotes.setText(event.myNotes);
 
         mDizzinessDisBubble.setProgress(Float.valueOf(event.getDizzinessDis()));
-        mDizzinessDisBubble.setProgress(Float.valueOf(event.inestabilityDis));
+        mInstabilityDisBubble.setProgress(Float.valueOf(event.inestabilityDis));
         mVisualBlurDisBubble.setProgress(Float.valueOf(event.visualBlurDis));
         mHeadPresureDisBubble.setProgress(Float.valueOf(event.headPressure));
 
