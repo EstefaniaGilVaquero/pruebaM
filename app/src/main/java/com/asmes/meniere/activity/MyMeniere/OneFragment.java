@@ -52,7 +52,7 @@ public class OneFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_one, container, false);
-        mCalendarV = (CalendarView) rootView.findViewById(R.id.calendarView);
+        mCalendarV = rootView.findViewById(R.id.calendarView);
         return rootView;
     }
 
@@ -66,9 +66,9 @@ public class OneFragment extends Fragment {
             sdf = new SimpleDateFormat("dd/MM/yyyy");
             selectedDate = sdf.format(new Date());
 
-            mFocusTodayCv = (CardView) rootView.findViewById(R.id.cvFocusToday);
-            mNewEventCv = (CardView) rootView.findViewById(R.id.cvNewEvent);
-            mSeeSelection = (CardView) rootView.findViewById(R.id.cvSeeSelection);
+            mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
+            mNewEventCv = rootView.findViewById(R.id.cvNewEvent);
+            mSeeSelection = rootView.findViewById(R.id.cvSeeSelection);
 
             mSeeSelection.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -99,6 +99,7 @@ public class OneFragment extends Fragment {
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy y solo un evento por dia
                     if(isValidDay() /*&& getEventEntriesCount()==0*/) {
+                        TabsActivity.activitySwitchFlag = true;
                         callNewEvent(true);
                     }else{
                         Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessage));
@@ -130,7 +131,7 @@ public class OneFragment extends Fragment {
     }
 
     public void callNewEvent(Boolean isNew){
-        Intent intent = new Intent(getActivity(), NewEventActivity.class);
+        Intent intent = new Intent(getContext(), NewEventActivity.class);
         intent.putExtra("selectedDate", selectedDate);
         intent.putExtra("isNew", isNew);
         if (!isNew) {

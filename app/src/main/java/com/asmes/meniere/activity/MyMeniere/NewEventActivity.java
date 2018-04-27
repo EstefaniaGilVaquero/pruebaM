@@ -238,7 +238,7 @@ public class NewEventActivity extends AppCompatActivity {
                 public void onClick(View view){
                     Snackbar.make(view, "Se ha guardado el evento", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
                     saveEvent();
-                    finish();
+                   // finish();
                     //disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
                 /*View fondoTransparente = findViewById(R.id.backgroundDisable);
                 fondoTransparente.setLayoutParams(new RelativeLayout.LayoutParams(mScrollView.getWidth(), mScrollView.getMeasuredHeight()));
@@ -943,17 +943,17 @@ public class NewEventActivity extends AppCompatActivity {
 
         //Switchs
         cv.put("hearingLoss", mHearingLoss);
-        cv.put("tinnitus", mTinnitusSwitch.isActivated());
-        cv.put("plenitude", mEarFullnessSwitch.isActivated());
-        cv.put("migraine", mHeadacheSwitch.isActivated());
-        cv.put("photophobia", mPhotophobiaSwitch.isActivated());
-        cv.put("phonophobia", mPhonophobiaSwitch.isActivated());
-        cv.put("visual_symp", mVisualSymSwitch.isActivated());
-        cv.put("tumarkin", mTumarkinSwitch.isActivated());
-        cv.put("menstruation", mMenstruationSwitch.isActivated());
-        cv.put("nausea", mNauseaSwitch.isActivated());
-        cv.put("vomit", mVomitingSwitch.isActivated());
-        cv.put("inestability", mInstabilitySwitch.isActivated());
+        cv.put("tinnitus", mTinnitusSwitch.isChecked());
+        cv.put("plenitude", mEarFullnessSwitch.isChecked());
+        cv.put("migraine", mHeadacheSwitch.isChecked());
+        cv.put("photophobia", mPhotophobiaSwitch.isChecked());
+        cv.put("phonophobia", mPhonophobiaSwitch.isChecked());
+        cv.put("visual_symp", mVisualSymSwitch.isChecked());
+        cv.put("tumarkin", mTumarkinSwitch.isChecked());
+        cv.put("menstruation", mMenstruationSwitch.isChecked());
+        cv.put("nausea", mNauseaSwitch.isChecked());
+        cv.put("vomit", mVomitingSwitch.isChecked());
+        cv.put("inestability", mInstabilityIntenBubble.getProgress());
 
         //Cards
         cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):mMigraineType1);
