@@ -13,10 +13,14 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,7 +37,7 @@ import java.util.Locale;
 
 public class NewEventActivity extends AppCompatActivity {
 
-    private View mScrollView;
+    private ScrollView mScrollView;
     private BubbleSeekBar mDurationBubble, mVertigoBubble, mLimitationBubble, mStressBubble, mInstabilityIntenBubble, mDizzinessDisBubble, mInstabilityDisBubble, mVisualBlurDisBubble, mHeadPresureDisBubble;
     private SwitchCompat mHearingLossSwitch, mTinnitusSwitch, mEarFullnessSwitch, mHeadacheSwitch, mPhotophobiaSwitch, mPhonophobiaSwitch, mVisualSymSwitch, mTumarkinSwitch, mMenstruationSwitch, mNauseaSwitch, mVomitingSwitch, mInstabilitySwitch;
     private TextView mEpisodesTxt, mDurationTxt, mVertigoTxt, mLimitationTxt, mStressTxt, mInstabilityIntenTxt, mDizzinessDisTxt, mInstabilityDisTxt, mVisualBlurDisTxt, mHeadPresureDisTxt,
@@ -59,6 +63,7 @@ public class NewEventActivity extends AppCompatActivity {
     private SimpleDateFormat sdf;
     private EventModel event;
     private String selectedDate;
+    private Boolean disableTouch;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -222,29 +227,22 @@ public class NewEventActivity extends AppCompatActivity {
         Intent i = getIntent();
         selectedDate = i.getStringExtra("selectedDate");
         if (!i.getBooleanExtra("isNew",true)){
+            disableTouch = true;
             event = (EventModel) i.getSerializableExtra("event");
             //Deshailitar y ocultar floating
             fab.setVisibility(View.GONE);
-
-
             //Cargar todos los datos en la vista
             setEventData();
         }else{
-
-
+            disableTouch = false;
             fab.setImageDrawable(AppCompatDrawableManager.get().getDrawable(this, R.drawable.ic_add_white_48px));
             fab.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-
-                    saveEvent();
-                    finish();
-                    //disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
-                /*View fondoTransparente = findViewById(R.id.backgroundDisable);
-                fondoTransparente.setLayoutParams(new RelativeLayout.LayoutParams(mScrollView.getWidth(), mScrollView.getMeasuredHeight()));
-                fondoTransparente.setVisibility(View.VISIBLE);
-                fondoTransparente.setEnabled(false);*/
-
+                    if(validateEvent()){
+                        saveEvent();
+                        finish();
+                    }
                 }
             });
 
@@ -257,32 +255,29 @@ public class NewEventActivity extends AppCompatActivity {
             //set info listeners
             setInfoListeners();
         }
-
-
-
     }
 
-/*    public void disableEnableEvent(boolean enable, LinearLayout layoutToDisable){
-        for (int i = 0; i < layoutToDisable.getChildCount(); i++) {
-            View child = layoutToDisable.getChildAt(i);
-            child.setEnabled(enable);
+    public Boolean validateEvent(){
+        Boolean result = true;
+        //Duration must be >20
+        //vertigoIntensity must be >0 or tinnutus or hearingloss o earfulness or headache or photophobia or phonophobia or aura or tumarkin
+        if (mInstabilityIntenBubble.getProgress()<20 || (mVertigoBubble.getProgress()<1 && !mTinnitusSwitch.isChecked() && !mHearingLossSwitch.isChecked() && !mEarFullnessSwitch.isChecked()
+        && !mHeadacheSwitch.isChecked() && !mPhonophobiaSwitch.isChecked() && !mPhotophobiaSwitch.isChecked() && !mVisualSymSwitch.isChecked() && !mTumarkinSwitch.isChecked())){
+            result = false;
+            new MaterialDialog.Builder(this)
+                    .content(R.string.mandatoryFieldsContent)
+                    .positiveText(R.string.positiveTxtOk)
+                    .show();
         }
-    }*/
+        return result;
+    }
 
-    /*private void disableEnableEvent(boolean enable, ViewGroup layout) {
-        for (int i = 0; i < layout.getChildCount(); i++) {
-            View child = layout.getChildAt(i);
-            child.setEnabled(enable);
-            if (child instanceof ViewGroup) {
-                ViewGroup group = (ViewGroup) child;
-                for (int j = 0; j < group.getChildCount(); j++) {
-                    group.getChildAt(j).setEnabled(enable);
-                }
-            }
-        }
-    }*/
-
-
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        if (!disableTouch)
+            return super.dispatchTouchEvent(ev);
+        return true;
+    }
 
     public void setInfoListeners(){
         mAddEpisodeBtn.setOnClickListener(new ImageButton.OnClickListener(){
@@ -871,7 +866,21 @@ public class NewEventActivity extends AppCompatActivity {
         });
     }
 
+    private void disableEnableControls(boolean enable, ViewGroup vg){
+        for (int i = 0; i < vg.getChildCount(); i++){
+            View child = vg.getChildAt(i);
+            child.setEnabled(enable);
+            if (child instanceof ViewGroup){
+                disableEnableControls(enable, (ViewGroup)child);
+            }
+        }
+    }
+
     public void setEventData(){
+
+        //disableEnableControls(false, mScrollView);
+        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
+        disableLayout.setVisibility(View.VISIBLE);
 
         if (event.instability != null && event.instability.equals("1")) mInstavilityIntenCardView.setVisibility(View.VISIBLE);
         if (event.headache != null && event.headache.equals("1")) mHeadache_LayOut.setVisibility(View.VISIBLE);
@@ -881,14 +890,6 @@ public class NewEventActivity extends AppCompatActivity {
         mVertigoBubble.setProgress(event.vertigoIntensity!=null?Float.valueOf(event.vertigoIntensity):0);
         mLimitationBubble.setProgress(event.limitation!=null?Float.valueOf(event.limitation):0);
         mStressBubble.setProgress(event.stress!=null?Float.valueOf(event.stress):0);
-
-
-
-        //Mostrar instavility booble
-        if (event.instabilityIntensity!=null){
-            mInstavilityIntenCardView.setVisibility(View.VISIBLE);
-            mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
-        }
 
         mHearingLossSwitch.setChecked(event.hearingLoss!=null?true:false);
         mTinnitusSwitch.setChecked(event.tinnitus.equals("1")?true:false);
@@ -903,7 +904,139 @@ public class NewEventActivity extends AppCompatActivity {
         mVomitingSwitch.setChecked(event.vomiting.equals("1")?true:false);
         mInstabilitySwitch.setChecked(event.instability.equals("1")?true:false);
 
-        //TODO cardviews, pensar como hacerlo mejor
+        //Mostrar instavility booble
+        if (mInstabilitySwitch.isChecked()){
+            mInstavilityIntenCardView.setVisibility(View.VISIBLE);
+            mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
+        }
+
+        if (mHeadacheSwitch.isChecked()){
+            mHeadache_LayOut.setVisibility(View.VISIBLE);
+
+            if(mHeadProp_1b_CardView.getText().equals(event.headacheProperties1)){
+                mHeadProp_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }else if(mWeather_1c_CardView.getText().equals(event.headacheProperties1)){
+                mHeadProp_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }else if(mHeadProp_1d_CardView.getText().equals(event.headacheProperties1)){
+                mHeadProp_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }
+
+            if(mHeadProp_2b_CardView.getText().equals(event.headacheProperties2)){
+                mHeadProp_2b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_2b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }else if(mHeadProp_2c_CardView.getText().equals(event.headacheProperties2)){
+                mHeadProp_2c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_2c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }
+
+            if(mHeadProp_3b_CardView.getText().equals(event.headacheProperties3)){
+                mHeadProp_3b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_3b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }else if(mHeadProp_3c_CardView.getText().equals(event.headacheProperties3)){
+                mHeadProp_3c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+                mHeadProp_3c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            }
+
+        }
+
+        if(mWeather_1b_CardView.getText().equals(event.weather)){
+            mWeather_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mWeather_1c_CardView.getText().equals(event.weather)){
+            mWeather_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mWeather_1d_CardView.getText().equals(event.weather)){
+            mWeather_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }
+
+        if(mSleep_1b_CardView.getText().equals(event.sleep)){
+            mSleep_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mSleep_1c_CardView.getText().equals(event.sleep)){
+            mSleep_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mSleep_1d_CardView.getText().equals(event.sleep)){
+            mSleep_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }
+
+        if(mPhysical_1b_CardView.getText().equals(event.physicalActivity)){
+            mPhysical_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mPhysical_1c_CardView.getText().equals(event.physicalActivity)){
+            mPhysical_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mPhysical_1d_CardView.getText().equals(event.physicalActivity)){
+            mPhysical_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }
+
+        if(mHabit_1b_CardView.getText().equals(event.habitExcess)){
+            mHabit_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mHabit_1c_CardView.getText().equals(event.habitExcess)){
+            mHabit_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mHabit_1d_CardView.getText().equals(event.habitExcess)){
+            mHabit_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mHabit_1e_CardView.getText().equals(event.habitExcess)){
+            mHabit_1e_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }else if(mHabit_1f_CardView.getText().equals(event.habitExcess)){
+            mHabit_1f_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
+            mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
+            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
+            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        }
+
+
+
+
 
         mNotes.setText(event.myNotes);
 

@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
+                    android:id="@+id/eventLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -785,11 +786,11 @@
                         </android.support.v7.widget.CardView>
 
                         <LinearLayout
+                            android:id="@+id/headachePropsLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/headachePropsLayout"
-                            android:visibility="gone"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -814,9 +815,9 @@
 
                                     <LinearLayout
                                         android:id="@+id/headProp_1a_layout"
-                                        android:background="@color/colorPrimaryDarker"
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
+                                        android:layout_height="match_parent"
+                                        android:background="@color/colorPrimaryDarker">
 
                                         <TextView
                                             android:id="@+id/headProp_1a"
@@ -1835,7 +1836,7 @@
                         android:background="@color/colorBlackTranslucent"
                         android:clipToPadding="false"
                         android:fitsSystemWindows="true"
-                        android:visibility="visible"/>
+                        android:visibility="visible" />
 
                 </RelativeLayout>
 
@@ -1855,3 +1856,4 @@
         app:borderWidth="8dp"
         app:fabSize="normal" />
 </android.support.design.widget.CoordinatorLayout>
+

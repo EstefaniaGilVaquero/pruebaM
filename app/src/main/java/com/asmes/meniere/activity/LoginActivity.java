@@ -5,13 +5,13 @@ import android.os.Bundle;
 
 import com.asmes.meniere.R;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+
 public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
     }
 }

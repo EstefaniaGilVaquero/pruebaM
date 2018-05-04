@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-
         android:scaleType="centerCrop"
         android:alpha="0.85"
         android:src="@drawable/splash"/>
