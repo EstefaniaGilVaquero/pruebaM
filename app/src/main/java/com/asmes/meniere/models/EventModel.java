@@ -15,18 +15,18 @@ public class EventModel implements Serializable{
     public String vertigoIntensity;
     public String limitation;
     public String stress;
-    public Boolean hearingLoss;
-    public Boolean tinnitus;
-    public Boolean earFullness;
-    public Boolean headache;
-    public Boolean photophobia;
-    public Boolean phonophobia;
-    public Boolean visualSymptoms;
-    public Boolean tumarkin;
-    public Boolean menstruation;
-    public Boolean nausea;
-    public Boolean vomiting;
-    public Boolean instability;
+    public String hearingLoss;
+    public String tinnitus;
+    public String earFullness;
+    public String headache;
+    public String photophobia;
+    public String phonophobia;
+    public String visualSymptoms;
+    public String tumarkin;
+    public String menstruation;
+    public String nausea;
+    public String vomiting;
+    public String instability;
     public String instabilityIntensity;
     public String headacheProperties1;
     public String headacheProperties2;
@@ -100,99 +100,99 @@ public class EventModel implements Serializable{
         this.stress = stress;
     }
 
-    public Boolean getHearingLoss() {
+    public String getHearingLoss() {
         return hearingLoss;
     }
 
-    public void setHearingLoss(Boolean hearingLoss) {
+    public void setHearingLoss(String hearingLoss) {
         this.hearingLoss = hearingLoss;
     }
 
-    public Boolean getTinnitus() {
+    public String getTinnitus() {
         return tinnitus;
     }
 
-    public void setTinnitus(Boolean tinnitus) {
+    public void setTinnitus(String tinnitus) {
         this.tinnitus = tinnitus;
     }
 
-    public Boolean getEarFullness() {
+    public String getEarFullness() {
         return earFullness;
     }
 
-    public void setEarFullness(Boolean earFullness) {
+    public void setEarFullness(String earFullness) {
         this.earFullness = earFullness;
     }
 
-    public Boolean getHeadache() {
+    public String getHeadache() {
         return headache;
     }
 
-    public void setHeadache(Boolean headache) {
+    public void setHeadache(String headache) {
         this.headache = headache;
     }
 
-    public Boolean getPhotophobia() {
+    public String getPhotophobia() {
         return photophobia;
     }
 
-    public void setPhotophobia(Boolean photophobia) {
+    public void setPhotophobia(String photophobia) {
         this.photophobia = photophobia;
     }
 
-    public Boolean getPhonophobia() {
+    public String getPhonophobia() {
         return phonophobia;
     }
 
-    public void setPhonophobia(Boolean phonophobia) {
+    public void setPhonophobia(String phonophobia) {
         this.phonophobia = phonophobia;
     }
 
-    public Boolean getVisualSymptoms() {
+    public String getVisualSymptoms() {
         return visualSymptoms;
     }
 
-    public void setVisualSymptoms(Boolean visualSymptoms) {
+    public void setVisualSymptoms(String visualSymptoms) {
         this.visualSymptoms = visualSymptoms;
     }
 
-    public Boolean getTumarkin() {
+    public String getTumarkin() {
         return tumarkin;
     }
 
-    public void setTumarkin(Boolean tumarkin) {
+    public void setTumarkin(String tumarkin) {
         this.tumarkin = tumarkin;
     }
 
-    public Boolean getMenstruation() {
+    public String getMenstruation() {
         return menstruation;
     }
 
-    public void setMenstruation(Boolean menstruation) {
+    public void setMenstruation(String menstruation) {
         this.menstruation = menstruation;
     }
 
-    public Boolean getNausea() {
+    public String getNausea() {
         return nausea;
     }
 
-    public void setNausea(Boolean nausea) {
+    public void setNausea(String nausea) {
         this.nausea = nausea;
     }
 
-    public Boolean getVomiting() {
+    public String getVomiting() {
         return vomiting;
     }
 
-    public void setVomiting(Boolean vomiting) {
+    public void setVomiting(String vomiting) {
         this.vomiting = vomiting;
     }
 
-    public Boolean getInstability() {
+    public String getInstability() {
         return instability;
     }
 
-    public void setInstability(Boolean instability) {
+    public void setInstability(String instability) {
         this.instability = instability;
     }
 

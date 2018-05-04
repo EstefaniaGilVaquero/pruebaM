@@ -110,7 +110,6 @@ public class OneFragment extends Fragment {
             mSeeSelection.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    TabsActivity.activitySwitchFlag = true;
                     //Recupero datos de eventos de sqlite
                     //Eventos del dia
                     String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", selectedDate);
@@ -130,6 +129,7 @@ public class OneFragment extends Fragment {
     }
 
     public void callNewEvent(Boolean isNew){
+        TabsActivity.activitySwitchFlag = true;
         Intent intent = new Intent(getActivity(), NewEventActivity.class);
         intent.putExtra("selectedDate", selectedDate);
         intent.putExtra("isNew", isNew);
@@ -160,18 +160,18 @@ public class OneFragment extends Fragment {
             event.vertigoIntensity = cursor.getString(cursor.getColumnIndex("intensity"));
             event.limitation = cursor.getString(cursor.getColumnIndex("limitation"));
             event.stress = cursor.getString(cursor.getColumnIndex("stress"));
-            event.hearingLoss = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("hearingLoss")));
-            event.tinnitus = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("tinnitus")));
-            event.earFullness = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("plenitude")));
-            event.headache = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("migraine")));
-            event.photophobia = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("photophobia")));
-            event.phonophobia = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("phonophobia")));
-            event.visualSymptoms = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("visual_symp")));
-            event.tumarkin = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("tumarkin")));
-            event.menstruation = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("menstruation")));
-            event.nausea = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("nausea")));
-            event.vomiting = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("vomit")));
-            event.instability = Boolean.valueOf(cursor.getString(cursor.getColumnIndex("inestability")));
+            event.hearingLoss = cursor.getString(cursor.getColumnIndex("hearingLoss"));
+            event.tinnitus = cursor.getString(cursor.getColumnIndex("tinnitus"));
+            event.earFullness = cursor.getString(cursor.getColumnIndex("plenitude"));
+            event.headache = cursor.getString(cursor.getColumnIndex("migraine"));
+            event.photophobia = cursor.getString(cursor.getColumnIndex("photophobia"));
+            event.phonophobia = cursor.getString(cursor.getColumnIndex("phonophobia"));
+            event.visualSymptoms = cursor.getString(cursor.getColumnIndex("visual_symp"));
+            event.tumarkin = cursor.getString(cursor.getColumnIndex("tumarkin"));
+            event.menstruation = cursor.getString(cursor.getColumnIndex("menstruation"));
+            event.nausea = cursor.getString(cursor.getColumnIndex("nausea"));
+            event.vomiting = cursor.getString(cursor.getColumnIndex("vomit"));
+            event.instability = cursor.getString(cursor.getColumnIndex("inestability"));
             event.instabilityIntensity = cursor.getString(cursor.getColumnIndex("inestabilityInten"));
             event.headacheProperties1 = cursor.getString(cursor.getColumnIndex("migraine_type1"));
             event.headacheProperties2 = cursor.getString(cursor.getColumnIndex("migraine_type2"));

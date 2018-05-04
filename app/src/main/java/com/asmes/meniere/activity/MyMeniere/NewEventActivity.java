@@ -150,10 +150,10 @@ public class NewEventActivity extends AppCompatActivity {
         mHabit_1f_CardView = (TextView) findViewById(R.id.Habit_1f);
 
         //Layouts
-        mHeadProp_1a_LayOut = (LinearLayout) findViewById(R.id.headProp_1a_layout);
-        mHeadProp_1b_LayOut = (LinearLayout) findViewById(R.id.headProp_1b_layout);
-        mHeadProp_1c_LayOut = (LinearLayout) findViewById(R.id.headProp_1c_layout);
-        mHeadProp_1d_LayOut = (LinearLayout) findViewById(R.id.headProp_1d_layout);
+        mHeadProp_1a_LayOut = findViewById(R.id.headProp_1a_layout);
+        mHeadProp_1b_LayOut =  findViewById(R.id.headProp_1b_layout);
+        mHeadProp_1c_LayOut =  findViewById(R.id.headProp_1c_layout);
+        mHeadProp_1d_LayOut =  findViewById(R.id.headProp_1d_layout);
         mHeadProp_2a_LayOut = (LinearLayout) findViewById(R.id.headProp_2a_layout);
         mHeadProp_2b_LayOut = (LinearLayout) findViewById(R.id.headProp_2b_layout);
         mHeadProp_2c_LayOut = (LinearLayout) findViewById(R.id.headProp_2c_layout);
@@ -181,9 +181,9 @@ public class NewEventActivity extends AppCompatActivity {
         mHeadache_LayOut = (LinearLayout) findViewById(R.id.headachePropsLayout);
         mInstavilityIntenCardView = (CardView) findViewById(R.id.instabilityIntensityCardView);
 
-        mNotes = (TextView) findViewById(R.id.notesTxt);
+        mNotes = findViewById(R.id.notesTxt);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAudio);
+        FloatingActionButton fab = findViewById(R.id.fabAudio);
 
         mScrollView.getViewTreeObserver().addOnScrollChangedListener(new ViewTreeObserver.OnScrollChangedListener() {
             @Override
@@ -205,7 +205,7 @@ public class NewEventActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -236,7 +236,7 @@ public class NewEventActivity extends AppCompatActivity {
             fab.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view){
-                    Snackbar.make(view, "Se ha guardado el evento", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+
                     saveEvent();
                     finish();
                     //disableEnableEvent(false ,(LinearLayout) findViewById(R.id.layoutToDisable));
@@ -873,8 +873,8 @@ public class NewEventActivity extends AppCompatActivity {
 
     public void setEventData(){
 
-        if (event.instability != null && event.instability) mInstavilityIntenCardView.setVisibility(View.VISIBLE);
-        if (event.headache != null && event.headache) mHeadache_LayOut.setVisibility(View.VISIBLE);
+        if (event.instability != null && event.instability.equals("1")) mInstavilityIntenCardView.setVisibility(View.VISIBLE);
+        if (event.headache != null && event.headache.equals("1")) mHeadache_LayOut.setVisibility(View.VISIBLE);
 
         mEpisodesTxt.setText(event.episodes!=null?getString(R.string.episodes) + event.episodes:getString(R.string.episodes) + "0");
         mDurationBubble.setProgress(event.duration!=null?Float.valueOf(event.duration):0);
@@ -890,18 +890,18 @@ public class NewEventActivity extends AppCompatActivity {
             mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
         }
 
-        mHearingLossSwitch.setChecked(event.hearingLoss);
-        mTinnitusSwitch.setChecked(event.tinnitus);
-        mEarFullnessSwitch.setChecked(event.earFullness);
-        mHeadacheSwitch.setChecked(event.headache);
-        mPhotophobiaSwitch.setChecked(event.photophobia);
-        mPhonophobiaSwitch.setChecked(event.phonophobia);
-        mVisualSymSwitch.setChecked(event.visualSymptoms);
-        mTumarkinSwitch.setChecked(event.tumarkin);
-        mMenstruationSwitch.setChecked(event.menstruation);
-        mNauseaSwitch.setChecked(event.nausea);
-        mVomitingSwitch.setChecked(event.vomiting);
-        mInstabilitySwitch.setChecked(event.instability);
+        mHearingLossSwitch.setChecked(event.hearingLoss!=null?true:false);
+        mTinnitusSwitch.setChecked(event.tinnitus.equals("1")?true:false);
+        mEarFullnessSwitch.setChecked(event.earFullness.equals("1")?true:false);
+        mHeadacheSwitch.setChecked(event.headache.equals("1")?true:false);
+        mPhotophobiaSwitch.setChecked(event.photophobia.equals("1")?true:false);
+        mPhonophobiaSwitch.setChecked(event.equals("1")?true:false);
+        mVisualSymSwitch.setChecked(event.visualSymptoms.equals("1")?true:false);
+        mTumarkinSwitch.setChecked(event.tumarkin.equals("1")?true:false);
+        mMenstruationSwitch.setChecked(event.menstruation.equals("1")?true:false);
+        mNauseaSwitch.setChecked(event.nausea.equals("1")?true:false);
+        mVomitingSwitch.setChecked(event.vomiting.equals("1")?true:false);
+        mInstabilitySwitch.setChecked(event.instability.equals("1")?true:false);
 
         //TODO cardviews, pensar como hacerlo mejor
 
@@ -943,17 +943,17 @@ public class NewEventActivity extends AppCompatActivity {
 
         //Switchs
         cv.put("hearingLoss", mHearingLoss);
-        cv.put("tinnitus", mTinnitusSwitch.isActivated());
-        cv.put("plenitude", mEarFullnessSwitch.isActivated());
-        cv.put("migraine", mHeadacheSwitch.isActivated());
-        cv.put("photophobia", mPhotophobiaSwitch.isActivated());
-        cv.put("phonophobia", mPhonophobiaSwitch.isActivated());
-        cv.put("visual_symp", mVisualSymSwitch.isActivated());
-        cv.put("tumarkin", mTumarkinSwitch.isActivated());
-        cv.put("menstruation", mMenstruationSwitch.isActivated());
-        cv.put("nausea", mNauseaSwitch.isActivated());
-        cv.put("vomit", mVomitingSwitch.isActivated());
-        cv.put("inestability", mInstabilitySwitch.isActivated());
+        cv.put("tinnitus", mTinnitusSwitch.isChecked()?1:0);
+        cv.put("plenitude", mEarFullnessSwitch.isChecked()?1:0);
+        cv.put("migraine", mHeadacheSwitch.isChecked()?1:0);
+        cv.put("photophobia", mPhotophobiaSwitch.isChecked()?1:0);
+        cv.put("phonophobia", mPhonophobiaSwitch.isChecked()?1:0);
+        cv.put("visual_symp", mVisualSymSwitch.isChecked()?1:0);
+        cv.put("tumarkin", mTumarkinSwitch.isChecked()?1:0);
+        cv.put("menstruation", mMenstruationSwitch.isChecked()?1:0);
+        cv.put("nausea", mNauseaSwitch.isChecked()?1:0);
+        cv.put("vomit", mVomitingSwitch.isChecked()?1:0);
+        cv.put("inestability", mInstabilitySwitch.isChecked()?1:0);
 
         //Cards
         cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):mMigraineType1);
@@ -965,8 +965,12 @@ public class NewEventActivity extends AppCompatActivity {
         cv.put("triggers_excesses", mHabit);
         cv.put("triggers_notes", notes);
 
-        db.insert("event", null, cv);
-        Utils.showToast(this,"Evento guardado con exito");
+
+            db.insert("event", null, cv);
+
+
+
+
     }
 
 
