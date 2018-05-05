@@ -12,6 +12,7 @@ import android.support.v7.widget.AppCompatDrawableManager;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
+import android.text.Layout;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -261,7 +262,8 @@ public class NewEventActivity extends AppCompatActivity {
         Boolean result = true;
         //Duration must be >20
         //vertigoIntensity must be >0 or tinnutus or hearingloss o earfulness or headache or photophobia or phonophobia or aura or tumarkin
-        if (mInstabilityIntenBubble.getProgress()<20 || (mVertigoBubble.getProgress()<1 && !mTinnitusSwitch.isChecked() && !mHearingLossSwitch.isChecked() && !mEarFullnessSwitch.isChecked()
+        //TODO cambiar valor de vertigobubble debe ser <20??? pq???
+        if (mVertigoBubble.getProgress()<0 || (mVertigoBubble.getProgress()<1 && !mTinnitusSwitch.isChecked() && !mHearingLossSwitch.isChecked() && !mEarFullnessSwitch.isChecked()
         && !mHeadacheSwitch.isChecked() && !mPhonophobiaSwitch.isChecked() && !mPhotophobiaSwitch.isChecked() && !mVisualSymSwitch.isChecked() && !mTumarkinSwitch.isChecked())){
             result = false;
             new MaterialDialog.Builder(this)
@@ -869,7 +871,12 @@ public class NewEventActivity extends AppCompatActivity {
     private void disableEnableControls(boolean enable, ViewGroup vg){
         for (int i = 0; i < vg.getChildCount(); i++){
             View child = vg.getChildAt(i);
-            child.setEnabled(enable);
+            child.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                }
+            });
             if (child instanceof ViewGroup){
                 disableEnableControls(enable, (ViewGroup)child);
             }
@@ -878,7 +885,8 @@ public class NewEventActivity extends AppCompatActivity {
 
     public void setEventData(){
 
-        //disableEnableControls(false, mScrollView);
+        RelativeLayout eventLayout = findViewById(R.id.eventLayout);
+        //disableEnableControls(false, eventLayout);
 /*        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
         disableLayout.setVisibility(View.VISIBLE);*/
 

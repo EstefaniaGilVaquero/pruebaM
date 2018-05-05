@@ -12,7 +12,8 @@
 
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
-    <string name="positiveTxtOk">OK</string>
+    <string name="positiveTxtOk">Ok</string>
+    <string name="negativeTxtCancel">Cancel</string>
 
 
     <!-- My Meniere -->
@@ -73,8 +74,10 @@
     <string name="headPressure">Head Pressure:</string>
     <string name="explanation">Disability Scale: (Shepard et al., 1990)\n\n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or hard to change job because of symptoms\n5: Estabilished severe disability; unable to work for over 1 year or estabilished permanent disability with compensations payments)</string>
 
-    <string name="selectionErrorTitle">Selection Error</string>
-    <string name="selectionErrorMessage">Selection Error</string>
+    <string name="selectionErrorTitle">Selection error</string>
+    <string name="selectionErrorMessagePassDay">Your should select today\'s date to add a new event.</string>
+    <string name="newEventErrorTitle">New event error</string>
+    <string name="newEventErrorMessageDayHasEvent">This day already has events. You only can add one event per day.</string>
     <string name="addEpisodeTitle">Add more episodes</string>
     <string name="addEpisodeContent">You have selected to add more episodes. Please enter the number of episodes for today. You must to summarize your symptoms in the other fields of this section</string>
     <string name="hearingLossSwitchTitle">More data is needed</string>
@@ -82,19 +85,25 @@
     <string name="infoVisualTitle">Items info</string>
     <string name="infoVisualContent">Visual symptoms: Visual sensations that occur mainly before the attack.\n\nTumarkin: Sudden fall with no previous warning or provocative factor and without vertigo or loss of consciousness.</string>
 
-    <string name="mandatoryFieldsContent">Data is not enought to add a new record, please set more data or press 'back' button.</string>
+    <string name="mandatoryFieldsContent">Data is not enought to add a new record, please set more data or press \'back\' button.</string>
 
     <!--Login-->
     <string name="userEditText">E-mail</string>
     <string name="passEditText">Password</string>
     <string name="confirmPassEditText">Confirm password</string>
     <string name="invalidEmail">Invalid E-mail.</string>
-    <string name="invalidPass">Confirm password is different.</string>
+    <string name="differentConfirmPass">Confirm password is different.</string>
+    <string name="invalidPass">Invalid password.</string>
     <string name="registerSuccess">Register successfully</string>
     <string name="emptyEmail">Enter E-mail</string>
     <string name="emptyPass">Enter password</string>
     <string name="singUpBtn">Sing up</string>
-    <string name="registerInfo">To protect your personal data this section is password protected. Please sing up with a valid E-mail to allow us to send back your pass in case you forget it.</string>
+    <string name="loginUpBtn">Login</string>
+    <string name="rememberPassInfo">Remember password</string>
+    <string name="resetEmailPassInfo">Reset E-mail or password</string>
+    <string name="registerInfo">Please sing up with a valid E-mail to allow us to send back your password in case you forget it.</string>
+    <string name="loginInfo">To protect your personal data this section is password protected.\n\nEnter password below.</string>
+    <string name="rememberPassContent">We will send your password to </string>
 
 
     <!-- Hearing diary -->

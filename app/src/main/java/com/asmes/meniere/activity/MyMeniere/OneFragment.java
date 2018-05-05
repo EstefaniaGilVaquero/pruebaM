@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.LoginFragment;
 import com.asmes.meniere.activity.RegisterFragment;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
@@ -43,14 +44,20 @@ public class OneFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static OneFragment newInstance() {
+        /*Bundle bundle = new Bundle();
+        bundle.putString(Constants.ITEM_TYPE, itemType);*/
+        OneFragment fragment = new OneFragment();
+        //fragment.setArguments(bundle);
+
+        return fragment;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         activity = getActivity();
-
-
-
     }
 
     @Override
@@ -66,12 +73,15 @@ public class OneFragment extends Fragment {
             transaction.replace(R.id.relativeOneFragment, fragment);
             transaction.commit();
 
+        }//Si no está logueado voy a login
+        else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
+            Fragment fragment = LoginFragment.newInstance();
+            FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+            transaction.replace(R.id.relativeOneFragment, fragment);
+            transaction.commit();
         }
 
-
-
-
-        mCalendarV = (CalendarView) rootView.findViewById(R.id.calendarView);
+        mCalendarV = rootView.findViewById(R.id.calendarView);
         return rootView;
     }
 
@@ -85,9 +95,9 @@ public class OneFragment extends Fragment {
             sdf = new SimpleDateFormat("dd/MM/yyyy");
             selectedDate = sdf.format(new Date());
 
-            mFocusTodayCv = (CardView) rootView.findViewById(R.id.cvFocusToday);
-            mNewEventCv = (CardView) rootView.findViewById(R.id.cvNewEvent);
-            mSeeSelection = (CardView) rootView.findViewById(R.id.cvSeeSelection);
+            mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
+            mNewEventCv = rootView.findViewById(R.id.cvNewEvent);
+            mSeeSelection = rootView.findViewById(R.id.cvSeeSelection);
 
             mSeeSelection.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -117,12 +127,13 @@ public class OneFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy y solo un evento por dia
-                    if(isValidDay() /*&& getEventEntriesCount()==0*/) {
+                    if(isValidDay() && getEventEntriesCount()==0) {
                         callNewEvent(true);
-                    }else{
-                        Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessage));
+                    }else if(!isValidDay()){
+                        Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessagePassDay));
+                    }else if(getEventEntriesCount()>0){
+                        Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
                     }
-
                 }
             });
 
@@ -139,8 +150,6 @@ public class OneFragment extends Fragment {
                     else Utils.showToast(activity,"Este dia no contiene eventos");
                 }
             });
-
-
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -160,7 +169,8 @@ public class OneFragment extends Fragment {
 
     public int getEventEntriesCount(){
 
-        Cursor cursor = db.rawQuery("SELECT * FROM EVENT", null);
+        String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", selectedDate);
+        Cursor cursor = db.rawQuery(query, null);
         return cursor.getCount();
     }
 

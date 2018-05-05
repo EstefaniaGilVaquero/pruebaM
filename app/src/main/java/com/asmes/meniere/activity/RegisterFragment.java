@@ -3,6 +3,7 @@ package com.asmes.meniere.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
 
@@ -68,11 +70,16 @@ public class RegisterFragment extends Fragment {
                 }else if(mPass.getText().toString().equals("")){
                     message = getString(R.string.emptyPass);
                 }else if(!mPass.getText().toString().equals(mConfirmPass.getText().toString())){
-                     message = getString(R.string.invalidPass);
+                     message = getString(R.string.differentConfirmPass);
                 }else {
                      message = getString(R.string.registerSuccess);
                      mUserLogged = new User(mEmail.getText().toString(), mPass.getText().toString());
                      UserSession.getInstance(getContext()).saveUser(mUserLogged);
+
+                    Fragment fragment = OneFragment.newInstance();
+                    FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+                    transaction.replace(R.id.layoutRegisterFragment, fragment);
+                    transaction.commit();
 
                      //Go to myMeniereFragment
                 }

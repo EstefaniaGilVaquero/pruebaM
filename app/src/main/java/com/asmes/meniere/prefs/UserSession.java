@@ -53,4 +53,12 @@ public class UserSession {
             mIsLoggedIn = true;
         }
     }
+
+    public boolean ismIsLoggedIn() {
+        return mIsLoggedIn;
+    }
+
+    public void setmIsLoggedIn(boolean mIsLoggedIn) {
+        this.mIsLoggedIn = mIsLoggedIn;
+    }
 }

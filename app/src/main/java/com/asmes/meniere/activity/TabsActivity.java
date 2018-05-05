@@ -20,6 +20,7 @@ import com.asmes.meniere.activity.HelpMeniere.FourFragment;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.activity.UtilitiesMeniere.ThreeFragment;
 import com.asmes.meniere.activity.AboutMeniere.TwoFragment;
+import com.asmes.meniere.prefs.UserSession;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,10 +63,6 @@ public class TabsActivity extends AppCompatActivity {
         }
     }
 
-
-
-
-
     @Override
     public void onPause(){
         super.onPause();
@@ -76,6 +73,8 @@ public class TabsActivity extends AppCompatActivity {
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(1);
             finishAffinity();
+        }else{
+            UserSession.getInstance(this).setmIsLoggedIn(false);
         }
         activitySwitchFlag = false;
     }
