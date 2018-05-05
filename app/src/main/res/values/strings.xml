@@ -87,6 +87,14 @@
     <!--Login-->
     <string name="userEditText">E-mail</string>
     <string name="passEditText">Password</string>
+    <string name="confirmPassEditText">Confirm password</string>
+    <string name="invalidEmail">Invalid E-mail.</string>
+    <string name="invalidPass">Confirm password is different.</string>
+    <string name="registerSuccess">Register successfully</string>
+    <string name="emptyEmail">Enter E-mail</string>
+    <string name="emptyPass">Enter password</string>
+    <string name="singUpBtn">Sing up</string>
+    <string name="registerInfo">To protect your personal data this section is password protected. Please sing up with a valid E-mail to allow us to send back your pass in case you forget it.</string>
 
 
     <!-- Hearing diary -->
@@ -219,5 +227,8 @@ Mark Jackson (English Localization) Eva Perendreu (ASMES)  
 Original Idea y Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  
 iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa y Rey</string>
     <string name="title_activity_main">MainActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.asmes.meniere.R;
@@ -39,11 +40,13 @@ public class TabsActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_tabs);
 
-            toolbar = (Toolbar) findViewById(R.id.toolbar);
+            getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+            toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
-            viewPager = (ViewPager) findViewById(R.id.viewpager);
-            tabLayout = (TabLayout) findViewById(R.id.tabs);
+            viewPager =  findViewById(R.id.viewpager);
+            tabLayout =  findViewById(R.id.tabs);
 
             dbHelper = new DatabaseHelper(this);
             db = dbHelper.getWritableDatabase();

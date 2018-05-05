@@ -879,8 +879,8 @@ public class NewEventActivity extends AppCompatActivity {
     public void setEventData(){
 
         //disableEnableControls(false, mScrollView);
-        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
-        disableLayout.setVisibility(View.VISIBLE);
+/*        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
+        disableLayout.setVisibility(View.VISIBLE);*/
 
         if (event.instability != null && event.instability.equals("1")) mInstavilityIntenCardView.setVisibility(View.VISIBLE);
         if (event.headache != null && event.headache.equals("1")) mHeadache_LayOut.setVisibility(View.VISIBLE);
