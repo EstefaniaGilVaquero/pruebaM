@@ -38,7 +38,6 @@
             android:screenOrientation="portrait" />
         <activity android:name="com.asmes.meniere.activity.HelpMeniere.AuthorsActivity" />
         <activity android:name="com.asmes.meniere.activity.HelpMeniere.FrameworksActivity" />
-        <activity android:name="com.asmes.meniere.activity.LoginActivity" />
         <activity android:name="com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity" />
         <activity android:name="com.asmes.meniere.activity.MyMeniere.NewEventActivity"></activity>
     </application>

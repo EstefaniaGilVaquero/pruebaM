@@ -38,12 +38,12 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <ImageView
-            android:id="@+id/emailIcon"
+            android:id="@+id/passIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_email"
+            android:src="@drawable/ic_pass"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/loginPassEditText"
             app:layout_constraintStart_toStartOf="@+id/loginPassEditText"
@@ -69,7 +69,6 @@
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorPrimaryDarker"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
 

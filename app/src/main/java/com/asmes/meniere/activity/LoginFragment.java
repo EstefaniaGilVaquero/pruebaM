@@ -27,6 +27,7 @@ import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.models.Mail;
 import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
+import com.asmes.meniere.utils.Constants;
 
 import javax.mail.AuthenticationFailedException;
 import javax.mail.MessagingException;
@@ -136,8 +137,8 @@ public class LoginFragment extends Fragment {
         SendEmailAsyncTask email = new SendEmailAsyncTask();
 
         //email.activity = this;
-        email.m = new Mail("estefania.gil.vaquero", "Symb3l1983");
-        email.m.set_from("estefania.gil.vaquero@gmail.com");
+        email.m = new Mail(Constants.SENDER_EMAIL_USER, Constants.SENDER_EMAIL_PASS);
+        email.m.set_from(Constants.SENDER_EMAIL_FROM);
         email.m.setBody(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, ""));
         email.m.set_to(destinatary);
         email.m.set_subject("Meniere app, remember password");
