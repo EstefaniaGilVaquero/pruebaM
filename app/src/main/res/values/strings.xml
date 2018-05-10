@@ -89,8 +89,12 @@
 
     <!--Login-->
     <string name="userEditText">E-mail</string>
+    <string name="newUserEditText">New E-mail</string>
     <string name="passEditText">Password</string>
+    <string name="newPassEditText">New password</string>
+    <string name="currentPassEditText">Current password</string>
     <string name="confirmPassEditText">Confirm password</string>
+    <string name="newConfirmPassEditText">Confirm new password</string>
     <string name="invalidEmail">Invalid E-mail.</string>
     <string name="differentConfirmPass">Confirm password is different.</string>
     <string name="invalidPass">Invalid password.</string>
@@ -105,7 +109,7 @@
     <string name="registerInfo">Please sing up with a valid E-mail to allow us to send back your password in case you forget it.</string>
     <string name="loginInfo">To protect your personal data this section is password protected.\n\nEnter password below.</string>
     <string name="rememberPassContent">We will send your password to </string>
-    <string name="editUserDataInfo">Write the old password below.</string>
+    <string name="editUserDataInfo">Write current password below.</string>
 
 
     <!-- Hearing diary -->
