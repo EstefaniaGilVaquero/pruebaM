@@ -7,8 +7,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -25,7 +23,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.models.Mail;
-import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Constants;
 
@@ -69,7 +66,7 @@ public class LoginFragment extends Fragment {
 
         mContext = getActivity();
 
-        mPassEt = rootView.findViewById(R.id.loginPassEditText);
+        mPassEt = rootView.findViewById(R.id.currentPassEditText);
         mLoginBtn = rootView.findViewById(R.id.loginBtn);
         mRememberPassTxt = rootView.findViewById(R.id.rememberPass);
         mResetEmailPassTxt = rootView.findViewById(R.id.resetEmailPass);
@@ -98,6 +95,16 @@ public class LoginFragment extends Fragment {
                             }
                         })
                         .show();
+            }
+        });
+
+        mResetEmailPassTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fragment = new EditUserDataFragment();
+                FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+                transaction.replace(R.id.layoutLoginFragment, fragment);
+                transaction.commit();
             }
         });
 
@@ -146,7 +153,8 @@ public class LoginFragment extends Fragment {
     }
 
     public void displayMessage(String message) {
-        //Toast.makeText(this.getActivity(),message,Toast.LENGTH_LONG).show();
+        //TODO falla por el contexto???
+        //Toast.makeText(rootView.getContext(), message, Toast.LENGTH_LONG).show();
     }
 
 

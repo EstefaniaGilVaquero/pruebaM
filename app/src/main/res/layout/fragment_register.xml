@@ -13,34 +13,19 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView5"
-            fontPath="fonts/PhosphateSolid.ttf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="MÉNIÊRE"
-            android:textColor="@color/colorWhite"
-            android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingPrefix" />
-
-        <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:padding="8dp"
             android:text="@string/registerInfo"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/loginEmailEditText"
+            android:id="@+id/newEmailEditText"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginEnd="24dp"
@@ -68,12 +53,12 @@
             android:layout_height="24dp"
             android:src="@drawable/ic_email"
             android:tint="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/loginEmailEditText"
-            app:layout_constraintStart_toStartOf="@+id/loginEmailEditText"
-            app:layout_constraintTop_toTopOf="@+id/loginEmailEditText" />
+            app:layout_constraintBottom_toBottomOf="@+id/newEmailEditText"
+            app:layout_constraintStart_toStartOf="@+id/newEmailEditText"
+            app:layout_constraintTop_toTopOf="@+id/newEmailEditText" />
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/loginPassEditText"
+            android:id="@+id/currentPassEditText"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginEnd="24dp"
@@ -93,7 +78,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginEmailEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/newEmailEditText" />
 
         <ImageView
             android:id="@+id/passIcon"
@@ -101,12 +86,12 @@
             android:layout_height="24dp"
             android:src="@drawable/ic_pass"
             android:tint="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/loginPassEditText"
-            app:layout_constraintStart_toStartOf="@+id/loginPassEditText"
-            app:layout_constraintTop_toTopOf="@+id/loginPassEditText" />
+            app:layout_constraintBottom_toBottomOf="@+id/currentPassEditText"
+            app:layout_constraintStart_toStartOf="@+id/currentPassEditText"
+            app:layout_constraintTop_toTopOf="@+id/currentPassEditText" />
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/loginConfirmPassEditText"
+            android:id="@+id/newConfirmPassEditText"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginEnd="24dp"
@@ -126,7 +111,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginPassEditText" />
+            app:layout_constraintTop_toBottomOf="@+id/currentPassEditText" />
 
         <ImageView
             android:id="@+id/confirmPassIcon"
@@ -134,17 +119,17 @@
             android:layout_height="24dp"
             android:src="@drawable/ic_pass"
             android:tint="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/loginConfirmPassEditText"
-            app:layout_constraintStart_toStartOf="@+id/loginConfirmPassEditText"
-            app:layout_constraintTop_toTopOf="@+id/loginConfirmPassEditText" />
+            app:layout_constraintBottom_toBottomOf="@+id/newConfirmPassEditText"
+            app:layout_constraintStart_toStartOf="@+id/newConfirmPassEditText"
+            app:layout_constraintTop_toTopOf="@+id/newConfirmPassEditText" />
 
         <android.support.v7.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginConfirmPassEditText">
+            app:layout_constraintStart_toStartOf="parent">
 
             <Button
                 android:id="@+id/registerBtn"

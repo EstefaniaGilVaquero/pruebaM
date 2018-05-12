@@ -108,8 +108,12 @@
     <string name="resetEmailPassInfo">Reset E-mail or password</string>
     <string name="registerInfo">Please sing up with a valid E-mail to allow us to send back your password in case you forget it.</string>
     <string name="loginInfo">To protect your personal data this section is password protected.\n\nEnter password below.</string>
-    <string name="rememberPassContent">We will send your password to </string>
+    <string name="rememberPassContent">We will send your password to \u0020</string>
     <string name="editUserDataInfo">Write current password below.</string>
+    <string name="editUserInvalidCurrentPass">Write current password below.Current password is invalid.</string>
+    <string name="editUserOkCurrentPass">Valid current password.</string>
+    <string name="editUserAnyChange">Fill new E-mail or password</string>
+    <string name="reditUserSuccess">Edit successfully</string>
 
 
     <!-- Hearing diary -->

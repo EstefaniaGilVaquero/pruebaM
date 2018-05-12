@@ -7,6 +7,9 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Author : Rajanikant
  * Date : 16 Jan 2016
@@ -48,6 +51,24 @@ public class Utils {
         }
         toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    public static Boolean isValidMail(String email){
+        Boolean result = false;
+        String validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+";
+
+        Matcher matcher = Pattern.compile(validemail).matcher(email);
+        if (matcher.matches()){
+            result = true;
+        }
+
+        return result;
     }
 
 

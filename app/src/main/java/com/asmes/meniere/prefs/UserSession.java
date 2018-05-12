@@ -54,6 +54,14 @@ public class UserSession {
         }
     }
 
+    public void editUser(User user) {
+
+        SharedPreferences.Editor editor = mPreferences.edit();
+        if(!user.getEmail().equals("")) editor.putString(PREFERENCES_EMAIL, user.getEmail());
+        if(!user.getPass().equals("")) editor.putString(PREFERENCES_PASS, user.getPass());
+        editor.apply();
+    }
+
     public boolean ismIsLoggedIn() {
         return mIsLoggedIn;
     }

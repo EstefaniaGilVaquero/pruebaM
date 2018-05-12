@@ -12,30 +12,16 @@
         android:id="@+id/layoutLoginFragment">
 
         <TextView
-            android:id="@+id/textView5"
-            fontPath="fonts/PhosphateSolid.ttf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="MÉNIÊRE"
-            android:textColor="@color/colorWhite"
-            android:textSize="40sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingPrefix" />
-
-        <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:padding="8dp"
             android:text="@string/loginInfo"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/passIcon"
@@ -45,12 +31,12 @@
             android:layout_marginTop="8dp"
             android:src="@drawable/ic_pass"
             android:tint="@color/colorWhite"
-            app:layout_constraintBottom_toBottomOf="@+id/loginPassEditText"
-            app:layout_constraintStart_toStartOf="@+id/loginPassEditText"
-            app:layout_constraintTop_toTopOf="@+id/loginPassEditText" />
+            app:layout_constraintBottom_toBottomOf="@+id/currentPassEditText"
+            app:layout_constraintStart_toStartOf="@+id/currentPassEditText"
+            app:layout_constraintTop_toTopOf="@+id/currentPassEditText" />
 
         <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/loginPassEditText"
+            android:id="@+id/currentPassEditText"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginEnd="24dp"
@@ -76,10 +62,10 @@
             android:id="@+id/linearLayoutCompat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/loginPassEditText">
+            app:layout_constraintStart_toStartOf="parent">
 
             <Button
                 android:id="@+id/loginBtn"
@@ -95,20 +81,23 @@
             android:id="@+id/rememberPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/rememberPassInfo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
+            app:layout_constraintTop_toBottomOf="@+id/currentPassEditText" />
 
         <TextView
             android:id="@+id/resetEmailPass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/resetEmailPassInfo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.148"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rememberPass" />
 

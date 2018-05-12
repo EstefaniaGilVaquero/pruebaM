@@ -15,9 +15,7 @@ import com.asmes.meniere.R;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
-
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import static com.asmes.meniere.utils.Utils.isValidMail;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,9 +50,9 @@ public class RegisterFragment extends Fragment {
         // Inflate the layout for this fragment
         rootview = inflater.inflate(R.layout.fragment_register, container, false);
 
-        mEmail = rootview.findViewById(R.id.loginEmailEditText);
-        mPass = rootview.findViewById(R.id.loginPassEditText);
-        mConfirmPass = rootview.findViewById(R.id.loginConfirmPassEditText);
+        mEmail = rootview.findViewById(R.id.newEmailEditText);
+        mPass = rootview.findViewById(R.id.currentPassEditText);
+        mConfirmPass = rootview.findViewById(R.id.newConfirmPassEditText);
         mRegisterBtn = rootview.findViewById(R.id.registerBtn);
 
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
@@ -90,25 +88,6 @@ public class RegisterFragment extends Fragment {
     return rootview;
 
     }
-
-    public Boolean isValidMail(String email){
-        Boolean result = false;
-        String validemail = "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
-                "\\@" +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
-                "(" +
-                "\\." +
-                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
-                ")+";
-
-        Matcher matcher = Pattern.compile(validemail).matcher(mEmail.getText());
-        if (matcher.matches()){
-            result = true;
-        }
-
-        return result;
-    }
-
 
 }
 
