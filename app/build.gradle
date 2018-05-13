@@ -4,8 +4,8 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.symbel.meniere"
-        minSdkVersion 22
-        targetSdkVersion 25
+        minSdkVersion 23
+        targetSdkVersion 26
         versionCode 5
         versionName "5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"

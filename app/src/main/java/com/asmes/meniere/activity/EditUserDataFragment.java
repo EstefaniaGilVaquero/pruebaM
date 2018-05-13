@@ -14,9 +14,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
-import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
+
 import static com.asmes.meniere.utils.Utils.isValidMail;
 
 /**
