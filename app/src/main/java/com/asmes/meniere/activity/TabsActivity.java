@@ -96,12 +96,12 @@ public class TabsActivity extends AppCompatActivity {
 
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText(R.string.utilities);
-        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
+        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_help, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
 
         TextView tabFour = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabFour.setText(R.string.help);
-        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
+        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_help, 0, 0);
         tabLayout.getTabAt(3).setCustomView(tabFour);
     }
 
