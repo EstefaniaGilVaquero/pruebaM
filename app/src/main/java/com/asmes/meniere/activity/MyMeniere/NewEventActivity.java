@@ -30,6 +30,7 @@ import com.asmes.meniere.R;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
 import com.asmes.meniere.utils.Utils;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.xw.repo.BubbleSeekBar;
 
 import java.text.SimpleDateFormat;
@@ -63,7 +64,7 @@ public class NewEventActivity extends AppCompatActivity {
     private Toast toast;
     private SimpleDateFormat sdf;
     private EventModel event;
-    private String selectedDate;
+    private CalendarDay selectedDate;
     private Boolean disableTouch;
 
     @Override
@@ -103,89 +104,89 @@ public class NewEventActivity extends AppCompatActivity {
         mVisualBlurDisBubble = findViewById(R.id.visualBlurDisBubble);
         mHeadPresureDisBubble = findViewById(R.id.headPressureDisBubble);
 
-        mHearingLossSwitch = (SwitchCompat) findViewById(R.id.hearingLossSwitch);
-        mTinnitusSwitch = (SwitchCompat) findViewById(R.id.tinnitusSwitch);
-        mEarFullnessSwitch = (SwitchCompat) findViewById(R.id.earFullnessSwitch);
-        mHeadacheSwitch = (SwitchCompat) findViewById(R.id.headacheSwitch);
-        mPhotophobiaSwitch = (SwitchCompat) findViewById(R.id.photophobiaSwitch);
-        mPhonophobiaSwitch = (SwitchCompat) findViewById(R.id.phonophobiawitch);
-        mVisualSymSwitch = (SwitchCompat) findViewById(R.id.visualShymSwitch);
-        mTumarkinSwitch = (SwitchCompat) findViewById(R.id.tumarkinSwitch);
-        mMenstruationSwitch = (SwitchCompat) findViewById(R.id.menstruationSwitch);
-        mNauseaSwitch = (SwitchCompat) findViewById(R.id.nauseaSwitch);
-        mVomitingSwitch = (SwitchCompat) findViewById(R.id.vomitingSwitch);
-        mInstabilitySwitch = (SwitchCompat) findViewById(R.id.instabilitySwitch);
+        mHearingLossSwitch = findViewById(R.id.hearingLossSwitch);
+        mTinnitusSwitch = findViewById(R.id.tinnitusSwitch);
+        mEarFullnessSwitch = findViewById(R.id.earFullnessSwitch);
+        mHeadacheSwitch = findViewById(R.id.headacheSwitch);
+        mPhotophobiaSwitch = findViewById(R.id.photophobiaSwitch);
+        mPhonophobiaSwitch = findViewById(R.id.phonophobiawitch);
+        mVisualSymSwitch = findViewById(R.id.visualShymSwitch);
+        mTumarkinSwitch = findViewById(R.id.tumarkinSwitch);
+        mMenstruationSwitch = findViewById(R.id.menstruationSwitch);
+        mNauseaSwitch = findViewById(R.id.nauseaSwitch);
+        mVomitingSwitch = findViewById(R.id.vomitingSwitch);
+        mInstabilitySwitch = findViewById(R.id.instabilitySwitch);
 
-        mDurationTxt = (TextView)findViewById(R.id.durationTxt);
-        mVertigoTxt = (TextView)findViewById(R.id.vertigoIntensityTxt);
-        mLimitationTxt = (TextView)findViewById(R.id.intensityLimitationTxt);
-        mStressTxt = (TextView)findViewById(R.id.stressLevelTxt);
-        mInstabilityIntenTxt = (TextView)findViewById(R.id.inestavilityIntensityTxt);
-        mDizzinessDisTxt = (TextView)findViewById(R.id.dizzinessDisTxt);
-        mInstabilityDisTxt = (TextView)findViewById(R.id.instabilityDisTxt);
-        mVisualBlurDisTxt = (TextView)findViewById(R.id.visualBlurDisTxt);
-        mHeadPresureDisTxt = (TextView)findViewById(R.id.headPresureDisTxt);
+        mDurationTxt = findViewById(R.id.durationTxt);
+        mVertigoTxt = findViewById(R.id.vertigoIntensityTxt);
+        mLimitationTxt = findViewById(R.id.intensityLimitationTxt);
+        mStressTxt = findViewById(R.id.stressLevelTxt);
+        mInstabilityIntenTxt = findViewById(R.id.inestavilityIntensityTxt);
+        mDizzinessDisTxt = findViewById(R.id.dizzinessDisTxt);
+        mInstabilityDisTxt = findViewById(R.id.instabilityDisTxt);
+        mVisualBlurDisTxt = findViewById(R.id.visualBlurDisTxt);
+        mHeadPresureDisTxt = findViewById(R.id.headPresureDisTxt);
 
-        mHeadProp_1a_CardView = (TextView) findViewById(R.id.headProp_1a);
-        mHeadProp_1b_CardView = (TextView) findViewById(R.id.headProp_1b);
-        mHeadProp_1c_CardView = (TextView) findViewById(R.id.headProp_1c);
-        mHeadProp_1d_CardView = (TextView) findViewById(R.id.headProp_1d);
-        mHeadProp_2a_CardView = (TextView) findViewById(R.id.headProp_2a);
-        mHeadProp_2b_CardView = (TextView) findViewById(R.id.headProp_2b);
-        mHeadProp_2c_CardView = (TextView) findViewById(R.id.headProp_2c);
-        mHeadProp_3a_CardView = (TextView) findViewById(R.id.headProp_3a);
-        mHeadProp_3b_CardView = (TextView) findViewById(R.id.headProp_3b);
-        mHeadProp_3c_CardView = (TextView) findViewById(R.id.headProp_3c);
-        mWeather_1a_CardView = (TextView) findViewById(R.id.Weather_1a);
-        mWeather_1b_CardView = (TextView) findViewById(R.id.Weather_1b);
-        mWeather_1c_CardView = (TextView) findViewById(R.id.Weather_1c);
-        mWeather_1d_CardView = (TextView) findViewById(R.id.Weather_1d);
-        mSleep_1a_CardView = (TextView) findViewById(R.id.Sleep_1a);
-        mSleep_1b_CardView = (TextView) findViewById(R.id.Sleep_1b);
-        mSleep_1c_CardView = (TextView) findViewById(R.id.Sleep_1c);
-        mSleep_1d_CardView = (TextView) findViewById(R.id.Sleep_1d);
-        mPhysical_1a_CardView = (TextView) findViewById(R.id.Physical_1a);
-        mPhysical_1b_CardView = (TextView) findViewById(R.id.Physical_1b);
-        mPhysical_1c_CardView = (TextView) findViewById(R.id.Physical_1c);
-        mPhysical_1d_CardView = (TextView) findViewById(R.id.Physical_1d);
-        mHabit_1a_CardView = (TextView) findViewById(R.id.Habit_1a);
-        mHabit_1b_CardView = (TextView) findViewById(R.id.Habit_1b);
-        mHabit_1c_CardView = (TextView) findViewById(R.id.Habit_1c);
-        mHabit_1d_CardView = (TextView) findViewById(R.id.Habit_1d);
-        mHabit_1e_CardView = (TextView) findViewById(R.id.Habit_1e);
-        mHabit_1f_CardView = (TextView) findViewById(R.id.Habit_1f);
+        mHeadProp_1a_CardView = findViewById(R.id.headProp_1a);
+        mHeadProp_1b_CardView = findViewById(R.id.headProp_1b);
+        mHeadProp_1c_CardView = findViewById(R.id.headProp_1c);
+        mHeadProp_1d_CardView = findViewById(R.id.headProp_1d);
+        mHeadProp_2a_CardView = findViewById(R.id.headProp_2a);
+        mHeadProp_2b_CardView = findViewById(R.id.headProp_2b);
+        mHeadProp_2c_CardView = findViewById(R.id.headProp_2c);
+        mHeadProp_3a_CardView = findViewById(R.id.headProp_3a);
+        mHeadProp_3b_CardView = findViewById(R.id.headProp_3b);
+        mHeadProp_3c_CardView = findViewById(R.id.headProp_3c);
+        mWeather_1a_CardView = findViewById(R.id.Weather_1a);
+        mWeather_1b_CardView = findViewById(R.id.Weather_1b);
+        mWeather_1c_CardView = findViewById(R.id.Weather_1c);
+        mWeather_1d_CardView = findViewById(R.id.Weather_1d);
+        mSleep_1a_CardView = findViewById(R.id.Sleep_1a);
+        mSleep_1b_CardView = findViewById(R.id.Sleep_1b);
+        mSleep_1c_CardView = findViewById(R.id.Sleep_1c);
+        mSleep_1d_CardView = findViewById(R.id.Sleep_1d);
+        mPhysical_1a_CardView = findViewById(R.id.Physical_1a);
+        mPhysical_1b_CardView = findViewById(R.id.Physical_1b);
+        mPhysical_1c_CardView = findViewById(R.id.Physical_1c);
+        mPhysical_1d_CardView = findViewById(R.id.Physical_1d);
+        mHabit_1a_CardView = findViewById(R.id.Habit_1a);
+        mHabit_1b_CardView = findViewById(R.id.Habit_1b);
+        mHabit_1c_CardView = findViewById(R.id.Habit_1c);
+        mHabit_1d_CardView = findViewById(R.id.Habit_1d);
+        mHabit_1e_CardView = findViewById(R.id.Habit_1e);
+        mHabit_1f_CardView = findViewById(R.id.Habit_1f);
 
         //Layouts
         mHeadProp_1a_LayOut = findViewById(R.id.headProp_1a_layout);
         mHeadProp_1b_LayOut =  findViewById(R.id.headProp_1b_layout);
         mHeadProp_1c_LayOut =  findViewById(R.id.headProp_1c_layout);
         mHeadProp_1d_LayOut =  findViewById(R.id.headProp_1d_layout);
-        mHeadProp_2a_LayOut = (LinearLayout) findViewById(R.id.headProp_2a_layout);
-        mHeadProp_2b_LayOut = (LinearLayout) findViewById(R.id.headProp_2b_layout);
-        mHeadProp_2c_LayOut = (LinearLayout) findViewById(R.id.headProp_2c_layout);
-        mHeadProp_3a_LayOut = (LinearLayout) findViewById(R.id.headProp_3a_layout);
-        mHeadProp_3b_LayOut = (LinearLayout) findViewById(R.id.headProp_3b_layout);
-        mHeadProp_3c_LayOut = (LinearLayout) findViewById(R.id.headProp_3c_layout);
-        mWeather_1a_LayOut = (LinearLayout) findViewById(R.id.Weather_1a_layout);
-        mWeather_1b_LayOut = (LinearLayout) findViewById(R.id.Weather_1b_layout);
-        mWeather_1c_LayOut = (LinearLayout) findViewById(R.id.Weather_1c_layout);
-        mWeather_1d_LayOut = (LinearLayout) findViewById(R.id.Weather_1d_layout);
-        mSleep_1a_LayOut = (LinearLayout) findViewById(R.id.Sleep_1a_layout);
-        mSleep_1b_LayOut = (LinearLayout) findViewById(R.id.Sleep_1b_layout);
-        mSleep_1c_LayOut = (LinearLayout) findViewById(R.id.Sleep_1c_layout);
-        mSleep_1d_LayOut = (LinearLayout) findViewById(R.id.Sleep_1d_layout);
-        mPhysical_1a_LayOut = (LinearLayout) findViewById(R.id.Physical_1a_layout);
-        mPhysical_1b_LayOut = (LinearLayout) findViewById(R.id.Physical_1b_layout);
-        mPhysical_1c_LayOut = (LinearLayout) findViewById(R.id.Physical_1c_layout);
-        mPhysical_1d_LayOut = (LinearLayout) findViewById(R.id.Physical_1d_layout);
-        mHabit_1a_LayOut = (LinearLayout) findViewById(R.id.Habit_1a_layout);
-        mHabit_1b_LayOut = (LinearLayout) findViewById(R.id.Habit_1b_layout);
-        mHabit_1c_LayOut = (LinearLayout) findViewById(R.id.Habit_1c_layout);
-        mHabit_1d_LayOut = (LinearLayout) findViewById(R.id.Habit_1d_layout);
-        mHabit_1e_LayOut = (LinearLayout) findViewById(R.id.Habit_1e_layout);
-        mHabit_1f_LayOut = (LinearLayout) findViewById(R.id.Habit_1f_layout);
-        mHeadache_LayOut = (LinearLayout) findViewById(R.id.headachePropsLayout);
-        mInstavilityIntenCardView = (CardView) findViewById(R.id.instabilityIntensityCardView);
+        mHeadProp_2a_LayOut = findViewById(R.id.headProp_2a_layout);
+        mHeadProp_2b_LayOut = findViewById(R.id.headProp_2b_layout);
+        mHeadProp_2c_LayOut = findViewById(R.id.headProp_2c_layout);
+        mHeadProp_3a_LayOut = findViewById(R.id.headProp_3a_layout);
+        mHeadProp_3b_LayOut = findViewById(R.id.headProp_3b_layout);
+        mHeadProp_3c_LayOut = findViewById(R.id.headProp_3c_layout);
+        mWeather_1a_LayOut = findViewById(R.id.Weather_1a_layout);
+        mWeather_1b_LayOut = findViewById(R.id.Weather_1b_layout);
+        mWeather_1c_LayOut = findViewById(R.id.Weather_1c_layout);
+        mWeather_1d_LayOut = findViewById(R.id.Weather_1d_layout);
+        mSleep_1a_LayOut = findViewById(R.id.Sleep_1a_layout);
+        mSleep_1b_LayOut = findViewById(R.id.Sleep_1b_layout);
+        mSleep_1c_LayOut = findViewById(R.id.Sleep_1c_layout);
+        mSleep_1d_LayOut = findViewById(R.id.Sleep_1d_layout);
+        mPhysical_1a_LayOut = findViewById(R.id.Physical_1a_layout);
+        mPhysical_1b_LayOut = findViewById(R.id.Physical_1b_layout);
+        mPhysical_1c_LayOut = findViewById(R.id.Physical_1c_layout);
+        mPhysical_1d_LayOut = findViewById(R.id.Physical_1d_layout);
+        mHabit_1a_LayOut = findViewById(R.id.Habit_1a_layout);
+        mHabit_1b_LayOut = findViewById(R.id.Habit_1b_layout);
+        mHabit_1c_LayOut = findViewById(R.id.Habit_1c_layout);
+        mHabit_1d_LayOut = findViewById(R.id.Habit_1d_layout);
+        mHabit_1e_LayOut = findViewById(R.id.Habit_1e_layout);
+        mHabit_1f_LayOut = findViewById(R.id.Habit_1f_layout);
+        mHeadache_LayOut = findViewById(R.id.headachePropsLayout);
+        mInstavilityIntenCardView = findViewById(R.id.instabilityIntensityCardView);
 
         mNotes = findViewById(R.id.notesTxt);
 
@@ -222,11 +223,9 @@ public class NewEventActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-
-
         //Si no es nuevo pillo el evento que me llega
         Intent i = getIntent();
-        selectedDate = i.getStringExtra("selectedDate");
+        selectedDate = i.getParcelableExtra("selectedDate");
         if (!i.getBooleanExtra("isNew",true)){
             disableTouch = true;
             event = (EventModel) i.getSerializableExtra("event");
@@ -1070,7 +1069,7 @@ public class NewEventActivity extends AppCompatActivity {
 
         ContentValues cv = new ContentValues();
 
-        cv.put("date", selectedDate);
+        cv.put("date", selectedDate.toString());
         cv.put("episodes", mEpisode);
         cv.put("duration", duration);
         cv.put("intensity", vertigoIntensity);

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,7 +13,6 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CalendarView;
 
 import com.asmes.meniere.R;
 import com.asmes.meniere.activity.LoginFragment;
@@ -22,20 +22,22 @@ import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
 import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Utils;
+import com.prolificinteractive.materialcalendarview.CalendarDay;
+import com.prolificinteractive.materialcalendarview.DayViewDecorator;
+import com.prolificinteractive.materialcalendarview.DayViewFacade;
+import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.spans.DotSpan;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 
 public class OneFragment extends Fragment {
 
     private View rootView;
-    private CalendarView mCalendarV;
+    private MaterialCalendarView mCalendarV;
     private CardView mFocusTodayCv, mNewEventCv, mSeeSelection;
     private Activity activity;
-    private SimpleDateFormat sdf;
-    private String selectedDate;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
     private EventModel event;
@@ -92,8 +94,15 @@ public class OneFragment extends Fragment {
             dbHelper = new DatabaseHelper(activity);
             db = dbHelper.getWritableDatabase();
 
-            sdf = new SimpleDateFormat("dd/MM/yyyy");
-            selectedDate = sdf.format(new Date());
+            mCalendarV.setDateSelected(CalendarDay.today(), true);
+            Collection<CalendarDay> calendarDayCollection = new ArrayList<>();
+            calendarDayCollection.add(CalendarDay.today());
+
+            mCalendarV.addDecorators(
+                    new EventDecorator(R.color.colorPrimaryDarker, calendarDayCollection),
+                    new TodayDecorator()
+            );
+
 
             mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
             mNewEventCv = rootView.findViewById(R.id.cvNewEvent);
@@ -109,17 +118,7 @@ public class OneFragment extends Fragment {
             mFocusTodayCv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    focusToday();
-                }
-            });
-
-            mCalendarV.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-
-                @Override
-                public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-
-                    Calendar calendar = new GregorianCalendar( year, month, dayOfMonth );
-                    selectedDate = sdf.format(calendar.getTime());
+                    mCalendarV.setSelectedDate(CalendarDay.today());
                 }
             });
 
@@ -142,7 +141,7 @@ public class OneFragment extends Fragment {
                 public void onClick(View v) {
                     //Recupero datos de eventos de sqlite
                     //Eventos del dia
-                    String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", selectedDate);
+                    String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", mCalendarV.getSelectedDate().toString());
                     event = getEventEntries(query);
 
                     //Si hay eventos para el dia
@@ -159,7 +158,7 @@ public class OneFragment extends Fragment {
     public void callNewEvent(Boolean isNew){
         TabsActivity.activitySwitchFlag = true;
         Intent intent = new Intent(getActivity(), NewEventActivity.class);
-        intent.putExtra("selectedDate", selectedDate);
+        intent.putExtra("selectedDate", mCalendarV.getSelectedDate());
         intent.putExtra("isNew", isNew);
         if (!isNew) {
             intent.putExtra("event", event);
@@ -169,7 +168,7 @@ public class OneFragment extends Fragment {
 
     public int getEventEntriesCount(){
 
-        String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", selectedDate);
+        String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", mCalendarV.getSelectedDate().toString());
         Cursor cursor = db.rawQuery(query, null);
         return cursor.getCount();
     }
@@ -220,22 +219,55 @@ public class OneFragment extends Fragment {
          return event;
     }
 
-    public void focusToday(){
-
-        mCalendarV.setDate(new Date().getTime());
-        selectedDate = sdf.format(new Date().getTime());
-
-    }
-
     public Boolean isValidDay(){
         Boolean result = false;
-        String today = sdf.format(new Date());
-        Date lDate = new Date(mCalendarV.getDate());
         //Si no es el dia de hoy, no se puede crear un nuevo evento
-        if(selectedDate.equals(today)){
+        if(mCalendarV.getSelectedDate().equals(CalendarDay.today())){
             result = true;
         }
         return result;
+    }
+
+    private class TodayDecorator implements DayViewDecorator {
+
+        private final CalendarDay today;
+        private final Drawable backgroundDrawable;
+
+        public TodayDecorator() {
+            today = CalendarDay.today();
+            backgroundDrawable = getResources().getDrawable(R.drawable.today_circle_background);
+        }
+
+        @Override
+        public boolean shouldDecorate(CalendarDay day) {
+            return today.equals(day);
+        }
+
+        @Override
+        public void decorate(DayViewFacade view) {
+            view.setBackgroundDrawable(backgroundDrawable);
+        }
+    }
+
+    public class EventDecorator implements DayViewDecorator {
+
+        private final int color;
+        private final HashSet<CalendarDay> dates;
+
+        public EventDecorator(int color, Collection<CalendarDay> dates) {
+            this.color = color;
+            this.dates = new HashSet<>(dates);
+        }
+
+        @Override
+        public boolean shouldDecorate(CalendarDay day) {
+            return dates.contains(day);
+        }
+
+        @Override
+        public void decorate(DayViewFacade view) {
+            view.addSpan(new DotSpan(5, color));
+        }
     }
 
 
