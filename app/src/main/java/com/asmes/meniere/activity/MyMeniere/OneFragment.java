@@ -44,6 +44,8 @@ public class OneFragment extends Fragment {
     private SQLiteDatabase db;
     private EventModel event;
     private DayDecorator dayDecorator;
+    private EventDecorator eventDecorator;
+    private Collection<CalendarDay> calendarDayCollection = new ArrayList<>();
 
     public OneFragment() {
         // Required empty public constructor
@@ -98,15 +100,9 @@ public class OneFragment extends Fragment {
             db = dbHelper.getWritableDatabase();
 
             mCalendarV.setDateSelected(CalendarDay.today(), true);
-            Collection<CalendarDay> calendarDayCollection = new ArrayList<>();
-            calendarDayCollection.add(CalendarDay.today());
-
-             dayDecorator = new DayDecorator(CalendarDay.today());
-
-            mCalendarV.addDecorators(
-                    new EventDecorator(R.color.colorPrimaryDarker, calendarDayCollection),
-                    dayDecorator
-            );
+            dayDecorator = new DayDecorator(CalendarDay.today());
+            mCalendarV.addDecorator(dayDecorator);
+            setDaysWithEntries();
 
             mCalendarV.setOnDateChangedListener(new OnDateSelectedListener() {
                 @Override
@@ -114,12 +110,11 @@ public class OneFragment extends Fragment {
                     //mCalendarV.removeDecorator(new DayDecorator(previousSelectedDay));
 
                     mCalendarV.removeDecorator(dayDecorator);
-                    mCalendarV.invalidateDecorators();
+                    //mCalendarV.invalidateDecorators();
                     dayDecorator = new DayDecorator(mCalendarV.getSelectedDate());
                     mCalendarV.addDecorator(dayDecorator);
                 }
             });
-
 
             mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
             mNewEventCv = rootView.findViewById(R.id.cvNewEvent);
@@ -188,6 +183,34 @@ public class OneFragment extends Fragment {
         String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", mCalendarV.getSelectedDate().toString());
         Cursor cursor = db.rawQuery(query, null);
         return cursor.getCount();
+    }
+
+    public void setDaysWithEntries() {
+        String query = String.format("SELECT DATE FROM EVENT");
+        Cursor cursor = db.rawQuery(query, null);
+
+        if(cursor.getCount() != 0){
+
+            String date = "";
+            int day = 0;
+            int month = 0;
+            int year= 0;
+
+            cursor.moveToFirst();
+            for (int i = 0; i < cursor.getCount(); i++) {
+
+                date = cursor.getString(i).substring(12,cursor.getString(i).toString().length()-1);
+                day = Integer.valueOf(date.split("-")[2]);
+                month = Integer.valueOf(date.split("-")[1]);
+                year = Integer.valueOf(date.split("-")[0]);
+
+                calendarDayCollection.add(CalendarDay.from(year,month,day));
+            }
+
+            cursor.close();
+            eventDecorator = new EventDecorator(calendarDayCollection);
+            mCalendarV.addDecorator(eventDecorator);
+        }
     }
 
     public EventModel getEventEntries(String sql){
@@ -269,11 +292,9 @@ public class OneFragment extends Fragment {
 
     public class EventDecorator implements DayViewDecorator {
 
-        private final int color;
         private final HashSet<CalendarDay> dates;
 
-        public EventDecorator(int color, Collection<CalendarDay> dates) {
-            this.color = color;
+        public EventDecorator(Collection<CalendarDay> dates) {
             this.dates = new HashSet<>(dates);
         }
 
@@ -284,7 +305,7 @@ public class OneFragment extends Fragment {
 
         @Override
         public void decorate(DayViewFacade view) {
-            view.addSpan(new DotSpan(5, color));
+            view.addSpan(new DotSpan(5, R.color.colorPrimaryDarker));
         }
     }
 
