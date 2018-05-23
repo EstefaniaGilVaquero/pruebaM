@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -26,6 +27,7 @@ import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.prolificinteractive.materialcalendarview.DayViewDecorator;
 import com.prolificinteractive.materialcalendarview.DayViewFacade;
 import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
+import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.spans.DotSpan;
 
 import java.util.ArrayList;
@@ -41,6 +43,7 @@ public class OneFragment extends Fragment {
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
     private EventModel event;
+    private DayDecorator dayDecorator;
 
     public OneFragment() {
         // Required empty public constructor
@@ -98,10 +101,24 @@ public class OneFragment extends Fragment {
             Collection<CalendarDay> calendarDayCollection = new ArrayList<>();
             calendarDayCollection.add(CalendarDay.today());
 
+             dayDecorator = new DayDecorator(CalendarDay.today());
+
             mCalendarV.addDecorators(
                     new EventDecorator(R.color.colorPrimaryDarker, calendarDayCollection),
-                    new TodayDecorator()
+                    dayDecorator
             );
+
+            mCalendarV.setOnDateChangedListener(new OnDateSelectedListener() {
+                @Override
+                public void onDateSelected(@NonNull MaterialCalendarView widget, @NonNull CalendarDay date, boolean selected) {
+                    //mCalendarV.removeDecorator(new DayDecorator(previousSelectedDay));
+
+                    mCalendarV.removeDecorator(dayDecorator);
+                    mCalendarV.invalidateDecorators();
+                    dayDecorator = new DayDecorator(mCalendarV.getSelectedDate());
+                    mCalendarV.addDecorator(dayDecorator);
+                }
+            });
 
 
             mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
@@ -228,19 +245,20 @@ public class OneFragment extends Fragment {
         return result;
     }
 
-    private class TodayDecorator implements DayViewDecorator {
+    private class DayDecorator implements DayViewDecorator {
 
-        private final CalendarDay today;
+        private final CalendarDay calendarDay;
         private final Drawable backgroundDrawable;
 
-        public TodayDecorator() {
-            today = CalendarDay.today();
+
+        public DayDecorator(CalendarDay calendarDay) {
+            this.calendarDay = calendarDay;
             backgroundDrawable = getResources().getDrawable(R.drawable.today_circle_background);
         }
 
         @Override
         public boolean shouldDecorate(CalendarDay day) {
-            return today.equals(day);
+            return this.calendarDay.equals(day);
         }
 
         @Override
