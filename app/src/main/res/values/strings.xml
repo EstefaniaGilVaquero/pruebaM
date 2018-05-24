@@ -129,6 +129,10 @@
     <string name="frecMasMenos">±</string>
     <string name="enCrisis">En crisis</string>
 
+    <!-- Month report -->
+    <string name="txtDetailChart">Detail Chart</string>
+    <string name="txtTitleStatistics">Monthly Statistics</string>
+
     <!-- Tab one -->
     <string name="txtNewEvent">New Event</string>
     <string name="txtSeeSelection">See Selection</string>
