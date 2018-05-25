@@ -273,12 +273,12 @@ public class NewEventActivity extends AppCompatActivity {
         return result;
     }
 
-    @Override
+    /*@Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         if (!disableTouch)
             return super.dispatchTouchEvent(ev);
         return true;
-    }
+    }*/
 
     public void setInfoListeners(){
         mAddEpisodeBtn.setOnClickListener(new ImageButton.OnClickListener(){
@@ -876,6 +876,10 @@ public class NewEventActivity extends AppCompatActivity {
 
                 }
             });
+
+
+               // child.setEnabled(false);
+
             if (child instanceof ViewGroup){
                 disableEnableControls(enable, (ViewGroup)child);
             }
@@ -884,8 +888,8 @@ public class NewEventActivity extends AppCompatActivity {
 
     public void setEventData(){
 
-        RelativeLayout eventLayout = findViewById(R.id.eventLayout);
-        //disableEnableControls(false, eventLayout);
+        LinearLayout eventLayout = findViewById(R.id.layoutToDisable);
+        disableEnableControls(false, eventLayout);
 /*        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
         disableLayout.setVisibility(View.VISIBLE);*/
 
