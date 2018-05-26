@@ -236,73 +236,78 @@ public class LoginFragment extends Fragment {
     //Create the generateKey method that we’ll use to gain access to the Android keystore and generate the encryption key//
 
     private void generateKey() throws FingerprintException {
-        try {
-            // Obtain a reference to the Keystore using the standard Android keystore container identifier (“AndroidKeystore”)//
-            keyStore = KeyStore.getInstance("AndroidKeyStore");
 
-            //Generate the key//
-            keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                // Obtain a reference to the Keystore using the standard Android keystore container identifier (“AndroidKeystore”)//
+                keyStore = KeyStore.getInstance("AndroidKeyStore");
 
-            //Initialize an empty KeyStore//
-            keyStore.load(null);
+                //Generate the key//
+                keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
 
-            //Initialize the KeyGenerator//
-            keyGenerator.init(new
+                //Initialize an empty KeyStore//
+                keyStore.load(null);
 
-                    //Specify the operation(s) this key can be used for//
-                    KeyGenParameterSpec.Builder(KEY_NAME,
-                    KeyProperties.PURPOSE_ENCRYPT |
-                            KeyProperties.PURPOSE_DECRYPT)
-                    .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
+                //Initialize the KeyGenerator//
+                keyGenerator.init(new
 
-                    //Configure this key so that the user has to confirm their identity with a fingerprint each time they want to use it//
-                    .setUserAuthenticationRequired(true)
-                    .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
-                    .build());
+                        //Specify the operation(s) this key can be used for//
+                        KeyGenParameterSpec.Builder(KEY_NAME,
+                        KeyProperties.PURPOSE_ENCRYPT |
+                                KeyProperties.PURPOSE_DECRYPT)
+                        .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
 
-            //Generate the key//
-            keyGenerator.generateKey();
+                        //Configure this key so that the user has to confirm their identity with a fingerprint each time they want to use it//
+                        .setUserAuthenticationRequired(true)
+                        .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
+                        .build());
 
-        } catch (KeyStoreException
-                | NoSuchAlgorithmException
-                | NoSuchProviderException
-                | InvalidAlgorithmParameterException
-                | CertificateException
-                | IOException exc) {
-            exc.printStackTrace();
-            throw new FingerprintException(exc);
+                //Generate the key//
+                keyGenerator.generateKey();
+
+            } catch (KeyStoreException
+                    | NoSuchAlgorithmException
+                    | NoSuchProviderException
+                    | InvalidAlgorithmParameterException
+                    | CertificateException
+                    | IOException exc) {
+                exc.printStackTrace();
+                throw new FingerprintException(exc);
+            }
         }
     }
 
     //Create a new method that we’ll use to initialize our cipher//
     public boolean initCipher() {
-        try {
-            //Obtain a cipher instance and configure it with the properties required for fingerprint authentication//
-            cipher = Cipher.getInstance(
-                    KeyProperties.KEY_ALGORITHM_AES + "/"
-                            + KeyProperties.BLOCK_MODE_CBC + "/"
-                            + KeyProperties.ENCRYPTION_PADDING_PKCS7);
-        } catch (NoSuchAlgorithmException |
-                NoSuchPaddingException e) {
-            throw new RuntimeException("Failed to get Cipher", e);
-        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                //Obtain a cipher instance and configure it with the properties required for fingerprint authentication//
+                cipher = Cipher.getInstance(
+                        KeyProperties.KEY_ALGORITHM_AES + "/"
+                                + KeyProperties.BLOCK_MODE_CBC + "/"
+                                + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+            } catch (NoSuchAlgorithmException |
+                    NoSuchPaddingException e) {
+                throw new RuntimeException("Failed to get Cipher", e);
+            }
 
-        try {
-            keyStore.load(null);
-            SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
-                    null);
-            cipher.init(Cipher.ENCRYPT_MODE, key);
-            //Return true if the cipher has been initialized successfully//
-            return true;
-        } catch (KeyPermanentlyInvalidatedException e) {
+            try {
+                keyStore.load(null);
+                SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
+                        null);
+                cipher.init(Cipher.ENCRYPT_MODE, key);
+                //Return true if the cipher has been initialized successfully//
+                return true;
+            } catch (KeyPermanentlyInvalidatedException e) {
 
-            //Return false if cipher initialization failed//
-            return false;
-        } catch (KeyStoreException | CertificateException
-                | UnrecoverableKeyException | IOException
-                | NoSuchAlgorithmException | InvalidKeyException e) {
-            throw new RuntimeException("Failed to init Cipher", e);
-        }
+                //Return false if cipher initialization failed//
+                return false;
+            } catch (KeyStoreException | CertificateException
+                    | UnrecoverableKeyException | IOException
+                    | NoSuchAlgorithmException | InvalidKeyException e) {
+                throw new RuntimeException("Failed to init Cipher", e);
+            }
+        }else return false;
     }
 
     private class FingerprintException extends Exception {
