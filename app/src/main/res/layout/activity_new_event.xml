@@ -71,7 +71,7 @@
                                     android:id="@+id/addEpisodeBtn"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:background="@drawable/ic_add_blue_48px"
+                                    app:srcCompat="@drawable/ic_add_blue_48px"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toStartOf="@+id/episodesTxt"
                                     app:layout_constraintTop_toTopOf="parent" />
