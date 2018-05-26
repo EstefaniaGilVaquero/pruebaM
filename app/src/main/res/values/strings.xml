@@ -75,7 +75,7 @@
     <string name="explanation">Disability Scale: (Shepard et al., 1990)\n\n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or hard to change job because of symptoms\n5: Estabilished severe disability; unable to work for over 1 year or estabilished permanent disability with compensations payments)</string>
 
     <string name="selectionErrorTitle">Selection error</string>
-    <string name="selectionErrorMessagePassDay">Your should select today\'s date to add a new event.</string>
+    <string name="selectionErrorMessagePassDay">Your should select today or yesterday to add a new event.</string>
     <string name="newEventErrorTitle">New event error</string>
     <string name="newEventErrorMessageDayHasEvent">This day already has events. You only can add one event per day.</string>
     <string name="addEpisodeTitle">Add more episodes</string>

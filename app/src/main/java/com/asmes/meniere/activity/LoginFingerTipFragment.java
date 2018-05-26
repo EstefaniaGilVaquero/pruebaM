@@ -127,24 +127,32 @@ public class LoginFingerTipFragment extends Fragment {
             //Check whether the device has a fingerprint sensor//
             if (!fingerprintManager.isHardwareDetected()) {
                 // If a fingerprint sensor isn’t available, then inform the user that they’ll be unable to use your app’s fingerprint functionality//
-                //textView.setText("Your device doesn't support fingerprint authentication");
+                String message =  "Your device doesn't support fingerprint authentication";
+                Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                hideFingerTipViews();
             }
             //Check whether the user has granted your app the USE_FINGERPRINT permission//
             if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
                 // If your app doesn't have this permission, then display the following text//
-                //textView.setText("Please enable the fingerprint permission");
+                String message = "Please enable the fingerprint permission";
+                Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                hideFingerTipViews();
             }
 
             //Check that the user has registered at least one fingerprint//
             if (!fingerprintManager.hasEnrolledFingerprints()) {
                 // If the user hasn’t configured any fingerprints, then display the following message//
-                //textView.setText("No fingerprint configured. Please register at least one fingerprint in your device's Settings");
+                String message = "No fingerprint configured. Please register at least one fingerprint in your device's Settings";
+                Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                hideFingerTipViews();
             }
 
             //Check that the lockscreen is secured//
             if (!keyguardManager.isKeyguardSecure()) {
                 // If the user hasn’t secured their lockscreen with a PIN password or pattern, then display the following text//
-                //textView.setText("Please enable lockscreen security in your device's Settings");
+                String message = "Please enable lockscreen security in your device's Settings";
+                Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                hideFingerTipViews();
             } else {
                 try {
                     generateKey();
@@ -162,9 +170,10 @@ public class LoginFingerTipFragment extends Fragment {
                 }
             }
         }else{
-            fingerTipImageView.setVisibility(View.GONE);
-            loginInfo2.setText(getString(R.string.loginInfo3));
+
         }
+
+
 
         mRememberPassTxt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -232,6 +241,11 @@ public class LoginFingerTipFragment extends Fragment {
         });
 
         return rootView;
+    }
+
+    public void hideFingerTipViews(){
+        fingerTipImageView.setVisibility(View.GONE);
+        loginInfo2.setText(getString(R.string.loginInfo3));
     }
 
     //Create the generateKey method that we’ll use to gain access to the Android keystore and generate the encryption key//

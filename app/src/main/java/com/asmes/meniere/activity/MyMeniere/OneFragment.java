@@ -31,6 +31,7 @@ import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.prolificinteractive.materialcalendarview.spans.DotSpan;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.HashSet;
 
@@ -130,14 +131,14 @@ public class OneFragment extends Fragment {
             mFocusTodayCv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mCalendarV.setSelectedDate(CalendarDay.today());
+                    mCalendarV.setCurrentDate(CalendarDay.today());
                 }
             });
 
             mNewEventCv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //Solo crear eventos en el dia de hoy y solo un evento por dia
+                    //Solo crear eventos en el dia de hoy o ayer y solo un evento por dia
                     if(isValidDay() && getEventEntriesCount()==0) {
                         callNewEvent(true);
                     }else if(!isValidDay()){
@@ -261,8 +262,13 @@ public class OneFragment extends Fragment {
 
     public Boolean isValidDay(){
         Boolean result = false;
-        //Si no es el dia de hoy, no se puede crear un nuevo evento
-        if(mCalendarV.getSelectedDate().equals(CalendarDay.today())){
+        //Calculate yesterday
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        CalendarDay yesterday = CalendarDay.from(cal);
+
+        //Si no es el dia de hoy o ayer, no se puede crear un nuevo evento
+        if(mCalendarV.getSelectedDate().equals(CalendarDay.today()) || mCalendarV.getSelectedDate().isInRange(yesterday, CalendarDay.today())){
             result = true;
         }
         return result;
