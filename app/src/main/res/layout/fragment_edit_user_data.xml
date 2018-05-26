@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.asmes.meniere.activity.LoginFragment">
+    tools:context="com.asmes.meniere.activity.LoginFingerTipFragment">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/layoutEditUserFragment"
@@ -29,7 +29,7 @@
             android:layout_height="24dp"
             android:layout_marginBottom="8dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/ic_pass"
+            app:srcCompat="@drawable/ic_pass"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/currentPassEditText"
             app:layout_constraintStart_toStartOf="@+id/currentPassEditText"
@@ -85,7 +85,7 @@
             android:id="@+id/emailIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_email"
+            app:srcCompat="@drawable/ic_email"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/newEmailEditText"
             app:layout_constraintStart_toStartOf="@+id/newEmailEditText"
@@ -118,7 +118,7 @@
             android:id="@+id/passIcon2"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_pass"
+            app:srcCompat="@drawable/ic_pass"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/newPassEditText"
             app:layout_constraintStart_toStartOf="@+id/newPassEditText"
@@ -151,7 +151,7 @@
             android:id="@+id/confirmPassIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/ic_pass"
+            app:srcCompat="@drawable/ic_pass"
             android:tint="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="@+id/newConfirmPassEditText"
             app:layout_constraintStart_toStartOf="@+id/newConfirmPassEditText"
@@ -171,7 +171,7 @@
                 android:id="@+id/cancelBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
+                app:backgroundTint="@color/colorPrimary"
                 android:text="@string/negativeTxtCancel"
                 android:textColor="@color/colorWhite" />
 
@@ -179,7 +179,7 @@
                 android:id="@+id/saveBtn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorPrimary"
+                app:backgroundTint="@color/colorPrimary"
                 android:text="@string/saveBtn"
                 android:textColor="@color/colorWhite" />
         </android.support.v7.widget.LinearLayoutCompat>

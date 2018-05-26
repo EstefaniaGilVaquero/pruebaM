@@ -113,7 +113,7 @@ public class EditUserDataFragment extends Fragment {
     }
 
     public void goToLogin(){
-        Fragment fragment = LoginFragment.newInstance();
+        Fragment fragment = LoginFingerTipFragment.newInstance();
         FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
         transaction.replace(R.id.layoutEditUserFragment, fragment);
         transaction.commit();

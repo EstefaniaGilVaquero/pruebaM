@@ -2,11 +2,12 @@ package com.asmes.meniere.utils;
 
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
+import android.os.Build;
 import android.os.CancellationSignal;
+import android.support.annotation.RequiresApi;
 import android.support.v13.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -14,10 +15,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
-import com.asmes.meniere.activity.LoginFragment;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.prefs.UserSession;
 
+@RequiresApi(api = Build.VERSION_CODES.M)
 public class FingerprintHandler extends FingerprintManager.AuthenticationCallback {
 
     private CancellationSignal cancellationSignal;

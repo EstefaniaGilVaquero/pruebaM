@@ -6,8 +6,8 @@ android {
         applicationId "com.symbel.meniere"
         minSdkVersion 19
         targetSdkVersion 27
-        versionCode 6
-        versionName "6"
+        versionCode 7
+        versionName "6.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

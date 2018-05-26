@@ -1,6 +1,7 @@
 package com.asmes.meniere.activity;
 
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -86,22 +87,26 @@ public class TabsActivity extends AppCompatActivity {
 
         TextView tabOne = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabOne.setText(R.string.MyMeniere);
-        tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_mymeniere, 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_mymeniere, 0, 0);
+        else tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_mymeniere1, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         TextView tabTwo = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabTwo.setText(R.string.aboutMeniere);
-        tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) tabTwo.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about, 0, 0);
+        else tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_about1, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
         TextView tabThree = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabThree.setText(R.string.utilities);
-        tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_utilidades, 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) tabThree.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_utilidades, 0, 0);
+        else tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.utilidades1, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
 
         TextView tabFour = (TextView) LayoutInflater.from(this).inflate(R.layout.custom_tab, null);
         tabFour.setText(R.string.help);
-        tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_help, 0, 0);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) tabFour.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_help, 0, 0);
+        else tabOne.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.ic_help1, 0, 0);
         tabLayout.getTabAt(3).setCustomView(tabFour);
     }
 

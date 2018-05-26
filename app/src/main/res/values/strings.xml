@@ -3,7 +3,7 @@
 
     <string name="MyMeniere">My Ménière</string>
     <string name="aboutMeniere">About Ménière</string>
-    <string name="utilities">Utilities</string>
+    <string name="utilities"> + Utilities</string>
     <string name="help">Help</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
@@ -131,7 +131,16 @@
 
     <!-- Month report -->
     <string name="txtDetailChart">Detail Chart</string>
-    <string name="txtTitleStatistics">Monthly Statistics</string>
+    <string name="txtTitleStatistics">Month Statistics</string>
+    <string name="txtEventsInMonth">Events in</string>
+    <string name="txtVertigoEvents">Vertigo events</string>
+    <string name="txtMigraineEvents">Migraine events</string>
+    <string name="txtDurationMean">Duration mean</string>
+    <string name="txtIntensityMean">Intensity mean</string>
+    <string name="txtActivityMean">Activity mean</string>
+    <string name="txtStressMean">Stress mean</string>
+    <string name="txtMainTriggerTitle">Main triggers</string>
+
 
     <!-- Tab one -->
     <string name="txtNewEvent">New Event</string>

@@ -16,7 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.asmes.meniere.R;
-import com.asmes.meniere.activity.LoginFragment;
+import com.asmes.meniere.activity.LoginFingerTipFragment;
 import com.asmes.meniere.activity.RegisterFragment;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
@@ -82,7 +82,7 @@ public class OneFragment extends Fragment {
 
         }//Si no está logueado voy a login
         else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
-            Fragment fragment = LoginFragment.newInstance();
+            Fragment fragment = LoginFingerTipFragment.newInstance();
             FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
             transaction.replace(R.id.relativeOneFragment, fragment);
             transaction.commit();

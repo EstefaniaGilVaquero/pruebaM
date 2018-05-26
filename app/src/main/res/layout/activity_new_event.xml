@@ -71,8 +71,7 @@
                                     android:id="@+id/addEpisodeBtn"
                                     android:layout_width="25dp"
                                     android:layout_height="25dp"
-                                    android:background="@drawable/ic_add_white_48px"
-                                    android:backgroundTint="@android:color/holo_blue_dark"
+                                    android:background="@drawable/ic_add_blue_48px"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toStartOf="@+id/episodesTxt"
                                     app:layout_constraintTop_toTopOf="parent" />
@@ -1852,7 +1851,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorPrimaryDark"
         app:borderWidth="8dp"
         app:fabSize="normal" />
 </android.support.design.widget.CoordinatorLayout>
