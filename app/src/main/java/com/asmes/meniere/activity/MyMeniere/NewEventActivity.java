@@ -1,9 +1,11 @@
 package com.asmes.meniere.activity.MyMeniere;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +16,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -30,8 +33,10 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
+import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Utils;
 import com.prolificinteractive.materialcalendarview.CalendarDay;
 import com.xw.repo.BubbleSeekBar;
@@ -42,6 +47,7 @@ import java.util.Locale;
 
 public class NewEventActivity extends AppCompatActivity {
 
+    private Activity activity;
     private ScrollView mScrollView;
     private BubbleSeekBar mDurationBubble, mVertigoBubble, mLimitationBubble, mStressBubble, mInstabilityIntenBubble, mDizzinessDisBubble, mInstabilityDisBubble, mVisualBlurDisBubble, mHeadPresureDisBubble;
     private SwitchCompat mHearingLossSwitch, mTinnitusSwitch, mEarFullnessSwitch, mHeadacheSwitch, mPhotophobiaSwitch, mPhonophobiaSwitch, mVisualSymSwitch, mTumarkinSwitch, mMenstruationSwitch, mNauseaSwitch, mVomitingSwitch, mInstabilitySwitch;
@@ -59,7 +65,7 @@ public class NewEventActivity extends AppCompatActivity {
     private CardView mInstavilityIntenCardView;
     private int mEpisode = 1, mHearingLossIndex;
 
-    boolean activitySwitchFlag = false;
+
     private Toolbar toolbar;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
@@ -69,6 +75,7 @@ public class NewEventActivity extends AppCompatActivity {
     private EventModel event;
     private CalendarDay selectedDate;
     private Boolean disableTouch;
+    boolean activitySwitchFlag = false;
 
 
     @Override
@@ -83,11 +90,15 @@ public class NewEventActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
+
+        //handle presses on the action bar items
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                UserSession.getInstance(activity).setmIsLoggedIn(false);
+                onBackPressed();
+                return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -97,6 +108,8 @@ public class NewEventActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
+
+        activity = this;
 
         sdf = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -1127,6 +1140,36 @@ public class NewEventActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            activitySwitchFlag = true;
+            UserSession.getInstance(activity).setmIsLoggedIn(false);
+            onBackPressed();
+            // activity switch stuff..
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if (!activitySwitchFlag) {
+            // Cambiamos de activity y no hacemos nada
+            // Hemos pulsado home, matamos la app
+            /*android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);*/
+            UserSession.getInstance(activity).setmIsLoggedIn(false);
+            onBackPressed();
+        }
+        activitySwitchFlag = false;
     }
 
 

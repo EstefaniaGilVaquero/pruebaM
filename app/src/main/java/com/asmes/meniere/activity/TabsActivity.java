@@ -1,5 +1,6 @@
 package com.asmes.meniere.activity;
 
+import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.support.annotation.Nullable;
@@ -17,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.Login.LoginFingerTipFragment;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.activity.HelpMeniere.FourFragment;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
@@ -35,6 +37,8 @@ public class TabsActivity extends AppCompatActivity {
     public static boolean activitySwitchFlag = false;
     private SQLiteDatabase db;
     private DatabaseHelper dbHelper;
+    private Activity activity;
+    private int currentPage = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,6 +49,8 @@ public class TabsActivity extends AppCompatActivity {
 
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
+            activity = this;
+
             toolbar = findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
 
@@ -53,6 +59,23 @@ public class TabsActivity extends AppCompatActivity {
 
             dbHelper = new DatabaseHelper(this);
             db = dbHelper.getWritableDatabase();
+
+            viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+                @Override
+                public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+                }
+
+                @Override
+                public void onPageSelected(int position) {
+                    currentPage = position;
+                }
+
+                @Override
+                public void onPageScrollStateChanged(int state) {
+
+                }
+            });
 
             setupViewPager(viewPager);
             if (tabLayout != null) {
@@ -68,17 +91,13 @@ public class TabsActivity extends AppCompatActivity {
     @Override
     public void onPause(){
         super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }else{
-            UserSession.getInstance(this).setmIsLoggedIn(false);
+        if(currentPage == 0) {
+            Fragment fragment = new OneFragment();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.oneFragmentFrame, fragment);
+            transaction.commit();
         }
-        activitySwitchFlag = false;
+        UserSession.getInstance(activity).setmIsLoggedIn(false);
     }
 
     /**
@@ -121,7 +140,7 @@ public class TabsActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.popBackStack(BACK_STACK_ROOT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(fragmentManager);
-            adapter.addFrag(new OneFragment(), "");
+            adapter.addFrag(new OneFragment(), "ROOT_FRAGMENT");
             adapter.addFrag(new TwoFragment(), "");
             adapter.addFrag(new ThreeFragment(), "");
             adapter.addFrag(new FourFragment(), "");

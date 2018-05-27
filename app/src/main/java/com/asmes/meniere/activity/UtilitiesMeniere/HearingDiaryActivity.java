@@ -30,6 +30,7 @@ import com.asmes.meniere.adapter.HearingDiaryAdapter;
 import com.asmes.meniere.models.HearingDiaryModel;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Utils;
 
 import java.text.SimpleDateFormat;
@@ -84,13 +85,10 @@ public class HearingDiaryActivity extends AppCompatActivity {
 
             case android.R.id.home:
                 activitySwitchFlag = true;
+                UserSession.getInstance(activity).setmIsLoggedIn(false);
                 onBackPressed();
                 return true;
 
-            /*case R.id.showSqlite:
-                Intent dbmanager = new Intent(this,DatabaseHelper.class);
-                startActivity(dbmanager);
-                return true;*/
             case R.id.hearingTestApp:
                 //Go to playStore
                 Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -163,6 +161,7 @@ public class HearingDiaryActivity extends AppCompatActivity {
         if(keyCode == KeyEvent.KEYCODE_BACK)
         {
             activitySwitchFlag = true;
+            UserSession.getInstance(activity).setmIsLoggedIn(false);
             onBackPressed();
             // activity switch stuff..
             return true;
@@ -178,9 +177,10 @@ public class HearingDiaryActivity extends AppCompatActivity {
         if (!activitySwitchFlag) {
             // Cambiamos de activity y no hacemos nada
             // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
+            /*android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);*/
+            UserSession.getInstance(activity).setmIsLoggedIn(false);
+            onBackPressed();
         }
         activitySwitchFlag = false;
     }
