@@ -101,7 +101,7 @@
     <string name="registerSuccess">Register successfully</string>
     <string name="emptyEmail">Enter E-mail</string>
     <string name="emptyPass">Enter password</string>
-    <string name="singUpBtn">Sing up</string>
+    <string name="singUpBtn">Sign up</string>
     <string name="loginUpBtn">Login</string>
     <string name="saveBtn">Save</string>
     <string name="rememberPassInfo">Remember password</string>
@@ -144,21 +144,21 @@
 
     <!-- Tab one -->
     <string name="txtNewEvent">New Event</string>
-    <string name="txtSeeSelection">See Selection</string>
-    <string name="txtMonthReview">Month Review</string>
+    <string name="txtSeeSelection">View Selected</string>
+    <string name="txtMonthReview">Month Report</string>
     <string name="txtFocusToday">Back Today</string>
-    <string name="txtMonthEvents">Month Events:</string>
+    <string name="txtMonthEvents">Events this month:</string>
 
     <!-- Tab Four -->
-    <string name="txtUserGuide">Guia de uso</string>
-    <string name="txtAuthors">Autores</string>
+    <string name="txtUserGuide">User`s Guide</string>
+    <string name="txtAuthors">Authors</string>
     <string name="txtFrameworks">Frameworks</string>
-    <string name="txtVisitWeb">Visitar Web</string>
+    <string name="txtVisitWeb">Visit Website</string>
 
     <!-- Tab thre -->
-    <string name="txtHearingDiary">Diario Auditivo</string>
-    <string name="txtHealthyHabits">Buenos Hábitos</string>
-    <string name="txtRateMe">¡Puentúame!</string>
+    <string name="txtHearingDiary">Hearing Diary</string>
+    <string name="txtHealthyHabits">Healthy Habits</string>
+    <string name="txtRateMe">Rate Me !</string>
 
     <string-array name="arrayQuestions">
         <item>WHAT IS MÉNIÈRE’S DISEASE?</item>

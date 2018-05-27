@@ -76,7 +76,7 @@ public class RegisterFragment extends Fragment {
 
                     Fragment fragment = OneFragment.newInstance();
                     FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                    transaction.replace(R.id.layoutRegisterFragment, fragment);
+                    transaction.replace(R.id.constraintOneFragment, fragment);
                     transaction.commit();
 
                      //Go to myMeniereFragment

@@ -78,14 +78,14 @@ public class OneFragment extends Fragment {
         if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
             Fragment fragment = RegisterFragment.newInstance();
             FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-            transaction.replace(R.id.relativeOneFragment, fragment);
+            transaction.replace(R.id.constraintOneFragment, fragment);
             transaction.commit();
 
         }//Si no está logueado voy a login
         else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
             Fragment fragment = LoginFingerTipFragment.newInstance();
             FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-            transaction.replace(R.id.relativeOneFragment, fragment);
+            transaction.replace(R.id.constraintOneFragment, fragment);
             transaction.commit();
         }
 

@@ -207,7 +207,7 @@ public class LoginFingerTipFragment extends Fragment {
             public void onClick(View view) {
                 Fragment fragment = new EditUserDataFragment();
                 FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                transaction.replace(R.id.layoutLoginFragment, fragment);
+                transaction.replace(R.id.constraintOneFragment, fragment);
                 transaction.commit();
             }
         });
@@ -231,7 +231,7 @@ public class LoginFingerTipFragment extends Fragment {
 
                     Fragment fragment = OneFragment.newInstance();
                     FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                    transaction.replace(R.id.layoutLoginFragment, fragment);
+                    transaction.replace(R.id.constraintOneFragment, fragment);
                     transaction.commit();
 
                 }

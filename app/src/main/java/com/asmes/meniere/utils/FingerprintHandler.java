@@ -72,7 +72,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
                 UserSession.getInstance(context).setmIsLoggedIn(true);
                 Fragment fragment = OneFragment.newInstance();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.layoutLoginFragment, fragment);
+                transaction.replace(R.id.constraintOneFragment, fragment);
                 transaction.commit();
         }
     }
