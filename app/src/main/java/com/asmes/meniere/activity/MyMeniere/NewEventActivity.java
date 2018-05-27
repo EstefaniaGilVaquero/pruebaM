@@ -14,6 +14,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -69,15 +70,24 @@ public class NewEventActivity extends AppCompatActivity {
     private CalendarDay selectedDate;
     private Boolean disableTouch;
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
-        //handle presses on the action bar items
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                activitySwitchFlag = true;
-                onBackPressed();
-                return true;
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            activitySwitchFlag = true;
+            onBackPressed();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
