@@ -1,8 +1,9 @@
-package com.asmes.meniere.activity;
+package com.asmes.meniere.activity.Login;
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import static com.asmes.meniere.utils.Utils.isValidMail;
  */
 public class RegisterFragment extends Fragment {
 
+    private static final String BACK_STACK_ROOT_TAG = "root_fragment";
     private View rootview;
     private User mUserLogged;
 
@@ -74,9 +76,12 @@ public class RegisterFragment extends Fragment {
                      mUserLogged = new User(mEmail.getText().toString(), mPass.getText().toString());
                      UserSession.getInstance(getContext()).saveUser(mUserLogged);
 
-                    Fragment fragment = OneFragment.newInstance();
-                    FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                    transaction.replace(R.id.constraintOneFragment, fragment);
+                    Fragment fragment = new OneFragment();
+                    FragmentManager fragmentManager = getChildFragmentManager();
+                    fragmentManager.popBackStack(BACK_STACK_ROOT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.replace(R.id.layoutRegisterFragment, fragment);
+                    transaction.addToBackStack(BACK_STACK_ROOT_TAG);
                     transaction.commit();
 
                      //Go to myMeniereFragment

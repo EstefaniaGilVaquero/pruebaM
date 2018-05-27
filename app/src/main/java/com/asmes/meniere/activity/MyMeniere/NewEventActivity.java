@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -53,7 +54,7 @@ public class NewEventActivity extends AppCompatActivity {
             mPhysical_1d_LayOut, mHabit_1a_LayOut, mHabit_1b_LayOut, mHabit_1c_LayOut, mHabit_1d_LayOut, mHabit_1e_LayOut, mHabit_1f_LayOut, mHeadache_LayOut;
 
     private String mMigraineType1, mMigraineType2, mMigraineType3, mWeather, mSleep, mPhysical, mHabit, mHearingLoss;
-    private ImageButton mAddEpisodeBtn, mInfoVisualBtn;
+    private ImageView mAddEpisodeBtn, mInfoVisualBtn;
     private CardView mInstavilityIntenCardView;
     private int mEpisode = 1, mHearingLossIndex;
 

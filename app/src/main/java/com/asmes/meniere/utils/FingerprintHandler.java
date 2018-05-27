@@ -70,9 +70,9 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             Toast.makeText(context, e, Toast.LENGTH_LONG).show();
             if(success){
                 UserSession.getInstance(context).setmIsLoggedIn(true);
-                Fragment fragment = OneFragment.newInstance();
+                Fragment fragment = new OneFragment();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.replace(R.id.constraintOneFragment, fragment);
+                transaction.replace(R.id.layoutLoginFragment, fragment);
                 transaction.commit();
         }
     }

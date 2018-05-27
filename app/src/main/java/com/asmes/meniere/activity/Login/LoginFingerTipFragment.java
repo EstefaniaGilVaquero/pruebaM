@@ -1,10 +1,11 @@
-package com.asmes.meniere.activity;
+package com.asmes.meniere.activity.Login;
 
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.KeyguardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.AsyncTask;
@@ -32,6 +33,8 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
+import com.asmes.meniere.activity.TabsActivity;
+import com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity;
 import com.asmes.meniere.models.Mail;
 import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Constants;
@@ -205,10 +208,8 @@ public class LoginFingerTipFragment extends Fragment {
         mResetEmailPassTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment fragment = new EditUserDataFragment();
-                FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                transaction.replace(R.id.constraintOneFragment, fragment);
-                transaction.commit();
+                TabsActivity.activitySwitchFlag = true;
+                startActivity(new Intent(view.getContext(), EditUserDataActivity.class));
             }
         });
 
@@ -229,9 +230,9 @@ public class LoginFingerTipFragment extends Fragment {
                     //TODO choose between fragments
                     //Go to myMeniereFragment or hearingDiary
 
-                    Fragment fragment = OneFragment.newInstance();
+                    Fragment fragment = new OneFragment();
                     FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                    transaction.replace(R.id.constraintOneFragment, fragment);
+                    transaction.replace(R.id.layoutLoginFragment, fragment);
                     transaction.commit();
 
                 }

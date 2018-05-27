@@ -7,6 +7,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TabsActivity extends AppCompatActivity {
-
+    private static final String BACK_STACK_ROOT_TAG = "root_fragment";
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -117,7 +118,9 @@ public class TabsActivity extends AppCompatActivity {
      */
     private void setupViewPager(ViewPager viewPager) {
         try {
-            TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(getSupportFragmentManager());
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.popBackStack(BACK_STACK_ROOT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+            TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(fragmentManager);
             adapter.addFrag(new OneFragment(), "");
             adapter.addFrag(new TwoFragment(), "");
             adapter.addFrag(new ThreeFragment(), "");
