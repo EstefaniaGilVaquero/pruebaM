@@ -140,7 +140,7 @@ public class TabsActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.popBackStack(BACK_STACK_ROOT_TAG, FragmentManager.POP_BACK_STACK_INCLUSIVE);
             TabsActivity.ViewPagerAdapter adapter = new TabsActivity.ViewPagerAdapter(fragmentManager);
-            adapter.addFrag(new OneFragment(), "ROOT_FRAGMENT");
+            adapter.addFrag(new OneFragment(), "");
             adapter.addFrag(new TwoFragment(), "");
             adapter.addFrag(new ThreeFragment(), "");
             adapter.addFrag(new FourFragment(), "");

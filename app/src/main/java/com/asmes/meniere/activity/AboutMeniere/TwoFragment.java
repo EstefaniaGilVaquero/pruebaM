@@ -36,8 +36,7 @@ public class TwoFragment extends Fragment {
 
         super.onCreate(savedInstanceState);
         activity = getActivity();
-        arrayQuestions = activity.getResources().getStringArray(R.array.arrayQuestions);
-        arrayAnswers = activity.getResources().getStringArray(R.array.arrayAnswers);
+
 
 
 
@@ -60,7 +59,8 @@ public class TwoFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         try {
 
-
+            arrayQuestions = activity.getResources().getStringArray(R.array.arrayQuestions);
+            arrayAnswers = activity.getResources().getStringArray(R.array.arrayAnswers);
 
             // 1. get a reference to recyclerView
             mRecyclerView = (RecyclerView) rootView.findViewById(R.id.FAQ_RecyclerView);

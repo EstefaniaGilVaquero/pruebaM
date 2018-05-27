@@ -31,8 +31,14 @@ public class OneFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_one, container, false);
 
+        if (UserSession.getInstance(getContext()).ismIsLoggedIn()){
+            Fragment fragment = new MyMeniereFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.oneFragmentFrame, fragment);
+            transaction.commit();
+        }
         //Si no hay password vamos al registro
-        if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
+         else if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
             Fragment fragment = RegisterFragment.newInstance();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.oneFragmentFrame, fragment);
@@ -42,11 +48,6 @@ public class OneFragment extends Fragment {
         }//Si no está logueado voy a login
         else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
             Fragment fragment = LoginFingerTipFragment.newInstance();
-            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.replace(R.id.oneFragmentFrame, fragment);
-            transaction.commit();
-        }else{//Voy a myMeniere
-            Fragment fragment = new MyMeniereFragment();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.oneFragmentFrame, fragment);
             transaction.commit();
