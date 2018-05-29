@@ -49,8 +49,6 @@ public class TwoFragment extends Fragment {
 
 
         rootView = inflater.inflate(R.layout.fragment_two, container, false);
-
-
         return rootView;
     }
 
@@ -69,6 +67,7 @@ public class TwoFragment extends Fragment {
             mRecyclerView.setLayoutManager(linearLayoutManager);
             // 3. set item animator to DefaultAnimator
             mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
 
             // 4. create and set adapter
             adapter = new FaqAdapter(arrayQuestions, arrayAnswers, activity);

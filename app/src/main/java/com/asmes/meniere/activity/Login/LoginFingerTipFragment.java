@@ -15,6 +15,7 @@ import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
@@ -106,6 +107,15 @@ public class LoginFingerTipFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_login, container, false);
+
+
+
+        return rootView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         mContext = getActivity();
 
@@ -240,8 +250,6 @@ public class LoginFingerTipFragment extends Fragment {
                 if (!message.equals("")) Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
             }
         });
-
-        return rootView;
     }
 
     public void hideFingerTipViews(){

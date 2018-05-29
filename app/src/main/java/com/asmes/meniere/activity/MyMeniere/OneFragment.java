@@ -1,6 +1,8 @@
 package com.asmes.meniere.activity.MyMeniere;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
@@ -30,6 +32,12 @@ public class OneFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_one, container, false);
+        return rootView;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         if (UserSession.getInstance(getContext()).ismIsLoggedIn()){
             Fragment fragment = new MyMeniereFragment();
@@ -38,7 +46,7 @@ public class OneFragment extends Fragment {
             transaction.commit();
         }
         //Si no hay password vamos al registro
-         else if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
+        else if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
             Fragment fragment = RegisterFragment.newInstance();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
             transaction.replace(R.id.oneFragmentFrame, fragment);
@@ -52,7 +60,5 @@ public class OneFragment extends Fragment {
             transaction.replace(R.id.oneFragmentFrame, fragment);
             transaction.commit();
         }
-
-        return rootView;
     }
 }
