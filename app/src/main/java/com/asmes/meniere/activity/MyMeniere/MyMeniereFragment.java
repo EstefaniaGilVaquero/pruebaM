@@ -13,6 +13,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.asmes.meniere.R;
 import com.asmes.meniere.activity.TabsActivity;
@@ -34,8 +35,9 @@ import java.util.HashSet;
 public class MyMeniereFragment extends Fragment {
 
     private View rootView;
-    private MaterialCalendarView mCalendarV;
-    private CardView mFocusTodayCv, mNewEventCv, mSeeSelection;
+    public static MaterialCalendarView mCalendarV;
+    private CardView mFocusTodayCv, mNewEventCv, mSeeSelection, mMonthReport;
+    private TextView mMonthEvents;
     private Activity activity;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
@@ -47,6 +49,7 @@ public class MyMeniereFragment extends Fragment {
     public MyMeniereFragment() {
         // Required empty public constructor
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
@@ -88,6 +91,10 @@ public class MyMeniereFragment extends Fragment {
             mFocusTodayCv = rootView.findViewById(R.id.cvFocusToday);
             mNewEventCv = rootView.findViewById(R.id.cvNewEvent);
             mSeeSelection = rootView.findViewById(R.id.cvSeeSelection);
+            mMonthReport = rootView.findViewById(R.id.cvMonthReview);
+            mMonthEvents = rootView.findViewById(R.id.tvMonthEvents);
+
+            mMonthEvents.setText(getString(R.string.txtMonthEvents).concat(String.valueOf(getMontEventEntriesCount())));
 
             mSeeSelection.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -103,15 +110,27 @@ public class MyMeniereFragment extends Fragment {
                 }
             });
 
+            mMonthReport.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Solo crear eventos en el dia de hoy o ayer y solo un evento por dia
+                    if(getMontEventEntriesCount()!=0) {
+                        callMonthReport();
+                    }else{
+                        Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
+                    }
+                }
+            });
+
             mNewEventCv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy o ayer y solo un evento por dia
-                    if(isValidDay() && getEventEntriesCount()==0) {
+                    if(isValidDay() && getDayEventEntriesCount()==0) {
                         callNewEvent(true);
                     }else if(!isValidDay()){
                         Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessagePassDay));
-                    }else if(getEventEntriesCount()>0){
+                    }else if(getDayEventEntriesCount()>0){
                         Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
                     }
                 }
@@ -147,9 +166,25 @@ public class MyMeniereFragment extends Fragment {
         startActivity(intent);
     }
 
-    public int getEventEntriesCount(){
+    public void callMonthReport(){
+        TabsActivity.activitySwitchFlag = true;
+        Intent intent = new Intent(getActivity(), MonthReportActivity.class);
+        //intent.putExtra("selectedDate", mCalendarV.getSelectedDate());
+        //intent.putExtra("isNew", isNew);
+
+        startActivity(intent);
+    }
+
+    public int getDayEventEntriesCount(){
 
         String query = String.format("SELECT * FROM EVENT WHERE DATE='%s'", mCalendarV.getSelectedDate().toString());
+        Cursor cursor = db.rawQuery(query, null);
+        return cursor.getCount();
+    }
+
+    public int getMontEventEntriesCount(){
+
+        String query = String.format("SELECT * FROM EVENT WHERE DATE LIKE '%s'", "%-" + mCalendarV.getSelectedDate().getMonth() + "-%");
         Cursor cursor = db.rawQuery(query, null);
         return cursor.getCount();
     }

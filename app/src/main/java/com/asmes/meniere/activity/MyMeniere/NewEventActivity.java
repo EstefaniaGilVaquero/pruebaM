@@ -1123,36 +1123,6 @@ public class NewEventActivity extends AppCompatActivity {
         cv.put("triggers_notes", notes);
 
 
-            db.insert("event", null, cv);
+        db.insert("event", null, cv);
     }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
-    }
-
-
 }

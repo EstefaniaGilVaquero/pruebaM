@@ -10,11 +10,14 @@
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barChart"
-        android:layout_width="368dp"
-        android:layout_height="217dp"
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></com.github.mikephil.charting.charts.BarChart>
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </com.github.mikephil.charting.charts.BarChart>
 
 
     

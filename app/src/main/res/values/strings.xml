@@ -84,8 +84,8 @@
     <string name="hearingLossSwitchContent">You selected some auditive symptoms. Please specify where these auditive symptoms mainly occurred.</string>
     <string name="infoVisualTitle">Items info</string>
     <string name="infoVisualContent">Visual symptoms: Visual sensations that occur mainly before the attack.\n\nTumarkin: Sudden fall with no previous warning or provocative factor and without vertigo or loss of consciousness.</string>
-
     <string name="mandatoryFieldsContent">Data is not enought to add a new record, please set more data or press \'back\' button.</string>
+    <string name="monthReportErrorTitle">New event error</string>
 
     <!--Login-->
     <string name="userEditText">E-mail</string>

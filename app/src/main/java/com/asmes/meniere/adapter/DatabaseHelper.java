@@ -123,7 +123,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 //KEY_AUDIO_DATE + " INTEGER REFERENCES " + TABLE_USERS + "," + // Define a foreign key
                 //BUBBLES
                 KEY_EVENT_DATE + " TEXT, " +
-                KEY_EVENT_EPISODES + " text, " +
+                KEY_EVENT_EPISODES + " TEXT, " +
                 KEY_EVENT_DURATION + " TEXT, " +
                 KEY_EVENT_INTENSITY + " TEXT, " +
                 KEY_EVENT_LIMITATION + " TEXT, " +
