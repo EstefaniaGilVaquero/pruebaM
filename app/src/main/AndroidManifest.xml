@@ -42,7 +42,9 @@
         <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity" />
         <activity android:name=".activity.MyMeniere.NewEventActivity" />
         <activity android:name=".activity.MyMeniere.MonthReportActivity" />
-        <activity android:name=".activity.Login.EditUserDataActivity"></activity>
+        <activity android:name=".activity.Login.EditUserDataActivity" />
+        <activity android:name=".activity.Login.LoginFingerTipActivity" />
+        <activity android:name=".activity.Login.RegisterActivity"></activity>
     </application>
 
 </manifest>

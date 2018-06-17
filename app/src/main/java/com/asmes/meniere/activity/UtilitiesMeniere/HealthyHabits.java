@@ -10,6 +10,8 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.Login.LoginFingerTipActivity;
+import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.FaqAdapter;
 
 public class HealthyHabits extends AppCompatActivity {
@@ -71,6 +73,8 @@ public class HealthyHabits extends AppCompatActivity {
         adapter = new FaqAdapter(arrayTituloHabitos, arrayDescripcionHabitos, this);
         adapter.notifyDataSetChanged();
         mRecyclerView.setAdapter(adapter);
+
+
     }
 
     @Override

@@ -1,14 +1,11 @@
 package com.asmes.meniere.activity.Login;
 
-
 import android.Manifest;
 import android.app.Activity;
 import android.app.KeyguardManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.security.keystore.KeyGenParameterSpec;
@@ -17,12 +14,11 @@ import android.security.keystore.KeyProperties;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.LayoutInflater;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,8 +28,8 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
-import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.activity.TabsActivity;
+import com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity;
 import com.asmes.meniere.models.Mail;
 import com.asmes.meniere.prefs.UserSession;
 import com.asmes.meniere.utils.Constants;
@@ -53,18 +49,8 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
-import javax.mail.AuthenticationFailedException;
-import javax.mail.MessagingException;
 
-import static android.content.Context.FINGERPRINT_SERVICE;
-import static android.content.Context.KEYGUARD_SERVICE;
-
-/**
- * A simple {@link Fragment} subclass.
- */
-public class LoginFingerTipFragment extends Fragment {
-
-    private View rootView;
+public class LoginFingerTipActivity extends AppCompatActivity {
 
     //Fingertip
     // Declare a string variable for the key we’re going to use in our fingerprint authentication
@@ -75,6 +61,9 @@ public class LoginFingerTipFragment extends Fragment {
     private FingerprintManager.CryptoObject cryptoObject;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
+    private Toolbar toolbar;
+    boolean activitySwitchFlag = false;
+    static LoginFingerTipActivity loginFingerTipActivity;
 
     //UI references
     private EditText mPassEt;
@@ -83,37 +72,55 @@ public class LoginFingerTipFragment extends Fragment {
     private ImageView fingerTipImageView;
     private TextView loginInfo2;
     private Activity mActivity;
-    private Context mContext;
 
-
-    public LoginFingerTipFragment() {
-        // Required empty public constructor
+    public static LoginFingerTipActivity getInstance(){
+        return loginFingerTipActivity;
     }
 
-    public static LoginFingerTipFragment newInstance() {
-        /*Bundle bundle = new Bundle();
-        bundle.putString(Constants.ITEM_TYPE, itemType);*/
-        LoginFingerTipFragment fragment = new LoginFingerTipFragment();
-        //fragment.setArguments(bundle);
-
-        return fragment;
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        rootView = inflater.inflate(R.layout.fragment_login, container, false);
+    protected void onResume() {
+        super.onResume();
+    }
 
-        mContext = getActivity();
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 
-        mPassEt = rootView.findViewById(R.id.currentPassEditText);
-        mLoginBtn = rootView.findViewById(R.id.loginBtn);
-        mRememberPassTxt = rootView.findViewById(R.id.rememberPass);
-        mResetEmailPassTxt = rootView.findViewById(R.id.resetEmailPass);
-        fingerTipImageView = rootView.findViewById(R.id.fingerTipImageView);
-        loginInfo2 = rootView.findViewById(R.id.info2TextView);
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            activitySwitchFlag = true;
+            onBackPressed();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login_finger_tip);
+
+
+        mActivity = this;
+        loginFingerTipActivity = this;
+
+        // SET BACK BUTTON
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+
+        mPassEt = findViewById(R.id.currentPassEditText);
+        mLoginBtn = findViewById(R.id.loginBtn);
+        mRememberPassTxt = findViewById(R.id.rememberPass);
+        mResetEmailPassTxt = findViewById(R.id.resetEmailPass);
+        fingerTipImageView = findViewById(R.id.fingerTipImageView);
+        loginInfo2 = findViewById(R.id.info2TextView);
 
 
 
@@ -121,8 +128,8 @@ public class LoginFingerTipFragment extends Fragment {
         // or higher before executing any fingerprint-related code
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             //Get an instance of KeyguardManager and FingerprintManager//
-            keyguardManager = (KeyguardManager) getActivity().getSystemService(KEYGUARD_SERVICE);
-            fingerprintManager = (FingerprintManager) getActivity().getSystemService(FINGERPRINT_SERVICE);
+            keyguardManager = (KeyguardManager) mActivity.getSystemService(KEYGUARD_SERVICE);
+            fingerprintManager = (FingerprintManager) mActivity.getSystemService(FINGERPRINT_SERVICE);
 
             //textView = (TextView) findViewById(R.id.textview);
 
@@ -130,14 +137,14 @@ public class LoginFingerTipFragment extends Fragment {
             if (!fingerprintManager.isHardwareDetected()) {
                 // If a fingerprint sensor isn’t available, then inform the user that they’ll be unable to use your app’s fingerprint functionality//
                 String message =  "Your device doesn't support fingerprint authentication";
-                Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                Toast.makeText(mActivity,message,Toast.LENGTH_LONG).show();
                 hideFingerTipViews();
             }else {
                 //Check whether the user has granted your app the USE_FINGERPRINT permission//
-                if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(mActivity, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
                     // If your app doesn't have this permission, then display the following text//
                     String message = "Please enable the fingerprint permission";
-                    Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, message, Toast.LENGTH_LONG).show();
                     hideFingerTipViews();
                 }
 
@@ -145,7 +152,7 @@ public class LoginFingerTipFragment extends Fragment {
                 if (!fingerprintManager.hasEnrolledFingerprints()) {
                     // If the user hasn’t configured any fingerprints, then display the following message//
                     String message = "No fingerprint configured. Please register at least one fingerprint in your device's Settings";
-                    Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, message, Toast.LENGTH_LONG).show();
                     hideFingerTipViews();
                 }
 
@@ -153,7 +160,7 @@ public class LoginFingerTipFragment extends Fragment {
                 if (!keyguardManager.isKeyguardSecure()) {
                     // If the user hasn’t secured their lockscreen with a PIN password or pattern, then display the following text//
                     String message = "Please enable lockscreen security in your device's Settings";
-                    Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
+                    Toast.makeText(mActivity, message, Toast.LENGTH_LONG).show();
                     hideFingerTipViews();
                 } else {
                     try {
@@ -167,24 +174,20 @@ public class LoginFingerTipFragment extends Fragment {
                         cryptoObject = new FingerprintManager.CryptoObject(cipher);
                         // Here, I’m referencing the FingerprintHandler class that we’ll create in the next section. This class will be responsible
                         // for starting the authentication process (via the startAuth method) and processing the authentication process events//
-                        FingerprintHandler helper = new FingerprintHandler(mContext, getFragmentManager());
+                        FingerprintHandler helper = new FingerprintHandler(mActivity);
                         helper.startAuth(fingerprintManager, cryptoObject);
                     }
                 }
             }
         }
 
-
-
-
-
         mRememberPassTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String email = UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_EMAIL, "");
+                String email = UserSession.getInstance(mActivity).getPreferences().getString(UserSession.PREFERENCES_EMAIL, "");
                 String content = getString(R.string.rememberPassContent) + "" + email;
-                new MaterialDialog.Builder(getContext())
+                new MaterialDialog.Builder(mActivity)
                         .content(content)
                         .positiveText(R.string.positiveTxtOk)
                         .negativeText(R.string.negativeTxtCancel)
@@ -221,27 +224,20 @@ public class LoginFingerTipFragment extends Fragment {
 
                 if (mPassEt.getText().toString().equals("")){
                     message = getString(R.string.emptyPass);
-                }else if(!UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals(mPassEt.getText().toString())){
+                }else if(!UserSession.getInstance(mActivity).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals(mPassEt.getText().toString())){
                     message = getString(R.string.invalidPass);
                 }else {
 
-                    UserSession.getInstance(getContext()).setmIsLoggedIn(true);
+                    UserSession.getInstance(mActivity).setmIsLoggedIn(true);
 
-                    //TODO choose between fragments
-                    //Go to myMeniereFragment or hearingDiary
-
-                    Fragment fragment = new OneFragment();
-                    FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-                    transaction.replace(R.id.layoutLoginFragment, fragment);
-                    transaction.commit();
+                    TabsActivity.activitySwitchFlag = true;
+                    startActivity(new Intent(view.getContext(), HearingDiaryActivity.class));
 
                 }
 
-                if (!message.equals("")) Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();
+                if (!message.equals("")) Toast.makeText(mActivity,message,Toast.LENGTH_LONG).show();
             }
         });
-
-        return rootView;
     }
 
     public void hideFingerTipViews(){
@@ -252,80 +248,80 @@ public class LoginFingerTipFragment extends Fragment {
     //Create the generateKey method that we’ll use to gain access to the Android keystore and generate the encryption key//
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void generateKey() throws FingerprintException {
-            try {
-                // Obtain a reference to the Keystore using the standard Android keystore container identifier (“AndroidKeystore”)//
-                keyStore = KeyStore.getInstance("AndroidKeyStore");
+        try {
+            // Obtain a reference to the Keystore using the standard Android keystore container identifier (“AndroidKeystore”)//
+            keyStore = KeyStore.getInstance("AndroidKeyStore");
+
+            //Generate the key//
+            keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+
+            //Initialize an empty KeyStore//
+            keyStore.load(null);
+
+            //Initialize the KeyGenerator//
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                keyGenerator.init(new
+                        //Specify the operation(s) this key can be used for//
+                        KeyGenParameterSpec.Builder(KEY_NAME,
+                        KeyProperties.PURPOSE_ENCRYPT |
+                                KeyProperties.PURPOSE_DECRYPT)
+                        .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
+
+                        //Configure this key so that the user has to confirm their identity with a fingerprint each time they want to use it//
+                        .setUserAuthenticationRequired(true)
+                        .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
+                        .build());
 
                 //Generate the key//
-                keyGenerator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
-
-                //Initialize an empty KeyStore//
-                keyStore.load(null);
-
-                //Initialize the KeyGenerator//
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    keyGenerator.init(new
-                            //Specify the operation(s) this key can be used for//
-                            KeyGenParameterSpec.Builder(KEY_NAME,
-                            KeyProperties.PURPOSE_ENCRYPT |
-                                    KeyProperties.PURPOSE_DECRYPT)
-                            .setBlockModes(KeyProperties.BLOCK_MODE_CBC)
-
-                            //Configure this key so that the user has to confirm their identity with a fingerprint each time they want to use it//
-                            .setUserAuthenticationRequired(true)
-                            .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_PKCS7)
-                            .build());
-
-                    //Generate the key//
-                    keyGenerator.generateKey();
-                }
-
-            } catch (Exception exc) {
-                if (exc instanceof KeyStoreException
-                        | exc instanceof NoSuchAlgorithmException
-                        | exc instanceof NoSuchProviderException
-                        | exc instanceof InvalidAlgorithmParameterException
-                        | exc instanceof CertificateException
-                        | exc instanceof IOException) {
-                    exc.printStackTrace();
-                    throw new FingerprintException(exc);
-                }
+                keyGenerator.generateKey();
             }
+
+        } catch (Exception exc) {
+            if (exc instanceof KeyStoreException
+                    | exc instanceof NoSuchAlgorithmException
+                    | exc instanceof NoSuchProviderException
+                    | exc instanceof InvalidAlgorithmParameterException
+                    | exc instanceof CertificateException
+                    | exc instanceof IOException) {
+                exc.printStackTrace();
+                throw new FingerprintException(exc);
+            }
+        }
     }
 
     //Create a new method that we’ll use to initialize our cipher//
     @RequiresApi(api = Build.VERSION_CODES.M)
     public boolean initCipher() {
-            try {
-                //Obtain a cipher instance and configure it with the properties required for fingerprint authentication//
-                cipher = Cipher.getInstance(
-                        KeyProperties.KEY_ALGORITHM_AES + "/"
-                                + KeyProperties.BLOCK_MODE_CBC + "/"
-                                + KeyProperties.ENCRYPTION_PADDING_PKCS7);
-            } catch (NoSuchAlgorithmException |
-                    NoSuchPaddingException e) {
-                throw new RuntimeException("Failed to get Cipher", e);
-            }
+        try {
+            //Obtain a cipher instance and configure it with the properties required for fingerprint authentication//
+            cipher = Cipher.getInstance(
+                    KeyProperties.KEY_ALGORITHM_AES + "/"
+                            + KeyProperties.BLOCK_MODE_CBC + "/"
+                            + KeyProperties.ENCRYPTION_PADDING_PKCS7);
+        } catch (NoSuchAlgorithmException |
+                NoSuchPaddingException e) {
+            throw new RuntimeException("Failed to get Cipher", e);
+        }
 
-            try {
-                keyStore.load(null);
-                SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
-                        null);
-                cipher.init(Cipher.ENCRYPT_MODE, key);
-                //Return true if the cipher has been initialized successfully//
-                return true;
-            } catch (Exception exc) {
-                if(exc instanceof KeyStoreException
-                        | exc instanceof CertificateException
-                        | exc instanceof UnrecoverableKeyException
-                        | exc instanceof IOException
-                        | exc instanceof NoSuchAlgorithmException
-                        | exc instanceof InvalidKeyException
-                        | exc instanceof  KeyPermanentlyInvalidatedException){
-                    throw new RuntimeException("Failed to init Cipher", exc);
-                }
-                return false;
+        try {
+            keyStore.load(null);
+            SecretKey key = (SecretKey) keyStore.getKey(KEY_NAME,
+                    null);
+            cipher.init(Cipher.ENCRYPT_MODE, key);
+            //Return true if the cipher has been initialized successfully//
+            return true;
+        } catch (Exception exc) {
+            if(exc instanceof KeyStoreException
+                    | exc instanceof CertificateException
+                    | exc instanceof UnrecoverableKeyException
+                    | exc instanceof IOException
+                    | exc instanceof NoSuchAlgorithmException
+                    | exc instanceof InvalidKeyException
+                    | exc instanceof KeyPermanentlyInvalidatedException){
+                throw new RuntimeException("Failed to init Cipher", exc);
             }
+            return false;
+        }
 
     }
 
@@ -337,13 +333,13 @@ public class LoginFingerTipFragment extends Fragment {
     }
 
     private void sendEmail() {
-        String[] destinatary = {UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_EMAIL, "")};
+        String[] destinatary = {UserSession.getInstance(mActivity).getPreferences().getString(UserSession.PREFERENCES_EMAIL, "")};
         SendEmailAsyncTask email = new SendEmailAsyncTask();
 
         //email.activity = this;
         email.m = new Mail(Constants.SENDER_EMAIL_USER, Constants.SENDER_EMAIL_PASS);
         email.m.set_from(Constants.SENDER_EMAIL_FROM);
-        email.m.setBody(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, ""));
+        email.m.setBody(UserSession.getInstance(mActivity).getPreferences().getString(UserSession.PREFERENCES_PASS, ""));
         email.m.set_to(destinatary);
         email.m.set_subject("Meniere app, remember password");
         email.execute();
@@ -351,8 +347,34 @@ public class LoginFingerTipFragment extends Fragment {
 
     public void displayMessage(String message) {
         //TODO falla por el contexto???
-        //Toast.makeText(rootView.getContext(), message, Toast.LENGTH_LONG).show();
+        //Toast.makeText(rootView.mActivity, message, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        if(keyCode == KeyEvent.KEYCODE_BACK)
+        {
+            activitySwitchFlag = true;
+            onBackPressed();
+            // activity switch stuff..
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
+    public void onPause(){
+        super.onPause();
+
+        if (!activitySwitchFlag) {
+            // Cambiamos de activity y no hacemos nada
+            // Hemos pulsado home, matamos la app
+            android.os.Process.killProcess(android.os.Process.myPid());
+            System.exit(1);
+            finishAffinity();
+        }
+        activitySwitchFlag = false;
     }
 }
-
-

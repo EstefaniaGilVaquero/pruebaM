@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.Login.LoginFingerTipActivity;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.adapter.HearingDiaryAdapter;
@@ -153,6 +154,11 @@ public class HearingDiaryActivity extends AppCompatActivity {
         adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
         adapter.notifyDataSetChanged();
         mRecyclerView.setAdapter(adapter);
+
+        //Mato activity de login
+        if (LoginFingerTipActivity.getInstance() != null){
+            LoginFingerTipActivity.getInstance().finish();
+        }
     }
 
 

@@ -6,13 +6,19 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.Login.LoginFingerTipActivity;
+import com.asmes.meniere.activity.Login.LoginFingerTipFragment;
+import com.asmes.meniere.activity.Login.RegisterActivity;
+import com.asmes.meniere.activity.Login.RegisterFragment;
 import com.asmes.meniere.activity.TabsActivity;
+import com.asmes.meniere.prefs.UserSession;
 
 
 public class ThreeFragment extends Fragment {
@@ -64,7 +70,15 @@ public class ThreeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
-                startActivity(new Intent(view.getContext(), HearingDiaryActivity.class));
+                //Si no hay password vamos al registro
+                if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
+                    startActivity(new Intent(view.getContext(), RegisterActivity.class));
+                }//Si no está logueado voy a login
+                else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
+                    startActivity(new Intent(view.getContext(), LoginFingerTipActivity.class));
+                }else {//Voy a myMeniere
+                    startActivity(new Intent(view.getContext(), HearingDiaryActivity.class));
+                }
             }
         });
 
