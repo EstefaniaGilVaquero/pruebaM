@@ -201,9 +201,8 @@ public class MyMeniereFragment extends Fragment {
             int year= 0;
 
             cursor.moveToFirst();
-            for (int i = 0; i < cursor.getCount(); i++) {
-
-                date = cursor.getString(i).substring(12,cursor.getString(i).toString().length()-1);
+            while(cursor.moveToNext()){
+                date = cursor.getString(0).substring(12,cursor.getString(0).toString().length()-1);
                 day = Integer.valueOf(date.split("-")[2]);
                 month = Integer.valueOf(date.split("-")[1]);
                 year = Integer.valueOf(date.split("-")[0]);

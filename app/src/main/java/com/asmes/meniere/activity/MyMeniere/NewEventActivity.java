@@ -883,16 +883,7 @@ public class NewEventActivity extends AppCompatActivity {
     private void disableEnableControls(boolean enable, ViewGroup vg){
         for (int i = 0; i < vg.getChildCount(); i++){
             View child = vg.getChildAt(i);
-            child.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                }
-            });
-
-
-               // child.setEnabled(false);
-
+            child.setEnabled(false);
             if (child instanceof ViewGroup){
                 disableEnableControls(enable, (ViewGroup)child);
             }
