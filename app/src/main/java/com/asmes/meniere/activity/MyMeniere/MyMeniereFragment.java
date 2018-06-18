@@ -158,7 +158,7 @@ public class MyMeniereFragment extends Fragment {
     public void callNewEvent(Boolean isNew){
         TabsActivity.activitySwitchFlag = true;
         Intent intent = new Intent(getActivity(), NewEventActivity.class);
-        intent.putExtra("selectedDate", mCalendarV.getSelectedDate());
+         intent.putExtra("selectedDate", mCalendarV.getSelectedDate());
         intent.putExtra("isNew", isNew);
         if (!isNew) {
             intent.putExtra("event", event);

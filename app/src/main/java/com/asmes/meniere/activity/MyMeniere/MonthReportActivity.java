@@ -76,14 +76,16 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
 
         mChart.setDrawGridBackground(false);
 
-        IAxisValueFormatter xAxisFormatter = new DayAxisValueFormatter(mChart);
+        //IAxisValueFormatter xAxisFormatter = new DayAxisValueFormatter(mChart);
 
         XAxis xAxis = mChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setDrawGridLines(false);
         xAxis.setGranularity(1f); // only intervals of 1 day
         xAxis.setLabelCount(7);
-        xAxis.setValueFormatter(xAxisFormatter);
+        xAxis.setAxisMinimum(1f);
+        xAxis.setCenterAxisLabels(true);
+        //xAxis.setValueFormatter(xAxisFormatter);
 
         //Y-axis
         mChart.getAxisRight().setEnabled(false);
@@ -140,40 +142,52 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
             xVals.add(String.valueOf(i));
         }
 
-        ArrayList yVals1 = new ArrayList();
-        ArrayList yVals2 = new ArrayList();
+        List<BarEntry> entriesGroup1 = new ArrayList<>();
+        List<BarEntry> entriesGroup2 = new ArrayList<>();
 
         ArrayList<EventModel> eventModelArrayList = getEventMonthStatistics();
         // fill the lists
-        for(int j = 0; j < eventModelArrayList.size(); j++ ){
-            int migrainteIntensity=0;
-            if (eventModelArrayList.get(j).getHeadacheProperties1() != null){
-                if(eventModelArrayList.get(j).getHeadacheProperties1().equalsIgnoreCase("Mild")){
-                    migrainteIntensity = 1;
-                }else if(eventModelArrayList.get(j).getHeadacheProperties1().equalsIgnoreCase("Moderate")) {
-                    migrainteIntensity = 2;
-                }else if(eventModelArrayList.get(j).getHeadacheProperties1().equalsIgnoreCase("Severe")) {
-                    migrainteIntensity = 3;
+        for(int j = 0; j < daysInMonth; j++ ){
+
+            for (int i = 0; i < eventModelArrayList.size(); i++ ){
+                Integer dayOfMonth = Integer.valueOf(eventModelArrayList.get(i).getDate().split("-")[2].split("\\}")[0]);
+                if(dayOfMonth == j) {
+
+                    int migrainteIntensity=0;
+                    if (eventModelArrayList.get(i).getHeadacheProperties1() != null){
+                        if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Mild")){
+                            migrainteIntensity = 1;
+                        }else if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Moderate")) {
+                            migrainteIntensity = 2;
+                        }else if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Severe")) {
+                            migrainteIntensity = 3;
+                        }
+                    }
+
+                    entriesGroup1.add(new BarEntry(j, Integer.valueOf(eventModelArrayList.get(i).getVertigoIntensity())));
+                    entriesGroup2.add(new BarEntry(j, migrainteIntensity));
+                    break;
                 }
             }
 
-            Integer dayOfMonth = Integer.valueOf(eventModelArrayList.get(j).getDate().split("-")[1]);
-
-            yVals1.add(dayOfMonth, Integer.valueOf(eventModelArrayList.get(j).getVertigoIntensity()));
-            yVals2.add(dayOfMonth, migrainteIntensity);
+            if (entriesGroup1.size() < j){
+                entriesGroup1.add(new BarEntry(j, 0));
+                entriesGroup2.add(new BarEntry(j, 0));
+            }
         }
 
+
         BarDataSet set1, set2;
-        set1 = new BarDataSet(yVals1, "Vertigo");
+        set1 = new BarDataSet(entriesGroup1, "Vertigo");
         set1.setColors(new int[] { R.color.colorPrimary}, this);
-        set2 = new BarDataSet(yVals2, "Migraine");
+        set2 = new BarDataSet(entriesGroup2, "Migraine");
         set2.setColors(new int[] { R.color.colorPrimaryDarker}, this);
         BarData data = new BarData(set1, set2);
         mChart.setData(data);
         mChart.getBarData().setBarWidth(barWidth);
         mChart.getXAxis().setAxisMinimum(0);
         //mChart.getXAxis().setAxisMaximum(0 + chart.getBarData().getGroupWidth(groupSpace, barSpace) * groupCount);
-        mChart.groupBars(0, groupSpace, barSpace);
+        mChart.groupBars(1, groupSpace, barSpace);
         mChart.getData().setHighlightEnabled(false);
         mChart.invalidate();
 
