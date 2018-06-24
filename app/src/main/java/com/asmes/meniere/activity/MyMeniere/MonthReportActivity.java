@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.asmes.meniere.R;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
+import com.asmes.meniere.models.TriggerModel;
+import com.asmes.meniere.utils.Utils;
 import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -19,7 +21,6 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
@@ -28,7 +29,9 @@ import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MonthReportActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, OnChartValueSelectedListener {
 
@@ -36,6 +39,8 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
     protected BarChart chart;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
+    private int eventsInMonth;
+    private TextView meanData1, meanData2, meanData3, meanData4, meanData5, meanData6,trigger1, trigger2, trigger3, trigger4;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -59,14 +64,24 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         db = dbHelper.getWritableDatabase();
 
         chart = findViewById(R.id.barChart);
+        trigger1 = findViewById(R.id.trigger1);
+        trigger2 = findViewById(R.id.trigger2);
+        trigger3 = findViewById(R.id.trigger3);
+        trigger4 = findViewById(R.id.trigger4);
 
+        meanData1 = findViewById(R.id.meanData1);
+        meanData2 = findViewById(R.id.meanData2);
+        meanData3 = findViewById(R.id.meanData3);
+        meanData4 = findViewById(R.id.meanData4);
+        meanData5 = findViewById(R.id.meanData5);
+        meanData6 = findViewById(R.id.meanData6);
 
-
-        setData();
-
+        setChart();
+        setMeanData();
+        setTriggers();
     }
 
-    private void setData() {
+    private void setChart() {
 
         float barWidth;
         float barSpace;
@@ -76,14 +91,12 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         barSpace = 0f;
         groupSpace = 0.4f;
 
-
         //Set the chart setting with the below following code
         chart = findViewById(R.id.barChart);
         chart.setDescription(null);
         chart.setPinchZoom(true);
         chart.setScaleEnabled(true);
         chart.setDrawBarShadow(false);
-
 
         // fill the lists//
 
@@ -107,7 +120,7 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         List<BarEntry> entriesGroup1 = new ArrayList<>();
         List<BarEntry> entriesGroup2 = new ArrayList<>();
 
-        ArrayList<EventModel> eventModelArrayList = getEventMonthStatistics();
+        ArrayList<EventModel> eventModelArrayList = getEventMonthChartData();
 
         for(int j = 1; j <= daysInMonth; j++ ){
             Boolean dateAsigned = false;
@@ -194,10 +207,11 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
 
     }
 
-    public ArrayList<EventModel> getEventMonthStatistics(){
+    public ArrayList<EventModel> getEventMonthChartData(){
         String query = String.format("SELECT * FROM EVENT WHERE DATE LIKE '%s'", "%-" + MyMeniereFragment.mCalendarV.getSelectedDate().getMonth() + "-%");
         Cursor cursor = db.rawQuery(query, null);
         ArrayList<EventModel> eventModelsArray = new ArrayList<EventModel>();
+        eventsInMonth = cursor.getCount();
         if(cursor.getCount() != 0){
             cursor.moveToFirst();
             while(!cursor.isAfterLast()) {
@@ -215,6 +229,117 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         }
 
         return eventModelsArray;
+    }
+
+    public void setMeanData(){
+
+        //Eventos con migraña o vertigo
+        String query2 = "select * from event where intensity != 0 or migraine != 0";
+        Cursor cursor2 = db.rawQuery(query2, null);
+        meanData2.setText(getString(R.string.txtVertigoMigraineEvents).concat(String.valueOf(cursor2.getCount()).concat("/").concat(String.valueOf(eventsInMonth))));
+        cursor2.close();
+
+        //Media de duracion y maximo y minimo
+        String query3 = "select SUM(duration) suma, count(*) contador, min(duration) minimo, max(duration) maximo from event where duration != 0";
+        Cursor cursor3 = db.rawQuery(query3, null);
+        if(cursor3.getCount() != 0){
+            cursor3.moveToFirst();
+            int suma = cursor3.getInt(cursor3.getColumnIndex("suma"));
+            int contador = cursor3.getInt(cursor3.getColumnIndex("contador"));
+            int minimo = cursor3.getInt(cursor3.getColumnIndex("minimo"));
+            int maximo = cursor3.getInt(cursor3.getColumnIndex("maximo"));
+
+            meanData3.setText(getString(R.string.txtDurationMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            cursor3.close();
+        }
+
+        //Media intensidad y minimo y maximo
+        String query4 = "select SUM(intensity) suma, count(*) contador, min(intensity) minimo, max(intensity) maximo from event where intensity != 0";
+        Cursor cursor4 = db.rawQuery(query4, null);
+        if(cursor4.getCount() != 0){
+            cursor4.moveToFirst();
+            int suma = cursor4.getInt(cursor4.getColumnIndex("suma"));
+            int contador = cursor4.getInt(cursor4.getColumnIndex("contador"));
+            int minimo = cursor4.getInt(cursor4.getColumnIndex("minimo"));
+            int maximo = cursor4.getInt(cursor4.getColumnIndex("maximo"));
+
+            meanData4.setText(getString(R.string.txtIntensityMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            cursor4.close();
+        }
+
+        //Media limitation y minimo y maximo
+        String query5 = "select SUM(limitation) suma, count(*) contador, min(limitation) minimo, max(limitation) maximo from event where limitation != 0";
+        Cursor cursor5 = db.rawQuery(query5, null);
+        if(cursor5.getCount() != 0){
+            cursor5.moveToFirst();
+            int suma = cursor5.getInt(cursor5.getColumnIndex("suma"));
+            int contador = cursor5.getInt(cursor5.getColumnIndex("contador"));
+            int minimo = cursor5.getInt(cursor5.getColumnIndex("minimo"));
+            int maximo = cursor5.getInt(cursor5.getColumnIndex("maximo"));
+
+            meanData5.setText(getString(R.string.txtActivityMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            cursor5.close();
+        }
+
+        //Media stress y minimo y maximo
+        String query6 = "select SUM(stress) suma, count(*) contador, min(stress) minimo, max(stress) maximo from event where stress != 0";
+        Cursor cursor6 = db.rawQuery(query6, null);
+        if(cursor6.getCount() != 0){
+            cursor6.moveToFirst();
+            int suma = cursor6.getInt(cursor6.getColumnIndex("suma"));
+            int contador = cursor6.getInt(cursor6.getColumnIndex("contador"));
+            int minimo = cursor6.getInt(cursor6.getColumnIndex("minimo"));
+            int maximo = cursor6.getInt(cursor6.getColumnIndex("maximo"));
+
+            meanData6.setText(getString(R.string.txtStressMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            cursor6.close();
+        }
+    }
+
+    public void setTriggers(){
+        String query = "select distinct(triggers_climate) name, count(*)\n" +
+                "from event\n" +
+                "where triggers_climate not null\n" +
+                "group by triggers_climate\n" +
+                "union\n" +
+                "select distinct(triggers_sleep) name, count(*)\n" +
+                "from event\n" +
+                "where triggers_sleep not null\n" +
+                "group by triggers_sleep\n" +
+                "union\n" +
+                "select distinct(triggers_phisic) name, count(*)\n" +
+                "from event\n" +
+                "where triggers_phisic not null\n" +
+                "group by triggers_phisic\n" +
+                "union\n" +
+                "select distinct(triggers_excesses) name, count(*)\n" +
+                "from event\n" +
+                "where triggers_excesses not null\n" +
+                "group by triggers_excesses\n" +
+                "union\n" +
+                "select distinct(menstruation) name, count(*)\n" +
+                "from event\n" +
+                "where menstruation = 1";
+        Cursor cursor = db.rawQuery(query, null);
+        if(cursor.getCount() != 0) {
+            cursor.moveToFirst();
+            Map arrayTriggers = new HashMap();
+            while(!cursor.isAfterLast()) {
+                arrayTriggers.put(cursor.getString(cursor.getColumnIndex("name")),cursor.getInt(cursor.getColumnIndex("contador")));
+                cursor.moveToNext();
+            }
+            cursor.close();
+
+            arrayTriggers.put("frio",2);
+            arrayTriggers.put("calor",6);
+            arrayTriggers.put("tabaco",1);
+            arrayTriggers.put("sal",2);
+            arrayTriggers.put("crossfit",4);
+
+            //ordenar array
+            arrayTriggers = Utils.sortByComparator(arrayTriggers,false);
+
+        }
     }
 
     @Override
