@@ -1,6 +1,5 @@
 package com.asmes.meniere.activity.MyMeniere;
 
-import android.app.usage.UsageEvents;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -11,8 +10,8 @@ import android.widget.SeekBar;
 import com.asmes.meniere.R;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
-import com.asmes.meniere.utils.DayAxisValueFormatter;
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -21,6 +20,8 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.LargeValueFormatter;
 import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
@@ -32,7 +33,7 @@ import java.util.List;
 public class MonthReportActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, OnChartValueSelectedListener {
 
     boolean activitySwitchFlag = false;
-    protected BarChart mChart;
+    protected BarChart chart;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
 
@@ -57,60 +58,10 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
 
-        mChart = findViewById(R.id.barChart);
+        chart = findViewById(R.id.barChart);
 
 
-        mChart.setOnChartValueSelectedListener(this);
 
-        mChart.setDrawBarShadow(false);
-        mChart.setDrawValueAboveBar(true);
-
-        mChart.getDescription().setEnabled(false);
-
-        // if more than 60 entries are displayed in the chart, no values will be
-        // drawn
-        mChart.setMaxVisibleValueCount(60);
-
-        // scaling can now only be done on x- and y-axis separately
-        mChart.setPinchZoom(false);
-
-        mChart.setDrawGridBackground(false);
-
-        //IAxisValueFormatter xAxisFormatter = new DayAxisValueFormatter(mChart);
-
-        XAxis xAxis = mChart.getXAxis();
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setDrawGridLines(false);
-        xAxis.setGranularity(1f); // only intervals of 1 day
-        xAxis.setLabelCount(7);
-        xAxis.setAxisMinimum(1f);
-        xAxis.setCenterAxisLabels(true);
-        //xAxis.setValueFormatter(xAxisFormatter);
-
-        //Y-axis
-        mChart.getAxisRight().setEnabled(false);
-        YAxis leftAxis = mChart.getAxisLeft();
-        //leftAxis.setTypeface(mTfLight);
-        leftAxis.setLabelCount(10, false);
-        leftAxis.setGranularity(1f);
-        leftAxis.setPosition(YAxis.YAxisLabelPosition.OUTSIDE_CHART);
-        leftAxis.setSpaceTop(15f);
-        leftAxis.setCenterAxisLabels(true);
-        leftAxis.setAxisMinimum(0f); // this replaces setStartAtZero(true)
-
-        Legend l = mChart.getLegend();
-        l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
-        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
-        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
-        l.setDrawInside(false);
-        l.setForm(Legend.LegendForm.SQUARE);
-        l.setFormSize(9f);
-        l.setTextSize(11f);
-        l.setXEntrySpace(4f);
-        // l.setExtra(ColorTemplate.VORDIPLOM_COLORS, new String[] { "abc",
-        // "def", "ghj", "ikl", "mno" });
-        // l.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "abc",
-        // "def", "ghj", "ikl", "mno" });
         setData();
 
     }
@@ -123,7 +74,18 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
 
         barWidth = 0.3f;
         barSpace = 0f;
-        groupSpace = 0.2f;
+        groupSpace = 0.4f;
+
+
+        //Set the chart setting with the below following code
+        chart = findViewById(R.id.barChart);
+        chart.setDescription(null);
+        chart.setPinchZoom(true);
+        chart.setScaleEnabled(true);
+        chart.setDrawBarShadow(false);
+
+
+        // fill the lists//
 
         // Get the number of days in that month
         int iYear = MyMeniereFragment.mCalendarV.getSelectedDate().getYear();
@@ -138,7 +100,7 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
 
         ArrayList xVals = new ArrayList();
 
-        for(int i = 0; i < daysInMonth; i++) {
+        for(int i = 1; i <= daysInMonth; i++) {
             xVals.add(String.valueOf(i));
         }
 
@@ -146,50 +108,89 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
         List<BarEntry> entriesGroup2 = new ArrayList<>();
 
         ArrayList<EventModel> eventModelArrayList = getEventMonthStatistics();
-        // fill the lists
-        for(int j = 0; j < daysInMonth; j++ ){
+
+        for(int j = 1; j <= daysInMonth; j++ ){
+            Boolean dateAsigned = false;
 
             for (int i = 0; i < eventModelArrayList.size(); i++ ){
                 Integer dayOfMonth = Integer.valueOf(eventModelArrayList.get(i).getDate().split("-")[2].split("\\}")[0]);
                 if(dayOfMonth == j) {
-
+                    int vertigoIntensity = Integer.valueOf(eventModelArrayList.get(i).getVertigoIntensity());
                     int migrainteIntensity=0;
                     if (eventModelArrayList.get(i).getHeadacheProperties1() != null){
                         if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Mild")){
-                            migrainteIntensity = 1;
+                            migrainteIntensity = vertigoIntensity;
                         }else if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Moderate")) {
-                            migrainteIntensity = 2;
+                            migrainteIntensity = vertigoIntensity/2;
                         }else if(eventModelArrayList.get(i).getHeadacheProperties1().equalsIgnoreCase("Severe")) {
-                            migrainteIntensity = 3;
+                            migrainteIntensity = vertigoIntensity/3;
                         }
+                    }else if(eventModelArrayList.get(i).getPhonophobia() != null || eventModelArrayList.get(i).getPhotophobia() != null
+                            || eventModelArrayList.get(i).getVisualSymptoms() != null){
+                        migrainteIntensity = 1;
                     }
 
-                    entriesGroup1.add(new BarEntry(j, Integer.valueOf(eventModelArrayList.get(i).getVertigoIntensity())));
+                    entriesGroup1.add(new BarEntry(j, vertigoIntensity));
                     entriesGroup2.add(new BarEntry(j, migrainteIntensity));
+                    dateAsigned = true;
                     break;
                 }
             }
 
-            if (entriesGroup1.size() < j){
+            if (!dateAsigned){
                 entriesGroup1.add(new BarEntry(j, 0));
                 entriesGroup2.add(new BarEntry(j, 0));
             }
         }
 
 
+        //draw the graph
         BarDataSet set1, set2;
-        set1 = new BarDataSet(entriesGroup1, "Vertigo");
+        set1 = new BarDataSet(entriesGroup1, getString(R.string.txtChartLabelVertigo));
         set1.setColors(new int[] { R.color.colorPrimary}, this);
-        set2 = new BarDataSet(entriesGroup2, "Migraine");
+        set2 = new BarDataSet(entriesGroup2, getString(R.string.txtChartLabelMigraine));
         set2.setColors(new int[] { R.color.colorPrimaryDarker}, this);
         BarData data = new BarData(set1, set2);
-        mChart.setData(data);
-        mChart.getBarData().setBarWidth(barWidth);
-        mChart.getXAxis().setAxisMinimum(0);
-        //mChart.getXAxis().setAxisMaximum(0 + chart.getBarData().getGroupWidth(groupSpace, barSpace) * groupCount);
-        mChart.groupBars(1, groupSpace, barSpace);
-        mChart.getData().setHighlightEnabled(false);
-        mChart.invalidate();
+        data.setValueFormatter(new LargeValueFormatter());
+        chart.setData(data);
+        chart.getBarData().setBarWidth(barWidth);
+        chart.getXAxis().setAxisMinimum(0);
+        chart.getXAxis().setAxisMaximum(0 + chart.getBarData().getGroupWidth(groupSpace, barSpace) * daysInMonth);
+        //chart.setScaleMinima((float) daysInMonth / 17f, 1f);
+        //chart.zoom(-15f,0f,0,0);
+        chart.setPinchZoom(false);
+        chart.groupBars(0, groupSpace, barSpace);
+        chart.getData().setHighlightEnabled(false);
+        chart.invalidate();
+
+        //Draw the indicator
+        Legend l = chart.getLegend();
+        l.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
+        l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
+        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
+        l.setDrawInside(false);
+        l.setForm(Legend.LegendForm.SQUARE);
+        l.setFormSize(9f);
+        l.setTextSize(11f);
+        l.setXEntrySpace(4f);
+
+        //Draw the X-Axis and Y-Axis
+        //X-axis
+        XAxis xAxis = chart.getXAxis();
+        xAxis.setGranularity(1f);
+        xAxis.setGranularityEnabled(true);
+        xAxis.setCenterAxisLabels(true);
+        xAxis.setDrawGridLines(false);
+        xAxis.setAxisMaximum(30);
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(xVals));
+        //Y-axis
+        chart.getAxisRight().setEnabled(false);
+        YAxis leftAxis = chart.getAxisLeft();
+        //leftAxis.setValueFormatter(new YValueFormatter());
+        leftAxis.setDrawGridLines(true);
+        leftAxis.setSpaceTop(10);
+        leftAxis.setAxisMinimum(0);
 
     }
 
@@ -204,6 +205,9 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
                 eventModel.setVertigoIntensity(cursor.getString(cursor.getColumnIndex("intensity")));
                 eventModel.setHeadacheProperties1(cursor.getString(cursor.getColumnIndex("migraine_type1")));
                 eventModel.setDate(cursor.getString(cursor.getColumnIndex("date")));
+                eventModel.setPhonophobia(cursor.getString(cursor.getColumnIndex("phonophobia")));
+                eventModel.setPhotophobia(cursor.getString(cursor.getColumnIndex("photophobia")));
+                eventModel.setVisualSymptoms(cursor.getString(cursor.getColumnIndex("visual_symp")));
                 eventModelsArray.add(eventModel);
                 cursor.moveToNext();
             }

@@ -131,15 +131,17 @@
 
     <!-- Month report -->
     <string name="txtDetailChart">Detail Chart</string>
-    <string name="txtTitleStatistics">Month Statistics</string>
+    <string name="txtTitleStatistics">This month Statistics</string>
     <string name="txtEventsInMonth">Events in</string>
-    <string name="txtVertigoEvents">Vertigo events</string>
-    <string name="txtMigraineEvents">Migraine events</string>
-    <string name="txtDurationMean">Duration mean</string>
-    <string name="txtIntensityMean">Intensity mean</string>
-    <string name="txtActivityMean">Activity mean</string>
-    <string name="txtStressMean">Stress mean</string>
+    <string name="txtVertigoEvents">Vertigo events:</string>
+    <string name="txtMigraineEvents">Migraine events:</string>
+    <string name="txtDurationMean">Duration mean:</string>
+    <string name="txtIntensityMean">Intensity mean:</string>
+    <string name="txtActivityMean">Activity mean:</string>
+    <string name="txtStressMean">Stress mean:</string>
     <string name="txtMainTriggerTitle">Main triggers</string>
+    <string name="txtChartLabelVertigo">Vertigo</string>
+    <string name="txtChartLabelMigraine">Migraine</string>
 
 
     <!-- Tab one -->
