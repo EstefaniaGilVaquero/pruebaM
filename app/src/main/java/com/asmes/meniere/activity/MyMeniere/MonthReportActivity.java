@@ -297,29 +297,30 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
     }
 
     public void setTriggers(){
-        String query = "select distinct(triggers_climate) name, count(*)\n" +
+        String query = "select distinct(triggers_climate) name, count(*) contador, 'climate' parent\n" +
                 "from event\n" +
                 "where triggers_climate not null\n" +
                 "group by triggers_climate\n" +
                 "union\n" +
-                "select distinct(triggers_sleep) name, count(*)\n" +
+                "select distinct(triggers_sleep) name, count(*) contador, 'sleep' parent\n" +
                 "from event\n" +
                 "where triggers_sleep not null\n" +
                 "group by triggers_sleep\n" +
                 "union\n" +
-                "select distinct(triggers_phisic) name, count(*)\n" +
+                "select distinct(triggers_phisic) name, count(*) contador, 'phisic' parent\n" +
                 "from event\n" +
                 "where triggers_phisic not null\n" +
                 "group by triggers_phisic\n" +
                 "union\n" +
-                "select distinct(triggers_excesses) name, count(*)\n" +
+                "select distinct(triggers_excesses) name, count(*) contador, 'excesses' parent\n" +
                 "from event\n" +
                 "where triggers_excesses not null\n" +
                 "group by triggers_excesses\n" +
                 "union\n" +
-                "select distinct(menstruation) name, count(*)\n" +
+                "select distinct(menstruation) name, count(*) contador, 'menstruation' parent\n" +
                 "from event\n" +
-                "where menstruation = 1";
+                "where menstruation = 1\n" +
+                "group by menstruation";
         Cursor cursor = db.rawQuery(query, null);
         if(cursor.getCount() != 0) {
             cursor.moveToFirst();
@@ -330,14 +331,16 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
             }
             cursor.close();
 
-            arrayTriggers.put("frio",2);
-            arrayTriggers.put("calor",6);
-            arrayTriggers.put("tabaco",1);
-            arrayTriggers.put("sal",2);
-            arrayTriggers.put("crossfit",4);
-
             //ordenar array
             arrayTriggers = Utils.sortByComparator(arrayTriggers,false);
+
+            List<String> arrayTriggersNames = new ArrayList<String>(arrayTriggers.keySet());
+            List<String> arrayTriggersValues = new ArrayList<String>(arrayTriggers.values());
+
+            trigger1.setText("1. " + arrayTriggersNames.get(0) + " (" + String.valueOf(arrayTriggersValues.get(0)) + ")");
+            trigger2.setText("2. " + arrayTriggersNames.get(1) + " (" + String.valueOf(arrayTriggersValues.get(1)) + ")");
+            trigger3.setText("3. " + arrayTriggersNames.get(2) + " (" + String.valueOf(arrayTriggersValues.get(2)) + ")");
+            trigger4.setText("4. " + arrayTriggersNames.get(3) + " (" + String.valueOf(arrayTriggersValues.get(3)) + ")");
 
         }
     }

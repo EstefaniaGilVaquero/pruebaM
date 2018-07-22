@@ -1062,6 +1062,7 @@
                             android:textSize="15dp" />
 
                         <LinearLayout
+                            android:id="@+id/weatherLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="7dp"
@@ -1166,6 +1167,7 @@
                             android:textSize="15dp" />
 
                         <LinearLayout
+                            android:id="@+id/sleepLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="7dp"
@@ -1270,6 +1272,7 @@
                             android:textSize="15dp" />
 
                         <LinearLayout
+                            android:id="@+id/phisicLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="7dp"
@@ -1374,6 +1377,7 @@
                             android:textSize="15dp" />
 
                         <LinearLayout
+                            android:id="@+id/exccessLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="7dp"

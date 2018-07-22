@@ -117,7 +117,7 @@ public class MyMeniereFragment extends Fragment {
                     if(getMontEventEntriesCount()!=0) {
                         callMonthReport();
                     }else{
-                        Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
+                        Utils.OkDialog(activity, getString(R.string.monthReportErrorTitle), getString(R.string.monthReportErrorContent));
                     }
                 }
             });
@@ -126,13 +126,13 @@ public class MyMeniereFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy o ayer y solo un evento por dia
-                    if(isValidDay() && getDayEventEntriesCount()==0) {
+                    //if(isValidDay() && getDayEventEntriesCount()==0) {
                         callNewEvent(true);
-                    }else if(!isValidDay()){
+                    /*}else if(!isValidDay()){
                         Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessagePassDay));
                     }else if(getDayEventEntriesCount()>0){
                         Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
-                    }
+                    }*/
                 }
             });
 

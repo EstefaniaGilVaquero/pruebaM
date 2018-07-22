@@ -53,7 +53,7 @@ public class NewEventActivity extends AppCompatActivity {
 
     private LinearLayout mHeadProp_1a_LayOut, mHeadProp_1b_LayOut, mHeadProp_1c_LayOut, mHeadProp_1d_LayOut, mHeadProp_2a_LayOut, mHeadProp_2b_LayOut, mHeadProp_2c_LayOut, mHeadProp_3a_LayOut, mHeadProp_3b_LayOut, mHeadProp_3c_LayOut,
             mWeather_1a_LayOut, mWeather_1b_LayOut, mWeather_1c_LayOut, mWeather_1d_LayOut, mSleep_1a_LayOut, mSleep_1b_LayOut, mSleep_1c_LayOut, mSleep_1d_LayOut, mPhysical_1a_LayOut, mPhysical_1b_LayOut, mPhysical_1c_LayOut,
-            mPhysical_1d_LayOut, mHabit_1a_LayOut, mHabit_1b_LayOut, mHabit_1c_LayOut, mHabit_1d_LayOut, mHabit_1e_LayOut, mHabit_1f_LayOut, mHeadache_LayOut;
+            mPhysical_1d_LayOut, mHabit_1a_LayOut, mHabit_1b_LayOut, mHabit_1c_LayOut, mHabit_1d_LayOut, mHabit_1e_LayOut, mHabit_1f_LayOut, mHeadache_LayOut, mWeatherLayout, mSleepLayout , mPhisicLayout , mExccessLayout;
 
     private String mMigraineType1, mMigraineType2, mMigraineType3, mWeather, mSleep, mPhysical, mHabit, mHearingLoss;
     private ImageView mAddEpisodeBtn, mInfoVisualBtn;
@@ -200,6 +200,11 @@ public class NewEventActivity extends AppCompatActivity {
         mHabit_1f_LayOut = findViewById(R.id.Habit_1f_layout);
         mHeadache_LayOut = findViewById(R.id.headachePropsLayout);
         mInstavilityIntenCardView = findViewById(R.id.instabilityIntensityCardView);
+
+        mWeatherLayout = findViewById(R.id.weatherLayout);
+        mSleepLayout = findViewById(R.id.sleepLayout);
+        mPhisicLayout = findViewById(R.id.phisicLayout);
+        mExccessLayout = findViewById(R.id.exccessLayout);
 
         mNotes = findViewById(R.id.notesTxt);
 
@@ -880,22 +885,40 @@ public class NewEventActivity extends AppCompatActivity {
         });
     }
 
-    private void disableEnableControls(boolean enable, ViewGroup vg){
-        for (int i = 0; i < vg.getChildCount(); i++){
-            View child = vg.getChildAt(i);
-            child.setEnabled(false);
-            if (child instanceof ViewGroup){
-                disableEnableControls(enable, (ViewGroup)child);
-            }
-        }
+    private void disableEnableControls(boolean enable){
+
+        mAddEpisodeBtn.setEnabled(enable);
+        mDurationBubble.setEnabled(enable);
+        mVertigoBubble.setEnabled(enable);
+        mLimitationBubble.setEnabled(enable);
+        mStressBubble.setEnabled(enable);
+        mHearingLossSwitch.setEnabled(enable);
+        mTinnitusSwitch.setEnabled(enable);
+        mEarFullnessSwitch.setEnabled(enable);
+        mHeadacheSwitch.setEnabled(enable);
+        mPhotophobiaSwitch.setEnabled(enable);
+        mPhonophobiaSwitch.setEnabled(enable);
+        mVisualSymSwitch.setEnabled(enable);
+        mTumarkinSwitch.setEnabled(enable);
+        mMenstruationSwitch.setEnabled(enable);
+        mNauseaSwitch.setEnabled(enable);
+        mVomitingSwitch.setEnabled(enable);
+        mInstabilitySwitch.setEnabled(enable);
+        mWeatherLayout.setEnabled(enable);
+        mSleepLayout.setEnabled(enable);
+        mPhisicLayout.setEnabled(enable);
+        mExccessLayout.setEnabled(enable);
+        mNotes.setEnabled(enable);
+        mDizzinessDisBubble.setEnabled(enable);
+        mInstabilityDisBubble.setEnabled(enable);
+        mVisualBlurDisBubble.setEnabled(enable);
+        mHeadPresureDisBubble.setEnabled(enable);
     }
 
     public void setEventData(){
 
         LinearLayout eventLayout = findViewById(R.id.layoutToDisable);
-        disableEnableControls(false, eventLayout);
-/*        RelativeLayout disableLayout = findViewById(R.id.disableLayout);
-        disableLayout.setVisibility(View.VISIBLE);*/
+        disableEnableControls(false);
 
         if (event.instability != null && event.instability.equals("1")) mInstavilityIntenCardView.setVisibility(View.VISIBLE);
         if (event.headache != null && event.headache.equals("1")) mHeadache_LayOut.setVisibility(View.VISIBLE);
