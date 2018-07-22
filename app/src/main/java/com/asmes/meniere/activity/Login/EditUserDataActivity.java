@@ -14,17 +14,16 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.models.User;
 import com.asmes.meniere.prefs.UserSession;
 
 import static com.asmes.meniere.utils.Utils.isValidMail;
 
-public class EditUserDataActivity extends AppCompatActivity {
+public class EditUserDataActivity extends BaseActivity {
 
     private User mUserLogged;
     private Activity activity;
-    private Toolbar toolbar;
-    boolean activitySwitchFlag = false;
 
     //UI references
     private EditText mCurrentPass, mNewEmail, mNewPass, mConfirmNewPass;
@@ -36,34 +35,11 @@ public class EditUserDataActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_user_data);
 
         activity = this;
-
-        // SET BACK BUTTON
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         mCurrentPass = findViewById(R.id.currentPassEditText);
         mNewEmail = findViewById(R.id.newEmailEditText);
@@ -71,7 +47,6 @@ public class EditUserDataActivity extends AppCompatActivity {
         mConfirmNewPass = findViewById(R.id.newConfirmPassEditText);
         mCancelBtn = findViewById(R.id.cancelBtn);
         mSaveBtn = findViewById(R.id.saveBtn);
-
 
         mCurrentPass.addTextChangedListener(new TextWatcher() {
             @Override
@@ -133,33 +108,5 @@ public class EditUserDataActivity extends AppCompatActivity {
                 finish();
             }
         });
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
     }
 }

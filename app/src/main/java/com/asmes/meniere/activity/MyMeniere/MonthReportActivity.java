@@ -9,6 +9,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
 import com.asmes.meniere.models.TriggerModel;
@@ -33,7 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MonthReportActivity extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener, OnChartValueSelectedListener {
+public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekBarChangeListener, OnChartValueSelectedListener {
 
     boolean activitySwitchFlag = false;
     protected BarChart chart;
@@ -43,20 +44,7 @@ public class MonthReportActivity extends AppCompatActivity implements SeekBar.On
     private TextView meanData1, meanData2, meanData3, meanData4, meanData5, meanData6,trigger1, trigger2, trigger3, trigger4;
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        //handle presses on the action bar items
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                activitySwitchFlag = true;
-                onBackPressed();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_month_report);
 

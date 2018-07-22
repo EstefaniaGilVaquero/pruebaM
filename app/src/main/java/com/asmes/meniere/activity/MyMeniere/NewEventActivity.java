@@ -31,6 +31,7 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
 import com.asmes.meniere.models.EventModel;
 import com.asmes.meniere.utils.Utils;
@@ -41,7 +42,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class NewEventActivity extends AppCompatActivity {
+public class NewEventActivity extends BaseActivity {
 
     private ScrollView mScrollView;
     private BubbleSeekBar mDurationBubble, mVertigoBubble, mLimitationBubble, mStressBubble, mInstabilityIntenBubble, mDizzinessDisBubble, mInstabilityDisBubble, mVisualBlurDisBubble, mHeadPresureDisBubble;
@@ -60,8 +61,6 @@ public class NewEventActivity extends AppCompatActivity {
     private CardView mInstavilityIntenCardView;
     private int mEpisode = 1, mHearingLossIndex;
 
-    boolean activitySwitchFlag = false;
-    private Toolbar toolbar;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
     private ArrayList<EventModel> arrayEventEntries = new ArrayList<>();
@@ -72,30 +71,11 @@ public class NewEventActivity extends AppCompatActivity {
     private Boolean disableTouch;
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressLint("RestrictedApi")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
 
@@ -230,16 +210,7 @@ public class NewEventActivity extends AppCompatActivity {
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        // SET BACK BUTTON
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         //Si no es nuevo pillo el evento que me llega
         Intent i = getIntent();
@@ -290,13 +261,6 @@ public class NewEventActivity extends AppCompatActivity {
         }
         return result;
     }
-
-    /*@Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        if (!disableTouch)
-            return super.dispatchTouchEvent(ev);
-        return true;
-    }*/
 
     public void setInfoListeners(){
         mAddEpisodeBtn.setOnClickListener(new ImageButton.OnClickListener(){
@@ -1072,10 +1036,6 @@ public class NewEventActivity extends AppCompatActivity {
             mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
         }
 
-
-
-
-
         mNotes.setText(event.myNotes);
 
         mDizzinessDisBubble.setProgress(Float.valueOf(event.getDizzinessDis()));
@@ -1135,7 +1095,6 @@ public class NewEventActivity extends AppCompatActivity {
         cv.put("triggers_phisic", mPhysical);
         cv.put("triggers_excesses", mHabit);
         cv.put("triggers_notes", notes);
-
 
         db.insert("event", null, cv);
     }

@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.activity.MyMeniere.OneFragment;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity;
@@ -25,7 +26,7 @@ import com.asmes.meniere.prefs.UserSession;
 
 import static com.asmes.meniere.utils.Utils.isValidMail;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
     private static final String BACK_STACK_ROOT_TAG = "root_fragment";
     private User mUserLogged;
 
@@ -33,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText mEmail, mPass, mConfirmPass;
     private Button mRegisterBtn;
     private Activity activity;
-    boolean activitySwitchFlag = false;
 
     @Override
     protected void onResume() {
@@ -41,23 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
@@ -94,33 +78,5 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(activity,message,Toast.LENGTH_LONG).show();
             }
         });
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
     }
 }

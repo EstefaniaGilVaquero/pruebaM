@@ -14,10 +14,6 @@ import android.security.keystore.KeyProperties;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +24,7 @@ import android.widget.Toast;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.activity.UtilitiesMeniere.HearingDiaryActivity;
 import com.asmes.meniere.models.Mail;
@@ -50,7 +47,7 @@ import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 
-public class LoginFingerTipActivity extends AppCompatActivity {
+public class LoginFingerTipActivity extends BaseActivity {
 
     //Fingertip
     // Declare a string variable for the key we’re going to use in our fingerprint authentication
@@ -61,8 +58,6 @@ public class LoginFingerTipActivity extends AppCompatActivity {
     private FingerprintManager.CryptoObject cryptoObject;
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
-    private Toolbar toolbar;
-    boolean activitySwitchFlag = false;
     static LoginFingerTipActivity loginFingerTipActivity;
 
     //UI references
@@ -83,23 +78,7 @@ public class LoginFingerTipActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_finger_tip);
 
@@ -107,22 +86,12 @@ public class LoginFingerTipActivity extends AppCompatActivity {
         mActivity = this;
         loginFingerTipActivity = this;
 
-        // SET BACK BUTTON
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
-
-
         mPassEt = findViewById(R.id.currentPassEditText);
         mLoginBtn = findViewById(R.id.loginBtn);
         mRememberPassTxt = findViewById(R.id.rememberPass);
         mResetEmailPassTxt = findViewById(R.id.resetEmailPass);
         fingerTipImageView = findViewById(R.id.fingerTipImageView);
         loginInfo2 = findViewById(R.id.info2TextView);
-
-
 
         // If you’ve set your app’s minSdkVersion to anything lower than 23, then you’ll need to verify that the device is running Marshmallow
         // or higher before executing any fingerprint-related code
@@ -322,7 +291,6 @@ public class LoginFingerTipActivity extends AppCompatActivity {
             }
             return false;
         }
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -345,36 +313,4 @@ public class LoginFingerTipActivity extends AppCompatActivity {
         email.execute();
     }
 
-    public void displayMessage(String message) {
-        //TODO falla por el contexto???
-        //Toast.makeText(rootView.mActivity, message, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
-    }
 }

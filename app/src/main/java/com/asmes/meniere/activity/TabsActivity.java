@@ -27,7 +27,7 @@ import com.asmes.meniere.prefs.UserSession;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TabsActivity extends AppCompatActivity {
+public class TabsActivity extends BaseActivity {
     private static final String BACK_STACK_ROOT_TAG = "root_fragment";
     private Toolbar toolbar;
     private TabLayout tabLayout;
@@ -37,16 +37,13 @@ public class TabsActivity extends AppCompatActivity {
     private DatabaseHelper dbHelper;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         try {
 
             setContentView(R.layout.activity_tabs);
 
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
-
-            toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
 
             viewPager =  findViewById(R.id.viewpager);
             tabLayout =  findViewById(R.id.tabs);
@@ -63,22 +60,6 @@ public class TabsActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }else{
-            UserSession.getInstance(this).setmIsLoggedIn(false);
-        }
-        activitySwitchFlag = false;
     }
 
     /**

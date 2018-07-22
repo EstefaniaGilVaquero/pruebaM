@@ -10,11 +10,12 @@ import android.view.KeyEvent;
 import android.view.MenuItem;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.activity.Login.LoginFingerTipActivity;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.FaqAdapter;
 
-public class HealthyHabits extends AppCompatActivity {
+public class HealthyHabits extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private String[] arrayTituloHabitos;
@@ -29,33 +30,11 @@ public class HealthyHabits extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == android.R.id.home) {
-            activitySwitchFlag = true;
-            onBackPressed();
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_healthy_habits);
 
-        // SET BACK BUTTON
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         arrayTituloHabitos = getResources().getStringArray(R.array.arrayTituloHabitos);
         arrayDescripcionHabitos = getResources().getStringArray(R.array.arrayDescripcionHabitos);
@@ -75,33 +54,5 @@ public class HealthyHabits extends AppCompatActivity {
         mRecyclerView.setAdapter(adapter);
 
 
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
     }
 }

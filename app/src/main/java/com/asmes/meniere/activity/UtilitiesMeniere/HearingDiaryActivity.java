@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
+import com.asmes.meniere.activity.BaseActivity;
 import com.asmes.meniere.activity.Login.LoginFingerTipActivity;
 import com.asmes.meniere.activity.TabsActivity;
 import com.asmes.meniere.adapter.DatabaseHelper;
@@ -37,7 +38,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class HearingDiaryActivity extends AppCompatActivity {
+public class HearingDiaryActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private ArrayList<HearingDiaryModel> arrayHearingEntries = new ArrayList<>();
@@ -68,30 +69,10 @@ public class HearingDiaryActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
         //handle presses on the action bar items
         switch (item.getItemId()) {
-
-            case android.R.id.home:
-                activitySwitchFlag = true;
-                onBackPressed();
-                return true;
-
-            /*case R.id.showSqlite:
-                Intent dbmanager = new Intent(this,DatabaseHelper.class);
-                startActivity(dbmanager);
-                return true;*/
             case R.id.hearingTestApp:
                 //Go to playStore
                 Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -108,7 +89,7 @@ public class HearingDiaryActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_hearing_diary);
@@ -117,10 +98,6 @@ public class HearingDiaryActivity extends AppCompatActivity {
         //
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
-
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAudio);
         fab.setImageDrawable(AppCompatDrawableManager.get().getDrawable(this, R.drawable.ic_add_white_48px));
@@ -131,13 +108,6 @@ public class HearingDiaryActivity extends AppCompatActivity {
                 showCustomView();
             }
         });
-
-        // SET BACK BUTTON
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
 
         // 1. get a reference to recyclerView
         mRecyclerView = (RecyclerView) findViewById(R.id.hearingDiary_RecyclerView);
@@ -159,36 +129,6 @@ public class HearingDiaryActivity extends AppCompatActivity {
         if (LoginFingerTipActivity.getInstance() != null){
             LoginFingerTipActivity.getInstance().finish();
         }
-    }
-
-
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)
-    {
-        if(keyCode == KeyEvent.KEYCODE_BACK)
-        {
-            activitySwitchFlag = true;
-            onBackPressed();
-            // activity switch stuff..
-            return true;
-        }
-        return false;
-    }
-
-
-    @Override
-    public void onPause(){
-        super.onPause();
-
-        if (!activitySwitchFlag) {
-            // Cambiamos de activity y no hacemos nada
-            // Hemos pulsado home, matamos la app
-            android.os.Process.killProcess(android.os.Process.myPid());
-            System.exit(1);
-            finishAffinity();
-        }
-        activitySwitchFlag = false;
     }
 
     public void refreshData(){

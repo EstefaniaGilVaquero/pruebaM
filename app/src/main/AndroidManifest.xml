@@ -44,7 +44,8 @@
         <activity android:name=".activity.MyMeniere.MonthReportActivity" />
         <activity android:name=".activity.Login.EditUserDataActivity" />
         <activity android:name=".activity.Login.LoginFingerTipActivity" />
-        <activity android:name=".activity.Login.RegisterActivity"></activity>
+        <activity android:name=".activity.Login.RegisterActivity" />
+        <activity android:name=".activity.BaseActivity"></activity>
     </application>
 
 </manifest>
