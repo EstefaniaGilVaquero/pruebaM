@@ -2,15 +2,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
-<!--    <item
-    android:id="@+id/showSqlite"
-    android:icon="@drawable/ic_add_white_48px"
-    android:title="sqlite"
-    app:showAsAction="always" />-->
-
     <item
+        android:title=""
         android:id="@+id/hearingTestApp"
-
-        android:title="Hearing test app"
+        android:icon="@drawable/ic_hearing_diary"
         app:showAsAction="always" />
 </menu>

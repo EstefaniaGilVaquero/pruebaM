@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import com.asmes.meniere.R;
@@ -54,6 +55,7 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
             viewHolder.txtRigth1.setText(arrayHearingEntries.get(position).rigth1_a );
             viewHolder.txtRigth2.setText(arrayHearingEntries.get(position).rigth2_a );
             viewHolder.txtRigth4.setText(arrayHearingEntries.get(position).rigth4_a );
+            viewHolder.txtCrisis.setText(arrayHearingEntries.get(position).crisis.equals("0")?"NO CRISIS":"CRISIS");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,23 +71,24 @@ public class HearingDiaryAdapter extends RecyclerView.Adapter {
 
     // inner class to hold a reference to each item of RecyclerView
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtDate, txtLeft05, txtLeft1, txtLeft2, txtLeft4, txtRigth05, txtRigth1, txtRigth2, txtRigth4;
+        public TextView txtDate, txtLeft05, txtLeft1, txtLeft2, txtLeft4, txtRigth05, txtRigth1, txtRigth2, txtRigth4, txtCrisis;
         public CardView cvRow;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             try {
-                txtDate = (TextView) itemLayoutView.findViewById(R.id.tvAudioDate);
-                txtLeft05 = (TextView) itemLayoutView.findViewById(R.id.tvLeft05);
-                txtLeft1 = (TextView) itemLayoutView.findViewById(R.id.tvLeft1);
-                txtLeft2 = (TextView) itemLayoutView.findViewById(R.id.tvLeft2);
-                txtLeft4 = (TextView) itemLayoutView.findViewById(R.id.tvLeft4);
-                txtRigth05 = (TextView) itemLayoutView.findViewById(R.id.tvRigth05);
-                txtRigth1 = (TextView) itemLayoutView.findViewById(R.id.tvRigth1);
-                txtRigth2 = (TextView) itemLayoutView.findViewById(R.id.tvRigth2);
-                txtRigth4 = (TextView) itemLayoutView.findViewById(R.id.tvRigth4);
+                txtDate = itemLayoutView.findViewById(R.id.tvAudioDate);
+                txtLeft05 = itemLayoutView.findViewById(R.id.tvLeft05);
+                txtLeft1 = itemLayoutView.findViewById(R.id.tvLeft1);
+                txtLeft2 = itemLayoutView.findViewById(R.id.tvLeft2);
+                txtLeft4 = itemLayoutView.findViewById(R.id.tvLeft4);
+                txtRigth05 = itemLayoutView.findViewById(R.id.tvRigth05);
+                txtRigth1 = itemLayoutView.findViewById(R.id.tvRigth1);
+                txtRigth2 = itemLayoutView.findViewById(R.id.tvRigth2);
+                txtRigth4 = itemLayoutView.findViewById(R.id.tvRigth4);
+                txtCrisis = itemLayoutView.findViewById(R.id.tvCrisis);
 
-                cvRow = (CardView) itemLayoutView.findViewById(R.id.cvRow);
+                cvRow =  itemLayoutView.findViewById(R.id.cvRow);
             } catch (Exception e) {
                 e.printStackTrace();
             }

@@ -21,6 +21,7 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -45,7 +46,6 @@ public class HearingDiaryActivity extends BaseActivity {
     private ArrayList<HearingDiaryModel> arrayHearingEntries = new ArrayList<>();
     private HearingDiaryAdapter adapter;
     private Toolbar toolbar;
-    boolean activitySwitchFlag = false;
     private Toast toast;
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
@@ -70,6 +70,11 @@ public class HearingDiaryActivity extends BaseActivity {
         mRecyclerView.setAdapter(adapter);
     }
 
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -80,7 +85,6 @@ public class HearingDiaryActivity extends BaseActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=com.amw.hearingtest"));
                 try{
-                    TabsActivity.activitySwitchFlag = true;
                     startActivity(intent);
                 }
                 catch(Exception e){
@@ -164,6 +168,7 @@ public class HearingDiaryActivity extends BaseActivity {
             audio.rigth1_a = cursor.getString(cursor.getColumnIndex("rigth1_a"));
             audio.rigth2_a = cursor.getString(cursor.getColumnIndex("rigth2_a"));
             audio.rigth4_a = cursor.getString(cursor.getColumnIndex("rigth4_a"));
+            audio.crisis = cursor.getString(cursor.getColumnIndex("crisis"));
 
             arrayHearingEntriesAux.add(audio);
             cursor.moveToNext();
@@ -185,14 +190,15 @@ public class HearingDiaryActivity extends BaseActivity {
                                 Utils.showToast(activity, "creo audicion");
                                 String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
                                 ContentValues cv = new ContentValues();
-                                EditText left05_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq05_a);
-                                EditText left1_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq1_a);
-                                EditText left2_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq2_a);
-                                EditText left4_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoIzq4_a);
-                                EditText rigth05_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer05_a);
-                                EditText rigth1_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer1_a);
-                                EditText rigth2_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer2_a);
-                                EditText rigth4_a = (EditText) dialog.getCustomView().findViewById(R.id.etOidoDer4_a);
+                                EditText left05_a = dialog.getCustomView().findViewById(R.id.etOidoIzq05_a);
+                                EditText left1_a = dialog.getCustomView().findViewById(R.id.etOidoIzq1_a);
+                                EditText left2_a = dialog.getCustomView().findViewById(R.id.etOidoIzq2_a);
+                                EditText left4_a =  dialog.getCustomView().findViewById(R.id.etOidoIzq4_a);
+                                EditText rigth05_a = dialog.getCustomView().findViewById(R.id.etOidoDer05_a);
+                                EditText rigth1_a = dialog.getCustomView().findViewById(R.id.etOidoDer1_a);
+                                EditText rigth2_a = dialog.getCustomView().findViewById(R.id.etOidoDer2_a);
+                                EditText rigth4_a = dialog.getCustomView().findViewById(R.id.etOidoDer4_a);
+                                CheckBox crisis = dialog.getCustomView().findViewById(R.id.crisisCheckBox);
 
                                 cv.put("date", date);
                                 cv.put("left05_a",  left05_a.getText().toString());
@@ -203,6 +209,7 @@ public class HearingDiaryActivity extends BaseActivity {
                                 cv.put("rigth1_a", rigth1_a.getText().toString());
                                 cv.put("rigth2_a", rigth2_a.getText().toString());
                                 cv.put("rigth4_a", rigth4_a.getText().toString());
+                                cv.put("crisis", crisis.isChecked()?1:0);
 
                                 db.insert("audio", null, cv);
                             }

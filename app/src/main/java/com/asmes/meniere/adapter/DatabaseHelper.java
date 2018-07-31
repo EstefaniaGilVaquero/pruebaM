@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
     // Database Info
     private static final String DATABASE_NAME = "meniereDatabase";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     // Table Names
     private static final String TABLE_USERS = "users";
@@ -38,6 +38,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String KEY_AUDIO_RIGTH_1_a = "rigth1_a";
     private static final String KEY_AUDIO_RIGTH_2_a = "rigth2_a";
     private static final String KEY_AUDIO_RIGTH_4_a = "rigth4_a";
+    private static final String KEY_AUDIO_CRISIS = "crisis";
 
     // Event Table Columns
     private static final String KEY_EVENT_ID = "id";
@@ -114,7 +115,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 KEY_AUDIO_RIGTH_05_a + " TEXT, " +
                 KEY_AUDIO_RIGTH_1_a + " TEXT, " +
                 KEY_AUDIO_RIGTH_2_a + " TEXT, " +
-                KEY_AUDIO_RIGTH_4_a + " TEXT " +
+                KEY_AUDIO_RIGTH_4_a + " TEXT, " +
+                KEY_AUDIO_CRISIS + " TEXT " +
                 ")";
 
         String CREATE_EVENT_TABLE = "CREATE TABLE " + TABLE_EVENT +
