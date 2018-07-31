@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -34,6 +35,7 @@ public class RegisterActivity extends BaseActivity {
     private EditText mEmail, mPass, mConfirmPass;
     private Button mRegisterBtn;
     private Activity activity;
+    private static String TAG;
 
     @Override
     protected void onResume() {
@@ -44,6 +46,10 @@ public class RegisterActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        TAG = getString(R.string.singup);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
         activity = this;
 

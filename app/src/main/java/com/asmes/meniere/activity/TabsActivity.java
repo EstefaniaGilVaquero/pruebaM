@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -44,6 +45,11 @@ public class TabsActivity extends BaseActivity {
             setContentView(R.layout.activity_tabs);
 
             getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
+            ActionBar actionBar = getSupportActionBar();
+            if (actionBar != null){
+                actionBar.setDisplayHomeAsUpEnabled(false);
+            }
 
             viewPager =  findViewById(R.id.viewpager);
             tabLayout =  findViewById(R.id.tabs);

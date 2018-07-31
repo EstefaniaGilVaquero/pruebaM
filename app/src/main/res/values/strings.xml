@@ -5,6 +5,11 @@
     <string name="aboutMeniere">About Ménière</string>
     <string name="utilities"> + Utilities</string>
     <string name="help">Help</string>
+    <string name="authors">Authors</string>
+    <string name="editUser">Edit User</string>
+    <string name="login">Login</string>
+    <string name="singup">Sing Up</string>
+    <string name="frameworks">Frameworks</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

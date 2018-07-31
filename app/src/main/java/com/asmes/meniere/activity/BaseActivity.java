@@ -1,37 +1,50 @@
 package com.asmes.meniere.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.asmes.meniere.R;
-import com.asmes.meniere.prefs.UserSession;
 
 public class BaseActivity extends AppCompatActivity {
 
-    protected static final String TAG = BaseActivity.class.getName();
+    private static String TAG;
     private Toolbar toolbar;
 
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+    }
 
-        toolbar = findViewById(R.id.toolbar);
-
-        // SET BACK BUTTON
-        if (toolbar != null) {
-            setSupportActionBar(toolbar);
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.toolbar_menu, menu);
+        return true;
     }
 
     @Override
     public void setContentView(int layoutResID) {
         View view = getLayoutInflater().inflate(layoutResID, null);
+
+        TAG = getString(R.string.app_name);
+
+        toolbar = view.findViewById(R.id.toolbar);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+        }
+
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null){
+            actionBar.setTitle(TAG);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
         super.setContentView(view);
     }
 
@@ -116,13 +129,4 @@ public class BaseActivity extends AppCompatActivity {
         return true;
     }
 
-    //@Override
-    /*public boolean onMenuItemSelected(int featureId, android.view.MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                break;
-        }
-        return true;
-    }*/
 }

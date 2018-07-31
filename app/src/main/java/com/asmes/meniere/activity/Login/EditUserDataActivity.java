@@ -1,6 +1,7 @@
 package com.asmes.meniere.activity.Login;
 
 import android.app.Activity;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -24,6 +25,7 @@ public class EditUserDataActivity extends BaseActivity {
 
     private User mUserLogged;
     private Activity activity;
+    private static String TAG;
 
     //UI references
     private EditText mCurrentPass, mNewEmail, mNewPass, mConfirmNewPass;
@@ -38,6 +40,10 @@ public class EditUserDataActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_user_data);
+
+        TAG = getString(R.string.editUser);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
         activity = this;
 

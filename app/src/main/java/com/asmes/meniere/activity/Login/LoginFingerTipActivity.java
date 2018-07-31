@@ -14,6 +14,7 @@ import android.security.keystore.KeyProperties;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,6 +60,7 @@ public class LoginFingerTipActivity extends BaseActivity {
     private FingerprintManager fingerprintManager;
     private KeyguardManager keyguardManager;
     static LoginFingerTipActivity loginFingerTipActivity;
+    private static String TAG;
 
     //UI references
     private EditText mPassEt;
@@ -82,6 +84,9 @@ public class LoginFingerTipActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_finger_tip);
 
+        TAG = getString(R.string.login);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
         mActivity = this;
         loginFingerTipActivity = this;
