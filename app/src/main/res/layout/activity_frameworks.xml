@@ -10,6 +10,7 @@
         android:orientation="vertical">
 
         <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
@@ -18,28 +19,30 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_scrollFlags="scroll|enterAlways"
                 android:titleTextColor="@color/colorPrimaryDark"
+                app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
 
         </android.support.design.widget.AppBarLayout>
 
-        <TextView
-            android:id="@+id/editText"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:padding="15dp"
-            android:background="@color/colorPrimary"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="@string/text_authors"/>
+            android:layout_height="match_parent">
 
-
+            <TextView
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:padding="15dp"
+                android:background="@color/colorPrimary"
+                android:ems="10"
+                android:inputType="none"
+                android:text="@string/text_frameworks"/>
+        </ScrollView>
     </android.support.v7.widget.LinearLayoutCompat>
-
 
 </android.support.design.widget.CoordinatorLayout>
 

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.asmes.meniere.R;
@@ -44,23 +45,21 @@ public class FaqAdapter extends RecyclerView.Adapter  {
 
         try {
             final FaqAdapter.ViewHolder viewHolder = (FaqAdapter.ViewHolder) holder;
-            isShowing = true;
 
             viewHolder.txtQuestion.setText(arrayQuestions[position]);
             viewHolder.txtAnswer.setText(arrayAnswers[position]);
-
             //Onclicklistener
 
             viewHolder.cvRow.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (!isShowing) {
-                        isShowing = true;
+                    if (viewHolder.txtAnswer.getVisibility()==view.GONE) {
                         viewHolder.txtAnswer.setVisibility(view.VISIBLE);
                         viewHolder.txtAnswer.setText(arrayAnswers[position]);
+                        viewHolder.arrow.setImageResource(R.drawable.ic_arrow_up);
                     } else {
-                        isShowing = false;
                         viewHolder.txtAnswer.setVisibility(view.GONE);
+                        viewHolder.arrow.setImageResource(R.drawable.ic_arrow_down);
                     }
                 }
             });
@@ -79,14 +78,16 @@ public class FaqAdapter extends RecyclerView.Adapter  {
     // inner class to hold a reference to each item of RecyclerView
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtQuestion, txtAnswer;
+        public ImageView arrow;
         public CardView cvRow;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             try {
-                txtQuestion = (TextView) itemLayoutView.findViewById(R.id.txtQuestion);
-                txtAnswer = (TextView) itemLayoutView.findViewById(R.id.txtAnswer);
-                cvRow = (CardView) itemLayoutView.findViewById(R.id.cvRow);
+                txtQuestion = itemLayoutView.findViewById(R.id.txtQuestion);
+                txtAnswer = itemLayoutView.findViewById(R.id.txtAnswer);
+                cvRow = itemLayoutView.findViewById(R.id.cvRow);
+                arrow = itemLayoutView.findViewById(R.id.imageView);
             } catch (Exception e) {
                 e.printStackTrace();
             }
