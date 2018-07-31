@@ -1,5 +1,6 @@
 package com.asmes.meniere.activity.UtilitiesMeniere;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -23,6 +24,7 @@ public class HealthyHabits extends BaseActivity {
     private FaqAdapter adapter;
     private Toolbar toolbar;
     boolean activitySwitchFlag = false;
+    private static String TAG;
 
     @Override
     protected void onResume() {
@@ -34,6 +36,10 @@ public class HealthyHabits extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_healthy_habits);
+
+        TAG = getString(R.string.healthyHabits);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
 
         arrayTituloHabitos = getResources().getStringArray(R.array.arrayTituloHabitos);

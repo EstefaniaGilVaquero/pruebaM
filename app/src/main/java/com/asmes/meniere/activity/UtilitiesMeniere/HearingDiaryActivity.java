@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatDrawableManager;
@@ -49,6 +50,7 @@ public class HearingDiaryActivity extends BaseActivity {
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
     private Activity activity;
+    private static String TAG;
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
@@ -95,6 +97,10 @@ public class HearingDiaryActivity extends BaseActivity {
         setContentView(R.layout.activity_hearing_diary);
         activity = this;
 
+        TAG = getString(R.string.hearingDiary);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
+
         //
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();
@@ -110,7 +116,7 @@ public class HearingDiaryActivity extends BaseActivity {
         });
 
         // 1. get a reference to recyclerView
-        mRecyclerView = (RecyclerView) findViewById(R.id.hearingDiary_RecyclerView);
+        mRecyclerView = findViewById(R.id.hearingDiary_RecyclerView);
         // 2. set layoutManger
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(linearLayoutManager);

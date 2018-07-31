@@ -3,6 +3,7 @@ package com.asmes.meniere.activity.MyMeniere;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.SeekBar;
@@ -41,12 +42,17 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
     private DatabaseHelper dbHelper;
     private SQLiteDatabase db;
     private int eventsInMonth;
+    private static String TAG;
     private TextView meanData1, meanData2, meanData3, meanData4, meanData5, meanData6,trigger1, trigger2, trigger3, trigger4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_month_report);
+
+        TAG = getString(R.string.monthlyReport);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
         dbHelper = new DatabaseHelper(this);
         db = dbHelper.getWritableDatabase();

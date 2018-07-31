@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,223 +9,187 @@
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvOidoIzq"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="@string/oidoIzquierdo"
+            app:layout_constraintEnd_toEndOf="@+id/etOidoIzq05_a"
+            app:layout_constraintStart_toStartOf="@+id/etOidoIzq05_a"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/tvOidoIzq"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/oidoIzquierdo" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/tvOidoDer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:text="@string/oidoDerecho" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvOidoDer"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_marginLeft="20dp"
-                android:gravity="center_vertical">
-                <TextView
-                    android:id="@+id/tvFrec05"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/frecuencia05" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/etOidoIzq05_a"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:text=""/>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-                <EditText
-                    android:id="@+id/etOidoDer05_a"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:text=""/>
-            </LinearLayout>
-        </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:id="@+id/tvFrec1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frecuencia1" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_marginTop="16dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:text="@string/oidoDerecho"
+            app:layout_constraintEnd_toEndOf="@+id/etOidoDer05_a"
+            app:layout_constraintStart_toStartOf="@+id/etOidoDer05_a"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <EditText
-                android:id="@+id/etOidoIzq1_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text="" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tvFrec05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/frecuencia05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etOidoDer1_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
+        <EditText
+            android:id="@+id/etOidoIzq05_a"
             android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:id="@+id/tvFrec2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frecuencia2" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etOidoIzq2_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etOidoDer2_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/etOidoDer05_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etOidoDer05_a" />
+
+        <EditText
+            android:id="@+id/etOidoDer05_a"
             android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:id="@+id/tvFrec4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/frecuencia4" />
-        </LinearLayout>
-        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="50dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFrec05"
+            app:layout_constraintEnd_toStartOf="@+id/etOidoIzq05_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFrec05" />
+
+        <TextView
+            android:id="@+id/tvFrec1"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etOidoIzq4_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-        </LinearLayout>
-        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/frecuencia1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrec05" />
+
+
+        <EditText
+            android:id="@+id/etOidoIzq1_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/etOidoDer1_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etOidoDer1_a" />
+
+        <EditText
+            android:id="@+id/etOidoDer1_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="50dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFrec1"
+            app:layout_constraintEnd_toStartOf="@+id/etOidoIzq1_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFrec1" />
+
+        <TextView
+            android:id="@+id/tvFrec2"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-            <EditText
-                android:id="@+id/etOidoDer4_a"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:text=""/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/frecuencia2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrec1" />
+
+        <EditText
+            android:id="@+id/etOidoIzq2_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/etOidoDer2_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etOidoDer2_a" />
+
+        <EditText
+            android:id="@+id/etOidoDer2_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="50dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFrec2"
+            app:layout_constraintEnd_toStartOf="@+id/etOidoIzq2_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFrec2" />
+
+        <TextView
+            android:id="@+id/tvFrec4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/frecuencia4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrec2" />
+
+        <EditText
+            android:id="@+id/etOidoIzq4_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="52dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/etOidoDer4_a"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etOidoDer4_a" />
+
+        <EditText
+            android:id="@+id/etOidoDer4_a"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="50dp"
+            android:maxLines="1"
+            android:maxLength="4"
+            app:layout_constraintBottom_toBottomOf="@+id/tvFrec4"
+            app:layout_constraintEnd_toStartOf="@+id/etOidoIzq4_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvFrec4" />
+
 
         <CheckBox
             android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/enCrisis" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/enCrisis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrec4" />
 
-    </LinearLayout>
-</LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+

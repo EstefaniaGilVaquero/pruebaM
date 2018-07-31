@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatDrawableManager;
 import android.support.v7.widget.CardView;
@@ -69,15 +70,17 @@ public class NewEventActivity extends BaseActivity {
     private EventModel event;
     private CalendarDay selectedDate;
     private Boolean disableTouch;
-
-
-
+    private static String TAG;
 
     @SuppressLint("RestrictedApi")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
+
+        TAG = getString(R.string.newEvent);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(TAG);
 
         sdf = new SimpleDateFormat("dd/MM/yyyy");
 
