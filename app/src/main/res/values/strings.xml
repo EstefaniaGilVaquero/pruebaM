@@ -19,6 +19,10 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="textSplash1">MÈNIÈRE</string>
 
+    <!-- Toast -->
+    <string name="toast_save_hearing_test_ok">Hearing test saved</string>
+    <string name="toast_save_hearing_test_ko">Error saving hearing test</string>
+
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
     <string name="positiveTxtOk">Ok</string>

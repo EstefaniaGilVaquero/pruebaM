@@ -62,7 +62,7 @@ public class HearingDiaryActivity extends BaseActivity {
     protected void onResume() {
         super.onResume();
         //Recupero mediciones de audio de sqlite
-        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
+        arrayHearingEntries = getHearingEntries("select * from audio order by date desc");
 
         // 4. create and set adapter
         adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
@@ -114,7 +114,6 @@ public class HearingDiaryActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                Snackbar.make(view, "Se ha presionado FAB", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
                 showCustomView();
             }
         });
@@ -128,7 +127,7 @@ public class HearingDiaryActivity extends BaseActivity {
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
         //Recupero mediciones de audio de sqlite
-        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
+        arrayHearingEntries = getHearingEntries("select * from audio order by date desc");
 
         // 4. create and set adapter
         adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
@@ -143,7 +142,7 @@ public class HearingDiaryActivity extends BaseActivity {
 
     public void refreshData(){
         //Recupero mediciones de audio de sqlite
-        arrayHearingEntries = getHearingEntries("SELECT * FROM " + "audio");
+        arrayHearingEntries = getHearingEntries("select * from audio order by date desc");
         // 4. create and set adapter
         adapter = new HearingDiaryAdapter(arrayHearingEntries, this);
         adapter.notifyDataSetChanged();
@@ -187,31 +186,38 @@ public class HearingDiaryActivity extends BaseActivity {
                         .onPositive(new MaterialDialog.SingleButtonCallback() {
                             @Override
                             public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                Utils.showToast(activity, "creo audicion");
-                                String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-                                ContentValues cv = new ContentValues();
-                                EditText left05_a = dialog.getCustomView().findViewById(R.id.etOidoIzq05_a);
-                                EditText left1_a = dialog.getCustomView().findViewById(R.id.etOidoIzq1_a);
-                                EditText left2_a = dialog.getCustomView().findViewById(R.id.etOidoIzq2_a);
-                                EditText left4_a =  dialog.getCustomView().findViewById(R.id.etOidoIzq4_a);
-                                EditText rigth05_a = dialog.getCustomView().findViewById(R.id.etOidoDer05_a);
-                                EditText rigth1_a = dialog.getCustomView().findViewById(R.id.etOidoDer1_a);
-                                EditText rigth2_a = dialog.getCustomView().findViewById(R.id.etOidoDer2_a);
-                                EditText rigth4_a = dialog.getCustomView().findViewById(R.id.etOidoDer4_a);
-                                CheckBox crisis = dialog.getCustomView().findViewById(R.id.crisisCheckBox);
 
-                                cv.put("date", date);
-                                cv.put("left05_a",  left05_a.getText().toString());
-                                cv.put("left1_a", left1_a.getText().toString());
-                                cv.put("left2_a", left2_a.getText().toString());
-                                cv.put("left4_a", left4_a.getText().toString());
-                                cv.put("rigth05_a", rigth05_a.getText().toString());
-                                cv.put("rigth1_a", rigth1_a.getText().toString());
-                                cv.put("rigth2_a", rigth2_a.getText().toString());
-                                cv.put("rigth4_a", rigth4_a.getText().toString());
-                                cv.put("crisis", crisis.isChecked()?1:0);
+                                try{
+                                    String date = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+                                    ContentValues cv = new ContentValues();
+                                    EditText left05_a = dialog.getCustomView().findViewById(R.id.etOidoIzq05_a);
+                                    EditText left1_a = dialog.getCustomView().findViewById(R.id.etOidoIzq1_a);
+                                    EditText left2_a = dialog.getCustomView().findViewById(R.id.etOidoIzq2_a);
+                                    EditText left4_a =  dialog.getCustomView().findViewById(R.id.etOidoIzq4_a);
+                                    EditText rigth05_a = dialog.getCustomView().findViewById(R.id.etOidoDer05_a);
+                                    EditText rigth1_a = dialog.getCustomView().findViewById(R.id.etOidoDer1_a);
+                                    EditText rigth2_a = dialog.getCustomView().findViewById(R.id.etOidoDer2_a);
+                                    EditText rigth4_a = dialog.getCustomView().findViewById(R.id.etOidoDer4_a);
+                                    CheckBox crisis = dialog.getCustomView().findViewById(R.id.crisisCheckBox);
 
-                                db.insert("audio", null, cv);
+                                    cv.put("date", date);
+                                    cv.put("left05_a",  left05_a.getText().toString());
+                                    cv.put("left1_a", left1_a.getText().toString());
+                                    cv.put("left2_a", left2_a.getText().toString());
+                                    cv.put("left4_a", left4_a.getText().toString());
+                                    cv.put("rigth05_a", rigth05_a.getText().toString());
+                                    cv.put("rigth1_a", rigth1_a.getText().toString());
+                                    cv.put("rigth2_a", rigth2_a.getText().toString());
+                                    cv.put("rigth4_a", rigth4_a.getText().toString());
+                                    cv.put("crisis", crisis.isChecked()?1:0);
+
+                                    db.insert("audio", null, cv);
+
+                                    Utils.showToast(activity, getString(R.string.toast_save_hearing_test_ok));
+                                }catch (Exception e){
+                                    Utils.showToast(activity, getString(R.string.toast_save_hearing_test_ko));
+                                }
+
                             }
                         })
                         .positiveText(R.string.dialogoGuardar)
