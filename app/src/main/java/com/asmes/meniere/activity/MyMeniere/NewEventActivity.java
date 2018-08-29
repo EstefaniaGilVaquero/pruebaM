@@ -233,7 +233,7 @@ public class NewEventActivity extends BaseActivity {
                 public void onClick(View view){
                     if(validateEvent()){
                         saveEvent();
-                        finish();
+                        onBackPressed();
                     }
                 }
             });
