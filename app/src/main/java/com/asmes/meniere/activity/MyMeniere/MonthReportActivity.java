@@ -319,8 +319,10 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
         if(cursor.getCount() != 0) {
             cursor.moveToFirst();
             Map arrayTriggers = new HashMap();
+            Map arrayTriggersParents = new HashMap();
             while(!cursor.isAfterLast()) {
                 arrayTriggers.put(cursor.getString(cursor.getColumnIndex("name")),cursor.getInt(cursor.getColumnIndex("contador")));
+                arrayTriggersParents.put(cursor.getString(cursor.getColumnIndex("name")), cursor.getString(cursor.getColumnIndex("parent")));
                 cursor.moveToNext();
             }
             cursor.close();
@@ -331,10 +333,10 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             List<String> arrayTriggersNames = new ArrayList<String>(arrayTriggers.keySet());
             List<String> arrayTriggersValues = new ArrayList<String>(arrayTriggers.values());
 
-            trigger1.setText("1. " + arrayTriggersNames.get(0) + " (" + String.valueOf(arrayTriggersValues.get(0)) + ")");
-            trigger2.setText("2. " + arrayTriggersNames.get(1) + " (" + String.valueOf(arrayTriggersValues.get(1)) + ")");
-            trigger3.setText("3. " + arrayTriggersNames.get(2) + " (" + String.valueOf(arrayTriggersValues.get(2)) + ")");
-            trigger4.setText("4. " + arrayTriggersNames.get(3) + " (" + String.valueOf(arrayTriggersValues.get(3)) + ")");
+            trigger1.setText("1. " + arrayTriggersParents.get(arrayTriggersNames.get(0)) + " " + arrayTriggersNames.get(0) + " (" + String.valueOf(arrayTriggersValues.get(0)) + ")");
+            trigger2.setText("2. " + arrayTriggersParents.get(arrayTriggersNames.get(1)) + " " + arrayTriggersNames.get(1) + " (" + String.valueOf(arrayTriggersValues.get(1)) + ")");
+            trigger3.setText("3. " + arrayTriggersParents.get(arrayTriggersNames.get(2)) + " " + arrayTriggersNames.get(2) + " (" + String.valueOf(arrayTriggersValues.get(2)) + ")");
+            trigger4.setText("4. " + arrayTriggersParents.get(arrayTriggersNames.get(3)) + " " + arrayTriggersNames.get(3) + " (" + String.valueOf(arrayTriggersValues.get(3)) + ")");
 
         }
     }

@@ -5,11 +5,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.asmes.meniere.R;
 
@@ -62,8 +59,8 @@ public class BaseActivity extends AppCompatActivity {
     private void applicationWillEnterForeground() {
         if (isAppWentToBg) {
             isAppWentToBg = false;
-            Toast.makeText(getApplicationContext(), "App is in foreground",
-                    Toast.LENGTH_SHORT).show();
+            /*Toast.makeText(getApplicationContext(), "App is in foreground",
+                    Toast.LENGTH_SHORT).show();*/
         }
     }
 
@@ -81,7 +78,7 @@ public class BaseActivity extends AppCompatActivity {
             android.os.Process.killProcess(android.os.Process.myPid());
             System.exit(1);
             finishAffinity();
-            Toast.makeText(getApplicationContext(),"App is Going to Background", Toast.LENGTH_SHORT).show();
+            /*Toast.makeText(getApplicationContext(),"App is Going to Background", Toast.LENGTH_SHORT).show();*/
         }
     }
 

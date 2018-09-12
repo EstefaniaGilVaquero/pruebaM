@@ -58,6 +58,12 @@ public class MyMeniereFragment extends Fragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        setDaysWithEntries();
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
@@ -126,13 +132,13 @@ public class MyMeniereFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     //Solo crear eventos en el dia de hoy o ayer y solo un evento por dia
-                    //if(isValidDay() && getDayEventEntriesCount()==0) {
+                    if(isValidDay() && getDayEventEntriesCount()==0) {
                         callNewEvent(true);
-                    /*}else if(!isValidDay()){
+                    }else if(!isValidDay()){
                         Utils.OkDialog(activity, getString(R.string.selectionErrorTitle), getString(R.string.selectionErrorMessagePassDay));
                     }else if(getDayEventEntriesCount()>0){
                         Utils.OkDialog(activity, getString(R.string.newEventErrorTitle), getString(R.string.newEventErrorMessageDayHasEvent));
-                    }*/
+                    }
                 }
             });
 
@@ -201,14 +207,15 @@ public class MyMeniereFragment extends Fragment {
             int year= 0;
 
             cursor.moveToFirst();
-            while(cursor.moveToNext()){
+
+            do{
                 date = cursor.getString(0).substring(12,cursor.getString(0).toString().length()-1);
                 day = Integer.valueOf(date.split("-")[2]);
                 month = Integer.valueOf(date.split("-")[1]);
                 year = Integer.valueOf(date.split("-")[0]);
 
                 calendarDayCollection.add(CalendarDay.from(year,month,day));
-            }
+            }while (cursor.moveToNext());
 
             cursor.close();
             eventDecorator = new EventDecorator(calendarDayCollection);
