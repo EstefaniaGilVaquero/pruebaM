@@ -8,7 +8,6 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
     android:layout_marginBottom="20dp"
-    android:background="?attr/selectableItemBackgroundBorderless"
     app:cardBackgroundColor="@color/colorPrimary"
     app:cardElevation="3dp">
 
