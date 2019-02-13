@@ -1,87 +1,135 @@
+<?xml version="1.0"?>
+
 <resources>
     <string name="app_name">Meniere</string>
 
-    <string name="MyMeniere">My Ménière</string>
-    <string name="aboutMeniere">About Ménière</string>
-    <string name="utilities">Utilities</string>
-    <string name="help">Help</string>
+    <string name="MyMeniere">Mi Ménière</string>
+    <string name="aboutMeniere">Acerca de</string>
+    <string name="utilities"> + Utilidades</string>
+    <string name="help">Ayuda</string>
+    <string name="authors">Autores</string>
+    <string name="editUser">Editar Usuario</string>
+    <string name="login">Login</string>
+    <string name="singup">Registro</string>
+    <string name="monthlyReport">Informe Mensual</string>
+    <string name="newEvent">Nuevo Evento</string>
+    <string name="frameworks">Frameworks</string>
+    <string name="healthyHabits">Buenos Hábitos</string>
+    <string name="hearingDiary">Diario Auditivo</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="textSplash1">MÈNIÈRE</string>
 
+    <!-- Toast -->
+    <string name="toast_save_hearing_test_ok">Test auditivo guardado</string>
+    <string name="toast_save_hearing_test_ko">Error guardando test auditivo</string>
+
     <!-- Acciones dialogos -->
     <string name="dialogoGuardar">Guardar</string>
-    <string name="positiveTxtOk">OK</string>
-
+    <string name="positiveTxtOk">Ok</string>
+    <string name="negativeTxtCancel">Cancelar</string>
 
     <!-- My Meniere -->
-    <string name="titleNewEvent">New event</string>
+    <string name="titleNewEvent">Nuevo Evento</string>
     <string name="min">Min.</string>
-    <string name="Max">Max.</string>
-    <string name="episodes">Episodes:</string>
-    <string name="duration">Duration:</string>
-    <string name="vertigoIntensity">Vertigo intensity:</string>
-    <string name="limitation">Intensity limitation:</string>
-    <string name="stress">Stress level:</string>
-    <string name="hearingLoss">Hearing loss</string>
-    <string name="tinnitus">Tinnitus</string>
-    <string name="earFullness">Ear fullness</string>
-    <string name="headache">Headache</string>
-    <string name="photophobia">Photophobia</string>
-    <string name="phonophobia">Phonophobia</string>
-    <string name="visualSymptoms">Visual symptoms</string>
+    <string name="max">Max.</string>
+    <string name="episodes">Episodios:</string>
+    <string name="duration">Duración:</string>
+    <string name="vertigoIntensity">Intensidad vértigo:</string>
+    <string name="limitation">Limitación actividad:</string>
+    <string name="stress">Nivel estrés:</string>
+    <string name="hearingLoss">Sordera</string>
+    <string name="tinnitus">Acúfenos</string>
+    <string name="earFullness">Plenitud ótica</string>
+    <string name="headache">Jaqueca</string>
+    <string name="photophobia">Fotobobia</string>
+    <string name="phonophobia">Fonofobia</string>
+    <string name="visualSymptoms">Síntomas Visuales</string>
     <string name="tumarkin">Tumarkin</string>
-    <string name="menstruation">Menstruation</string>
+    <string name="menstruation">Menstruación</string>
     <string name="nausea">Nausea</string>
-    <string name="vomiting">Vomiting</string>
-    <string name="instability">Instability</string>
-    <string name="instabilityIntensity">Instability intensity:</string>
-    <string name="headacheProperties">Headache properties</string>
+    <string name="vomiting">Vómito</string>
+    <string name="instability">Inestabilidad</string>
+    <string name="instabilityIntensity">Inestabilidad:</string>
+    <string name="headacheProperties">Tipo de jaqueca</string>
     <string name="NA">N/A</string>
-    <string name="mild">Mild</string>
-    <string name="moderate">Moderate</string>
-    <string name="severe">Severe</string>
-    <string name="oneSide">One side</string>
-    <string name="wholeHead">Whole Head</string>
-    <string name="throbbing">Throbbing</string>
-    <string name="tightening">Tigthening</string>
-    <string name="eventTriggers">Event triggers</string>
-    <string name="weather">Weather</string>
-    <string name="sunny">Sunny</string>
-    <string name="cloudy">Cloudy</string>
-    <string name="storm">Storm</string>
-    <string name="sleep">Sleep</string>
-    <string name="excelent">Excelent</string>
+    <string name="mild">Leve</string>
+    <string name="moderate">Moderado</string>
+    <string name="severe">Severo</string>
+    <string name="oneSide">Un lado</string>
+    <string name="wholeHead">Toda la cabeza</string>
+    <string name="throbbing">Pulsátil</string>
+    <string name="tightening">Opresivo</string>
+    <string name="eventTriggers">Desencadenantes</string>
+    <string name="weather">Clima</string>
+    <string name="sunny">Sol</string>
+    <string name="cloudy">Nublado</string>
+    <string name="storm">Tormenta</string>
+    <string name="sleep">Sueño</string>
+    <string name="excelent">Excelente</string>
     <string name="regular">Regular</string>
-    <string name="poor">Poor</string>
-    <string name="physicalActivity">Physical activity</string>
-    <string name="high">High</string>
-    <string name="medium">Medium</string>
-    <string name="low">Low</string>
-    <string name="habitExcess">Habit - Excess</string>
-    <string name="salt">Salt</string>
-    <string name="caffeine">Caffeine</string>
+    <string name="poor">Malo</string>
+    <string name="physicalActivity">Actividad física</string>
+    <string name="high">Alto</string>
+    <string name="medium">Medio</string>
+    <string name="low">Bajo</string>
+    <string name="habitExcess">Excesos</string>
+    <string name="salt">Sal</string>
+    <string name="caffeine">Cafeina</string>
     <string name="alcohol">Alcohol</string>
-    <string name="tobacco">Tobacco</string>
-    <string name="sugar">Sugar</string>
-    <string name="myNotes">My notes</string>
-    <string name="backSymps">Background Symptoms</string>
-    <string name="dizzinessDis">Dizziness disability:</string>
-    <string name="inestabilityDis">Inestability disability:</string>
-    <string name="visualBlurDis">Visual blur disability:</string>
-    <string name="headPressure">Head Pressure:</string>
-    <string name="explanation">Disability Scale: (Shepard et al., 1990)\n\n0: No disability; negligible symptoms\n1: No disability; bothersome symptoms\n2: Mild disability; performs usual work/duties, but symptoms interfere with outside activities\n3: Moderate disability; symptoms disrupt performance of both usual work and outside activities\n4: Recent severe disability; on medical leave or hard to change job because of symptoms\n5: Estabilished severe disability; unable to work for over 1 year or estabilished permanent disability with compensations payments)</string>
-
-    <string name="selectionErrorTitle">Selection Error</string>
-    <string name="selectionErrorMessage">Selection Error</string>
-    <string name="addEpisodeTitle">Add more episodes</string>
-    <string name="addEpisodeContent">You have selected to add more episodes. Please enter the number of episodes for today. You must to summarize your symptoms in the other fields of this section</string>
-    <string name="hearingLossSwitchTitle">More data is needed</string>
-    <string name="hearingLossSwitchContent">You selected some auditive symptoms. Please specify where these auditive symptoms mainly occurred.</string>
+    <string name="tobacco">Tabaco</string>
+    <string name="sugar">Azúcar</string>
+    <string name="myNotes">Mis Notas</string>
+    <string name="backSymps">Síntomas Residuales</string>
+    <string name="dizzinessDis">Mareo de fondo:</string>
+    <string name="inestabilityDis">Inestabilidad de fondo:</string>
+    <string name="visualBlurDis">Visión borrosa:</string>
+    <string name="headPressure">Presión Cefálica:</string>
+    <string name="explanation">Escala de discapacidad: (Adaptado de Shephard et al., 1990)\n\n0: Sin discapacidad; no hay síntomas\n1: Sin discapacidad; síntomas anecdóticos\n2: Leve discapacidad; realiza sus tareas o trabajos habitualmente pero los síntomas interfieren con ellos\n3: Discapacidad moderada; los síntomas interrumpen y dificultan frecuentemente sus actividades o trabajos\n4: Discapacidad severa reciente; de baja médica o ha cambiado de trabajo por culpa de los síntomas\n5: Discapacidad severa permanente; incapacitado para trabajar durante más de un año o con pensión de discapacidad.)</string>
+    <string name="selectionErrorTitle">Error de selección</string>
+    <string name="selectionErrorMessagePassDay">Debes seleccionar el día de hoy o ayer para añadir un nuevo evento.</string>
+    <string name="newEventErrorTitle">Error nuevo evento</string>
+    <string name="newEventErrorMessageDayHasEvent">El día de hoy ya tiene eventos. Sólo puedes añadir un evento al día.</string>
+    <string name="addEpisodeTitle">Añadir más episodios</string>
+    <string name="addEpisodeContent">Has seleccionado añadir más episodios. Por favor introduce un número de episodios para hoy. Debes sumar tus síntomas en los otros campos de ésta sección</string>
+    <string name="hearingLossSwitchTitle">Se necesitan más datos</string>
+    <string name="hearingLossSwitchContent">Has seleccionado algunos síntomas auditivos. Por favor, especifica dónde ocurren principalmente éstos síntomas.</string>
     <string name="infoVisualTitle">Items info</string>
-    <string name="infoVisualContent">Visual symptoms: Visual sensations that occur mainly before the attack.\n\nTumarkin: Sudden fall with no previous warning or provocative factor and without vertigo or loss of consciousness.</string>
+    <string name="infoVisualContent">Síntomas visuales: Sensaciones visuales que ocurren principalmente antes del ataque.\n\nTumarkin: Caida súbita sin previo aviso o factor desencadenante, sin vertigo ni pérdida de consciencia.</string>
+    <string name="mandatoryFieldsContent">Los datos no son suficientes para añadir un nuevo evento, por favor introduce mas datosp o presiona botón atras.</string>
+    <string name="monthReportErrorTitle">Error informe mensual</string>
+    <string name="monthReportErrorContent">Éste mes no tiene eventos</string>
 
+    <!--Login-->
+    <string name="userEditText">E-mail</string>
+    <string name="newUserEditText">Nuevo E-mail</string>
+    <string name="passEditText">Contraseña</string>
+    <string name="newPassEditText">Nueva contraseña</string>
+    <string name="currentPassEditText">Contraseña actual</string>
+    <string name="confirmPassEditText">Confirmar contraseña</string>
+    <string name="newConfirmPassEditText">Confirmar nueva contraseña</string>
+    <string name="invalidEmail">E-mail inválido.</string>
+    <string name="differentConfirmPass">Las contraseñas son diferentes.</string>
+    <string name="invalidPass">Contraseña incorrecta.</string>
+    <string name="registerSuccess">Registro correcto</string>
+    <string name="emptyEmail">Introduzca E-mail</string>
+    <string name="emptyPass">Introduzca contraseña</string>
+    <string name="singUpBtn">Registro</string>
+    <string name="loginUpBtn">Login</string>
+    <string name="saveBtn">Guardar</string>
+    <string name="rememberPassInfo">Recordar contraseña</string>
+    <string name="editEmailPassInfo">Editar E-mail o contraseña</string>
+    <string name="registerInfo">Por favor, registrese con un E-mail vÁlido, para poder enviarle su contraseña en caso de que la olvide.</string>
+    <string name="loginInfo">Para proteger su informacion personal, esta seccion está protegida por contraseña.</string>
+    <string name="loginInfo2">Utilice su huella o intruduzca su contraseña a continuacion para comprobar su identidad</string>
+    <string name="loginInfo3">Introduzca su contraseña a continuacion.</string>
+    <string name="rememberPassContent">Enviaremos su contraseña a \u0020</string>
+    <string name="editUserDataInfo">Escriba la contraseña actual a continuacion.</string>
+    <string name="editUserInvalidCurrentPass">Intruduzca la contraseña actual a continuacion. La contraseña actual es incorrecta.</string>
+    <string name="editUserOkCurrentPass">Contraseña actual correcta.</string>
+    <string name="editUserAnyChange">Rellene nuevo E-mail o contraseña</string>
+    <string name="reditUserSuccess">Editado correctamente</string>
 
     <!-- Hearing diary -->
     <string name="titleNewEntry">Nueva audición</string>
@@ -94,107 +142,79 @@
     <string name="frecMasMenos">±</string>
     <string name="enCrisis">En crisis</string>
 
+    <!-- Month report -->
+    <string name="txtDetailChart">Detail Chart</string>
+    <string name="txtTitleStatistics">Estadisticas de éste mes</string>
+    <string name="txtEventsInMonth">Eventos en</string>
+    <string name="txtVertigoMigraineEvents">Vertigo/Migraine eventos:</string>
+    <string name="txtDurationMean">Duración media:</string>
+    <string name="txtIntensityMean">Intensidad media:</string>
+    <string name="txtActivityMean">Actividad media:</string>
+    <string name="txtStressMean">Estres medio:</string>
+    <string name="txtMainTriggerTitle">Desencadenantes principales:</string>
+    <string name="txtChartLabelVertigo">Vertigo</string>
+    <string name="txtChartLabelMigraine">Jaqueca</string>
+
     <!-- Tab one -->
-    <string name="txtNewEvent">New Event</string>
-    <string name="txtSeeSelection">See Selection</string>
-    <string name="txtMonthReview">Month Review</string>
-    <string name="txtFocusToday">Back Today</string>
-    <string name="txtMonthEvents">Month Events:</string>
+    <string name="txtNewEvent">Nuevo Evento</string>
+    <string name="txtSeeSelection">Ver Selección</string>
+    <string name="txtMonthReview">Informe Mensual</string>
+    <string name="txtFocusToday">Volver a Hoy</string>
+    <string name="txtMonthEvents">Eventos Éste Mes:</string>
 
     <!-- Tab Four -->
-    <string name="txtUserGuide">Guia de uso</string>
+    <string name="txtUserGuide">Guía de Usuario</string>
     <string name="txtAuthors">Autores</string>
     <string name="txtFrameworks">Frameworks</string>
-    <string name="txtVisitWeb">Visitar Web</string>
+    <string name="txtVisitWeb">Visitar la Web</string>
 
     <!-- Tab thre -->
     <string name="txtHearingDiary">Diario Auditivo</string>
-    <string name="txtHealthyHabits">Buenos Hábitos</string>
-    <string name="txtRateMe">¡Puentúame!</string>
+    <string name="txtHealthyHabits">Hábitos Saludables</string>
+    <string name="txtRateMe">Puntuame !</string>
 
     <string-array name="arrayQuestions">
-        <item>WHAT IS MÉNIÈRE’S DISEASE?</item>
-        <item>HOW COMMON IS IT?</item>
-        <item>WHAT IS THE CAUSE OF MD?</item>
-        <item>WHAT ARE THE SYMPTOMS OF MD?</item>
-        <item>HOW IS A DIAGNOSIS MADE?</item>
-        <item>HOW IS MD TREATED?</item>
-        <item>HOW CAN I COPE WITH MD?</item>
-        <item>MORE INFO ABOUT MD?</item>
+        <item>¿QUE ES LA ENFERMEDAD DE MENIERE?</item>
+        <item>¿COMO ES DE FRECUENTE?</item>
+        <item>¿QUE CAUSA LA EM?</item>
+        <item>¿CUALES SON LOS SÍNTOMAS DE LA EM?</item>
+        <item>¿COMO SE DIAGNOSTICA?</item>
+        <item>¿COM SE TRATA LA EM?</item>
+        <item>¿COMO ME ENFRENTO A LA EM?</item>
+        <item>MAS INFORMACIÓN SOBRE LA EM</item>
     </string-array>
 
     <string-array name="arrayAnswers" formatted="false">
-        <item>Ménière’s syndrome is a chronic inner-ear disorder characterized by frequent episodes of spontaneous vertigo and fluctuating hearing loss in one or sometimes both ears, tinnitus (ringing in the ears), and a feeling of fullness in the ear.
-            When we can point to a recognized cause for these symptoms, it is called Ménière’s syndrome. However, in many cases it is often difficult to find a cause at all, so in theses cases it is coined Ménière’s disease (MD).</item>
-        <item>Although MD is considered the third most common cause of vertigo, after benign paroxysmal positional vertigo and vestibular migraine, it is a rare disease. In the United States, it is estimated that approximately 615,000 individuals are currently diagnosed with Ménière’s disease and that 45,500 cases are newly diagnosed each year.
-            MD commonly begins between 30 and 50 years of age, and the condition is often found to affect a higher proportion of females. Both ears are affected in 25–40% of sufferers. If the condition is found in patients of the same family of one or two generations apart, it is considered familial MD.
-            Migraine and autoimmune diseases (systemic lupus erythematous, psoriasis, or rheumatoid arthritis) are common in patients with MD.
-        </item>
-        <item>The cause of MD is unknown although allergies, autoimmunity, and genetic factors are supposed to be involved. Furthermore, one or more suspected environmental factors may trigger the disease. Somehow, an excess of a fluid in the inner ear, known as endolymph, causes an expansion of some structures of the inner ear termed endolymphatic hydrops.
-        </item>
-        <item>Symptoms may vary over time and are often experienced differently from one patient to another. Vertigo is the most disabling symptom, commonly described as a spinning sensation, made worse by head movements and is accompanied by nausea, vomiting, and sweating. Spells of vertigo appear spontaneously lasting several hours and, when they subside,
-            patients complain of a lack of balance for some days.These spells of vertigo often begin with tinnitus and aural fullness, followed a little later by a loss of hearing in the affected ear. But, as the disease progresses over time, hearing worsens with each attack with the previous hearing level not fully recovered. Eventually, deafness becomes
-            permanent and no longer fluctuates.Some patients report sudden falls with no previous warning or trigger, and without vertigo, loss of consciousness, or other neurologic symptoms. We refer to these episodes as crises of Tumarkin.Headaches occur in more than 40% of Ménière’s attacks, and migraine-type headaches are felt in 8% of patients during
-            episodes of vertigo.Numerous factors have been known to trigger MD attacks, including stress, sleep deprivation, some foods, allergens, change of atmospheric pressure, and hormonal changes such us the period.The frequency of attacks is highly unpredictable and varies greatly from patient to patient. As time progresses, the frequency of these
-            attacks usually decreases, and hearing loss becomes permanent, as does the tinnitus.</item>
-        <item>There is currently no precise way of testing for MD, therefore diagnosis is determined through a patient´s symptoms and any signs perceived by a medical practitioner. A hearing test is needed to determine the existence of hearing loss in the affected ear, and its type. Balance function tests such as caloric tests and/or a video head impulse test, are commonly performed. A magnetic resonance imaging (MRI) is routinely called for to rule out other causes of vertigo.
-        </item>
-        <item>MD treatment is often issued in two main ways
-            Treatment given as and when a patient suffers a spell.
-            Preventive treatment, usually in the form of daily medication. While suffering a spell of MD, you may require medication to alleviate nausea, vomiting or feelings of vertigo. Depending on the impact on your quality of life, a preventive treatment may also be required. Preventive treatment comprises:
-            dietary changes (an increase in water intake and a low-salt diet) and lifestyle changes which include avoiding caffeine, smoking and alcohol, avoiding stressful situations, getting regular sleep and doing light exercise
-            oral medication (diuretics, betahistine)
-            intratympanic injection with either gentamicin or corticosteroids
-            and in some extreme cases surgical procedures.
-            The diverse nature of MD could explain the difference in response to a treatment between one person and the next. Other treatment options are hearing aids, cochlear implants, and the Meniett device.</item>
-        <item>MD has a high impact on healthrelated quality of life. Along with hearing loss comes an inability to discriminate between different phonemes.
-            Oftentimes a rise in volume will not improve comprehension and may even cause greater difficulties in understanding speech.
-            As you can imagine, this often causes some limitations in your daily routines.
-            Your doctor can advise you and clarify any aspect related to the disease and its treatment.
-            Relaxation techniques and cognitive behavioral therapy can help you.
-            Selfhelp groups, such as the Menieres Society in UK or ASMES in Spain, can offer you support.
-            Today, MD is considered incurable but research efforts are becoming more successful and we are gaining a better understanding of the disease.
-            So, there is a hope for the development of a specific treatment through our continued investigations.
-            Please help us with our ongoing efforts to find a cure for this debilitating disease.
-        </item>
+        <item>El Síndrome de Ménière es un desorden crónico del oído interno, que se caracteriza por frecuentes episodios de vértigo espontaneo, perdida de audición fluctuante en uno o en los dos oídos, tinnitus (ruidos en los oídos) y una sensación de plenitud en el oído. Es difícil definir la diferencia entre Enfermedad y Síndrome de Ménière. Enfermedad de Ménière se usa cuando no se encuentra causa de la misma y Síndrome se usa cuando podría ser secundario a otra patología, si bien en la práctica se usa como sinónimos.</item>
+        <item>Aunque el Ménière se considera la tercera causa mas común de vértigo, después del vértigo posicional paroxistico benigno, y la migraña vestibular, es una enfermedad rara en los Estados Unidos, se estima que aprox. 615.000 personas están actualmente diagnosticadas con Ménière, y que se diagnostican 45,500 casos nuevos cada año. Ménière comienza normalmente entre los 30 y los 50 años de edad, y parece que afecta a un porcentaje mas alto de mujeres. En un 25-40% de los casos se ven afectados los dos oídos. Si la condición se da en pacientes de una o dos generaciones de la misma familia, se considera Ménière familiar. La migraña, y enfermedades auto-inmunes (lupus sistémico eritematoso, psoriasis o artritis reumatoide) son frecuentes en pacientes con Ménière. </item>
+        <item>Las causas del Ménière son desconocidas, aunque se supone que están implicadas las alergias, auto-inmunidad y los factores genéticos. Además, se sospecha que algunos factores ambientales pueden desencadenar la enfermedad. De alguna manera, un exceso de líquido en el oído interno, conocido como endolinfa, causa una expansión de algunas estructuras del oído interno, lo que se llama hidrops endolinfático.</item>
+        <item>Los síntomas pueden variar con el paso del tiempo, y ser diferentes de un paciente a otro. El vértigo es el síntoma mas incapacitante, se describe normalmente como la sensación de estar girando, empeora con los movimientos de cabeza, y va acompañado por nauseas, vómitos y sudores. Los vértigos aparecen espontáneamente, pueden durar hasta varias horas, y cuando remiten los pacientes se quejan de perdida de equilibrio por varios días.  Los vértigos a veces empiezan con tinnitus o un aura  de plenitud, seguida poco después por una perdida de audición en el oído afectado. Pero cuando la enfermedad avanza la audición empeora, y después de cada ataque de vértigo ya no se recupera la audición completamente. Finalmente la sordera se hace permanente y no fluctúa. Algunos pacientes sufren caídas súbitas, sin aviso previo ni detonantes, y sin vértigo, perdida de conciencia u otros síntomas neurológicos. Es lo que llamamos crisis de Tumarkin.  En mas del 40% de las crisis de Ménière aparecen dolores de cabeza, y en un 8% de los pacientes, durante los episodios de vértigo, aparecen dolores de cabeza tipo migraña. Hay numerosos factores que pueden ser considerados detonantes de una crisis de vértigo, estrés, privación de sueño, algunas comidas, alérgenos, cambios de presión atmosférica y cambios hormonales entre otros. La frecuencia de las crisis es totalmente impredecible y varia mucho de un paciente a otro. Cuando va pasando el tiempo la frecuencia de estas crisis normalmente se reduce, y la perdida de audición se hace permanente, así como el tinnitus.</item>
+        <item>No hay en la actualidad una forma precisa de diagnosticar el Ménière, se diagnostica a través de los síntomas de los pacientes y de algunos signos que percibe el especialista. Test de audición para determinar la existencia de perdida auditiva en el oído afectado, pruebas de equilibrio, pruebas calóricas y/o test de vídeo impulso de la cabeza es lo que se realiza normalmente. También se suele  realizar una resonancia magnética (MRI) para descartar otras causas del vértigo.</item>
+        <item>El tratamiento del Ménière normalmente se desarrolla en dos formas principalmente: el tratamiento que se da cuando el paciente tiene una crisis y el tratamiento preventivo, normalmente en forma de medicación diaria. Cuando se está teniendo una crisis de Ménière, se puede necesitar medicación para aliviar las nauseas, los vómitos y la sensación de vértigo.  Dependiendo del impacto que esto tenga en la calidad de vida se puede necesitar también un tratamiento preventivo. El tratamiento preventivo incluye: cambios en la dieta ( aumento del consumo de agua y dieta baja en sal), y cambios en el estilo de vida, que incluyen evitar cafeína, fumar y el alcohol, evitar situaciones de estrés, mantener una regularidad en el sueño, hacer ejercicio suave, y medicación oral (diuréticos, betahistina) Como procedimiento quirúrgico, inyecciones intratimpanicas con gentamicina o corticoides en algunos casos extremos. La naturaleza desconocida del Ménière explicaría la diferencia en la respuesta a los tratamientos entre una persona y otra. Otras opciones son ayudas auditivas, implantes cocleares, y el dispositivo Meniett. </item>
+        <item>Ménière tiene un gran impacto en la salud y la calidad de vida. Con la pérdida auditiva llega la incapacidad para discriminar entre diferentes fonemas. A menudo, un aumento en el volumen no mejora la comprensión e incluso puede causar mayores dificultades para entender el habla. Como se puede imaginar, esto causa algunas limitaciones en las rutinas diarias. Su doctor puede aconsejarle y aclararle cualquier aspecto relacionado con la enfermedad y su tratamiento. Las técnicas de relajación y la terapia cognitiva conductual pueden ayudar. Los grupos de auto-ayuda, como los de Menieres Society en el Reino Unido o Asmes en España pueden ofrecer apoyo.En la actualidad el Ménière se considera crónico, pero los esfuerzos en la investigación están dando sus frutos y nos están ayudando a entender la enfermedad. Hay esperanza para el desarrollo de tratamientos específicos en los que continuamos investigando. Por favor, ayudanos en nuestros esfuerzos para encontrar una cura para esta incapacitante enfermedad. </item>
         <item>links</item>
     </string-array>
 
     <string-array name="arrayTituloHabitos">
-        <item>OVERVIEW</item>
-        <item>DIET</item>
-        <item>LIFESTYLE CHANGES</item>
-        <item>LIFESTYLE: EXERCISE</item>
-        <item>LIFESTYLE: SLEEP</item>
-        <item>LIFESTYLE: STRESS</item>
+        <item>HÁBITOS</item>
+        <item>DIETA</item>
+        <item>CAMBIO DEL ESTILO DE VIDA</item>
+        <item>ESTILO DE VIDA: EJERCICIO</item>
+        <item>ESTILO DE VIDA: SUEÑO</item>
+        <item>ESTILO DE VIDA: ESTRÉS</item>
     </string-array>
-
 
     <string-array name="arrayDescripcionHabitos" formatted="false">
-        <item>DIETARY CHANGES AND LIFESTYLE MODIFICATIONS
-            Making some changes to your diet and adopting good lifestyle habits are two important means of preventive treatment of MD.
-        </item>
-        <item>The initial aim is to avoid all the common triggers of MD, but once your symptoms have improved you can slowly reintroduce them trying to identify your personal triggers.
-            The most important dietary recommendation is a high-water intake and a low sodium diet. Some Japanese researchers have found that a water intake of 35 mL/kg per day (about 2 litres and a half if you are 70 kg) may improve the symptoms of MD. Very low sodium mineral water is a good option. We also advise a sodium intake between 1.5-2g per day (less than a teaspoon of table salt). Therefore, we recommend removing the use of salt at the table and reducing the consumption of foods with a high-sodium content like processed or cured meats (bacon, sausages, ham) and frozen meals, canned foods, fast food and potato chips. We also recommend avoiding food containing monosodium glutamate, a flavor enhancer commonly added to Chinese food.
-            It is also advisable to eat at regular times and not to skip meals.
-            Coffee and other caffeine-containing food and drink like tea and chocolate should be reduced to one cup of coffee a day, as should alcohol with a limit of a glass of wine or half a pint of beer per day.
-        </item>
-        <item>Try to adopt healthy habits to your daily life. A systematic approach to your life helps to maintain daily routines which may prevent vertigo attacks.
-            Exercise regularly, establish regular sleeping habits and think of ways to reduce stress. Try to limit caffeine and alcohol intake.
-            Keep in mind that smoking is often not just a habit but also an addiction, so if you have MD, it is a good opportunity to try to quit.
-        </item>
-        <item>Be active and do some light to moderate physical exercise. Try going for a walk for 30 minutes at least every day or playing some sport regularly. Dancing, aerobics, Pilates and tai chi are also good options.</item>
-        <item>Try these tips below to help you to form healthy sleep habits. In order to maintain at least 7 hours of sleep per night, try keeping a
-            regular sleep schedule which means going to sleep and getting up at the same time every day, including weekends and holidays.
-            Consider avoiding naps, especially longer than 20 minutes. Lighter dinners and a reduce fluid intake before bedtime allow for
-            ease of sleep. Coffee from late afternoon onward is not advised. Do regular exercise but not too close to bedtime.
-        </item>
-        <item>Reducing your stress level is easier to said than done, but the question is how to do this. The first step in reducing stress is to identify the cause. Once it is known, first try to change your circumstances. This could mean finding alternatives (manage your time better, change of routines, etc.).  Second, learn ways of avoiding situations that you find stressful. Thirdly, if the above are not possible, try to adapt to your environment.  Ultimately, sometimes it is necessary to accept that there are things we just can’t change. Take then a deep breath and try to stay calm.
-            Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.
-            Relaxation techniques and mindfulness sessions may be appropriate.</item>
-
+        <item>CAMBIOS EN LA DIETA Y EN EL ESTILO DE VIDA
+            Hacer algunos cambios en la dieta y adoptar buenos hábitos en el estilo de vida son dos importantes pasos para el tratamiento preventivo del Ménière. </item>
+        <item>El objetivo principal es evitar los desencadenantes comunes del Ménière, pero una vez que los síntomas han mejorado se pueden reintroducir lentamente intentando identificar cuales son sus desencadenantes personales. La recomendación dietética mas importante es aumentar el consumo de agua y una dieta baja en sodio. Algunos investigadores japoneses han definido que un consumo de agua de 35 mL/kg al día (sobre 2 litros y medio si pesa 70 kgs) puede mejorar los síntomas del Ménière . Agua mineral muy baja en sodio es la mejor opción). También recomendamos un consumo de sodio de entre 1.5-2 g por día (menos de una cucharilla de té de sal). Recomendamos eliminar el uso de sal en la mesa y reducir el consumo de comidas con un contenido alto en sodio, carnes curadas o procesadas (bacon, jamón) y comidas congeladas, alimentos enlatados, comida rápida y patatas chips. También recomendamos evitar la comida que contiene glutamato monosódico, un saborizante normalmente añadido a la comida china. También recomendamos comer a horas regulares, y no saltarse comidas. Se debería también reducir el café y otros alimentos y bebidas que contengan cafeína, el té y el chocolate, como máximo una taza de café al día, y reducir el alcohol, con un límite de un vaso de vino o media pinta de cerveza al día. </item>
+        <item>Intenta adoptar hábitos saludables en el estilo de vida. Una organización sistemática de la vida que ayude a mantener rutinas diarias puede ayudar a prevenir las crisis de vértigo. El ejercicio regular, establecer pautas de sueño regulares y pensar formas de reducir el estrés. Piense que fumar no es solo un hábito, es una adicción, así que, si tiene Ménière, es una buena oportunidad para dejarlo. </item>
+        <item>Mantenerse activo y hacer algo de ejercicio ligero o moderado. Intentar caminar al menos 30 minutos cada día, o practicar algún deporte. Bailar, aerobic, pilares y tai-chi son también buenas opciones. </item>
+        <item>Intentar estos consejos ayudará a conseguir hábitos de sueño saludables, con el fin de dormir al menos 7 horas por noche, mantener un horario fijo de ir a la cama y de levantarte todos los días, incluyendo los fines de semanas y vacaciones, evitar siestas de mas de 20 minutos.  Una cena ligera y reducir la toma de líquidos antes de ir a la cama permite dormir mas fácilmente.  Tomar café en la tarde no es recomendable. Tampoco hacer ejercicio demasiado cerca de la hora de dormir. </item>
+        <item>Reducir el nivel de estrés es mas fácil de decir que de hacer, pero la cuestión es como hacerlo. El primer paso para reducir el estrés es identificar la causa. Una vez que se identifica intentar cambiar las circunstancias. Eso podría significar buscar alternativas (gestionar mejor el tiempo, cambiar las rutinas, etc.) Segundo, buscar la forma de evitar las situaciones que se encuentran estresantes. Tercero, si lo anterior no es posible, intentar adaptarte a las circunstancias. Y por ultimo, a veces es necesario aceptar que hay cosas que se pueden cambiar. Entonces, tomar una respiración profunda e intentar mantener la calma. Tomar nota de los pensamientos negativos, creencias erróneas y actitudes que contribuyen al estrés. Esto es particularmente importante para manejar el tinnitus.  Hacer lo mismo con los  comportamientos y emociones erráticas. A veces la guía de un profesional puede ser necesaria para cambiar estas actitudes negativas y desarrollar estrategias de vida mas saludables. La familia, amigos y compañeros de trabajo pueden dar apoyo. Interactuar con otras personas, incluyendo personas con Maniere y asociaciones. Las tecnicas de relajación y sesiones de mindfulness también pueden ser muy apropiadas. </item>
         <item>links</item>
     </string-array>
+
     <string name="title_activity_authors">AuthorsActivity</string>
 
     <string-array name="arrayTituloGuia">
@@ -206,12 +226,29 @@
         <item>LIFESTYLE: STRESS</item>
     </string-array>
 
+    <string name="text_authors"><![CDATA[<h3>Authors:</h3>
+<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+<h3><br />Collaborators:</h3>
+<h3 style="padding-left: 30px;"><br />Nicol&aacute;s P&eacute;rez Fern&aacute;ndez (Medical Advisor)<br />&Aacute;ngel Batuecas Caletr&iacute;o (Medical Advisor)<br />Jose Antonio L&oacute;pez Esc&aacute;mez (Medical Advisor)<br />Mark Jackson (English Localization)<br />Eva Perendreu (ASMES)</h3>
+<h3><br />Original Idea y Design:</h3>
+<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+<h3><br />iOS Development and Design:</h3>
+<h3 style="padding-left: 30px;"><br />Jorge Rey Mart&iacute;nez<br />Marina Gonz&aacute;lez Llorca (iOS Design)&copy; 2017 Espinosa y Rey</h3>
+<h3><br />Android Development and Design:</h3>
+<h3 style="padding-left: 30px;"><br />Estefan&iacute;a Gil Vaquero</h3>]]>
+    </string>
 
-    <string name="text_authors">Authors: \n---------\n\n  Juan Manuel Espinosa Jorge Rey Martínez  Collaborators: --------------  
-Nicolás Pérez Fernández (Medical Advisor) Ángel Batuecas Caletrío (Medical Advisor) Jose Antonio López Escámez (Medical Advisor) 
-Mark Jackson (English Localization) Eva Perendreu (ASMES)  
-Original Idea y Design: -----------------------  Juan Manuel Espinosa Jorge Rey Martínez  
-iOS Development and Design: ------------------------------  Jorge Rey Martínez Marina González Llorca (iOS Design)    © 2017 Espinosa y Rey</string>
+    <string name="text_frameworks"><![CDATA[<h3>Frameworks:</h3>
+<p><strong>com.afollestad.material-dialogs</strong></p>
+<p><strong>com.github.PhilJay:MPAndroidChart</strong></p>
+<p><strong>com.xw.repo:bubbleseekbar:3.14-lite</strong></p>
+<p><strong>com.weiwangcn.betterspinner:library-material</strong></p>
+<p><strong>com.crashlytics.sdk.android:crashlytics</strong></p>
+<p><strong>com.sun.mail:android-mail</strong></p>
+<p>&nbsp;</p>]]>
+    </string>
+
     <string name="title_activity_main">MainActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
