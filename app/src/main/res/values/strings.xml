@@ -255,7 +255,8 @@
             Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.
             Relaxation techniques and mindfulness sessions may be appropriate.</item>
 
-        <item>links</item>
+        <item>name="my_link"><a href="http://www.menieres.org.uk/">Click me!</a></item>
+
     </string-array>
     <string name="title_activity_authors">AuthorsActivity</string>
 

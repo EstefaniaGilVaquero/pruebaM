@@ -1,6 +1,7 @@
 package com.asmes.meniere.adapter;
 
 import android.app.Activity;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -50,7 +51,7 @@ public class FaqAdapter extends RecyclerView.Adapter  {
             viewHolder.txtAnswer.setText(arrayAnswers[position]);
             //Onclicklistener
 
-            viewHolder.cvRow.setOnClickListener(new View.OnClickListener() {
+            viewHolder.constraintLayoutDesplegable.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (viewHolder.txtAnswer.getVisibility()==view.GONE) {
@@ -80,6 +81,7 @@ public class FaqAdapter extends RecyclerView.Adapter  {
         public TextView txtQuestion, txtAnswer;
         public ImageView arrow;
         public CardView cvRow;
+        public ConstraintLayout constraintLayoutDesplegable;
 
         public ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
@@ -88,6 +90,7 @@ public class FaqAdapter extends RecyclerView.Adapter  {
                 txtAnswer = itemLayoutView.findViewById(R.id.txtAnswer);
                 cvRow = itemLayoutView.findViewById(R.id.cvRow);
                 arrow = itemLayoutView.findViewById(R.id.imageView);
+                constraintLayoutDesplegable = itemLayoutView.findViewById(R.id.constraintLayoutDesplegable);
             } catch (Exception e) {
                 e.printStackTrace();
             }
