@@ -190,17 +190,14 @@
             When we can point to a recognized cause for these symptoms, it is called Ménière’s syndrome. However, in many cases it is often difficult to find a cause at all, so in theses cases it is coined Ménière’s disease (MD).</item>
         <item>Although MD is considered the third most common cause of vertigo, after benign paroxysmal positional vertigo and vestibular migraine, it is a rare disease. In the United States, it is estimated that approximately 615,000 individuals are currently diagnosed with Ménière’s disease and that 45,500 cases are newly diagnosed each year.
             MD commonly begins between 30 and 50 years of age, and the condition is often found to affect a higher proportion of females. Both ears are affected in 25–40% of sufferers. If the condition is found in patients of the same family of one or two generations apart, it is considered familial MD.
-            Migraine and autoimmune diseases (systemic lupus erythematous, psoriasis, or rheumatoid arthritis) are common in patients with MD.
-        </item>
-        <item>The cause of MD is unknown although allergies, autoimmunity, and genetic factors are supposed to be involved. Furthermore, one or more suspected environmental factors may trigger the disease. Somehow, an excess of a fluid in the inner ear, known as endolymph, causes an expansion of some structures of the inner ear termed endolymphatic hydrops.
-        </item>
+            Migraine and autoimmune diseases (systemic lupus erythematous, psoriasis, or rheumatoid arthritis) are common in patients with MD.</item>
+        <item>The cause of MD is unknown although allergies, autoimmunity, and genetic factors are supposed to be involved. Furthermore, one or more suspected environmental factors may trigger the disease. Somehow, an excess of a fluid in the inner ear, known as endolymph, causes an expansion of some structures of the inner ear termed endolymphatic hydrops.</item>
         <item>Symptoms may vary over time and are often experienced differently from one patient to another. Vertigo is the most disabling symptom, commonly described as a spinning sensation, made worse by head movements and is accompanied by nausea, vomiting, and sweating. Spells of vertigo appear spontaneously lasting several hours and, when they subside,
             patients complain of a lack of balance for some days.These spells of vertigo often begin with tinnitus and aural fullness, followed a little later by a loss of hearing in the affected ear. But, as the disease progresses over time, hearing worsens with each attack with the previous hearing level not fully recovered. Eventually, deafness becomes
             permanent and no longer fluctuates.Some patients report sudden falls with no previous warning or trigger, and without vertigo, loss of consciousness, or other neurologic symptoms. We refer to these episodes as crises of Tumarkin.Headaches occur in more than 40% of Ménière’s attacks, and migraine-type headaches are felt in 8% of patients during
             episodes of vertigo.Numerous factors have been known to trigger MD attacks, including stress, sleep deprivation, some foods, allergens, change of atmospheric pressure, and hormonal changes such us the period.The frequency of attacks is highly unpredictable and varies greatly from patient to patient. As time progresses, the frequency of these
             attacks usually decreases, and hearing loss becomes permanent, as does the tinnitus.</item>
-        <item>There is currently no precise way of testing for MD, therefore diagnosis is determined through a patient´s symptoms and any signs perceived by a medical practitioner. A hearing test is needed to determine the existence of hearing loss in the affected ear, and its type. Balance function tests such as caloric tests and/or a video head impulse test, are commonly performed. A magnetic resonance imaging (MRI) is routinely called for to rule out other causes of vertigo.
-        </item>
+        <item>There is currently no precise way of testing for MD, therefore diagnosis is determined through a patient´s symptoms and any signs perceived by a medical practitioner. A hearing test is needed to determine the existence of hearing loss in the affected ear, and its type. Balance function tests such as caloric tests and/or a video head impulse test, are commonly performed. A magnetic resonance imaging (MRI) is routinely called for to rule out other causes of vertigo.</item>
         <item>MD treatment is often issued in two main ways
             Treatment given as and when a patient suffers a spell.
             Preventive treatment, usually in the form of daily medication. While suffering a spell of MD, you may require medication to alleviate nausea, vomiting or feelings of vertigo. Depending on the impact on your quality of life, a preventive treatment may also be required. Preventive treatment comprises:
@@ -217,9 +214,11 @@
             Selfhelp groups, such as the Menieres Society in UK or ASMES in Spain, can offer you support.
             Today, MD is considered incurable but research efforts are becoming more successful and we are gaining a better understanding of the disease.
             So, there is a hope for the development of a specific treatment through our continued investigations.
-            Please help us with our ongoing efforts to find a cure for this debilitating disease.
-        </item>
-        <item>links</item>
+            Please help us with our ongoing efforts to find a cure for this debilitating disease.</item>
+        <item>www.menieres.org.uk \n
+            https://vestibular.org \n
+            www.sindromedemeniereespana.com \n
+            www.facebook.com/asociacionsindromedemeniereespana</item>
     </string-array>
 
     <string-array name="arrayTituloHabitos">
@@ -245,7 +244,8 @@
             Exercise regularly, establish regular sleeping habits and think of ways to reduce stress. Try to limit caffeine and alcohol intake.
             Keep in mind that smoking is often not just a habit but also an addiction, so if you have MD, it is a good opportunity to try to quit.
         </item>
-        <item>Be active and do some light to moderate physical exercise. Try going for a walk for 30 minutes at least every day or playing some sport regularly. Dancing, aerobics, Pilates and tai chi are also good options.</item>
+        <item>Be active and do some light to moderate physical exercise. Try going for a walk for 30 minutes at least every day or playing some sport regularly. Dancing, aerobics, Pilates and tai chi are also good options.
+        </item>
         <item>Try these tips below to help you to form healthy sleep habits. In order to maintain at least 7 hours of sleep per night, try keeping a
             regular sleep schedule which means going to sleep and getting up at the same time every day, including weekends and holidays.
             Consider avoiding naps, especially longer than 20 minutes. Lighter dinners and a reduce fluid intake before bedtime allow for
@@ -253,21 +253,10 @@
         </item>
         <item>Reducing your stress level is easier to said than done, but the question is how to do this. The first step in reducing stress is to identify the cause. Once it is known, first try to change your circumstances. This could mean finding alternatives (manage your time better, change of routines, etc.).  Second, learn ways of avoiding situations that you find stressful. Thirdly, if the above are not possible, try to adapt to your environment.  Ultimately, sometimes it is necessary to accept that there are things we just can’t change. Take then a deep breath and try to stay calm.
             Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.
-            Relaxation techniques and mindfulness sessions may be appropriate.</item>
-
-        <item>name="my_link"><a href="http://www.menieres.org.uk/">Click me!</a></item>
-
+            Relaxation techniques and mindfulness sessions may be appropriate.
+        </item>
     </string-array>
     <string name="title_activity_authors">AuthorsActivity</string>
-
-    <string-array name="arrayTituloGuia">
-        <item>OVERVIEW</item>
-        <item>DIET</item>
-        <item>LIFESTYLE CHANGES</item>
-        <item>LIFESTYLE: EXERCISE</item>
-        <item>LIFESTYLE: SLEEP</item>
-        <item>LIFESTYLE: STRESS</item>
-    </string-array>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>
 <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>

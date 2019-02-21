@@ -43,7 +43,7 @@
     <string name="tinnitus">Acúfenos</string>
     <string name="earFullness">Plenitud ótica</string>
     <string name="headache">Jaqueca</string>
-    <string name="photophobia">Fotobobia</string>
+    <string name="photophobia">Fotofobia</string>
     <string name="phonophobia">Fonofobia</string>
     <string name="visualSymptoms">Síntomas Visuales</string>
     <string name="tumarkin">Tumarkin</string>
@@ -121,12 +121,12 @@
     <string name="rememberPassInfo">Recordar contraseña</string>
     <string name="editEmailPassInfo">Editar E-mail o contraseña</string>
     <string name="registerInfo">Por favor, registrese con un E-mail vÁlido, para poder enviarle su contraseña en caso de que la olvide.</string>
-    <string name="loginInfo">Para proteger su informacion personal, esta seccion está protegida por contraseña.</string>
+    <string name="loginInfo">Para proteger su información personal, esta seccion está protegida por contraseña.</string>
     <string name="loginInfo2">Utilice su huella o intruduzca su contraseña a continuacion para comprobar su identidad</string>
     <string name="loginInfo3">Introduzca su contraseña a continuacion.</string>
     <string name="rememberPassContent">Enviaremos su contraseña a \u0020</string>
-    <string name="editUserDataInfo">Escriba la contraseña actual a continuacion.</string>
-    <string name="editUserInvalidCurrentPass">Intruduzca la contraseña actual a continuacion. La contraseña actual es incorrecta.</string>
+    <string name="editUserDataInfo">Escriba la contraseña actual a continuación.</string>
+    <string name="editUserInvalidCurrentPass">Intruduzca la contraseña actual a continuación. La contraseña actual es incorrecta.</string>
     <string name="editUserOkCurrentPass">Contraseña actual correcta.</string>
     <string name="editUserAnyChange">Rellene nuevo E-mail o contraseña</string>
     <string name="reditUserSuccess">Editado correctamente</string>
@@ -192,7 +192,10 @@
         <item>No hay en la actualidad una forma precisa de diagnosticar el Ménière, se diagnostica a través de los síntomas de los pacientes y de algunos signos que percibe el especialista. Test de audición para determinar la existencia de perdida auditiva en el oído afectado, pruebas de equilibrio, pruebas calóricas y/o test de vídeo impulso de la cabeza es lo que se realiza normalmente. También se suele  realizar una resonancia magnética (MRI) para descartar otras causas del vértigo.</item>
         <item>El tratamiento del Ménière normalmente se desarrolla en dos formas principalmente: el tratamiento que se da cuando el paciente tiene una crisis y el tratamiento preventivo, normalmente en forma de medicación diaria. Cuando se está teniendo una crisis de Ménière, se puede necesitar medicación para aliviar las nauseas, los vómitos y la sensación de vértigo.  Dependiendo del impacto que esto tenga en la calidad de vida se puede necesitar también un tratamiento preventivo. El tratamiento preventivo incluye: cambios en la dieta ( aumento del consumo de agua y dieta baja en sal), y cambios en el estilo de vida, que incluyen evitar cafeína, fumar y el alcohol, evitar situaciones de estrés, mantener una regularidad en el sueño, hacer ejercicio suave, y medicación oral (diuréticos, betahistina) Como procedimiento quirúrgico, inyecciones intratimpanicas con gentamicina o corticoides en algunos casos extremos. La naturaleza desconocida del Ménière explicaría la diferencia en la respuesta a los tratamientos entre una persona y otra. Otras opciones son ayudas auditivas, implantes cocleares, y el dispositivo Meniett. </item>
         <item>Ménière tiene un gran impacto en la salud y la calidad de vida. Con la pérdida auditiva llega la incapacidad para discriminar entre diferentes fonemas. A menudo, un aumento en el volumen no mejora la comprensión e incluso puede causar mayores dificultades para entender el habla. Como se puede imaginar, esto causa algunas limitaciones en las rutinas diarias. Su doctor puede aconsejarle y aclararle cualquier aspecto relacionado con la enfermedad y su tratamiento. Las técnicas de relajación y la terapia cognitiva conductual pueden ayudar. Los grupos de auto-ayuda, como los de Menieres Society en el Reino Unido o Asmes en España pueden ofrecer apoyo.En la actualidad el Ménière se considera crónico, pero los esfuerzos en la investigación están dando sus frutos y nos están ayudando a entender la enfermedad. Hay esperanza para el desarrollo de tratamientos específicos en los que continuamos investigando. Por favor, ayudanos en nuestros esfuerzos para encontrar una cura para esta incapacitante enfermedad. </item>
-        <item>name="my_link"><a href="http://www.menieres.org.uk/">Click me!</a></item>
+        <item>www.menieres.org.uk \n
+            https://vestibular.org \n
+            www.sindromedemeniereespana.com \n
+            www.facebook.com/asociacionsindromedemeniereespana</item>
     </string-array>
 
     <string-array name="arrayTituloHabitos">
@@ -212,19 +215,9 @@
         <item>Mantenerse activo y hacer algo de ejercicio ligero o moderado. Intentar caminar al menos 30 minutos cada día, o practicar algún deporte. Bailar, aerobic, pilares y tai-chi son también buenas opciones. </item>
         <item>Intentar estos consejos ayudará a conseguir hábitos de sueño saludables, con el fin de dormir al menos 7 horas por noche, mantener un horario fijo de ir a la cama y de levantarte todos los días, incluyendo los fines de semanas y vacaciones, evitar siestas de mas de 20 minutos.  Una cena ligera y reducir la toma de líquidos antes de ir a la cama permite dormir mas fácilmente.  Tomar café en la tarde no es recomendable. Tampoco hacer ejercicio demasiado cerca de la hora de dormir. </item>
         <item>Reducir el nivel de estrés es mas fácil de decir que de hacer, pero la cuestión es como hacerlo. El primer paso para reducir el estrés es identificar la causa. Una vez que se identifica intentar cambiar las circunstancias. Eso podría significar buscar alternativas (gestionar mejor el tiempo, cambiar las rutinas, etc.) Segundo, buscar la forma de evitar las situaciones que se encuentran estresantes. Tercero, si lo anterior no es posible, intentar adaptarte a las circunstancias. Y por ultimo, a veces es necesario aceptar que hay cosas que se pueden cambiar. Entonces, tomar una respiración profunda e intentar mantener la calma. Tomar nota de los pensamientos negativos, creencias erróneas y actitudes que contribuyen al estrés. Esto es particularmente importante para manejar el tinnitus.  Hacer lo mismo con los  comportamientos y emociones erráticas. A veces la guía de un profesional puede ser necesaria para cambiar estas actitudes negativas y desarrollar estrategias de vida mas saludables. La familia, amigos y compañeros de trabajo pueden dar apoyo. Interactuar con otras personas, incluyendo personas con Maniere y asociaciones. Las tecnicas de relajación y sesiones de mindfulness también pueden ser muy apropiadas. </item>
-        <item>name="my_link"><a href="http://www.menieres.org.uk/">Click me!</a></item>
     </string-array>
 
     <string name="title_activity_authors">AuthorsActivity</string>
-
-    <string-array name="arrayTituloGuia">
-        <item>OVERVIEW</item>
-        <item>DIET</item>
-        <item>LIFESTYLE CHANGES</item>
-        <item>LIFESTYLE: EXERCISE</item>
-        <item>LIFESTYLE: SLEEP</item>
-        <item>LIFESTYLE: STRESS</item>
-    </string-array>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>
 <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>

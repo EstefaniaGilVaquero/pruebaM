@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="episodes">
-        <item>I only had ONE (1) episode</item>
-        <item>I had TWO (2) episodes</item>
-        <item>I had THREE (3) episodes</item>
-        <item>I had FOUR (4) episodes or more</item>
+        <item>Solo he tenido UN (1) episodio</item>
+        <item>He tenido DOS (2) episodios</item>
+        <item>He tenido TRES (3) episodios</item>
+        <item>He tenido CUATRO (4) episodios o más</item>
     </string-array>
 
     <string-array name="hearingLoss">
-        <item>Not Applicable</item>
-        <item>Left Ear</item>
-        <item>Right Ear</item>
-        <item>Both Ears</item>
+        <item>No aplicable</item>
+        <item>Oído Izquierdo</item>
+        <item>Oído Derecho</item>
+        <item>Ambos Oídos</item>
     </string-array>
 </resources>

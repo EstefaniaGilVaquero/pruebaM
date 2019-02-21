@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.asmes.meniere.activity.Login.LoginFingerTipFragment"
+    tools:context="com.asmes.meniereapp.activity.Login.LoginFingerTipFragment"
     android:orientation="vertical">
 
     <android.support.design.widget.AppBarLayout

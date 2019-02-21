@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context="com.asmes.meniere.activity.MyMeniere.NewEventActivity">
+    tools:context="com.asmes.meniereapp.activity.MyMeniere.NewEventActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -1534,7 +1534,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:text="Residual Sinmpthoms"
+                            android:text="@string/backSymps"
                             android:textColor="@color/colorWhite"
                             android:textSize="15dp" />
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asmes.meniere.activity.Login.RegisterActivity"
+    tools:context="com.asmes.meniereapp.activity.Login.RegisterActivity"
     android:orientation="vertical"
     android:background="@color/colorPrimaryDark"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
