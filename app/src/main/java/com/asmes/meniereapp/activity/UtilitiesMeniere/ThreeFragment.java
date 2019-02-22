@@ -83,7 +83,7 @@ public class ThreeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
-                startActivity(new Intent(view.getContext(), HealthyHabits.class));
+                startActivity(new Intent(view.getContext(), HealthyHabitsActivity.class));
             }
         });
 

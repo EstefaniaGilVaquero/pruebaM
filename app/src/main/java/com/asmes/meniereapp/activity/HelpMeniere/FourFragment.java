@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.asmes.meniereapp.R;
-import com.asmes.meniereapp.activity.UtilitiesMeniere.HealthyHabits;
+import com.asmes.meniereapp.activity.UtilitiesMeniere.HealthyHabitsActivity;
 import com.asmes.meniereapp.activity.TabsActivity;
 
 
@@ -64,7 +64,7 @@ public class FourFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
-                startActivity(new Intent(getActivity(), HealthyHabits.class));
+                startActivity(new Intent(getActivity(), HealthyHabitsActivity.class));
             }
         });
 

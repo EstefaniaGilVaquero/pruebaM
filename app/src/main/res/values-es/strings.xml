@@ -16,6 +16,7 @@
     <string name="frameworks">Frameworks</string>
     <string name="healthyHabits">Buenos Hábitos</string>
     <string name="hearingDiary">Diario Auditivo</string>
+    <string name="manageData">Manage Data</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -171,6 +172,7 @@
     <!-- Tab thre -->
     <string name="txtHearingDiary">Diario Auditivo</string>
     <string name="txtHealthyHabits">Hábitos Saludables</string>
+    <string name="txtDataImpExp">Gestionar Datos</string>
     <string name="txtRateMe">Puntuame !</string>
 
     <string-array name="arrayQuestions">

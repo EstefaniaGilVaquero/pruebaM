@@ -21,8 +21,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
+        <activity android:name=".activity.UtilitiesMeniere.ManageDataActivity"></activity>
         <activity
-            android:name="com.asmes.meniereapp.activity.SplashActivity"
+            android:name=".activity.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,21 +32,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.asmes.meniereapp.activity.TabsActivity"
+            android:name=".activity.TabsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name="com.asmes.meniereapp.activity.UtilitiesMeniere.HealthyHabits"
+            android:name=".activity.UtilitiesMeniere.HealthyHabitsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.asmes.meniereapp.activity.HelpMeniere.AuthorsActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.HelpMeniere.FrameworksActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.UtilitiesMeniere.HearingDiaryActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.MyMeniere.NewEventActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.MyMeniere.MonthReportActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.Login.EditUserDataActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.Login.LoginFingerTipActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.Login.RegisterActivity" />
-        <activity android:name="com.asmes.meniereapp.activity.BaseActivity"></activity>
+        <activity android:name=".activity.HelpMeniere.AuthorsActivity" />
+        <activity android:name=".activity.HelpMeniere.FrameworksActivity" />
+        <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity" />
+        <activity android:name=".activity.MyMeniere.NewEventActivity" />
+        <activity android:name=".activity.MyMeniere.MonthReportActivity" />
+        <activity android:name=".activity.Login.EditUserDataActivity" />
+        <activity android:name=".activity.Login.LoginFingerTipActivity" />
+        <activity android:name=".activity.Login.RegisterActivity" />
+        <activity android:name=".activity.BaseActivity" />
     </application>
 
 </manifest>

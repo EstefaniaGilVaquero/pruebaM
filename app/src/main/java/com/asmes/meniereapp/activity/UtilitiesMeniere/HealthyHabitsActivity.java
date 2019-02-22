@@ -11,14 +11,12 @@ import com.asmes.meniereapp.R;
 import com.asmes.meniereapp.activity.BaseActivity;
 import com.asmes.meniereapp.adapter.FaqAdapter;
 
-public class HealthyHabits extends BaseActivity {
+public class HealthyHabitsActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private String[] arrayTituloHabitos;
     private String[] arrayDescripcionHabitos;
     private FaqAdapter adapter;
-    private Toolbar toolbar;
-    boolean activitySwitchFlag = false;
     private static String TAG;
 
     @Override
