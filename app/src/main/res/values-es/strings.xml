@@ -219,6 +219,47 @@
         <item>Reducir el nivel de estrés es mas fácil de decir que de hacer, pero la cuestión es como hacerlo. El primer paso para reducir el estrés es identificar la causa. Una vez que se identifica intentar cambiar las circunstancias. Eso podría significar buscar alternativas (gestionar mejor el tiempo, cambiar las rutinas, etc.) Segundo, buscar la forma de evitar las situaciones que se encuentran estresantes. Tercero, si lo anterior no es posible, intentar adaptarte a las circunstancias. Y por ultimo, a veces es necesario aceptar que hay cosas que se pueden cambiar. Entonces, tomar una respiración profunda e intentar mantener la calma. Tomar nota de los pensamientos negativos, creencias erróneas y actitudes que contribuyen al estrés. Esto es particularmente importante para manejar el tinnitus.  Hacer lo mismo con los  comportamientos y emociones erráticas. A veces la guía de un profesional puede ser necesaria para cambiar estas actitudes negativas y desarrollar estrategias de vida mas saludables. La familia, amigos y compañeros de trabajo pueden dar apoyo. Interactuar con otras personas, incluyendo personas con Maniere y asociaciones. Las tecnicas de relajación y sesiones de mindfulness también pueden ser muy apropiadas. </item>
     </string-array>
 
+    <string-array name="arrayTituloGuia">
+        <item>PROPOSITO GENERAL</item>
+        <item>MI DIARIO</item>
+        <item>DIARIO AUDITIVO</item>
+        <item>GLOSARIO</item>
+    </string-array>
+
+    <string-array name="arrayDescripcionGuia" formatted="false">
+        <item>Bienvenido a la app Ménière.
+            Esta app se ha desarrollado con el objetivo de ayudarle a recopilar los síntomas producidos por su enfermedad de Ménière.
+            Debe tener en cuenta que esta app no le dará diagnósticos ni tratamientos, su medico domina el contenido aquí recogido, y serán sus indicaciones o consejos los que deberá seguir. Los textos aquí presentados son meramente de apoyo informativo.
+            La parte principal de la aplicación es “mi Ménière” y en ella podrá llevar un diario de sus síntomas.
+            Puede encontrar una breve descripción de esta y otras secciones en el menú superior.
+            Deseamos que esta app le sea útil.
+            El equipo de desarrolladores.
+        </item>
+        <item>En esta sección podrá llevar un registro diario de sus síntomas. La idea es que haga un resumen de los síntomas relacionados con el Ménière que ha tenido a lo largo del día. Como si fuese un diario personal, lo mejor es que al final del día haga un examen mental para recordar los posibles eventos producidos a lo largo del día antes de registrarlos.
+            Solo puede añadir un registro por día, y una vez añadido no puede ser modificado ni borrado.
+            Esta sección tiene dos controles de navegación para cambiar el mes actual, y cuatro botones para controlar los eventos registrados en ese mes:
+            Nuevo Evento: Use este botón para añadir un registro con todos los síntomas del día. No se pueden añadir registros a otros días que no sean el día de hoy.
+            Ver selección: Este botón se usa para ver los registros del día seleccionados, si existen.
+            Informe mensual: Con este botón se accede a un informe resumen de sus síntomas mensuales. Este informe puede se guardado en su dispositivo, o enviado a otras personas. La aplicación nunca guardará o compartirá este informe automáticamente, solo se compartirán sus informes cuando usted lo indique.
+            Volver a hoy: Use este botón para volver al día de hoy.
+            ¿Cómo se añade un evento?
+            Al pulsar el botón “Nuevo Evento” irá a una pantalla donde aparecerán los síntomas que se pueden añadir, para que usted los seleccione, solo debe añadir eventos si en el día ha habido alguna crisis o algún síntoma notable, no use este registro para guardar síntomas de poca relevancia.
+            Esta sección tiene dos partes. En la primera parte usted podrá añadir los signos agudos que caracterizan la crisis sufrida en el día de hoy. En la segunda sección podrá poner los síntomas residuales que permanecen después de las crisis. Los valores de estos síntomas residuales se copian de su último registro y solo los debe cambiar si ha experimentado algún cambio en estos síntomas de fondo.
+        </item>
+        <item>Esta es una característica experimental en la que usted podrá estimar su audición a lo largo del tiempo. Como hemos dicho con anterioridad, este “Diario auditivo” no tiene finalidad diagnóstica, solo ha sido diseñado para realizar una valoración auditiva automática, sin la necesidad de ayuda externa, y su finalidad es meramente informativa.
+            Para usarla debe ir al botón “+ Utilidades” de la barra de navegación inferior, y seleccionar el botón “Diario auditivo”. Una vez aquí aparecerá una lista con sus valoraciones auditivas, presionando en el botón de añadir (+) podrá realizar una nueva estimación auditiva. Para realizar la prueba solo tiene que seguir las instrucciones presentadas en la pantalla.
+        </item>
+        <item>Acúfeno: zumbido en el oído.
+            Aura visual: Síntomas visuales que pueden aparecer generalmente antes de una crisis.
+            Fonofobia: Malestar producido por los sonidos.
+            Fotofobia: Malestar producido por la luz.
+            Mareo: Sensación de malestar acompañada de sensación de caída o de vacío.
+            Presión Ótica: Sensación de presión en uno o los dos oídos.
+            Tumarkin: Caída repentina sin avisos previos ni factores desencadenantes conocidos.
+            Vértigo: Sensación de movimiento propio o del ambiente que no existe.
+        </item>
+    </string-array>
+
     <string name="title_activity_authors">AuthorsActivity</string>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>

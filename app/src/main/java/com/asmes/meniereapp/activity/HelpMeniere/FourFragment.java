@@ -64,7 +64,7 @@ public class FourFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
-                startActivity(new Intent(getActivity(), HealthyHabitsActivity.class));
+                startActivity(new Intent(getActivity(), GuideActivity.class));
             }
         });
 
@@ -73,7 +73,6 @@ public class FourFragment extends Fragment {
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
                 startActivity(new Intent(getActivity(), AuthorsActivity.class));
-
             }
         });
 

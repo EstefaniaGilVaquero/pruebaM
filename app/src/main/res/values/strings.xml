@@ -258,6 +258,49 @@
             Relaxation techniques and mindfulness sessions may be appropriate.
         </item>
     </string-array>
+
+    <string-array name="arrayTituloGuia">
+        <item>GENERAL PURPOSE</item>
+        <item>MY DIARY</item>
+        <item>HEARING JOURNAL</item>
+        <item>GLOSSARY</item>
+    </string-array>
+
+    <string-array name="arrayDescripcionGuia" formatted="false">
+        <item>Welcome to the Ménière app.
+            This app has been developed with the aim of helping you collect the symptoms caused by your Ménière’s disease.
+            You must bear in mind that this app will not give you diagnoses or treatments, your doctor will interpret the information collected here, and they will give you the indications or advice that you should follow. The texts presented here are merely informative.
+            The main section of the application is my Ménière, and in it you can keep a diary of your symptoms.
+            You can find a brief description of this and other sections in the top menu.
+            We wish this app will be useful for you.
+            The team of developers.
+        </item>
+        <item>In this section you can keep a daily record of your symptoms. The idea is to summarize the symptoms related to the Ménière that you have had throughout the day. As if it were a personal diary, it is best to do a mental exam at the end of the day to remember the possible events that occurred throughout the day before registering them.
+            You can only add one record per day, and once added it can not be modified or deleted.
+            This section has two navigation controls to change the current month, and four buttons to control the events recorded in that month:
+            New Event: Use this button to add a record with all the symptoms of the day. You can not add records to other days that are not today.
+            See selection: This button is used to view the selected day records, if there are any.
+            Monthly report: With this button you can access a summary report of your monthly symptoms. This report can be saved on your device, or sent to other people. The application will never save or share this report automatically, your reports will only be shared when you want to.
+            Back to today: Use this button to return to the current date.
+            How is an event added? Pressing the "New Event" button will go to a screen where the symptoms that can be added will appear for you to select , you should only add events if there have been any crises or any notable symptoms uring the day, we advice not to use this function to record symptoms of little relevance.
+            This section has two parts. In the first part you can add the acute signs that characterize the crisis suffered today. In the second section you can add the residual symptoms that remain after the crises. The values of these residual symptoms are copied from their last record and you should only change
+            them if you have experienced any change in these background symptoms.
+        </item>
+        <item>This is an experimental feature in which you can estimate your hearing over time. As we have said before, this "Auditory Diary" has no diagnostic purpose, it has only been designed to perform an automatic hearing evaluation, without the need for external help, and its purpose is merely informative.
+            To use it, go to the "+ Utilities" button in the bottom navigation bar, and select the "Auditory Diary" button. Once there you will see a list with your auditory ratings, and clicking on the add button (+) you can make a new auditory estimate. To perform the test just follow the instructions presented on the screen.
+        </item>
+        <item>Tinnitus: ringing in the ear.
+            Visual Aura: Visual symptoms that can appear usually before a crisis.
+            Phonophobia: Discomfort produced by sounds.
+            Photophobia: Discomfort produced by light.
+            Dizziness: Sensation of discomfort accompanied by a sensation of falling or of emptiness.
+            Lightheadness.
+            Otic Pressure: Feeling of pressure in one or both ears.
+            Tumarkin: Sudden fall without previous warnings or known triggers.
+            Vertigo: Sensation of movement, both of oneself or of the environment that does not exist.
+        </item>
+    </string-array>
+
     <string name="title_activity_authors">AuthorsActivity</string>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>

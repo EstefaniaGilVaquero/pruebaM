@@ -16,6 +16,7 @@ import com.asmes.meniereapp.activity.Login.LoginFingerTipActivity;
 import com.asmes.meniereapp.activity.Login.RegisterActivity;
 import com.asmes.meniereapp.activity.TabsActivity;
 import com.asmes.meniereapp.prefs.UserSession;
+import com.crashlytics.android.Crashlytics;
 
 
 public class ThreeFragment extends Fragment {
@@ -26,6 +27,7 @@ public class ThreeFragment extends Fragment {
     private CardView cvRateMe;
     private CardView cvVerticalSensivity;
     private CardView cvHearingDiary;
+    private CardView cvSaveData;
 
     public ThreeFragment() {
         // Required empty public constructor
@@ -60,8 +62,14 @@ public class ThreeFragment extends Fragment {
     private void setCardViews() {
         cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVHealtyHabits);
         cvRateMe = (CardView) rootView.findViewById(R.id.CVRateMe);
-        //cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
         cvHearingDiary = (CardView) rootView.findViewById(R.id.CVHearingDiary);
+        cvSaveData = (CardView) rootView.findViewById(R.id.CVSaveData);
+
+        cvSaveData.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Crashlytics.getInstance().crash(); // Force a crash
+            }
+        });
 
         cvHearingDiary.setOnClickListener(new View.OnClickListener() {
             @Override

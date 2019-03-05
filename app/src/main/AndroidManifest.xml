@@ -38,14 +38,25 @@
         <activity
             android:name=".activity.UtilitiesMeniere.HealthyHabitsActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".activity.HelpMeniere.AuthorsActivity" />
-        <activity android:name=".activity.HelpMeniere.FrameworksActivity" />
-        <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity" />
-        <activity android:name=".activity.MyMeniere.NewEventActivity" />
-        <activity android:name=".activity.MyMeniere.MonthReportActivity" />
-        <activity android:name=".activity.Login.EditUserDataActivity" />
-        <activity android:name=".activity.Login.LoginFingerTipActivity" />
-        <activity android:name=".activity.Login.RegisterActivity" />
+        <activity
+            android:name=".activity.HelpMeniere.GuideActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HelpMeniere.AuthorsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.HelpMeniere.FrameworksActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.UtilitiesMeniere.HearingDiaryActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.MyMeniere.NewEventActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.MyMeniere.MonthReportActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Login.EditUserDataActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Login.LoginFingerTipActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.Login.RegisterActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".activity.BaseActivity" />
     </application>
 
