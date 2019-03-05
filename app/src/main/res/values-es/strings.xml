@@ -98,7 +98,7 @@
     <string name="hearingLossSwitchContent">Has seleccionado algunos síntomas auditivos. Por favor, especifica dónde ocurren principalmente éstos síntomas.</string>
     <string name="infoVisualTitle">Items info</string>
     <string name="infoVisualContent">Síntomas visuales: Sensaciones visuales que ocurren principalmente antes del ataque.\n\nTumarkin: Caida súbita sin previo aviso o factor desencadenante, sin vertigo ni pérdida de consciencia.</string>
-    <string name="mandatoryFieldsContent">Los datos no son suficientes para añadir un nuevo evento, por favor introduce mas datosp o presiona botón atras.</string>
+    <string name="mandatoryFieldsContent">Los datos no son suficientes para añadir un nuevo evento, por favor introduce mas datos o presiona botón atras.</string>
     <string name="monthReportErrorTitle">Error informe mensual</string>
     <string name="monthReportErrorContent">Éste mes no tiene eventos</string>
 

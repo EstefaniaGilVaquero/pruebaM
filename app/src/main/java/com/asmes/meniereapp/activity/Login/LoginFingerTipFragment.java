@@ -155,7 +155,7 @@ public class LoginFingerTipFragment extends Fragment {
                     try {
                         generateKey();
                     } catch (FingerprintException e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
                     }
 
                     if (initCipher()) {

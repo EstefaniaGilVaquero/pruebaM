@@ -242,7 +242,7 @@ public class NewEventActivity extends BaseActivity {
         //Duration must be >20
         //vertigoIntensity must be >0 or tinnutus or hearingloss o earfulness or headache or photophobia or phonophobia or aura or tumarkin
         //TODO cambiar valor de vertigobubble debe ser <20??? pq???
-        if (mVertigoBubble.getProgress()<0 || (mVertigoBubble.getProgress()<1 && !mTinnitusSwitch.isChecked() && !mHearingLossSwitch.isChecked() && !mEarFullnessSwitch.isChecked()
+        if (mDurationBubble.getProgressFloat()<0.21 || mVertigoBubble.getProgress()<0 || (mVertigoBubble.getProgress()<1 && !mTinnitusSwitch.isChecked() && !mHearingLossSwitch.isChecked() && !mEarFullnessSwitch.isChecked()
         && !mHeadacheSwitch.isChecked() && !mPhonophobiaSwitch.isChecked() && !mPhotophobiaSwitch.isChecked() && !mVisualSymSwitch.isChecked() && !mTumarkinSwitch.isChecked())){
             result = false;
             new MaterialDialog.Builder(this)
