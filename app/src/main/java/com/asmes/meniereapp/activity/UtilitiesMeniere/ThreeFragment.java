@@ -68,12 +68,12 @@ public class ThreeFragment extends Fragment {
             public void onClick(View view) {
                 TabsActivity.activitySwitchFlag = true;
                 //Si no hay password vamos al registro
-                if(UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")){
+                if (UserSession.getInstance(getContext()).getPreferences().getString(UserSession.PREFERENCES_PASS, "").equals("")) {
                     startActivity(new Intent(view.getContext(), RegisterActivity.class));
                 }//Si no está logueado voy a login
-                else if(!UserSession.getInstance(getContext()).ismIsLoggedIn()){
+                else if (!UserSession.getInstance(getContext()).ismIsLoggedIn()) {
                     startActivity(new Intent(view.getContext(), LoginFingerTipActivity.class));
-                }else {//Voy a myMeniere
+                } else {//Voy a myMeniere
                     startActivity(new Intent(view.getContext(), HearingDiaryActivity.class));
                 }
             }
@@ -93,11 +93,10 @@ public class ThreeFragment extends Fragment {
                 //Go to playStore
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse("market://details?id=com.asmes.meniereapp"));
-                try{
+                try {
                     TabsActivity.activitySwitchFlag = true;
                     startActivity(intent);
-                }
-                catch(Exception e){
+                } catch (Exception e) {
                     intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=com.asmes.meniereapp&hl=es"));
                 }
             }
