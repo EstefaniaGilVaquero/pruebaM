@@ -13,6 +13,7 @@
     <string name="newEvent">New Event</string>
     <string name="frameworks">Frameworks</string>
     <string name="healthyHabits">Healthy Habits</string>
+    <string name="userGuide">User Guide</string>
     <string name="hearingDiary">Hearing Diary</string>
     <string name="manageData">Manage Data</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
@@ -234,69 +235,68 @@
 
 
     <string-array name="arrayDescripcionHabitos" formatted="false">
-        <item>DIETARY CHANGES AND LIFESTYLE MODIFICATIONS
+        <item>DIETARY CHANGES AND LIFESTYLE MODIFICATIONS\n
             Making some changes to your diet and adopting good lifestyle habits are two important means of preventive treatment of MD.
         </item>
-        <item>The initial aim is to avoid all the common triggers of MD, but once your symptoms have improved you can slowly reintroduce them trying to identify your personal triggers.
-            The most important dietary recommendation is a high-water intake and a low sodium diet. Some Japanese researchers have found that a water intake of 35 mL/kg per day (about 2 litres and a half if you are 70 kg) may improve the symptoms of MD. Very low sodium mineral water is a good option. We also advise a sodium intake between 1.5-2g per day (less than a teaspoon of table salt). Therefore, we recommend removing the use of salt at the table and reducing the consumption of foods with a high-sodium content like processed or cured meats (bacon, sausages, ham) and frozen meals, canned foods, fast food and potato chips. We also recommend avoiding food containing monosodium glutamate, a flavor enhancer commonly added to Chinese food.
-            It is also advisable to eat at regular times and not to skip meals.
+        <item>The initial aim is to avoid all the common triggers of MD, but once your symptoms have improved you can slowly reintroduce them trying to identify your personal triggers.\n
+            The most important dietary recommendation is a high-water intake and a low sodium diet. Some Japanese researchers have found that a water intake of 35 mL/kg per day (about 2 litres and a half if you are 70 kg) may improve the symptoms of MD. Very low sodium mineral water is a good option. We also advise a sodium intake between 1.5-2g per day (less than a teaspoon of table salt). Therefore, we recommend removing the use of salt at the table and reducing the consumption of foods with a high-sodium content like processed or cured meats (bacon, sausages, ham) and frozen meals, canned foods, fast food and potato chips. We also recommend avoiding food containing monosodium glutamate, a flavor enhancer commonly added to Chinese food.\n
+            It is also advisable to eat at regular times and not to skip meals.\n
             Coffee and other caffeine-containing food and drink like tea and chocolate should be reduced to one cup of coffee a day, as should alcohol with a limit of a glass of wine or half a pint of beer per day.
         </item>
-        <item>Try to adopt healthy habits to your daily life. A systematic approach to your life helps to maintain daily routines which may prevent vertigo attacks.
-            Exercise regularly, establish regular sleeping habits and think of ways to reduce stress. Try to limit caffeine and alcohol intake.
+        <item>Try to adopt healthy habits to your daily life. A systematic approach to your life helps to maintain daily routines which may prevent vertigo attacks.\n
+            Exercise regularly, establish regular sleeping habits and think of ways to reduce stress. Try to limit caffeine and alcohol intake.\n
             Keep in mind that smoking is often not just a habit but also an addiction, so if you have MD, it is a good opportunity to try to quit.
         </item>
         <item>Be active and do some light to moderate physical exercise. Try going for a walk for 30 minutes at least every day or playing some sport regularly. Dancing, aerobics, Pilates and tai chi are also good options.
         </item>
         <item>Try these tips below to help you to form healthy sleep habits. In order to maintain at least 7 hours of sleep per night, try keeping a
-            regular sleep schedule which means going to sleep and getting up at the same time every day, including weekends and holidays.
+            regular sleep schedule which means going to sleep and getting up at the same time every day, including weekends and holidays.\n
             Consider avoiding naps, especially longer than 20 minutes. Lighter dinners and a reduce fluid intake before bedtime allow for
             ease of sleep. Coffee from late afternoon onward is not advised. Do regular exercise but not too close to bedtime.
         </item>
-        <item>Reducing your stress level is easier to said than done, but the question is how to do this. The first step in reducing stress is to identify the cause. Once it is known, first try to change your circumstances. This could mean finding alternatives (manage your time better, change of routines, etc.).  Second, learn ways of avoiding situations that you find stressful. Thirdly, if the above are not possible, try to adapt to your environment.  Ultimately, sometimes it is necessary to accept that there are things we just can’t change. Take then a deep breath and try to stay calm.
-            Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.
+        <item>Reducing your stress level is easier to said than done, but the question is how to do this. The first step in reducing stress is to identify the cause. Once it is known, first try to change your circumstances. This could mean finding alternatives (manage your time better, change of routines, etc.).  Second, learn ways of avoiding situations that you find stressful. Thirdly, if the above are not possible, try to adapt to your environment.  Ultimately, sometimes it is necessary to accept that there are things we just can’t change. Take then a deep breath and try to stay calm.\n
+            Take note of your negative thoughts, erroneous beliefs and attitudes that contribute to your stress. This is particularly important when dealing with tinnitus. Do the same with erratic behaviors and emotions. Professional guidance may be necessary to change these negative trains of thought and to develop healthy coping strategies. Your family, friends and workmates may provide you support. Interact with other people, including people with MD and MD associations.\n
             Relaxation techniques and mindfulness sessions may be appropriate.
         </item>
     </string-array>
 
-    <string-array name="arrayTituloGuia">
+    <string-array name="arrayTituloUserGuide">
         <item>GENERAL PURPOSE</item>
         <item>MY DIARY</item>
         <item>HEARING JOURNAL</item>
         <item>GLOSSARY</item>
     </string-array>
 
-    <string-array name="arrayDescripcionGuia" formatted="false">
-        <item>Welcome to the Ménière app.
-            This app has been developed with the aim of helping you collect the symptoms caused by your Ménière’s disease.
-            You must bear in mind that this app will not give you diagnoses or treatments, your doctor will interpret the information collected here, and they will give you the indications or advice that you should follow. The texts presented here are merely informative.
-            The main section of the application is my Ménière, and in it you can keep a diary of your symptoms.
-            You can find a brief description of this and other sections in the top menu.
-            We wish this app will be useful for you.
+    <string-array name="arrayDescripcioUserGuide" formatted="false">
+        <item>Welcome to the Ménière app.\n
+            This app has been developed with the aim of helping you collect the symptoms caused by your Ménière\'s disease.\n
+            You must bear in mind that this app will not give you diagnoses or treatments, your doctor will interpret the information collected here, and they will give you the indications or advice that you should follow. The texts presented here are merely informative.\n
+            The main section of the application is \"my Ménière\", and in it you can keep a diary of your symptoms.\n
+            You can find a brief description of this and other sections in the top menu.\n
+            We wish this app will be useful for you.\n
             The team of developers.
         </item>
-        <item>In this section you can keep a daily record of your symptoms. The idea is to summarize the symptoms related to the Ménière that you have had throughout the day. As if it were a personal diary, it is best to do a mental exam at the end of the day to remember the possible events that occurred throughout the day before registering them.
-            You can only add one record per day, and once added it can not be modified or deleted.
-            This section has two navigation controls to change the current month, and four buttons to control the events recorded in that month:
-            New Event: Use this button to add a record with all the symptoms of the day. You can not add records to other days that are not today.
-            See selection: This button is used to view the selected day records, if there are any.
-            Monthly report: With this button you can access a summary report of your monthly symptoms. This report can be saved on your device, or sent to other people. The application will never save or share this report automatically, your reports will only be shared when you want to.
-            Back to today: Use this button to return to the current date.
-            How is an event added? Pressing the "New Event" button will go to a screen where the symptoms that can be added will appear for you to select , you should only add events if there have been any crises or any notable symptoms uring the day, we advice not to use this function to record symptoms of little relevance.
-            This section has two parts. In the first part you can add the acute signs that characterize the crisis suffered today. In the second section you can add the residual symptoms that remain after the crises. The values of these residual symptoms are copied from their last record and you should only change
-            them if you have experienced any change in these background symptoms.
+        <item>In this section you can keep a daily record of your symptoms. The idea is to summarize the symptoms related to the Ménière that you have had throughout the day. As if it were a personal diary, it is best to do a mental exam at the end of the day to remember the possible events that occurred throughout the day before registering them.\n
+            You can only add one record per day, and once added it cannot be modified or deleted.\n
+            This section has two navigation controls to change the current month, and four buttons to control the events recorded in that month:\n
+            New Event: Use this button to add a record with all the symptoms of the day. You cannot add records to other days that are not today.\n
+            See selection: This button is used to view the selected day records, if there are any.\n
+            Monthly report: With this button you can access a summary report of your monthly symptoms. This report can be saved on your device, or sent to other people. The application will never save or share this report automatically, your reports will only be shared when you want to.\n
+            Back to today: Use this button to return to the current date.\n
+            How is an event added?\n
+            Pressing the "New Event" button will go to a screen  where the symptoms that can be added will appear for you to select , you should  only add  events if there have been any crises  or any notable  symptoms  during the day, we advise not to use this function  to record symptoms of little relevance.\n
+            This section has two parts. In the first part you can add the acute signs that characterize the crisis suffered today. In the second section you can add the residual symptoms that remain after the crises. The values of these residual symptoms are copied from their last record and you should only change them if you have experienced any change in these background symptoms.
         </item>
-        <item>This is an experimental feature in which you can estimate your hearing over time. As we have said before, this "Auditory Diary" has no diagnostic purpose, it has only been designed to perform an automatic hearing evaluation, without the need for external help, and its purpose is merely informative.
-            To use it, go to the "+ Utilities" button in the bottom navigation bar, and select the "Auditory Diary" button. Once there you will see a list with your auditory ratings, and clicking on the add button (+) you can make a new auditory estimate. To perform the test just follow the instructions presented on the screen.
+        <item>This is an experimental feature in which you can estimate your hearing over time. As we have said before, this \"Auditory Diary\" has no diagnostic purpose, it has only been designed to perform an automatic hearing evaluation, without the need for external help, and its purpose is merely informative.\n
+            To use it, go to the \'+ Utilities" button in the bottom navigation bar, and select the "Auditory Diary" button. Once there you will see a list with your auditory ratings, and clicking on the add button (+) you can make a new auditory estimate. To perform the test just follow the instructions presented on the screen.
         </item>
-        <item>Tinnitus: ringing in the ear.
-            Visual Aura: Visual symptoms that can appear usually before a crisis.
-            Phonophobia: Discomfort produced by sounds.
-            Photophobia: Discomfort produced by light.
-            Dizziness: Sensation of discomfort accompanied by a sensation of falling or of emptiness.
-            Lightheadness.
-            Otic Pressure: Feeling of pressure in one or both ears.
-            Tumarkin: Sudden fall without previous warnings or known triggers.
+        <item>Tinnitus: ringing in the ear.\n
+            Visual Aura: Visual symptoms that can appear usually before a crisis.\n
+            Phonophobia: Discomfort produced by sounds.\n
+            Photophobia: Discomfort produced by light.\n
+            Dizziness:  Sensation of discomfort accompanied by a sensation of falling or of emptiness. Lightheadness.\n
+            Otic Pressure: Feeling of pressure in one or both ears.\n
+            Tumarkin: Sudden fall without previous warnings or known triggers.\n
             Vertigo: Sensation of movement, both of oneself or of the environment that does not exist.
         </item>
     </string-array>

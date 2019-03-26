@@ -239,8 +239,12 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             int contador = cursor3.getInt(cursor3.getColumnIndex("contador"));
             int minimo = cursor3.getInt(cursor3.getColumnIndex("minimo"));
             int maximo = cursor3.getInt(cursor3.getColumnIndex("maximo"));
+            int media = 0;
 
-            meanData3.setText(getString(R.string.txtDurationMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            if(contador != 0){
+                media = (suma/contador);
+            }
+            meanData3.setText(getString(R.string.txtDurationMean).concat(String.valueOf(media)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
             cursor3.close();
         }
 

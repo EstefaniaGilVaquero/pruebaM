@@ -15,6 +15,7 @@
     <string name="newEvent">Nuevo Evento</string>
     <string name="frameworks">Frameworks</string>
     <string name="healthyHabits">Buenos Hábitos</string>
+    <string name="userGuide">Guía de Usuario</string>
     <string name="hearingDiary">Diario Auditivo</string>
     <string name="manageData">Manage Data</string>
     <string name="title_activity_spalsh">SpalshActivity</string>
@@ -98,7 +99,7 @@
     <string name="hearingLossSwitchContent">Has seleccionado algunos síntomas auditivos. Por favor, especifica dónde ocurren principalmente éstos síntomas.</string>
     <string name="infoVisualTitle">Items info</string>
     <string name="infoVisualContent">Síntomas visuales: Sensaciones visuales que ocurren principalmente antes del ataque.\n\nTumarkin: Caida súbita sin previo aviso o factor desencadenante, sin vertigo ni pérdida de consciencia.</string>
-    <string name="mandatoryFieldsContent">Los datos no son suficientes para añadir un nuevo evento, por favor introduce mas datosp o presiona botón atras.</string>
+    <string name="mandatoryFieldsContent">Los datos no son suficientes para añadir un nuevo evento, por favor introduce mas datos o presiona botón atras.</string>
     <string name="monthReportErrorTitle">Error informe mensual</string>
     <string name="monthReportErrorContent">Éste mes no tiene eventos</string>
 
@@ -187,13 +188,26 @@
     </string-array>
 
     <string-array name="arrayAnswers" formatted="false">
-        <item>El Síndrome de Ménière es un desorden crónico del oído interno, que se caracteriza por frecuentes episodios de vértigo espontaneo, perdida de audición fluctuante en uno o en los dos oídos, tinnitus (ruidos en los oídos) y una sensación de plenitud en el oído. Es difícil definir la diferencia entre Enfermedad y Síndrome de Ménière. Enfermedad de Ménière se usa cuando no se encuentra causa de la misma y Síndrome se usa cuando podría ser secundario a otra patología, si bien en la práctica se usa como sinónimos.</item>
-        <item>Aunque el Ménière se considera la tercera causa mas común de vértigo, después del vértigo posicional paroxistico benigno, y la migraña vestibular, es una enfermedad rara en los Estados Unidos, se estima que aprox. 615.000 personas están actualmente diagnosticadas con Ménière, y que se diagnostican 45,500 casos nuevos cada año. Ménière comienza normalmente entre los 30 y los 50 años de edad, y parece que afecta a un porcentaje mas alto de mujeres. En un 25-40% de los casos se ven afectados los dos oídos. Si la condición se da en pacientes de una o dos generaciones de la misma familia, se considera Ménière familiar. La migraña, y enfermedades auto-inmunes (lupus sistémico eritematoso, psoriasis o artritis reumatoide) son frecuentes en pacientes con Ménière. </item>
-        <item>Las causas del Ménière son desconocidas, aunque se supone que están implicadas las alergias, auto-inmunidad y los factores genéticos. Además, se sospecha que algunos factores ambientales pueden desencadenar la enfermedad. De alguna manera, un exceso de líquido en el oído interno, conocido como endolinfa, causa una expansión de algunas estructuras del oído interno, lo que se llama hidrops endolinfático.</item>
-        <item>Los síntomas pueden variar con el paso del tiempo, y ser diferentes de un paciente a otro. El vértigo es el síntoma mas incapacitante, se describe normalmente como la sensación de estar girando, empeora con los movimientos de cabeza, y va acompañado por nauseas, vómitos y sudores. Los vértigos aparecen espontáneamente, pueden durar hasta varias horas, y cuando remiten los pacientes se quejan de perdida de equilibrio por varios días.  Los vértigos a veces empiezan con tinnitus o un aura  de plenitud, seguida poco después por una perdida de audición en el oído afectado. Pero cuando la enfermedad avanza la audición empeora, y después de cada ataque de vértigo ya no se recupera la audición completamente. Finalmente la sordera se hace permanente y no fluctúa. Algunos pacientes sufren caídas súbitas, sin aviso previo ni detonantes, y sin vértigo, perdida de conciencia u otros síntomas neurológicos. Es lo que llamamos crisis de Tumarkin.  En mas del 40% de las crisis de Ménière aparecen dolores de cabeza, y en un 8% de los pacientes, durante los episodios de vértigo, aparecen dolores de cabeza tipo migraña. Hay numerosos factores que pueden ser considerados detonantes de una crisis de vértigo, estrés, privación de sueño, algunas comidas, alérgenos, cambios de presión atmosférica y cambios hormonales entre otros. La frecuencia de las crisis es totalmente impredecible y varia mucho de un paciente a otro. Cuando va pasando el tiempo la frecuencia de estas crisis normalmente se reduce, y la perdida de audición se hace permanente, así como el tinnitus.</item>
-        <item>No hay en la actualidad una forma precisa de diagnosticar el Ménière, se diagnostica a través de los síntomas de los pacientes y de algunos signos que percibe el especialista. Test de audición para determinar la existencia de perdida auditiva en el oído afectado, pruebas de equilibrio, pruebas calóricas y/o test de vídeo impulso de la cabeza es lo que se realiza normalmente. También se suele  realizar una resonancia magnética (MRI) para descartar otras causas del vértigo.</item>
-        <item>El tratamiento del Ménière normalmente se desarrolla en dos formas principalmente: el tratamiento que se da cuando el paciente tiene una crisis y el tratamiento preventivo, normalmente en forma de medicación diaria. Cuando se está teniendo una crisis de Ménière, se puede necesitar medicación para aliviar las nauseas, los vómitos y la sensación de vértigo.  Dependiendo del impacto que esto tenga en la calidad de vida se puede necesitar también un tratamiento preventivo. El tratamiento preventivo incluye: cambios en la dieta ( aumento del consumo de agua y dieta baja en sal), y cambios en el estilo de vida, que incluyen evitar cafeína, fumar y el alcohol, evitar situaciones de estrés, mantener una regularidad en el sueño, hacer ejercicio suave, y medicación oral (diuréticos, betahistina) Como procedimiento quirúrgico, inyecciones intratimpanicas con gentamicina o corticoides en algunos casos extremos. La naturaleza desconocida del Ménière explicaría la diferencia en la respuesta a los tratamientos entre una persona y otra. Otras opciones son ayudas auditivas, implantes cocleares, y el dispositivo Meniett. </item>
-        <item>Ménière tiene un gran impacto en la salud y la calidad de vida. Con la pérdida auditiva llega la incapacidad para discriminar entre diferentes fonemas. A menudo, un aumento en el volumen no mejora la comprensión e incluso puede causar mayores dificultades para entender el habla. Como se puede imaginar, esto causa algunas limitaciones en las rutinas diarias. Su doctor puede aconsejarle y aclararle cualquier aspecto relacionado con la enfermedad y su tratamiento. Las técnicas de relajación y la terapia cognitiva conductual pueden ayudar. Los grupos de auto-ayuda, como los de Menieres Society en el Reino Unido o Asmes en España pueden ofrecer apoyo.En la actualidad el Ménière se considera crónico, pero los esfuerzos en la investigación están dando sus frutos y nos están ayudando a entender la enfermedad. Hay esperanza para el desarrollo de tratamientos específicos en los que continuamos investigando. Por favor, ayudanos en nuestros esfuerzos para encontrar una cura para esta incapacitante enfermedad. </item>
+        <item>El Síndrome de Ménière es un desorden crónico del oído interno, que se caracteriza por frecuentes episodios de vértigo espontaneo, perdida de audición fluctuante en uno o en los dos oídos, tinnitus (ruidos en los oídos) y una sensación de plenitud en el oído.\n
+            Es difícil definir la diferencia entre Enfermedad y Síndrome de Ménière. Enfermedad de Ménière se usa cuando no se encuentra causa de la misma y Síndrome se usa cuando podría ser secundario a otra patología, si bien en la práctica se usa como sinónimos.</item>
+        <item>Aunque el Ménière se considera la tercera causa mas común de vértigo, después del vértigo posicional paroxistico benigno, y la migraña vestibular, es una enfermedad rara en los Estados Unidos, se estima que aprox. 615.000 personas están actualmente diagnosticadas con Ménière, y que se diagnostican 45,500 casos nuevos cada año. Ménière comienza normalmente entre los 30 y los 50 años de edad, y parece que afecta a un porcentaje mas alto de mujeres. En un 25-40% de los casos se ven afectados los dos oídos. Si la condición se da en pacientes de una o dos generaciones de la misma familia, se considera Ménière familiar.\n
+            La migraña, y enfermedades auto-inmunes (lupus sistémico eritematoso, psoriasis o artritis reumatoide) son frecuentes en pacientes con Ménière. </item>
+        <item>Las causas del Ménière son desconocidas, aunque se supone que están implicadas las alergias, auto-inmunidad y los factores genéticos. Además, se sospecha que algunos factores ambientales pueden desencadenar la enfermedad.\n
+            De alguna manera, un exceso de líquido en el oído interno, conocido como endolinfa, causa una expansión de algunas estructuras del oído interno, lo que se llama hidrops endolinfático.</item>
+        <item>Los síntomas pueden variar con el paso del tiempo, y ser diferentes de un paciente a otro. El vértigo es el síntoma mas incapacitante, se describe normalmente como la sensación de estar girando, empeora con los movimientos de cabeza, y va acompañado por nauseas, vómitos y sudores.\n
+            Los vértigos aparecen espontáneamente, pueden durar hasta varias horas, y cuando remiten los pacientes se quejan de perdida de equilibrio por varios días. Los vértigos a veces empiezan con tinnitus o un aura de plenitud, seguida poco después por una perdida de audición en el oído afectado.\n
+            Pero cuando la enfermedad avanza la audición empeora, y después de cada ataque de vértigo ya no se recupera la audición completamente. Finalmente la sordera se hace permanente y no fluctúa. Algunos pacientes sufren caídas súbitas, sin aviso previo ni detonantes, y sin vértigo, perdida de conciencia u otros síntomas neurológicos. Es lo que llamamos crisis de Tumarkin.\n
+            En mas del 40% de las crisis de Ménière aparecen dolores de cabeza, y en un 8% de los pacientes, durante los episodios de vértigo, aparecen dolores de cabeza tipo migraña. Hay numerosos factores que pueden ser considerados detonantes de una crisis de vértigo, estrés, privación de sueño, algunas comidas, alérgenos, cambios de presión atmosférica y cambios hormonales entre otros.\n
+            La frecuencia de las crisis es totalmente impredecible y varia mucho de un paciente a otro. Cuando va pasando el tiempo la frecuencia de estas crisis normalmente se reduce, y la perdida de audición se hace permanente, así como el tinnitus.</item>
+        <item>No hay en la actualidad una forma precisa de diagnosticar el Ménière, se diagnostica a través de los síntomas de los pacientes y de algunos signos que percibe el especialista.\n
+            Test de audición para determinar la existencia de perdida auditiva en el oído afectado, pruebas de equilibrio, pruebas calóricas y/o test de vídeo impulso de la cabeza es lo que se realiza normalmente. También se suele realizar una resonancia magnética (MRI) para descartar otras causas del vértigo.</item>
+        <item>El tratamiento del Ménière normalmente se desarrolla en dos formas principalmente: el tratamiento que se da cuando el paciente tiene una crisis y el tratamiento preventivo, normalmente en forma de medicación diaria.\n
+            Cuando se está teniendo una crisis de Ménière, se puede necesitar medicación para aliviar las nauseas, los vómitos y la sensación de vértigo.  Dependiendo del impacto que esto tenga en la calidad de vida se puede necesitar también un tratamiento preventivo.\n
+            El tratamiento preventivo incluye: cambios en la dieta ( aumento del consumo de agua y dieta baja en sal), y cambios en el estilo de vida, que incluyen evitar cafeína, fumar y el alcohol, evitar situaciones de estrés, mantener una regularidad en el sueño, hacer ejercicio suave, y medicación oral (diuréticos, betahistina) Como procedimiento quirúrgico, inyecciones intratimpanicas con gentamicina o corticoides en algunos casos extremos.\n
+            La naturaleza desconocida del Ménière explicaría la diferencia en la respuesta a los tratamientos entre una persona y otra. Otras opciones son ayudas auditivas, implantes cocleares, y el dispositivo Meniett. </item>
+        <item>Ménière tiene un gran impacto en la salud y la calidad de vida. Con la pérdida auditiva llega la incapacidad para discriminar entre diferentes fonemas. A menudo, un aumento en el volumen no mejora la comprensión e incluso puede causar mayores dificultades para entender el habla. Como se puede imaginar, esto causa algunas limitaciones en las rutinas diarias.\n
+            Su doctor puede aconsejarle y aclararle cualquier aspecto relacionado con la enfermedad y su tratamiento. Las técnicas de relajación y la terapia cognitiva conductual pueden ayudar. Los grupos de auto-ayuda, como los de Menieres Society en el Reino Unido o Asmes en España pueden ofrecer apoyo.\n
+            En la actualidad el Ménière se considera crónico, pero los esfuerzos en la investigación están dando sus frutos y nos están ayudando a entender la enfermedad. Hay esperanza para el desarrollo de tratamientos específicos en los que continuamos investigando. Por favor, ayudanos en nuestros esfuerzos para encontrar una cura para esta incapacitante enfermedad. </item>
         <item>www.menieres.org.uk \n
             https://vestibular.org \n
             www.sindromedemeniereespana.com \n
@@ -219,43 +233,43 @@
         <item>Reducir el nivel de estrés es mas fácil de decir que de hacer, pero la cuestión es como hacerlo. El primer paso para reducir el estrés es identificar la causa. Una vez que se identifica intentar cambiar las circunstancias. Eso podría significar buscar alternativas (gestionar mejor el tiempo, cambiar las rutinas, etc.) Segundo, buscar la forma de evitar las situaciones que se encuentran estresantes. Tercero, si lo anterior no es posible, intentar adaptarte a las circunstancias. Y por ultimo, a veces es necesario aceptar que hay cosas que se pueden cambiar. Entonces, tomar una respiración profunda e intentar mantener la calma. Tomar nota de los pensamientos negativos, creencias erróneas y actitudes que contribuyen al estrés. Esto es particularmente importante para manejar el tinnitus.  Hacer lo mismo con los  comportamientos y emociones erráticas. A veces la guía de un profesional puede ser necesaria para cambiar estas actitudes negativas y desarrollar estrategias de vida mas saludables. La familia, amigos y compañeros de trabajo pueden dar apoyo. Interactuar con otras personas, incluyendo personas con Maniere y asociaciones. Las tecnicas de relajación y sesiones de mindfulness también pueden ser muy apropiadas. </item>
     </string-array>
 
-    <string-array name="arrayTituloGuia">
+    <string-array name="arrayTituloUserGuide">
         <item>PROPOSITO GENERAL</item>
         <item>MI DIARIO</item>
         <item>DIARIO AUDITIVO</item>
         <item>GLOSARIO</item>
     </string-array>
 
-    <string-array name="arrayDescripcionGuia" formatted="false">
+    <string-array name="arrayDescripcioUserGuide" formatted="false">
         <item>Bienvenido a la app Ménière.
-            Esta app se ha desarrollado con el objetivo de ayudarle a recopilar los síntomas producidos por su enfermedad de Ménière.
-            Debe tener en cuenta que esta app no le dará diagnósticos ni tratamientos, su medico domina el contenido aquí recogido, y serán sus indicaciones o consejos los que deberá seguir. Los textos aquí presentados son meramente de apoyo informativo.
-            La parte principal de la aplicación es “mi Ménière” y en ella podrá llevar un diario de sus síntomas.
-            Puede encontrar una breve descripción de esta y otras secciones en el menú superior.
-            Deseamos que esta app le sea útil.
+            Esta app se ha desarrollado con el objetivo de ayudarle a recopilar los síntomas producidos por su enfermedad de Ménière.\n
+            Debe tener en cuenta que esta app no le dará diagnósticos ni tratamientos, su medico domina el contenido aquí recogido, y serán sus indicaciones o consejos los que deberá seguir. Los textos aquí presentados son meramente de apoyo informativo.\n
+            La parte principal de la aplicación es \"mi Ménière\" y en ella podrá llevar un diario de sus síntomas.\n
+            Puede encontrar una breve descripción de esta y otras secciones en el menú superior.\n
+            Deseamos que esta app le sea útil.\n
             El equipo de desarrolladores.
         </item>
-        <item>En esta sección podrá llevar un registro diario de sus síntomas. La idea es que haga un resumen de los síntomas relacionados con el Ménière que ha tenido a lo largo del día. Como si fuese un diario personal, lo mejor es que al final del día haga un examen mental para recordar los posibles eventos producidos a lo largo del día antes de registrarlos.
-            Solo puede añadir un registro por día, y una vez añadido no puede ser modificado ni borrado.
-            Esta sección tiene dos controles de navegación para cambiar el mes actual, y cuatro botones para controlar los eventos registrados en ese mes:
-            Nuevo Evento: Use este botón para añadir un registro con todos los síntomas del día. No se pueden añadir registros a otros días que no sean el día de hoy.
-            Ver selección: Este botón se usa para ver los registros del día seleccionados, si existen.
-            Informe mensual: Con este botón se accede a un informe resumen de sus síntomas mensuales. Este informe puede se guardado en su dispositivo, o enviado a otras personas. La aplicación nunca guardará o compartirá este informe automáticamente, solo se compartirán sus informes cuando usted lo indique.
-            Volver a hoy: Use este botón para volver al día de hoy.
-            ¿Cómo se añade un evento?
-            Al pulsar el botón “Nuevo Evento” irá a una pantalla donde aparecerán los síntomas que se pueden añadir, para que usted los seleccione, solo debe añadir eventos si en el día ha habido alguna crisis o algún síntoma notable, no use este registro para guardar síntomas de poca relevancia.
+        <item>En esta sección podrá llevar un registro diario de sus síntomas. La idea es que haga un resumen de los síntomas relacionados con el Ménière que ha tenido a lo largo del día. Como si fuese un diario personal, lo mejor es que al final del día haga un examen mental para recordar los posibles eventos producidos a lo largo del día antes de registrarlos.\n
+            Solo puede añadir un registro por día, y una vez añadido no puede ser modificado ni borrado.\n
+            Esta sección tiene dos controles de navegación para cambiar el mes actual, y cuatro botones para controlar los eventos registrados en ese mes:\n
+            Nuevo Evento: Use este botón para añadir un registro con todos los síntomas del día. No se pueden añadir registros a otros días que no sean el día de hoy.\n
+            Ver selección: Este botón se usa para ver los registros del día seleccionados, si existen.\n
+            Informe mensual: Con este botón se accede a un informe resumen de sus síntomas mensuales. Este informe puede se guardado en su dispositivo, o enviado a otras personas. La aplicación nunca guardará o compartirá este informe automáticamente, solo se compartirán sus informes cuando usted lo indique.\n
+            Volver a hoy: Use este botón para volver al día de hoy.\n
+            ¿Cómo se añade un evento?\n
+            Al pulsar el botón \"Nuevo Evento\" irá a una pantalla donde aparecerán los síntomas que se pueden añadir, para que usted los seleccione, solo debe añadir eventos si en el día ha habido alguna crisis o algún síntoma notable, no use este registro para guardar síntomas de poca relevancia.\n
             Esta sección tiene dos partes. En la primera parte usted podrá añadir los signos agudos que caracterizan la crisis sufrida en el día de hoy. En la segunda sección podrá poner los síntomas residuales que permanecen después de las crisis. Los valores de estos síntomas residuales se copian de su último registro y solo los debe cambiar si ha experimentado algún cambio en estos síntomas de fondo.
         </item>
-        <item>Esta es una característica experimental en la que usted podrá estimar su audición a lo largo del tiempo. Como hemos dicho con anterioridad, este “Diario auditivo” no tiene finalidad diagnóstica, solo ha sido diseñado para realizar una valoración auditiva automática, sin la necesidad de ayuda externa, y su finalidad es meramente informativa.
-            Para usarla debe ir al botón “+ Utilidades” de la barra de navegación inferior, y seleccionar el botón “Diario auditivo”. Una vez aquí aparecerá una lista con sus valoraciones auditivas, presionando en el botón de añadir (+) podrá realizar una nueva estimación auditiva. Para realizar la prueba solo tiene que seguir las instrucciones presentadas en la pantalla.
+        <item>Esta es una característica experimental en la que usted podrá estimar su audición a lo largo del tiempo. Como hemos dicho con anterioridad, este \"Diario auditivo\" no tiene finalidad diagnóstica, solo ha sido diseñado para realizar una valoración auditiva automática, sin la necesidad de ayuda externa, y su finalidad es meramente informativa.\n
+            Para usarla debe ir al botón \"+ Utilidades\" de la barra de navegación inferior, y seleccionar el botón “Diario auditivo”. Una vez aquí aparecerá una lista con sus valoraciones auditivas, presionando en el botón de añadir (+) podrá realizar una nueva estimación auditiva. Para realizar la prueba solo tiene que seguir las instrucciones presentadas en la pantalla.
         </item>
-        <item>Acúfeno: zumbido en el oído.
-            Aura visual: Síntomas visuales que pueden aparecer generalmente antes de una crisis.
-            Fonofobia: Malestar producido por los sonidos.
-            Fotofobia: Malestar producido por la luz.
-            Mareo: Sensación de malestar acompañada de sensación de caída o de vacío.
-            Presión Ótica: Sensación de presión en uno o los dos oídos.
-            Tumarkin: Caída repentina sin avisos previos ni factores desencadenantes conocidos.
+        <item>Acúfeno: zumbido en el oído.\n
+            Aura visual: Síntomas visuales que pueden aparecer generalmente antes de una crisis.\n
+            Fonofobia: Malestar producido por los sonidos.\n
+            Fotofobia: Malestar producido por la luz.\n
+            Mareo: Sensación de malestar acompañada de sensación de caída o de vacío.\n
+            Presión Ótica: Sensación de presión en uno o los dos oídos.\n
+            Tumarkin: Caída repentina sin avisos previos ni factores desencadenantes conocidos.\n
             Vértigo: Sensación de movimiento propio o del ambiente que no existe.
         </item>
     </string-array>
@@ -263,25 +277,25 @@
     <string name="title_activity_authors">AuthorsActivity</string>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>
-<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
-<h3><br />Collaborators:</h3>
-<h3 style="padding-left: 30px;"><br />Nicol&aacute;s P&eacute;rez Fern&aacute;ndez (Medical Advisor)<br />&Aacute;ngel Batuecas Caletr&iacute;o (Medical Advisor)<br />Jose Antonio L&oacute;pez Esc&aacute;mez (Medical Advisor)<br />Mark Jackson (English Localization)<br />Eva Perendreu (ASMES)</h3>
-<h3><br />Original Idea y Design:</h3>
-<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
-<h3><br />iOS Development and Design:</h3>
-<h3 style="padding-left: 30px;"><br />Jorge Rey Mart&iacute;nez<br />Marina Gonz&aacute;lez Llorca (iOS Design)&copy; 2017 Espinosa y Rey</h3>
-<h3><br />Android Development and Design:</h3>
-<h3 style="padding-left: 30px;"><br />Estefan&iacute;a Gil Vaquero</h3>]]>
+        <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+        <h3><br />Collaborators:</h3>
+        <h3 style="padding-left: 30px;"><br />Nicol&aacute;s P&eacute;rez Fern&aacute;ndez (Medical Advisor)<br />&Aacute;ngel Batuecas Caletr&iacute;o (Medical Advisor)<br />Jose Antonio L&oacute;pez Esc&aacute;mez (Medical Advisor)<br />Mark Jackson (English Localization)<br />Eva Perendreu (ASMES)</h3>
+        <h3><br />Original Idea y Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+        <h3><br />iOS Development and Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Jorge Rey Mart&iacute;nez<br />Marina Gonz&aacute;lez Llorca (iOS Design)&copy; 2017 Espinosa y Rey</h3>
+        <h3><br />Android Development and Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Estefan&iacute;a Gil Vaquero</h3>]]>
     </string>
 
     <string name="text_frameworks"><![CDATA[<h3>Frameworks:</h3>
-<p><strong>com.afollestad.material-dialogs</strong></p>
-<p><strong>com.github.PhilJay:MPAndroidChart</strong></p>
-<p><strong>com.xw.repo:bubbleseekbar:3.14-lite</strong></p>
-<p><strong>com.weiwangcn.betterspinner:library-material</strong></p>
-<p><strong>com.crashlytics.sdk.android:crashlytics</strong></p>
-<p><strong>com.sun.mail:android-mail</strong></p>
-<p>&nbsp;</p>]]>
+        <p><strong>com.afollestad.material-dialogs</strong></p>
+        <p><strong>com.github.PhilJay:MPAndroidChart</strong></p>
+        <p><strong>com.xw.repo:bubbleseekbar:3.14-lite</strong></p>
+        <p><strong>com.weiwangcn.betterspinner:library-material</strong></p>
+        <p><strong>com.crashlytics.sdk.android:crashlytics</strong></p>
+        <p><strong>com.sun.mail:android-mail</strong></p>
+        <p>&nbsp;</p>]]>
     </string>
 
     <string name="title_activity_main">MainActivity</string>
