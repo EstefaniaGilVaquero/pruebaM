@@ -285,8 +285,11 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             int contador = cursor6.getInt(cursor6.getColumnIndex("contador"));
             int minimo = cursor6.getInt(cursor6.getColumnIndex("minimo"));
             int maximo = cursor6.getInt(cursor6.getColumnIndex("maximo"));
-
-            meanData6.setText(getString(R.string.txtStressMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            int mean = 0;
+            if(contador > 0){
+                mean = suma/contador;
+            }
+            meanData6.setText(getString(R.string.txtStressMean).concat(String.valueOf(mean)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
             cursor6.close();
         }
     }
@@ -334,10 +337,10 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             List<String> arrayTriggersNames = new ArrayList<String>(arrayTriggers.keySet());
             List<String> arrayTriggersValues = new ArrayList<String>(arrayTriggers.values());
 
-            trigger1.setText("1. " + arrayTriggersParents.get(arrayTriggersNames.get(0)) + " " + arrayTriggersNames.get(0) + " (" + String.valueOf(arrayTriggersValues.get(0)) + ")");
-            trigger2.setText("2. " + arrayTriggersParents.get(arrayTriggersNames.get(1)) + " " + arrayTriggersNames.get(1) + " (" + String.valueOf(arrayTriggersValues.get(1)) + ")");
-            trigger3.setText("3. " + arrayTriggersParents.get(arrayTriggersNames.get(2)) + " " + arrayTriggersNames.get(2) + " (" + String.valueOf(arrayTriggersValues.get(2)) + ")");
-            trigger4.setText("4. " + arrayTriggersParents.get(arrayTriggersNames.get(3)) + " " + arrayTriggersNames.get(3) + " (" + String.valueOf(arrayTriggersValues.get(3)) + ")");
+            if(arrayTriggersNames.size() > 0) trigger1.setText("1. " + arrayTriggersParents.get(arrayTriggersNames.get(0)) + " " + arrayTriggersNames.get(0) + " (" + String.valueOf(arrayTriggersValues.get(0)) + ")");
+            if(arrayTriggersNames.size() > 1) trigger2.setText("2. " + arrayTriggersParents.get(arrayTriggersNames.get(1)) + " " + arrayTriggersNames.get(1) + " (" + String.valueOf(arrayTriggersValues.get(1)) + ")");
+            if(arrayTriggersNames.size() > 2) trigger3.setText("3. " + arrayTriggersParents.get(arrayTriggersNames.get(2)) + " " + arrayTriggersNames.get(2) + " (" + String.valueOf(arrayTriggersValues.get(2)) + ")");
+            if(arrayTriggersNames.size() > 3) trigger4.setText("4. " + arrayTriggersParents.get(arrayTriggersNames.get(3)) + " " + arrayTriggersNames.get(3) + " (" + String.valueOf(arrayTriggersValues.get(3)) + ")");
 
         }
     }
