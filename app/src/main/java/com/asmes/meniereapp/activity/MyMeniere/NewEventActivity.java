@@ -31,21 +31,21 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import lib.kingja.switchbutton.SwitchMultiButton;
+
 public class NewEventActivity extends BaseActivity {
 
     private ScrollView mScrollView;
     private BubbleSeekBar mDurationBubble, mVertigoBubble, mLimitationBubble, mStressBubble, mInstabilityIntenBubble, mDizzinessDisBubble, mInstabilityDisBubble, mVisualBlurDisBubble, mHeadPresureDisBubble;
     private SwitchCompat mHearingLossSwitch, mTinnitusSwitch, mEarFullnessSwitch, mHeadacheSwitch, mPhotophobiaSwitch, mPhonophobiaSwitch, mVisualSymSwitch, mTumarkinSwitch, mMenstruationSwitch, mNauseaSwitch, mVomitingSwitch, mInstabilitySwitch;
     private TextView mEpisodesTxt, mDurationTxt, mVertigoTxt, mLimitationTxt, mStressTxt, mInstabilityIntenTxt, mDizzinessDisTxt, mInstabilityDisTxt, mVisualBlurDisTxt, mHeadPresureDisTxt,
-                        mHeadProp_1a_CardView, mHeadProp_1b_CardView, mHeadProp_1c_CardView, mHeadProp_1d_CardView, mHeadProp_2a_CardView, mHeadProp_2b_CardView, mHeadProp_2c_CardView, mHeadProp_3a_CardView, mHeadProp_3b_CardView, mHeadProp_3c_CardView,
-                        mWeather_1a_CardView, mWeather_1b_CardView, mWeather_1c_CardView, mWeather_1d_CardView, mSleep_1a_CardView, mSleep_1b_CardView, mSleep_1c_CardView, mSleep_1d_CardView, mPhysical_1a_CardView, mPhysical_1b_CardView, mPhysical_1c_CardView,
-                        mPhysical_1d_CardView, mHabit_1a_CardView, mHabit_1b_CardView, mHabit_1c_CardView, mHabit_1d_CardView, mHabit_1e_CardView, mHabit_1f_CardView, mNotes;
+                        mHeadProp_1a_CardView, mHeadProp_1b_CardView, mHeadProp_1c_CardView, mHeadProp_1d_CardView, mHeadProp_2a_CardView, mHeadProp_2b_CardView, mHeadProp_2c_CardView, mHeadProp_3a_CardView, mHeadProp_3b_CardView, mHeadProp_3c_CardView, mNotes;
 
-    private LinearLayout mHeadProp_1a_LayOut, mHeadProp_1b_LayOut, mHeadProp_1c_LayOut, mHeadProp_1d_LayOut, mHeadProp_2a_LayOut, mHeadProp_2b_LayOut, mHeadProp_2c_LayOut, mHeadProp_3a_LayOut, mHeadProp_3b_LayOut, mHeadProp_3c_LayOut,
-            mWeather_1a_LayOut, mWeather_1b_LayOut, mWeather_1c_LayOut, mWeather_1d_LayOut, mSleep_1a_LayOut, mSleep_1b_LayOut, mSleep_1c_LayOut, mSleep_1d_LayOut, mPhysical_1a_LayOut, mPhysical_1b_LayOut, mPhysical_1c_LayOut,
-            mPhysical_1d_LayOut, mHabit_1a_LayOut, mHabit_1b_LayOut, mHabit_1c_LayOut, mHabit_1d_LayOut, mHabit_1e_LayOut, mHabit_1f_LayOut, mHeadache_LayOut, mWeatherLayout, mSleepLayout , mPhisicLayout , mExccessLayout;
+    private LinearLayout mHeadProp_1a_LayOut, mHeadProp_1b_LayOut, mHeadProp_1c_LayOut, mHeadProp_1d_LayOut, mHeadProp_2a_LayOut, mHeadProp_2b_LayOut, mHeadProp_2c_LayOut, mHeadProp_3a_LayOut, mHeadProp_3b_LayOut, mHeadProp_3c_LayOut, mHeadache_LayOut;
 
-    private String mMigraineType1, mMigraineType2, mMigraineType3, mWeather, mSleep, mPhysical, mHabit, mHearingLoss;
+    SwitchMultiButton mSwitchMultiButtonClima , mSwitchMultiButtonSueno , mSwitchMultiButtonActividad , mSwitchMultiButtonExcesos, getmSwitchMultiButtonJaqueca1, getmSwitchMultiButtonJaqueca2, getmSwitchMultiButtonJaqueca3;
+
+    private String mMigraineType1, mMigraineType2, mMigraineType3, mHearingLoss;
     private ImageView mAddEpisodeBtn, mInfoVisualBtn;
     private CardView mInstavilityIntenCardView;
     private int mEpisode = 1, mHearingLossIndex;
@@ -111,71 +111,16 @@ public class NewEventActivity extends BaseActivity {
         mVisualBlurDisTxt = findViewById(R.id.visualBlurDisTxt);
         mHeadPresureDisTxt = findViewById(R.id.headPresureDisTxt);
 
-        mHeadProp_1a_CardView = findViewById(R.id.headProp_1a);
-        mHeadProp_1b_CardView = findViewById(R.id.headProp_1b);
-        mHeadProp_1c_CardView = findViewById(R.id.headProp_1c);
-        mHeadProp_1d_CardView = findViewById(R.id.headProp_1d);
-        mHeadProp_2a_CardView = findViewById(R.id.headProp_2a);
-        mHeadProp_2b_CardView = findViewById(R.id.headProp_2b);
-        mHeadProp_2c_CardView = findViewById(R.id.headProp_2c);
-        mHeadProp_3a_CardView = findViewById(R.id.headProp_3a);
-        mHeadProp_3b_CardView = findViewById(R.id.headProp_3b);
-        mHeadProp_3c_CardView = findViewById(R.id.headProp_3c);
-        mWeather_1a_CardView = findViewById(R.id.Weather_1a);
-        mWeather_1b_CardView = findViewById(R.id.Weather_1b);
-        mWeather_1c_CardView = findViewById(R.id.Weather_1c);
-        mWeather_1d_CardView = findViewById(R.id.Weather_1d);
-        mSleep_1a_CardView = findViewById(R.id.Sleep_1a);
-        mSleep_1b_CardView = findViewById(R.id.Sleep_1b);
-        mSleep_1c_CardView = findViewById(R.id.Sleep_1c);
-        mSleep_1d_CardView = findViewById(R.id.Sleep_1d);
-        mPhysical_1a_CardView = findViewById(R.id.Physical_1a);
-        mPhysical_1b_CardView = findViewById(R.id.Physical_1b);
-        mPhysical_1c_CardView = findViewById(R.id.Physical_1c);
-        mPhysical_1d_CardView = findViewById(R.id.Physical_1d);
-        mHabit_1a_CardView = findViewById(R.id.Habit_1a);
-        mHabit_1b_CardView = findViewById(R.id.Habit_1b);
-        mHabit_1c_CardView = findViewById(R.id.Habit_1c);
-        mHabit_1d_CardView = findViewById(R.id.Habit_1d);
-        mHabit_1e_CardView = findViewById(R.id.Habit_1e);
-        mHabit_1f_CardView = findViewById(R.id.Habit_1f);
+        getmSwitchMultiButtonJaqueca1 = findViewById(R.id.multiButtonJaqueca1);
+        getmSwitchMultiButtonJaqueca2 = findViewById(R.id.multiButtonJaqueca2);
+        getmSwitchMultiButtonJaqueca3 = findViewById(R.id.multiButtonJaqueca3);
+        mSwitchMultiButtonClima = findViewById(R.id.multiButtonClima);
+        mSwitchMultiButtonSueno = findViewById(R.id.multiButtonSueno);
+        mSwitchMultiButtonActividad = findViewById(R.id.multiButtonActividad);
+        mSwitchMultiButtonExcesos = findViewById(R.id.multiButtonExcesos);
 
-        //Layouts
-        mHeadProp_1a_LayOut = findViewById(R.id.headProp_1a_layout);
-        mHeadProp_1b_LayOut =  findViewById(R.id.headProp_1b_layout);
-        mHeadProp_1c_LayOut =  findViewById(R.id.headProp_1c_layout);
-        mHeadProp_1d_LayOut =  findViewById(R.id.headProp_1d_layout);
-        mHeadProp_2a_LayOut = findViewById(R.id.headProp_2a_layout);
-        mHeadProp_2b_LayOut = findViewById(R.id.headProp_2b_layout);
-        mHeadProp_2c_LayOut = findViewById(R.id.headProp_2c_layout);
-        mHeadProp_3a_LayOut = findViewById(R.id.headProp_3a_layout);
-        mHeadProp_3b_LayOut = findViewById(R.id.headProp_3b_layout);
-        mHeadProp_3c_LayOut = findViewById(R.id.headProp_3c_layout);
-        mWeather_1a_LayOut = findViewById(R.id.Weather_1a_layout);
-        mWeather_1b_LayOut = findViewById(R.id.Weather_1b_layout);
-        mWeather_1c_LayOut = findViewById(R.id.Weather_1c_layout);
-        mWeather_1d_LayOut = findViewById(R.id.Weather_1d_layout);
-        mSleep_1a_LayOut = findViewById(R.id.Sleep_1a_layout);
-        mSleep_1b_LayOut = findViewById(R.id.Sleep_1b_layout);
-        mSleep_1c_LayOut = findViewById(R.id.Sleep_1c_layout);
-        mSleep_1d_LayOut = findViewById(R.id.Sleep_1d_layout);
-        mPhysical_1a_LayOut = findViewById(R.id.Physical_1a_layout);
-        mPhysical_1b_LayOut = findViewById(R.id.Physical_1b_layout);
-        mPhysical_1c_LayOut = findViewById(R.id.Physical_1c_layout);
-        mPhysical_1d_LayOut = findViewById(R.id.Physical_1d_layout);
-        mHabit_1a_LayOut = findViewById(R.id.Habit_1a_layout);
-        mHabit_1b_LayOut = findViewById(R.id.Habit_1b_layout);
-        mHabit_1c_LayOut = findViewById(R.id.Habit_1c_layout);
-        mHabit_1d_LayOut = findViewById(R.id.Habit_1d_layout);
-        mHabit_1e_LayOut = findViewById(R.id.Habit_1e_layout);
-        mHabit_1f_LayOut = findViewById(R.id.Habit_1f_layout);
         mHeadache_LayOut = findViewById(R.id.headachePropsLayout);
         mInstavilityIntenCardView = findViewById(R.id.instabilityIntensityCardView);
-
-        mWeatherLayout = findViewById(R.id.weatherLayout);
-        mSleepLayout = findViewById(R.id.sleepLayout);
-        mPhisicLayout = findViewById(R.id.phisicLayout);
-        mExccessLayout = findViewById(R.id.exccessLayout);
 
         mNotes = findViewById(R.id.notesTxt);
 
@@ -229,9 +174,6 @@ public class NewEventActivity extends BaseActivity {
             //Set listeners for bubbles
             setBubblesListeners();
 
-            //Set listeners for CardViews
-            setCardViewsListeners();
-
             //set info listeners
             setInfoListeners();
         }
@@ -280,7 +222,6 @@ public class NewEventActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 new MaterialDialog.Builder(v.getContext())
-                        .title(R.string.infoVisualTitle)
                         .content(R.string.infoVisualContent)
                         .positiveText(R.string.positiveTxtOk)
                         .show();
@@ -293,8 +234,8 @@ public class NewEventActivity extends BaseActivity {
         //TODO: Poner textos de verdad
                 if (mHearingLossSwitch.isChecked()) {
                     new MaterialDialog.Builder(v.getContext())
-                            .title(R.string.addEpisodeTitle)
-                            .content(R.string.addEpisodeContent)
+                            .title(R.string.hearingLossSwitchTitle)
+                            .content(R.string.hearingLossSwitchContent)
                             .items(R.array.hearingLoss)
                             .itemsCallbackSingleChoice(mHearingLossIndex, new MaterialDialog.ListCallbackSingleChoice() {
                                 @Override
@@ -380,442 +321,6 @@ public class NewEventActivity extends BaseActivity {
                 mHeadPresureDisTxt.setText(s);
             }
         });
-    }
-
-    public void setCardViewsListeners(){
-        mHeadProp_1a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_1a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType1 = mHeadProp_1a_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_1b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType1 = mHeadProp_1b_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_1c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType1 = mHeadProp_1c_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_1d_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mMigraineType1 = mHeadProp_1d_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_2a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_2a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_2b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_2c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType2 = mHeadProp_2a_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_2b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_2b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_2b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_2c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType2 = mHeadProp_2b_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_2c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_2b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_2c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_2c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mMigraineType2 = mHeadProp_2c_CardView.getText().toString();
-                }
-        });
-
-        mHeadProp_3a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_3a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_3b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_3c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType3 = mHeadProp_3a_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_3b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_3b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_3b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_3c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mMigraineType3 = mHeadProp_3b_CardView.getText().toString();
-            }
-        });
-
-        mHeadProp_3c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_3b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHeadProp_3c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_3c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mMigraineType3 = mHeadProp_3c_CardView.getText().toString();
-            }
-        });
-
-        mWeather_1a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mWeather_1a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mWeather_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather = mWeather_1a_CardView.getText().toString();
-            }
-        });
-
-        mWeather_1b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mWeather_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather = mWeather_1b_CardView.getText().toString();
-            }
-        });
-
-        mWeather_1c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mWeather_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather = mWeather_1c_CardView.getText().toString();
-            }
-        });
-
-        mWeather_1d_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mWeather_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mWeather = mWeather_1d_CardView.getText().toString();
-            }
-        });
-
-        mSleep_1a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSleep_1a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mSleep_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep = mSleep_1a_CardView.getText().toString();
-            }
-        });
-
-        mSleep_1b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mSleep_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep = mSleep_1b_CardView.getText().toString();
-            }
-        });
-
-        mSleep_1c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mSleep_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep = mSleep_1c_CardView.getText().toString();
-            }
-        });
-
-        mSleep_1d_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mSleep_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mSleep = mSleep_1d_CardView.getText().toString();
-            }
-        });
-
-        mPhysical_1a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mPhysical_1a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mPhysical_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical = mPhysical_1a_CardView.getText().toString();
-            }
-        });
-
-        mPhysical_1b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mPhysical_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical = mPhysical_1b_CardView.getText().toString();
-            }
-        });
-
-        mPhysical_1c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mPhysical_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical = mPhysical_1c_CardView.getText().toString();
-            }
-        });
-
-        mPhysical_1d_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mPhysical_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mPhysical = mPhysical_1d_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1a_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1e_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1f_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit = mHabit_1a_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1b_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1e_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1f_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit = mHabit_1b_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1c_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1e_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1f_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit = mHabit_1c_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1d_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit_1e_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1f_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit = mHabit_1d_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1e_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1e_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit_1f_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit = mHabit_1e_CardView.getText().toString();
-            }
-        });
-
-        mHabit_1f_CardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1b_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1c_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1d_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1e_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-                mHabit_1f_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHabit = mHabit_1f_CardView.getText().toString();
-            }
-        });
 
         mInstabilitySwitch.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -840,6 +345,8 @@ public class NewEventActivity extends BaseActivity {
         });
     }
 
+
+
     private void disableEnableControls(boolean enable){
 
         mAddEpisodeBtn.setEnabled(enable);
@@ -859,10 +366,10 @@ public class NewEventActivity extends BaseActivity {
         mNauseaSwitch.setEnabled(enable);
         mVomitingSwitch.setEnabled(enable);
         mInstabilitySwitch.setEnabled(enable);
-        mWeatherLayout.setEnabled(enable);
-        mSleepLayout.setEnabled(enable);
-        mPhisicLayout.setEnabled(enable);
-        mExccessLayout.setEnabled(enable);
+        mSwitchMultiButtonClima.setEnabled(enable);
+        mSwitchMultiButtonSueno.setEnabled(enable);
+        mSwitchMultiButtonActividad.setEnabled(enable);
+        mSwitchMultiButtonExcesos.setEnabled(enable);
         mNotes.setEnabled(enable);
         mDizzinessDisBubble.setEnabled(enable);
         mInstabilityDisBubble.setEnabled(enable);
@@ -903,128 +410,52 @@ public class NewEventActivity extends BaseActivity {
             mInstabilityIntenBubble.setProgress(event.instabilityIntensity!=null?Float.valueOf(event.instabilityIntensity):0);
         }
 
+        String switchSelectedName;
+
         if (mHeadacheSwitch.isChecked()){
             mHeadache_LayOut.setVisibility(View.VISIBLE);
 
-            if(mHeadProp_1b_CardView.getText().equals(event.headacheProperties1)){
-                mHeadProp_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-            }else if(mWeather_1c_CardView.getText().equals(event.headacheProperties1)){
-                mHeadProp_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-            }else if(mHeadProp_1d_CardView.getText().equals(event.headacheProperties1)){
-                mHeadProp_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca1).length; i++)
+            {
+                switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca1)[i];
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties1)) mSwitchMultiButtonClima.setSelectedTab(i);
             }
 
-            if(mHeadProp_2b_CardView.getText().equals(event.headacheProperties2)){
-                mHeadProp_2b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_2b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-            }else if(mHeadProp_2c_CardView.getText().equals(event.headacheProperties2)){
-                mHeadProp_2c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_2c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_2a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_2a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca2).length; i++)
+            {
+                switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca2)[i];
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties2)) mSwitchMultiButtonClima.setSelectedTab(i);
             }
 
-            if(mHeadProp_3b_CardView.getText().equals(event.headacheProperties3)){
-                mHeadProp_3b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_3b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-            }else if(mHeadProp_3c_CardView.getText().equals(event.headacheProperties3)){
-                mHeadProp_3c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-                mHeadProp_3c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-                mHeadProp_3a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-                mHeadProp_3a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+            for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca3).length; i++)
+            {
+                switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca3)[i];
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties3)) mSwitchMultiButtonClima.setSelectedTab(i);
             }
-
         }
 
-        if(mWeather_1b_CardView.getText().equals(event.weather)){
-            mWeather_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mWeather_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mWeather_1c_CardView.getText().equals(event.weather)){
-            mWeather_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mWeather_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mWeather_1d_CardView.getText().equals(event.weather)){
-            mWeather_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mWeather_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mWeather_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mWeather_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        for (int i=0; i<getResources().getStringArray(R.array.arrayTriggersClima).length; i++)
+        {
+            switchSelectedName = getResources().getStringArray(R.array.arrayTriggersClima)[i];
+            if (switchSelectedName.equalsIgnoreCase(event.weather)) mSwitchMultiButtonClima.setSelectedTab(i);
         }
 
-        if(mSleep_1b_CardView.getText().equals(event.sleep)){
-            mSleep_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mSleep_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mSleep_1c_CardView.getText().equals(event.sleep)){
-            mSleep_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mSleep_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mSleep_1d_CardView.getText().equals(event.sleep)){
-            mSleep_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mSleep_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mSleep_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mSleep_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        for (int i=0; i<getResources().getStringArray(R.array.arrayTriggersSueño).length; i++)
+        {
+            switchSelectedName = getResources().getStringArray(R.array.arrayTriggersSueño)[i];
+            if (switchSelectedName.equalsIgnoreCase(event.sleep)) mSwitchMultiButtonSueno.setSelectedTab(i);
         }
 
-        if(mPhysical_1b_CardView.getText().equals(event.physicalActivity)){
-            mPhysical_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mPhysical_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mPhysical_1c_CardView.getText().equals(event.physicalActivity)){
-            mPhysical_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mPhysical_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mPhysical_1d_CardView.getText().equals(event.physicalActivity)){
-            mPhysical_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mPhysical_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mPhysical_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mPhysical_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        for (int i=0; i<getResources().getStringArray(R.array.arrayTriggersActividad).length; i++)
+        {
+            switchSelectedName = getResources().getStringArray(R.array.arrayTriggersActividad)[i];
+            if (switchSelectedName.equalsIgnoreCase(event.physicalActivity)) mSwitchMultiButtonActividad.setSelectedTab(i);
         }
 
-        if(mHabit_1b_CardView.getText().equals(event.habitExcess)){
-            mHabit_1b_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mHabit_1b_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mHabit_1c_CardView.getText().equals(event.habitExcess)){
-            mHabit_1c_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mHabit_1c_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mHabit_1d_CardView.getText().equals(event.habitExcess)){
-            mHabit_1d_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mHabit_1d_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mHabit_1e_CardView.getText().equals(event.habitExcess)){
-            mHabit_1e_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mHabit_1e_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
-        }else if(mHabit_1f_CardView.getText().equals(event.habitExcess)){
-            mHabit_1f_LayOut.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDarker));
-            mHabit_1f_CardView.setTextColor(getResources().getColor(R.color.colorWhite));
-            mHabit_1a_LayOut.setBackground(getResources().getDrawable(R.drawable.card_edge));
-            mHabit_1a_CardView.setTextColor(getResources().getColor(R.color.colorBlackTranslucent));
+        for (int i=0; i<getResources().getStringArray(R.array.arrayTriggersExcesos).length; i++)
+        {
+            switchSelectedName = getResources().getStringArray(R.array.arrayTriggersExcesos)[i];
+            if (switchSelectedName.equalsIgnoreCase(event.habitExcess)) mSwitchMultiButtonExcesos.setSelectedTab(i);
         }
 
         mNotes.setText(event.myNotes);
@@ -1078,13 +509,13 @@ public class NewEventActivity extends BaseActivity {
         cv.put("inestability", mInstabilitySwitch.isChecked()?1:0);
 
         //Cards
-        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):mMigraineType1);
-        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):mMigraineType2);
-        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):mMigraineType3);
-        cv.put("triggers_climate", mWeather);
-        cv.put("triggers_sleep", mSleep);
-        cv.put("triggers_phisic", mPhysical);
-        cv.put("triggers_excesses", mHabit);
+        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca1)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca2)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca3)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("triggers_climate", getResources().getStringArray(R.array.arrayTriggersClima)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("triggers_sleep", getResources().getStringArray(R.array.arrayTriggersSueño)[mSwitchMultiButtonSueno.getSelectedTab()]);
+        cv.put("triggers_phisic", getResources().getStringArray(R.array.arrayTriggersActividad)[mSwitchMultiButtonActividad.getSelectedTab()]);
+        cv.put("triggers_excesses", getResources().getStringArray(R.array.arrayTriggersExcesos)[mSwitchMultiButtonExcesos.getSelectedTab()]);
         cv.put("triggers_notes", notes);
 
         db.insert("event", null, cv);

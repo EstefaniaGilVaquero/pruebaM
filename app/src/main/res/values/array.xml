@@ -13,4 +13,53 @@
         <item>Right Ear</item>
         <item>Both Ears</item>
     </string-array>
+
+    <string-array name="arrayTriggersClima">
+        <item>N/C</item>
+        <item>@string/sunny</item>
+        <item>@string/cloudy</item>
+        <item>@string/storm</item>
+    </string-array>
+
+    <string-array name="arrayTriggersSueño">
+        <item>N/C</item>
+        <item>@string/excelent</item>
+        <item>@string/regular</item>
+        <item>@string/poor</item>
+    </string-array>
+
+    <string-array name="arrayTriggersActividad">
+        <item>N/C</item>
+        <item>@string/high</item>
+        <item>@string/medium</item>
+        <item>@string/low</item>
+    </string-array>
+
+    <string-array name="arrayTriggersExcesos">
+        <item>N/C</item>
+        <item>@string/salt</item>
+        <item>@string/caffeine</item>
+        <item>@string/alcohol</item>
+        <item>@string/tobacco</item>
+        <item>@string/sugar</item>
+    </string-array>
+
+    <string-array name="arrayJaqueca1">
+        <item>N/C</item>
+        <item>@string/mild</item>
+        <item>@string/moderate</item>
+        <item>@string/severe</item>
+    </string-array>
+
+    <string-array name="arrayJaqueca2">
+        <item>N/C</item>
+        <item>@string/oneSide</item>
+        <item>@string/wholeHead</item>
+    </string-array>
+
+    <string-array name="arrayJaqueca3">
+        <item>N/C</item>
+        <item>@string/throbbing</item>
+        <item>@string/tightening</item>
+    </string-array>
 </resources>

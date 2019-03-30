@@ -304,24 +304,27 @@
     <string name="title_activity_authors">AuthorsActivity</string>
 
     <string name="text_authors"><![CDATA[<h3>Authors:</h3>
-<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
-<h3><br />Collaborators:</h3>
-<h3 style="padding-left: 30px;"><br />Nicol&aacute;s P&eacute;rez Fern&aacute;ndez (Medical Advisor)<br />&Aacute;ngel Batuecas Caletr&iacute;o (Medical Advisor)<br />Jose Antonio L&oacute;pez Esc&aacute;mez (Medical Advisor)<br />Mark Jackson (English Localization)<br />Eva Perendreu (ASMES)</h3>
-<h3><br />Original Idea y Design:</h3>
-<h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
-<h3><br />iOS Development and Design:</h3>
-<h3 style="padding-left: 30px;"><br />Jorge Rey Mart&iacute;nez<br />Marina Gonz&aacute;lez Llorca (iOS Design)&copy; 2017 Espinosa y Rey</h3>
-<h3><br />Android Development and Design:</h3>
-<h3 style="padding-left: 30px;"><br />Estefan&iacute;a Gil Vaquero</h3>]]></string>
+        <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+        <h3><br />Collaborators:</h3>
+        <h3 style="padding-left: 30px;"><br />Nicol&aacute;s P&eacute;rez Fern&aacute;ndez (Medical Advisor)<br />&Aacute;ngel Batuecas Caletr&iacute;o (Medical Advisor)<br />Jose Antonio L&oacute;pez Esc&aacute;mez (Medical Advisor)<br />Mark Jackson (English Localization)<br />Eva Perendreu (ASMES)</h3>
+        <h3><br />Original Idea y Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Juan Manuel Espinosa<br />Jorge Rey Mart&iacute;nez</h3>
+        <h3><br />iOS Development and Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Jorge Rey Mart&iacute;nez<br />Marina Gonz&aacute;lez Llorca (iOS Design)&copy; 2017 Espinosa y Rey</h3>
+        <h3><br />Android Development and Design:</h3>
+        <h3 style="padding-left: 30px;"><br />Estefan&iacute;a Gil Vaquero</h3>]]>
+    </string>
 
     <string name="text_frameworks"><![CDATA[<h3>Frameworks:</h3>
-<p><strong>com.afollestad.material-dialogs</strong></p>
-<p><strong>com.github.PhilJay:MPAndroidChart</strong></p>
-<p><strong>com.xw.repo:bubbleseekbar:3.14-lite</strong></p>
-<p><strong>com.weiwangcn.betterspinner:library-material</strong></p>
-<p><strong>com.crashlytics.sdk.android:crashlytics</strong></p>
-<p><strong>com.sun.mail:android-mail</strong></p>
-<p>&nbsp;</p>]]></string>
+        <p><strong>com.afollestad.material-dialogs</strong></p>
+        <p><strong>com.github.PhilJay:MPAndroidChart</strong></p>
+        <p><strong>com.xw.repo:bubbleseekbar:3.14-lite</strong></p>
+        <p><strong>com.weiwangcn.betterspinner:library-material</strong></p>
+        <p><strong>com.crashlytics.sdk.android:crashlytics</strong></p>
+        <p><strong>com.sun.mail:android-mail</strong></p>
+        <p><strong>lib.kingja.switchbutton</strong></p>
+        <p>&nbsp;</p>]]>
+    </string>
 
     <string name="title_activity_main">MainActivity</string>
 
