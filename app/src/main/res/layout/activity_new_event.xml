@@ -589,7 +589,7 @@
                                                 android:layout_marginTop="4dp"
                                                 android:layout_marginBottom="4dp"
                                                 android:background="@android:drawable/ic_dialog_info"
-                                                android:backgroundTint="@android:color/holo_blue_dark"
+                                                app:backgroundTint="@android:color/holo_blue_dark"
                                                 android:foregroundGravity="center_vertical"
                                                 app:layout_constraintBottom_toBottomOf="parent"
                                                 app:layout_constraintStart_toEndOf="@+id/visualShymSwitch"
