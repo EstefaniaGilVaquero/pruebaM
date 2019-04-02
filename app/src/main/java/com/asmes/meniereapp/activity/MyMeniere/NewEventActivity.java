@@ -509,9 +509,9 @@ public class NewEventActivity extends BaseActivity {
         cv.put("inestability", mInstabilitySwitch.isChecked()?1:0);
 
         //Cards
-        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca1)[mSwitchMultiButtonClima.getSelectedTab()]);
-        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca2)[mSwitchMultiButtonClima.getSelectedTab()]);
-        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca3)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca1)[getmSwitchMultiButtonJaqueca1.getSelectedTab()]);
+        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca2)[getmSwitchMultiButtonJaqueca2.getSelectedTab()]);
+        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca3)[getmSwitchMultiButtonJaqueca3.getSelectedTab()]);
         cv.put("triggers_climate", getResources().getStringArray(R.array.arrayTriggersClima)[mSwitchMultiButtonClima.getSelectedTab()]);
         cv.put("triggers_sleep", getResources().getStringArray(R.array.arrayTriggersSueño)[mSwitchMultiButtonSueno.getSelectedTab()]);
         cv.put("triggers_phisic", getResources().getStringArray(R.array.arrayTriggersActividad)[mSwitchMultiButtonActividad.getSelectedTab()]);
