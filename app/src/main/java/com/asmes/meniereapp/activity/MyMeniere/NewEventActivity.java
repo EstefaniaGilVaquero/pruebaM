@@ -43,7 +43,7 @@ public class NewEventActivity extends BaseActivity {
 
     private LinearLayout mHeadProp_1a_LayOut, mHeadProp_1b_LayOut, mHeadProp_1c_LayOut, mHeadProp_1d_LayOut, mHeadProp_2a_LayOut, mHeadProp_2b_LayOut, mHeadProp_2c_LayOut, mHeadProp_3a_LayOut, mHeadProp_3b_LayOut, mHeadProp_3c_LayOut, mHeadache_LayOut;
 
-    SwitchMultiButton mSwitchMultiButtonClima , mSwitchMultiButtonSueno , mSwitchMultiButtonActividad , mSwitchMultiButtonExcesos, getmSwitchMultiButtonJaqueca1, getmSwitchMultiButtonJaqueca2, getmSwitchMultiButtonJaqueca3;
+    SwitchMultiButton mSwitchMultiButtonClima , mSwitchMultiButtonSueno , mSwitchMultiButtonActividad , mSwitchMultiButtonExcesos, mSwitchMultiButtonJaqueca1, mSwitchMultiButtonJaqueca2, mSwitchMultiButtonJaqueca3;
 
     private String mMigraineType1, mMigraineType2, mMigraineType3, mHearingLoss;
     private ImageView mAddEpisodeBtn, mInfoVisualBtn;
@@ -111,9 +111,9 @@ public class NewEventActivity extends BaseActivity {
         mVisualBlurDisTxt = findViewById(R.id.visualBlurDisTxt);
         mHeadPresureDisTxt = findViewById(R.id.headPresureDisTxt);
 
-        getmSwitchMultiButtonJaqueca1 = findViewById(R.id.multiButtonJaqueca1);
-        getmSwitchMultiButtonJaqueca2 = findViewById(R.id.multiButtonJaqueca2);
-        getmSwitchMultiButtonJaqueca3 = findViewById(R.id.multiButtonJaqueca3);
+        mSwitchMultiButtonJaqueca1 = findViewById(R.id.multiButtonJaqueca1);
+        mSwitchMultiButtonJaqueca2 = findViewById(R.id.multiButtonJaqueca2);
+        mSwitchMultiButtonJaqueca3 = findViewById(R.id.multiButtonJaqueca3);
         mSwitchMultiButtonClima = findViewById(R.id.multiButtonClima);
         mSwitchMultiButtonSueno = findViewById(R.id.multiButtonSueno);
         mSwitchMultiButtonActividad = findViewById(R.id.multiButtonActividad);
@@ -366,6 +366,9 @@ public class NewEventActivity extends BaseActivity {
         mNauseaSwitch.setEnabled(enable);
         mVomitingSwitch.setEnabled(enable);
         mInstabilitySwitch.setEnabled(enable);
+        mSwitchMultiButtonJaqueca1.setEnabled(enable);
+        mSwitchMultiButtonJaqueca2.setEnabled(enable);
+        mSwitchMultiButtonJaqueca3.setEnabled(enable);
         mSwitchMultiButtonClima.setEnabled(enable);
         mSwitchMultiButtonSueno.setEnabled(enable);
         mSwitchMultiButtonActividad.setEnabled(enable);
@@ -418,19 +421,19 @@ public class NewEventActivity extends BaseActivity {
             for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca1).length; i++)
             {
                 switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca1)[i];
-                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties1)) mSwitchMultiButtonClima.setSelectedTab(i);
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties1)) mSwitchMultiButtonJaqueca1.setSelectedTab(i);
             }
 
             for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca2).length; i++)
             {
                 switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca2)[i];
-                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties2)) mSwitchMultiButtonClima.setSelectedTab(i);
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties2)) mSwitchMultiButtonJaqueca2.setSelectedTab(i);
             }
 
             for (int i=0; i<getResources().getStringArray(R.array.arrayJaqueca3).length; i++)
             {
                 switchSelectedName = getResources().getStringArray(R.array.arrayJaqueca3)[i];
-                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties3)) mSwitchMultiButtonClima.setSelectedTab(i);
+                if (switchSelectedName.equalsIgnoreCase(event.headacheProperties3)) mSwitchMultiButtonJaqueca3.setSelectedTab(i);
             }
         }
 
@@ -509,9 +512,9 @@ public class NewEventActivity extends BaseActivity {
         cv.put("inestability", mInstabilitySwitch.isChecked()?1:0);
 
         //Cards
-        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca1)[mSwitchMultiButtonClima.getSelectedTab()]);
-        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca2)[mSwitchMultiButtonClima.getSelectedTab()]);
-        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca3)[mSwitchMultiButtonClima.getSelectedTab()]);
+        cv.put("migraine_type1", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca1)[mSwitchMultiButtonJaqueca1.getSelectedTab()]);
+        cv.put("migraine_type2", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca2)[mSwitchMultiButtonJaqueca2.getSelectedTab()]);
+        cv.put("migraine_type3", mHeadacheSwitch.getVisibility()==View.GONE?getResources().getString(R.string.NA):getResources().getStringArray(R.array.arrayJaqueca3)[mSwitchMultiButtonJaqueca3.getSelectedTab()]);
         cv.put("triggers_climate", getResources().getStringArray(R.array.arrayTriggersClima)[mSwitchMultiButtonClima.getSelectedTab()]);
         cv.put("triggers_sleep", getResources().getStringArray(R.array.arrayTriggersSueño)[mSwitchMultiButtonSueno.getSelectedTab()]);
         cv.put("triggers_phisic", getResources().getStringArray(R.array.arrayTriggersActividad)[mSwitchMultiButtonActividad.getSelectedTab()]);

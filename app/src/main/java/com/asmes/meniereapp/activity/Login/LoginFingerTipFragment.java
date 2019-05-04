@@ -123,7 +123,7 @@ public class LoginFingerTipFragment extends Fragment {
             //textView = (TextView) findViewById(R.id.textview);
 
             //Check whether the device has a fingerprint sensor//
-            if (!fingerprintManager.isHardwareDetected()) {
+            if (fingerprintManager == null || !fingerprintManager.isHardwareDetected()) {
                 // If a fingerprint sensor isn’t available, then inform the user that they’ll be unable to use your app’s fingerprint functionality//
                 String message =  "Your device doesn't support fingerprint authentication";
                 //Toast.makeText(getContext(),message,Toast.LENGTH_LONG).show();

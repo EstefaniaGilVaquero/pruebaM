@@ -257,8 +257,13 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             int contador = cursor4.getInt(cursor4.getColumnIndex("contador"));
             int minimo = cursor4.getInt(cursor4.getColumnIndex("minimo"));
             int maximo = cursor4.getInt(cursor4.getColumnIndex("maximo"));
+            String mean = "";
 
-            meanData4.setText(getString(R.string.txtIntensityMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            if(contador != 0){
+                mean = String.valueOf(suma/contador);
+            }
+
+            meanData4.setText(getString(R.string.txtIntensityMean).concat(mean).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
             cursor4.close();
         }
 
@@ -271,8 +276,13 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             int contador = cursor5.getInt(cursor5.getColumnIndex("contador"));
             int minimo = cursor5.getInt(cursor5.getColumnIndex("minimo"));
             int maximo = cursor5.getInt(cursor5.getColumnIndex("maximo"));
+            String mean = "";
 
-            meanData5.setText(getString(R.string.txtActivityMean).concat(String.valueOf(suma/contador)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            if(contador != 0){
+                mean = String.valueOf(suma/contador);
+            }
+
+            meanData5.setText(getString(R.string.txtActivityMean).concat(mean).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
             cursor5.close();
         }
 
@@ -285,11 +295,12 @@ public class MonthReportActivity extends BaseActivity implements SeekBar.OnSeekB
             int contador = cursor6.getInt(cursor6.getColumnIndex("contador"));
             int minimo = cursor6.getInt(cursor6.getColumnIndex("minimo"));
             int maximo = cursor6.getInt(cursor6.getColumnIndex("maximo"));
-            int mean = 0;
-            if(contador > 0){
-                mean = suma/contador;
+            String mean = "";
+
+            if(contador != 0){
+                mean = String.valueOf(suma/contador);
             }
-            meanData6.setText(getString(R.string.txtStressMean).concat(String.valueOf(mean)).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
+            meanData6.setText(getString(R.string.txtStressMean).concat(mean).concat("[max:").concat(String.valueOf(maximo)).concat("-min").concat(String.valueOf(minimo)).concat("]"));
             cursor6.close();
         }
     }
