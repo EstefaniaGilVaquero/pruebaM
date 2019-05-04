@@ -10,27 +10,27 @@
     tools:context=".activity.UtilitiesMeniere.ThreeFragment">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/CVHearingDiary"
+        android:id="@+id/CVGuide"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_above="@+id/CVSaveData"
+        android:layout_above="@+id/CVFrameworks"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="24dp"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="16dp"
-        android:layout_toStartOf="@+id/CVHealtyHabits"
+        android:layout_toStartOf="@+id/CVAuthors"
         android:layout_weight="1"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardElevation="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/CVSaveData"
-        app:layout_constraintEnd_toStartOf="@+id/CVHealtyHabits"
+        app:layout_constraintBottom_toTopOf="@+id/CVFrameworks"
+        app:layout_constraintEnd_toStartOf="@+id/CVAuthors"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textViewHeringDiary"
+            android:id="@+id/textViewGuide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -41,7 +41,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageHearingDiary"
+            android:id="@+id/imageGuide"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -54,7 +54,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/CVSaveData"
+        android:id="@+id/CVFrameworks"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="invisible"
@@ -64,17 +64,17 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="76dp"
-        android:layout_toStartOf="@+id/CVRateMe"
+        android:layout_toStartOf="@+id/CVwebsite"
         android:layout_weight="1"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardElevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/CVRateMe"
+        app:layout_constraintEnd_toStartOf="@+id/CVwebsite"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CVHearingDiary">
+        app:layout_constraintTop_toBottomOf="@+id/CVGuide">
 
         <TextView
-            android:id="@+id/textViewSaveData"
+            android:id="@+id/textViewFrameworks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -85,7 +85,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imageSaveData"
+            android:id="@+id/imageFrameworks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -97,10 +97,10 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/CVHealtyHabits"
+        android:id="@+id/CVAuthors"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_above="@+id/CVRateMe"
+        android:layout_above="@+id/CVwebsite"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="12dp"
@@ -110,13 +110,13 @@
         android:layout_weight="1"
         app:cardBackgroundColor="@color/colorPrimary"
         app:cardElevation="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/CVRateMe"
+        app:layout_constraintBottom_toTopOf="@+id/CVwebsite"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/CVHearingDiary"
+        app:layout_constraintStart_toEndOf="@+id/CVGuide"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textViewAuthors"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -128,7 +128,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imgHealthyHabits"
+            android:id="@+id/imagenAuthors"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -141,7 +141,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/CVRateMe"
+        android:id="@+id/CVwebsite"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_alignParentEnd="true"
@@ -155,11 +155,11 @@
         app:cardElevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/CVSaveData"
-        app:layout_constraintTop_toBottomOf="@+id/CVHealtyHabits">
+        app:layout_constraintStart_toEndOf="@+id/CVFrameworks"
+        app:layout_constraintTop_toBottomOf="@+id/CVAuthors">
 
         <TextView
-            android:id="@+id/textViewRateMe"
+            android:id="@+id/textFrameworks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
@@ -170,7 +170,7 @@
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/imgRateMe"
+            android:id="@+id/imagenFrameworks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"

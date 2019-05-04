@@ -58,10 +58,10 @@ public class ThreeFragment extends Fragment {
     }
 
     private void setCardViews() {
-        cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVHealtyHabits);
-        cvRateMe = (CardView) rootView.findViewById(R.id.CVRateMe);
+        cvHealthyHabits = (CardView) rootView.findViewById(R.id.CVAuthors);
+        cvRateMe = (CardView) rootView.findViewById(R.id.CVwebsite);
         //cvVerticalSensivity = (CardView) rootView.findViewById(R.id.CVverticalSensivity);
-        cvHearingDiary = (CardView) rootView.findViewById(R.id.CVHearingDiary);
+        cvHearingDiary = (CardView) rootView.findViewById(R.id.CVGuide);
 
         cvHearingDiary.setOnClickListener(new View.OnClickListener() {
             @Override
